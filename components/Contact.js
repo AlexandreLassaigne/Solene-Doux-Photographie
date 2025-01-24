@@ -10,43 +10,19 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Head from "next/head";
 import { Footer } from "flowbite-react";
 import { FaInstagram } from "react-icons/fa";
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 
-const SERVICE_ID = "service_gOnoway";
+const SERVICE_ID = "service_g0noway";
 const TEMPLATE_ID = "template_u2k7z4r";
-const PUBLIC_KEY = "EyXreh7zUmW7qlajw";
+const PUBLIC_KEY = "EyXreh7zUmW7qIajw";
 
 function Contact() {
-  const [nom, setNom] = useState("");
-  const [prenom, setPrenom] = useState("");
-  const [email, setEmail] = useState("");
-  const [tel, setTel] = useState("");
-  const [message, setMessage] = useState("");
+
   const [open, setOpen] = useState(false);
-  const [wrongEmail, setWrongEmail] = useState(false);
-  const [emptyFields, setEmptyFields] = useState(false);
 
   const handleOpen = (newOpen) => {
     setOpen(newOpen);
   };
-
-/*   const EMAIL_REGEX =
-    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-  const handleSubmit = () => {
-    if (!nom || !prenom || !email || !tel || !message) {
-      setWrongEmail(false);
-      setEmptyFields(true);
-    } else {
-      setEmptyFields(false);
-      if (!EMAIL_REGEX.test(email)) {
-        setWrongEmail(true);
-      } else {
-        setWrongEmail(false);
-        setEmptyFields(false);
-      }
-    }
-  }; */
 
   const drawerList = (
     <Box
@@ -81,13 +57,15 @@ function Contact() {
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
-      .then((result) => {
-        alert('Message Sent Successfully')
-      }, (error) => {
-        alert('Something went wrong!')
-      });
-    e.target.reset()
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY).then(
+      (result) => {
+        alert("Message envoyé");
+      },
+      (error) => {
+        alert("Désolé, il y a eu une erreur veuillez recommencer");
+      }
+    );
+    e.target.reset();
   };
 
   return (
@@ -114,78 +92,79 @@ function Contact() {
       <div className={styles.titreContainer}>
         <p className={styles.text}>Parlez moi de votre projet</p>
       </div>
-      <form className={styles.inputContainer} onSubmit={handleOnSubmit}>
-        <div className={styles.nom}>
-          <input
-            type="nom"
-            placeholder="Nom"
-            onChange={(e) => setNom(e.target.value)}
-            value={nom}
-            className={styles.input}
-            required
-            id="Nom"
-          />
-          <input
-            type="prenom"
-            placeholder="Prénom"
-            onChange={(e) => setPrenom(e.target.value)}
-            value={prenom}
-            className={styles.input}
-            required
-            id="Prénom"
-          />
-        </div>
-        <div className={styles.coordonees}>
-          <input
-            type="email"
-            placeholder="Email"
-            onChange={(e) => setEmail(e.target.value)}
-            value={email}
-            className={styles.input}
-            required
-          />
-          <input
-            type="téléphone"
-            placeholder="Téléphone"
-            onChange={(e) => setTel(e.target.value)}
-            value={tel}
-            className={styles.input}
-            required
-          />
-        </div>
-        <label className={styles.prestation}>
-          <select className={styles.choice} required>
-            <option>Prestation</option>
-            <option value="Mariage">Mariage</option>
-            <option value="Naissance">Naissance</option>
-            <option value="Grossesse">Grossesse</option>
-            <option value="Famille">Famille</option>
-          </select>
-        </label>
-        <div className={styles.message}>
-          <textarea
-            type="message"
-            placeholder="Décrivez-moi votre projet"
-            onChange={(e) => setMessage(e.target.value)}
-            value={message}
-            className={styles.projet}
-            rows={8}
-            cols={30}
-            required
-          />
-        </div>
-{/*         {emptyFields && (
-          <p className={styles.error}>Veuillez remplir tous les champs</p>
-        )}
-        {wrongEmail && (
-          <p className={styles.error}>Veuillez saisir un email au bon format</p>
-        )} */}
-        <div className={styles.buttonContainer}>
-          <button className={styles.button} type='submit'>
-            Envoyer
-          </button>
-        </div>
-      </form>
+      <div style={{width:'100vw', height: '100vh', display:'flex', justifyContent:'center'}}>
+        <form className={styles.inputContainer} onSubmit={handleOnSubmit}>
+          <div className={styles.nom}>
+            <input
+              type="text"
+              placeholder="Nom"
+              className={styles.input}
+              required
+              name="nom"
+              id="nom"
+            />
+            <input
+              type="text"
+              placeholder="Prénom"
+              className={styles.input}
+              required
+              name="prenom"
+              id="prenom"
+            />
+          </div>
+          <div className={styles.coordonees}>
+            <input
+              type="email"
+              placeholder="Email"
+              className={styles.input}
+              required
+              name="email"
+              id="email"
+            />
+            <input
+              type="téléphone"
+              placeholder="Téléphone"
+              className={styles.input}
+              required
+              name="telephone"
+              id="telephone"
+            />
+          </div>
+          <label className={styles.prestation}>
+            <select className={styles.choice}>
+              <option>Prestation</option>
+              <option value="Mariage" name="Mariage">
+                Mariage
+              </option>
+              <option value="Naissance" name="Naissance">
+                Naissance
+              </option>
+              <option value="Grossesse" name="Grossesse">
+                Grossesse
+              </option>
+              <option value="Famille" name="Famille">
+                Famille
+              </option>
+            </select>
+          </label>
+          <div className={styles.message}>
+            <textarea
+              type="text"
+              placeholder="Décrivez-moi votre projet"
+              className={styles.projet}
+              rows={8}
+              cols={30}
+              name="message"
+              required
+            />
+          </div>
+          <div className={styles.buttonContainer}>
+            <button className={styles.button} type="submit">
+              Envoyer
+            </button>
+          </div>
+        </form>
+      </div>
       <Footer className={styles.footerContainer}>
         <div className={styles.footer}>
           <a
