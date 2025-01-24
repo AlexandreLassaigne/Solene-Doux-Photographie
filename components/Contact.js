@@ -10,6 +10,11 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Head from "next/head";
 import { Footer } from "flowbite-react";
 import { FaInstagram } from "react-icons/fa";
+import emailjs from 'emailjs-com';
+
+const SERVICE_ID = "service_gOnoway";
+const TEMPLATE_ID = "template_u2k7z4r";
+const PUBLIC_KEY = "EyXreh7zUmW7qlajw";
 
 function Contact() {
   const [nom, setNom] = useState("");
@@ -25,7 +30,7 @@ function Contact() {
     setOpen(newOpen);
   };
 
-  const EMAIL_REGEX =
+/*   const EMAIL_REGEX =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   const handleSubmit = () => {
@@ -41,7 +46,8 @@ function Contact() {
         setEmptyFields(false);
       }
     }
-  };
+  }; */
+
   const drawerList = (
     <Box
       sx={{ width: 250, height: "100vh", fontSize: 34 }}
@@ -73,6 +79,17 @@ function Contact() {
     </Box>
   );
 
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
+      .then((result) => {
+        alert('Message Sent Successfully')
+      }, (error) => {
+        alert('Something went wrong!')
+      });
+    e.target.reset()
+  };
+
   return (
     <div>
       <Head>
@@ -97,7 +114,7 @@ function Contact() {
       <div className={styles.titreContainer}>
         <p className={styles.text}>Parlez moi de votre projet</p>
       </div>
-      <form className={styles.inputContainer}>
+      <form className={styles.inputContainer} onSubmit={handleOnSubmit}>
         <div className={styles.nom}>
           <input
             type="nom"
@@ -105,6 +122,8 @@ function Contact() {
             onChange={(e) => setNom(e.target.value)}
             value={nom}
             className={styles.input}
+            required
+            id="Nom"
           />
           <input
             type="prenom"
@@ -112,6 +131,8 @@ function Contact() {
             onChange={(e) => setPrenom(e.target.value)}
             value={prenom}
             className={styles.input}
+            required
+            id="Prénom"
           />
         </div>
         <div className={styles.coordonees}>
@@ -121,6 +142,7 @@ function Contact() {
             onChange={(e) => setEmail(e.target.value)}
             value={email}
             className={styles.input}
+            required
           />
           <input
             type="téléphone"
@@ -128,14 +150,16 @@ function Contact() {
             onChange={(e) => setTel(e.target.value)}
             value={tel}
             className={styles.input}
+            required
           />
         </div>
         <label className={styles.prestation}>
-          <select className={styles.choice}>
+          <select className={styles.choice} required>
             <option>Prestation</option>
             <option value="Mariage">Mariage</option>
             <option value="Naissance">Naissance</option>
             <option value="Grossesse">Grossesse</option>
+            <option value="Famille">Famille</option>
           </select>
         </label>
         <div className={styles.message}>
@@ -145,18 +169,19 @@ function Contact() {
             onChange={(e) => setMessage(e.target.value)}
             value={message}
             className={styles.projet}
-            rows={4}
-            cols={40}
+            rows={8}
+            cols={30}
+            required
           />
         </div>
-        {emptyFields && (
+{/*         {emptyFields && (
           <p className={styles.error}>Veuillez remplir tous les champs</p>
         )}
         {wrongEmail && (
           <p className={styles.error}>Veuillez saisir un email au bon format</p>
-        )}
+        )} */}
         <div className={styles.buttonContainer}>
-          <button className={styles.button} onClick={handleSubmit}>
+          <button className={styles.button} type='submit'>
             Envoyer
           </button>
         </div>

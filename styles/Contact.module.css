@@ -15,6 +15,7 @@
     font-size: 32;
     margin-top: 10px;
     margin-bottom: 10px;
+    font-family: 'Poppins';
 }
 
 .head {
@@ -161,4 +162,5 @@
 .error {
     color: tomato;
     text-align: center;
+    font-size: 12px;
   }
