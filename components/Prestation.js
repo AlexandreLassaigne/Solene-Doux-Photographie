@@ -84,7 +84,9 @@ function Prestation() {
             className={styles.image}
             alt="photo de mariage"
           />
-          <button className={styles.button}>Mariage</button>
+          <Link href="/mariage" >
+            <span className={styles.button}>Mariage</span>
+          </Link>
         </div>
         <div className={styles.container}>
           <img
@@ -92,7 +94,9 @@ function Prestation() {
             className={styles.image}
             alt="photo de grossesses"
           />
-          <button className={styles.button}>Grossesses</button>
+          <Link href="/grossesse">
+            <span className={styles.button}>Grossesse</span>
+          </Link>
         </div>
         <div className={styles.container}>
           <img
@@ -100,7 +104,9 @@ function Prestation() {
             className={styles.image}
             alt="photo de naissance"
           />
-          <button className={styles.button}>Naissance</button>
+          <Link href="/naissance">
+            <span className={styles.button}>Naissance</span>
+          </Link>
         </div>
         <div className={styles.container}>
           <img
@@ -108,7 +114,9 @@ function Prestation() {
             className={styles.image}
             alt="photo de naissance"
           />
-          <button className={styles.button}>Famille</button>
+          <Link href="/famille">
+            <span className={styles.button}>Famille</span>
+          </Link>
         </div>
         <div className={styles.container}>
           <img
@@ -116,7 +124,9 @@ function Prestation() {
             className={styles.image}
             alt="photo de naissance"
           />
-          <button className={styles.button}>Individuel</button>
+          <Link href="/naissance">
+            <span className={styles.button}>Individuel</span>
+          </Link>
         </div>
         <div className={styles.container}>
           <img
@@ -124,7 +134,9 @@ function Prestation() {
             className={styles.image}
             alt="photo de naissance"
           />
-          <button className={styles.button}>Famille</button>
+          <Link href="/famille">
+            <span className={styles.button}>Famille</span>
+          </Link>
         </div>
       </div>
       <Footer className={styles.footerContainer}>

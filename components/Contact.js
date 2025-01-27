@@ -17,8 +17,8 @@ const TEMPLATE_ID = "template_u2k7z4r";
 const PUBLIC_KEY = "EyXreh7zUmW7qIajw";
 
 function Contact() {
-
   const [open, setOpen] = useState(false);
+
 
   const handleOpen = (newOpen) => {
     setOpen(newOpen);
@@ -56,7 +56,9 @@ function Contact() {
   );
 
   const handleOnSubmit = (e) => {
+    //empêche la page de se recharger lors de la soumission du formulaire
     e.preventDefault();
+    //envoie le formulaire via l'API EmailJS, en utilisant les paramètres
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY).then(
       (result) => {
         alert("Message envoyé");
@@ -92,7 +94,14 @@ function Contact() {
       <div className={styles.titreContainer}>
         <p className={styles.text}>Parlez moi de votre projet</p>
       </div>
-      <div style={{width:'100vw', height: '100vh', display:'flex', justifyContent:'center'}}>
+      <div
+        style={{
+          width: "100vw",
+          height: "100vh",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
         <form className={styles.inputContainer} onSubmit={handleOnSubmit}>
           <div className={styles.nom}>
             <input
@@ -131,7 +140,7 @@ function Contact() {
             />
           </div>
           <label className={styles.prestation}>
-            <select className={styles.choice}>
+             <select className={styles.choice}>
               <option>Prestation</option>
               <option value="Mariage" name="Mariage">
                 Mariage
@@ -145,7 +154,7 @@ function Contact() {
               <option value="Famille" name="Famille">
                 Famille
               </option>
-            </select>
+            </select> 
           </label>
           <div className={styles.message}>
             <textarea
