@@ -11,6 +11,12 @@ import Head from "next/head";
 import { Footer } from "flowbite-react";
 import { FaInstagram } from "react-icons/fa";
 import "typeface-poppins";
+import { Carousel } from "nuka-carousel";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
   const [open, setOpen] = useState(false);
@@ -47,6 +53,39 @@ function Home() {
     </Box>
   );
 
+  const slideToUp = (elem, delay, duration) => {
+    gsap.fromTo(
+      elem,
+      {
+        opacity: 0,
+        y: -200,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        scrollTrigger: {
+          trigger: elem,
+          start: "top center",
+          end: "bottom center",
+          scrub: true,
+        },
+      }
+    );
+  };
+
+  useEffect(() => {
+    slideToUp('#parcours')
+  }, [])
+  useEffect(() => {
+    slideToUp('#prestation')
+  }, [])
+  useEffect(() => {
+    slideToUp('#portfolio')
+  }, [])
+  useEffect(() => {
+    slideToUp('#contact')
+  }, [])
+
   return (
     <div>
       <Head>
@@ -60,17 +99,34 @@ function Home() {
             className={styles.icon}
             size="2x"
           />
-          <Drawer open={open} onClose={() => handleOpen(false)}>
+          <Drawer
+            open={open}
+            onClose={() => handleOpen(false)}
+            sx={{ backgroundColor: "transparent" }}
+          >
             {drawerList}
           </Drawer>
-          <h1 className={styles.title}>Solène Photographie</h1>
+          <img src="/Logo/logo_nom2.png" className={styles.logo} />
         </div>
-        <img src="/home.jpg" className={styles.imageHead} />
+        <div className={styles.carouselContainer}>
+          <Carousel
+          autoplay={true}
+          autoplayInterval={3000}
+          wrapAround={true}
+          wrapMode="wrap"
+          showArrows='hover'
+        >
+          <img src="/Accueil/accueil3.jpg" className={styles.imageHead1} />
+          <img src="/Accueil/accueil1.jpg" className={styles.imageHead} />
+          <img src="/Accueil/accueil2.jpg" className={styles.imageHead} />
+        </Carousel>
+        </div>
+        
       </div>
       <div className={styles.allContainer}>
-        <div className={styles.container}>
+        <div className={styles.container} id="parcours">
           <img
-            src="/portrait.jpg"
+            src="/Solene/solene3.jpg"
             className={styles.image}
             alt="photo portrait"
           />
@@ -91,7 +147,7 @@ function Home() {
             </Link>
           </div>
         </div>
-        <div className={styles.container}>
+        <div className={styles.container} id="prestation">
           <div className={styles.description}>
             <p>
               J'offres une gamme complète de services pour capturer les moments
@@ -106,10 +162,10 @@ function Home() {
               </button>
             </Link>
           </div>
-          <img src="/prestation.jpg" className={styles.image} alt="photo"/>
+          <img src="/Couple/couple8.jpg" className={styles.image} alt="photo" />
         </div>
-        <div className={styles.container}>
-          <img src="/prestation.jpg" className={styles.image} alt="photo"/>
+        <div className={styles.container} id="portfolio">
+          <img src="/EVJF/evjf5.jpg" className={styles.image} alt="photo" />
           <div className={styles.description}>
             <p>
               Envie de découvrir mon travail ? Cliquez ici pour explorer mon
@@ -121,7 +177,7 @@ function Home() {
             </Link>
           </div>
         </div>
-        <div className={styles.contactDescription}>
+        <div className={styles.contactDescription} id="contact">
           <p className={styles.contactText}>
             Vous avez un projet en tête ou des questions ?<br /> N’hésitez pas à
             me contacter, je serai ravi d’échanger avec vous et de créer
@@ -139,7 +195,7 @@ function Home() {
             className={styles.footerIcon}
             target="_blank"
           >
-            <FaInstagram className={styles.footerIcon} size={40}/>
+            <FaInstagram className={styles.footerIcon} size={40} />
           </a>
           <div className={styles.coordoneesContainer}>
             <p className={styles.texteCoordonnees}>(+33)6.54.28.97.60</p>

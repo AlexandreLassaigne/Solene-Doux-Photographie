@@ -1,5 +1,5 @@
 .icon {
-    margin-top: 20px;
+    margin-top: 15px;
     margin-left : 20px;
     background-color: transparent;
     cursor: pointer;
@@ -32,29 +32,33 @@
     align-items: flex-start;
     background-color: rgb(228, 165, 113, 0.6);
     position: fixed;
+    height: 70px;
 }
 
-.title {
+.logo {
     margin-left: auto;
     margin-right: auto;
     background-color: transparent;
-    font-family:'Poppins';
-    font-weight: 300;
+    height: 50px;
+    margin-top: 5px;
     cursor: pointer;
 }
+
 
 .presentationContainer {
     display: flex;
     justify-content: space-around;
     font-family:'Poppins';
+    margin-bottom: 100px;
 }
 
 .presentationTexte {
     width: 40%;
+    font-size: 22px;
 }
 
 .image {
-    width: 50%;
+    width: 30%;
 }
 
 .footerContainer {

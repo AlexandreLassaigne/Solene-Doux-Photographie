@@ -22,6 +22,7 @@
     width: 100vw;
     height: 350px;
     align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .headContainer {
@@ -29,24 +30,33 @@
     display: flex;
     width: 100vw;
     align-items: flex-start;
-    background-color: rgb(228, 165, 113, 0.6);
+    background-color: rgba(228, 165, 113, 0.6);
     position: fixed;
-    height: 40;
+    height: 70px;
 }
 
-.title {
+.carouselContainer{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.logo {
     margin-left: auto;
     margin-right: auto;
     background-color: transparent;
-    font-family:'Poppins';
-    font-weight: 300;
+    height: 50px;
+    margin-top: 5px;
+}
+
+.imageHead1{
+    width: 100vw;
+    object-fit: cover;
 }
 
 .imageHead {
-    position:relative;
-    z-index: 0;
-    height: 600px;
-    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
 }
 
 .image {
@@ -55,7 +65,7 @@
 }
 
 .allContainer {
-    margin-top : 270px;
+    margin-top : 500px;
 }
 
 .container {

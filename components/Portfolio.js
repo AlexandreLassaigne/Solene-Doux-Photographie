@@ -11,14 +11,14 @@ import Head from "next/head";
 import { Footer } from "flowbite-react";
 import { FaInstagram } from "react-icons/fa";
 import "typeface-poppins";
+import image from "../utils/image";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Portfolio() {
-  const [allIsVisible, setAllIsVisible] = useState(true);
-  const [mariageIsVisible, setMariageIsVisible] = useState(false);
-  const [grossesseIsVisible, setGrossesseIsVible] = useState(false);
-  const [naissanceIsVisible, setNaisanceIsVisible] = useState(false);
-  const [familleIsVisible, setFamilleIsVisible] = useState(false);
-
   const [open, setOpen] = useState(false);
 
   const handleOpen = (newOpen) => {
@@ -53,79 +53,47 @@ function Portfolio() {
     </Box>
   );
 
-  const handleMariage = () => {
-    setMariageIsVisible(true);
-    setGrossesseIsVible(false);
-    setNaisanceIsVisible(false);
-    setAllIsVisible(false);
-    setFamilleIsVisible(false);
+  const imagePath = image.map((data, i) => {
+    return (
+      <img
+        key={i}
+        src={data.image}
+        className={styles.image}
+        alt={data.name}
+        ref={(el) => (imageRefs.current[i] = el)}
+      />
+    );
+  });
+
+  const imageRefs = useRef([]);
+
+  const slideToUp = (elem, delay, duration) => {
+    gsap.fromTo(
+      elem,
+      {
+        opacity: 0,
+        y: -200,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        scrollTrigger: {
+          trigger: elem,
+          start: "top center",
+          end: "bottom center",
+          scrub: true,
+        },
+      }
+    );
   };
 
-  const handleGrossesse = () => {
-    setGrossesseIsVible(true);
-    setMariageIsVisible(false);
-    setNaisanceIsVisible(false);
-    setAllIsVisible(false);
-    setFamilleIsVisible(false);
-  };
-
-  const handleNaissance = () => {
-    setNaisanceIsVisible(true);
-    setAllIsVisible(false);
-    setMariageIsVisible(false);
-    setGrossesseIsVible(false);
-    setFamilleIsVisible(false);
-  };
-
-  const handleAll = () => {
-    setAllIsVisible(true);
-    setGrossesseIsVible(false);
-    setMariageIsVisible(false);
-    setNaisanceIsVisible(false);
-    setFamilleIsVisible(false);
-  };
-
-  const handleFamille = () => {
-    setNaisanceIsVisible(false);
-    setAllIsVisible(false);
-    setMariageIsVisible(false);
-    setGrossesseIsVible(false);
-    setFamilleIsVisible(true);
-  };
-
-  const mariage = [];
-  if (mariageIsVisible === true) {
-    for (let i = 0; i < 20; i++) {
-      mariage.push(<img className={styles.image} src="/mariage.jpeg" />);
-    }
-  }
-
-  const naissance = [];
-  if (naissanceIsVisible === true) {
-    for (let i = 0; i < 20; i++) {
-      naissance.push(<img className={styles.image} src="/naissance.jpeg" />);
-    }
-  }
-
-  const grossesse = [];
-  if (grossesseIsVisible === true) {
-    for (let i = 0; i < 20; i++) {
-      grossesse.push(<img className={styles.image} src="/grossesse.jpeg" />);
-    }
-  }
-
-  const famille = [];
-  if (familleIsVisible === true) {
-    for (let i = 0; i < 20; i++) {
-      famille.push(<img className={styles.image} src="/famille.jpeg" />);
-    }
-  }
-
-  const image = [];
-
-  for (let i = 0; i < 20; i++) {
-    image.push(<img className={styles.image} src="/home.jpg" />);
-  }
+  useEffect(() => {
+    imageRefs.current.forEach((elem) => {
+      if (elem) {
+        slideToUp(elem);
+      }
+    });
+  }, []);
 
   return (
     <div>
@@ -144,42 +112,11 @@ function Portfolio() {
             {drawerList}
           </Drawer>
           <Link href="/">
-            <h1 className={styles.title}>Solène Photographie</h1>
+            <img src="/Logo/logo_nom2.png" className={styles.logo} />
           </Link>
         </div>
       </div>
-      <div>
-        <div className={styles.container}>
-          <p className={styles.texte} onClick={handleAll}>
-            Tout
-          </p>
-          <p className={styles.texte} onClick={handleMariage}>
-            Mariages
-          </p>
-          <p className={styles.texte} onClick={handleGrossesse}>
-            Grossesses
-          </p>
-          <p className={styles.texte} onClick={handleNaissance}>
-            Naissance
-          </p>
-          <p className={styles.texte} onClick={handleFamille}>
-            Famille
-          </p>
-        </div>
-        {allIsVisible && <div className={styles.imageContainer}>{image}</div>}
-      </div>
-      {mariageIsVisible && (
-        <div className={styles.imageContainer}>{mariage}</div>
-      )}
-      {grossesseIsVisible && (
-        <div className={styles.imageContainer}>{grossesse}</div>
-      )}
-      {naissanceIsVisible && (
-        <div className={styles.imageContainer}>{naissance}</div>
-      )}
-      {familleIsVisible && (
-        <div className={styles.imageContainer}>{famille}</div>
-      )}
+      <div className={styles.imageContainer}>{imagePath}</div>
       <Footer className={styles.footerContainer}>
         <div className={styles.footer}>
           <a

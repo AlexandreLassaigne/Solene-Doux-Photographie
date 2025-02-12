@@ -1,5 +1,5 @@
 .icon {
-    margin-top: 20px;
+    margin-top: 15px;
     margin-left : 20px;
     background-color: transparent;
     cursor: pointer;
@@ -32,21 +32,20 @@
     align-items: flex-start;
     background-color: rgb(228, 165, 113, 0.6);
     position: fixed;
-    height: 40;
+    height: 70px;
 }
 
-.title {
+.logo {
     margin-left: auto;
     margin-right: auto;
     background-color: transparent;
-    font-family:'Poppins';
-    font-weight: 300;
+    height: 50px;
+    margin-top: 5px;
     cursor: pointer;
 }
 
 .container {
     display: flex;
-    justify-content: space-around;
 }
 
 .texte {
@@ -57,8 +56,8 @@
 }
 
 .image {
-    width: 400px;
-    height: 300px;
+    width: auto;
+    height: 500px;
     margin: 10px;
 }
 

@@ -11,6 +11,11 @@ import Head from "next/head";
 import { Footer } from "flowbite-react";
 import { FaInstagram } from "react-icons/fa";
 import "typeface-poppins";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Prestation() {
   const [open, setOpen] = useState(false);
@@ -47,6 +52,60 @@ function Prestation() {
     </Box>
   );
 
+  const slideToUp = (elem, delay, duration) => {
+    gsap.fromTo(
+      elem,
+      {
+        opacity: 0,
+        y: -200,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        scrollTrigger: {
+          trigger: elem,
+          start: "center",
+          end: "bottom center",
+          scrub: true,
+        },
+      }
+    );
+  };
+
+  useEffect(() => {
+    slideToUp('#box1')
+  }, [])
+  useEffect(() => {
+    slideToUp('#box2')
+  }, [])
+  useEffect(() => {
+    slideToUp('#box3')
+  }, [])
+  useEffect(() => {
+    slideToUp('#box4')
+  }, [])
+  useEffect(() => {
+    slideToUp('#box5')
+  }, [])
+  useEffect(() => {
+    slideToUp('#box6')
+  }, [])
+  useEffect(() => {
+    slideToUp('#box7')
+  }, [])
+  useEffect(() => {
+    slideToUp('#box8')
+  }, [])
+  useEffect(() => {
+    slideToUp('#box9')
+  }, [])
+  useEffect(() => {
+    slideToUp('#box10')
+  }, [])
+  useEffect(() => {
+    slideToUp('#box11')
+  }, [])
+
   return (
     <div>
       <Head>
@@ -64,7 +123,7 @@ function Prestation() {
             {drawerList}
           </Drawer>
           <Link href="/">
-            <h1 className={styles.title}>Solène Photographie</h1>
+            <img src="/Logo/logo_nom2.png" className={styles.logo}/>
           </Link>
         </div>
       </div>
@@ -78,9 +137,69 @@ function Prestation() {
         </p>
       </div>
       <div className={styles.allContainer}>
-        <div className={styles.container}>
+        <div className={styles.container} id="box1">
           <img
-            src="/portrait.jpg"
+            src="/Allaitement/allaitement2.jpg"
+            className={styles.image}
+            alt="photo d'allaitement"
+          />
+          <Link href="/mariage" >
+            <span className={styles.button}>Allaitement</span>
+          </Link>
+        </div>
+        <div className={styles.container} id="box2">
+          <img
+            src="/Couple/couple2.jpg"
+            className={styles.image}
+            alt="photo de couple"
+          />
+          <Link href="/grossesse">
+            <span className={styles.button}>Couple</span>
+          </Link>
+        </div>
+        <div className={styles.container} id="box3">
+          <img
+            src="/Deco/deco4.jpg"
+            className={styles.image}
+            alt="photo de décoration"
+          />
+          <Link href="/naissance">
+            <span className={styles.button}>Décoration d'intérieur</span>
+          </Link>
+        </div>
+        <div className={styles.container} id="box4">
+          <img
+            src="/EVJF/evjf10.jpg"
+            className={styles.image}
+            alt="photo d'EVJF"
+          />
+          <Link href="/famille">
+            <span className={styles.button}>EVJF</span>
+          </Link>
+        </div>
+        <div className={styles.container} id="box5">
+          <img
+            src="/Famille/famille4.jpg"
+            className={styles.image}
+            alt="photo de famille"
+          />
+          <Link href="/naissance">
+            <span className={styles.button}>Famille</span>
+          </Link>
+        </div>
+        <div className={styles.container} id="box6">
+          <img
+            src="/Grossesse/grossesse6.jpg"
+            className={styles.image}
+            alt="photo de grossesse"
+          />
+          <Link href="/famille">
+            <span className={styles.button}>Grossesse</span>
+          </Link>
+        </div>
+        <div className={styles.container} id="box7">
+          <img
+            src="/Mariage/mariage4.jpg"
             className={styles.image}
             alt="photo de mariage"
           />
@@ -88,54 +207,44 @@ function Prestation() {
             <span className={styles.button}>Mariage</span>
           </Link>
         </div>
-        <div className={styles.container}>
+        <div className={styles.container} id="box8">
           <img
-            src="/portrait.jpg"
-            className={styles.image}
-            alt="photo de grossesses"
-          />
-          <Link href="/grossesse">
-            <span className={styles.button}>Grossesse</span>
-          </Link>
-        </div>
-        <div className={styles.container}>
-          <img
-            src="/portrait.jpg"
+            src="/Naissance/naissance4.jpg"
             className={styles.image}
             alt="photo de naissance"
           />
-          <Link href="/naissance">
+          <Link href="/mariage" >
             <span className={styles.button}>Naissance</span>
           </Link>
         </div>
-        <div className={styles.container}>
+        <div className={styles.container} id="box9">
           <img
-            src="/portrait.jpg"
+            src="/Professionnels_marques/professionnels_marques7.jpg"
             className={styles.image}
-            alt="photo de naissance"
+            alt="photo marques"
           />
-          <Link href="/famille">
-            <span className={styles.button}>Famille</span>
+          <Link href="/mariage" >
+            <span className={styles.button}>Professionnels - Marques</span>
           </Link>
         </div>
-        <div className={styles.container}>
+        <div className={styles.container} id="box10">
           <img
-            src="/portrait.jpg"
+            src="/Solo_confiance_en_soi/solo_confiance3.jpg"
             className={styles.image}
-            alt="photo de naissance"
+            alt="photo solo"
           />
-          <Link href="/naissance">
-            <span className={styles.button}>Individuel</span>
+          <Link href="/mariage" >
+            <span className={styles.button}>Solo - Confiance en soi</span>
           </Link>
         </div>
-        <div className={styles.container}>
+        <div className={styles.container} id="box11">
           <img
-            src="/portrait.jpg"
+            src="/TBB/tbb7.jpg"
             className={styles.image}
-            alt="photo de naissance"
+            alt="photo tbb"
           />
-          <Link href="/famille">
-            <span className={styles.button}>Famille</span>
+          <Link href="/mariage" >
+            <span className={styles.button}>TBB</span>
           </Link>
         </div>
       </div>
