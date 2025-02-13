@@ -8,7 +8,6 @@ import ListItem from "@mui/material/ListItem";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Head from "next/head";
-import { Footer } from "flowbite-react";
 import { FaInstagram } from "react-icons/fa";
 import "typeface-poppins";
 
@@ -60,12 +59,23 @@ function Naissance() {
             className={styles.icon}
             size="2x"
           />
-          <Drawer open={open} onClose={() => handleOpen(false)}>
+          <Drawer
+            open={open}
+            onClose={() => handleOpen(false)}
+            sx={{ backgroundColor: "transparent" }}
+          >
             {drawerList}
           </Drawer>
           <Link href="/">
-            <h1 className={styles.title}>Solène Photographie</h1>
+            <img src="/Logo/logo_nom2.png" className={styles.logo} />
           </Link>
+          <a
+            href="https://www.instagram.com/solenedoux_photographie/"
+            className={styles.instaIcon}
+            target="_blank"
+          >
+            <FaInstagram style={{ backgroundColor: "transparent" }} size={40} />
+          </a>
         </div>
       </div>
       <div>
@@ -158,21 +168,6 @@ function Naissance() {
           </div>
         </div>
       </div>
-      <Footer className={styles.footerContainer}>
-        <div className={styles.footer}>
-          <a
-            href="https://www.instagram.com/"
-            className={styles.footerIcon}
-            target="_blank"
-          >
-            <FaInstagram className={styles.footerIcon} size={40} />
-          </a>
-          <div className={styles.coordoneesContainer}>
-            <p className={styles.texteCoordonnees}>(+33)6.54.28.97.60</p>
-            <p className={styles.texteCoordonnees}>solenephoto@gmail.com</p>
-          </div>
-        </div>
-      </Footer>
     </div>
   );
 }

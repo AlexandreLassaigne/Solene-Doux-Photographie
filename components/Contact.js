@@ -8,7 +8,6 @@ import ListItem from "@mui/material/ListItem";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Head from "next/head";
-import { Footer } from "flowbite-react";
 import { FaInstagram } from "react-icons/fa";
 import emailjs from "emailjs-com";
 
@@ -18,7 +17,6 @@ const PUBLIC_KEY = "EyXreh7zUmW7qIajw";
 
 function Contact() {
   const [open, setOpen] = useState(false);
-
 
   const handleOpen = (newOpen) => {
     setOpen(newOpen);
@@ -83,12 +81,23 @@ function Contact() {
             className={styles.icon}
             size="2x"
           />
-          <Drawer open={open} onClose={() => handleOpen(false)}>
+          <Drawer
+            open={open}
+            onClose={() => handleOpen(false)}
+            sx={{ backgroundColor: "transparent" }}
+          >
             {drawerList}
           </Drawer>
           <Link href="/">
-            <h1 className={styles.title}>Solène Photographie</h1>
+            <img src="/Logo/logo_nom2.png" className={styles.logo} />
           </Link>
+          <a
+            href="https://www.instagram.com/solenedoux_photographie/"
+            className={styles.instaIcon}
+            target="_blank"
+          >
+            <FaInstagram style={{ backgroundColor: "transparent" }} size={40} />
+          </a>
         </div>
       </div>
       <div className={styles.titreContainer}>
@@ -139,23 +148,16 @@ function Contact() {
               id="telephone"
             />
           </div>
-          <label className={styles.prestation}>
-             <select className={styles.choice}>
-              <option>Prestation</option>
-              <option value="Mariage" name="Mariage">
-                Mariage
-              </option>
-              <option value="Naissance" name="Naissance">
-                Naissance
-              </option>
-              <option value="Grossesse" name="Grossesse">
-                Grossesse
-              </option>
-              <option value="Famille" name="Famille">
-                Famille
-              </option>
-            </select> 
-          </label>
+          <div className={styles.prestation}>
+            <input
+              type="text"
+              placeholder="Prestation"
+              className={styles.input}
+              required
+              name="prestation"
+              id="prestation"
+            />
+          </div>
           <div className={styles.message}>
             <textarea
               type="text"
@@ -174,21 +176,6 @@ function Contact() {
           </div>
         </form>
       </div>
-      <Footer className={styles.footerContainer}>
-        <div className={styles.footer}>
-          <a
-            href="https://www.instagram.com/"
-            className={styles.footerIcon}
-            target="_blank"
-          >
-            <FaInstagram className={styles.footerIcon} size={40} />
-          </a>
-          <div className={styles.coordoneesContainer}>
-            <p className={styles.texteCoordonnees}>(+33)654289760</p>
-            <p className={styles.texteCoordonnees}>solenephoto@gmail.com</p>
-          </div>
-        </div>
-      </Footer>
     </div>
   );
 }

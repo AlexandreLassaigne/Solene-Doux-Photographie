@@ -56,41 +56,48 @@
 }
 
 .image {
-    width: auto;
-    height: 500px;
+    width: 25%;
     margin: 10px;
 }
 
 .imageContainer {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.footerContainer {
-    width: 100vw;
-    height: 100%;
-    background-color:rgb(228, 165, 113, 0.8);
-    margin-top: 10px;
+.instaIcon {
+    background-color: transparent;
+    margin-top: 15px;
+    margin-right : 20px;
+    cursor: pointer;
+    color: #000000
 }
 
-.footer {
+.fullscreenModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
-    background-color: rgb(228, 165, 113, 0.8);
+    z-index: 1000;
 }
 
-.footerIcon {
-   background-color: transparent;
-   cursor: pointer;
-   color: #000000
+.fullscreenImageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-.coordoneesContainer {
-    background-color: transparent;
-}
-
-.texteCoordonnees {
-    background-color: transparent;
+.fullscreenImage {
+    max-width: 35%;
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
 }

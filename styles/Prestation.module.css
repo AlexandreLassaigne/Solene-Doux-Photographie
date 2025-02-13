@@ -52,24 +52,18 @@
 
 .allContainer {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
-    width: 40%;
-    height: 800px;
+    width: 30%;
     margin-top: 20px;
     margin-bottom: 40px;
 }
 
-.image {
-    width: 100%;
-    height: 100%;
-}
 
 .button {
     border : solid 1px;
@@ -93,33 +87,10 @@
 }
 
 
-.footerContainer {
-    width: 100vw;
-    height: 100%;
-    background-color:rgb(228, 165, 113, 0.8);
-    margin-top: 10px;
-}
-
-.footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-/*     position: absolute;
-    bottom: 0;
-    width: 100vw; */
-    background-color: rgb(228, 165, 113, 0.8);
-}
-
-.footerIcon {
-   background-color: transparent;
-   cursor: pointer;
-   color: #000000
-}
-
-.coordoneesContainer {
+.instaIcon {
     background-color: transparent;
-}
-
-.texteCoordonnees {
-    background-color: transparent;
+    margin-top: 15px;
+    margin-right : 20px;
+    cursor: pointer;
+    color: #000000
 }

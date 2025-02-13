@@ -156,30 +156,10 @@
     color : #ffffff
 }
 
-.footerContainer {
-    width: 100vw;
-    height: 100%;
-    background-color:rgb(228, 165, 113, 0.8);
-    margin-top: 10px;
-}
-
-.footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: rgb(228, 165, 113, 0.8);
-}
-
-.footerIcon {
-   background-color: transparent;
-   cursor: pointer;
-   color: #000000
-}
-
-.coordoneesContainer {
+.instaIcon {
     background-color: transparent;
-}
-
-.texteCoordonnees {
-    background-color: transparent;
+    margin-top: 15px;
+    margin-right : 20px;
+    cursor: pointer;
+    color: #000000
 }

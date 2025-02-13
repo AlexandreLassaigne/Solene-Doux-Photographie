@@ -8,14 +8,12 @@ import ListItem from "@mui/material/ListItem";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Head from "next/head";
-import { Footer } from "flowbite-react";
 import { FaInstagram } from "react-icons/fa";
 import "typeface-poppins";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import { useEffect, useRef } from "react";
-
-gsap.registerPlugin(ScrollTrigger);
+import ScrollAnimation from "react-animate-on-scroll";
+import "animate.css";
+import "animate.css/animate.compat.css";
+import Image from "next/image";
 
 function Prestation() {
   const [open, setOpen] = useState(false);
@@ -52,60 +50,6 @@ function Prestation() {
     </Box>
   );
 
-  const slideToUp = (elem, delay, duration) => {
-    gsap.fromTo(
-      elem,
-      {
-        opacity: 0,
-        y: -200,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        scrollTrigger: {
-          trigger: elem,
-          start: "center",
-          end: "bottom center",
-          scrub: true,
-        },
-      }
-    );
-  };
-
-  useEffect(() => {
-    slideToUp('#box1')
-  }, [])
-  useEffect(() => {
-    slideToUp('#box2')
-  }, [])
-  useEffect(() => {
-    slideToUp('#box3')
-  }, [])
-  useEffect(() => {
-    slideToUp('#box4')
-  }, [])
-  useEffect(() => {
-    slideToUp('#box5')
-  }, [])
-  useEffect(() => {
-    slideToUp('#box6')
-  }, [])
-  useEffect(() => {
-    slideToUp('#box7')
-  }, [])
-  useEffect(() => {
-    slideToUp('#box8')
-  }, [])
-  useEffect(() => {
-    slideToUp('#box9')
-  }, [])
-  useEffect(() => {
-    slideToUp('#box10')
-  }, [])
-  useEffect(() => {
-    slideToUp('#box11')
-  }, [])
-
   return (
     <div>
       <Head>
@@ -119,12 +63,23 @@ function Prestation() {
             className={styles.icon}
             size="2x"
           />
-          <Drawer open={open} onClose={() => handleOpen(false)}>
+          <Drawer
+            open={open}
+            onClose={() => handleOpen(false)}
+            sx={{ backgroundColor: "transparent" }}
+          >
             {drawerList}
           </Drawer>
           <Link href="/">
-            <img src="/Logo/logo_nom2.png" className={styles.logo}/>
+            <img src="/Logo/logo_nom2.png" className={styles.logo} />
           </Link>
+          <a
+            href="https://www.instagram.com/solenedoux_photographie/"
+            className={styles.instaIcon}
+            target="_blank"
+          >
+            <FaInstagram style={{ backgroundColor: "transparent" }} size={40} />
+          </a>
         </div>
       </div>
       <div className={styles.presationTexte}>
@@ -136,133 +91,163 @@ function Prestation() {
           l’émotion.
         </p>
       </div>
-      <div className={styles.allContainer}>
-        <div className={styles.container} id="box1">
-          <img
+      <ScrollAnimation
+        animateIn="fadeInUp"
+        className={styles.allContainer}
+        delay={1 * 100}
+      >
+        <div className={styles.container}>
+          <Image
             src="/Allaitement/allaitement2.jpg"
-            className={styles.image}
             alt="photo d'allaitement"
+            width={3974}
+            height={5961}
           />
-          <Link href="/mariage" >
+          <Link href="/mariage">
             <span className={styles.button}>Allaitement</span>
           </Link>
         </div>
-        <div className={styles.container} id="box2">
-          <img
+        <div className={styles.container}>
+          <Image
             src="/Couple/couple2.jpg"
-            className={styles.image}
             alt="photo de couple"
+            width={3913}
+            height={5869}
           />
           <Link href="/grossesse">
             <span className={styles.button}>Couple</span>
           </Link>
         </div>
-        <div className={styles.container} id="box3">
-          <img
+      </ScrollAnimation>
+      <ScrollAnimation
+        animateIn="fadeInUp"
+        className={styles.allContainer}
+        delay={1 * 100}
+      >
+        <div className={styles.container}>
+          <Image
             src="/Deco/deco4.jpg"
-            className={styles.image}
             alt="photo de décoration"
+            width={3978}
+            height={5967}
           />
           <Link href="/naissance">
             <span className={styles.button}>Décoration d'intérieur</span>
           </Link>
         </div>
-        <div className={styles.container} id="box4">
-          <img
+        <div className={styles.container}>
+          <Image
             src="/EVJF/evjf10.jpg"
-            className={styles.image}
             alt="photo d'EVJF"
+            width={4160}
+            height={6240}
           />
           <Link href="/famille">
             <span className={styles.button}>EVJF</span>
           </Link>
         </div>
-        <div className={styles.container} id="box5">
-          <img
+      </ScrollAnimation>
+      <ScrollAnimation
+        animateIn="fadeInUp"
+        className={styles.allContainer}
+        delay={1 * 100}
+      >
+        <div className={styles.container}>
+          <Image
             src="/Famille/famille4.jpg"
-            className={styles.image}
             alt="photo de famille"
+            width={3798}
+            height={5697}
           />
           <Link href="/naissance">
             <span className={styles.button}>Famille</span>
           </Link>
         </div>
-        <div className={styles.container} id="box6">
-          <img
+        <div className={styles.container}>
+          <Image
             src="/Grossesse/grossesse6.jpg"
-            className={styles.image}
             alt="photo de grossesse"
+            width={2267}
+            height={3400}
           />
           <Link href="/famille">
             <span className={styles.button}>Grossesse</span>
           </Link>
         </div>
-        <div className={styles.container} id="box7">
-          <img
+      </ScrollAnimation>
+      <ScrollAnimation
+        animateIn="fadeInUp"
+        className={styles.allContainer}
+        delay={1 * 100}
+      >
+        <div className={styles.container}>
+          <Image
             src="/Mariage/mariage4.jpg"
-            className={styles.image}
             alt="photo de mariage"
+            width={3455}
+            height={5183}
           />
-          <Link href="/mariage" >
+          <Link href="/mariage">
             <span className={styles.button}>Mariage</span>
           </Link>
         </div>
-        <div className={styles.container} id="box8">
-          <img
+        <div className={styles.container}>
+          <Image
             src="/Naissance/naissance4.jpg"
-            className={styles.image}
             alt="photo de naissance"
+            width={2875}
+            height={4312}
           />
-          <Link href="/mariage" >
+          <Link href="/mariage">
             <span className={styles.button}>Naissance</span>
           </Link>
         </div>
-        <div className={styles.container} id="box9">
-          <img
+      </ScrollAnimation>
+      <ScrollAnimation
+        animateIn="fadeInUp"
+        className={styles.allContainer}
+        delay={1 * 100}
+      >
+        <div className={styles.container}>
+          <Image
             src="/Professionnels_marques/professionnels_marques7.jpg"
-            className={styles.image}
             alt="photo marques"
+            width={2527}
+            height={3790}
           />
-          <Link href="/mariage" >
+          <Link href="/mariage">
             <span className={styles.button}>Professionnels - Marques</span>
           </Link>
         </div>
-        <div className={styles.container} id="box10">
-          <img
+        <div className={styles.container}>
+          <Image
             src="/Solo_confiance_en_soi/solo_confiance3.jpg"
-            className={styles.image}
             alt="photo solo"
+            width={4005}
+            height={6008}
           />
-          <Link href="/mariage" >
+          <Link href="/mariage">
             <span className={styles.button}>Solo - Confiance en soi</span>
           </Link>
         </div>
-        <div className={styles.container} id="box11">
-          <img
+      </ScrollAnimation>
+      <ScrollAnimation
+        animateIn="fadeInUp"
+        className={styles.allContainer}
+        delay={1 * 100}
+      >
+        <div className={styles.container}>
+          <Image
             src="/TBB/tbb7.jpg"
-            className={styles.image}
             alt="photo tbb"
+            width={3648}
+            height={5472}
           />
-          <Link href="/mariage" >
+          <Link href="/mariage">
             <span className={styles.button}>TBB</span>
           </Link>
         </div>
-      </div>
-      <Footer className={styles.footerContainer}>
-        <div className={styles.footer}>
-          <a
-            href="https://www.instagram.com/"
-            className={styles.footerIcon}
-            target="_blank"
-          >
-            <FaInstagram className={styles.footerIcon} size={40} />
-          </a>
-          <div className={styles.coordoneesContainer}>
-            <p className={styles.texteCoordonnees}>(+33)6.54.28.97.60</p>
-            <p className={styles.texteCoordonnees}>solenephoto@gmail.com</p>
-          </div>
-        </div>
-      </Footer>
+      </ScrollAnimation>
     </div>
   );
 }

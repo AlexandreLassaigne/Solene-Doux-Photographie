@@ -12,11 +12,9 @@ import { Footer } from "flowbite-react";
 import { FaInstagram } from "react-icons/fa";
 import "typeface-poppins";
 import { Carousel } from "nuka-carousel";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import { useEffect, useRef } from "react";
-
-gsap.registerPlugin(ScrollTrigger);
+import ScrollAnimation from "react-animate-on-scroll";
+import "animate.css/animate.compat.css";
+import Image from "next/image";
 
 function Home() {
   const [open, setOpen] = useState(false);
@@ -53,39 +51,6 @@ function Home() {
     </Box>
   );
 
-  const slideToUp = (elem, delay, duration) => {
-    gsap.fromTo(
-      elem,
-      {
-        opacity: 0,
-        y: -200,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        scrollTrigger: {
-          trigger: elem,
-          start: "top center",
-          end: "bottom center",
-          scrub: true,
-        },
-      }
-    );
-  };
-
-  useEffect(() => {
-    slideToUp('#parcours')
-  }, [])
-  useEffect(() => {
-    slideToUp('#prestation')
-  }, [])
-  useEffect(() => {
-    slideToUp('#portfolio')
-  }, [])
-  useEffect(() => {
-    slideToUp('#contact')
-  }, [])
-
   return (
     <div>
       <Head>
@@ -107,102 +72,119 @@ function Home() {
             {drawerList}
           </Drawer>
           <img src="/Logo/logo_nom2.png" className={styles.logo} />
+          <a
+            href="https://www.instagram.com/solenedoux_photographie/"
+            className={styles.instaIcon}
+            target="_blank"
+          >
+            <FaInstagram style={{backgroundColor: 'transparent'}} size={40} />
+          </a>
         </div>
         <div className={styles.carouselContainer}>
           <Carousel
-          autoplay={true}
-          autoplayInterval={3000}
-          wrapAround={true}
-          wrapMode="wrap"
-          showArrows='hover'
-        >
-          <img src="/Accueil/accueil3.jpg" className={styles.imageHead1} />
-          <img src="/Accueil/accueil1.jpg" className={styles.imageHead} />
-          <img src="/Accueil/accueil2.jpg" className={styles.imageHead} />
-        </Carousel>
+            autoplay={true}
+            autoplayInterval={3000}
+            wrapAround={true}
+            wrapMode="wrap"
+            showArrows="hover"
+          >
+              <img src="/Accueil/accueil3.jpg" alt='Photo acceuil couple'  className={styles.imageHead1}/>
+              <img src="/Accueil/accueil1.jpg" alt='Photo acceuil grossesse' className={styles.imageHead}/>
+              <img src="/Accueil/accueil2.jpg" alt='Photo acceuil naissance' className={styles.imageHead}/>
+          </Carousel>
         </div>
-        
       </div>
       <div className={styles.allContainer}>
-        <div className={styles.container} id="parcours">
-          <img
-            src="/Solene/solene3.jpg"
-            className={styles.image}
-            alt="photo portrait"
-          />
-          <div className={styles.description}>
-            <p>
-              Solène Doux photographe passionné, spécialisé dans le portrait et
-              le paysage. <br />
-              Mon travail se distingue par une utilisation subtile de la lumière
-              naturelle et une approche minimaliste.
-              <br /> Je cherche à capturer des moments authentiques, souvent
-              empreints d’émotion.
-              <br />
-              Exposé dans plusieurs galeries, je collabore également avec des
-              magazines et des entreprises.
+        <ScrollAnimation animateIn="fadeInUp" delay={1 * 100}>
+          <div className={styles.container}>
+            <div className={styles.image}>
+              <Image
+                src="/Solene/solene3.jpg"
+                alt="photo portrait"
+                width={3510}
+                height={5270}
+              />
+            </div>
+            <div className={styles.description}>
+              <p>
+                Solène Doux photographe passionné, spécialisé dans le portrait
+                et le paysage. <br />
+                Mon travail se distingue par une utilisation subtile de la
+                lumière naturelle et une approche minimaliste.
+                <br /> Je cherche à capturer des moments authentiques, souvent
+                empreints d’émotion.
+                <br />
+                Exposé dans plusieurs galeries, je collabore également avec des
+                magazines et des entreprises.
+              </p>
+              <Link href="/apropos">
+                <button className={styles.button}>Mon parcours</button>
+              </Link>
+            </div>
+          </div>
+        </ScrollAnimation>
+        <ScrollAnimation animateIn="fadeInUp" delay={1 * 100}>
+          <div className={styles.container}>
+            <div className={styles.description}>
+              <p>
+                J'offres une gamme complète de services pour capturer les
+                moments qui comptent. <br />
+                Que ce soit pour des événements privés, des projets
+                professionnels ou des créations artistiques, chaque séance est
+                pensée sur mesure pour répondre à vos besoins.
+              </p>
+              <Link href="/prestation">
+                <button className={styles.buttonPrestation}>
+                  Mes prestations
+                </button>
+              </Link>
+            </div>
+            <div className={styles.image}>
+              <Image
+                src="/Couple/couple8.jpg"
+                alt="photo"
+                width={4160}
+                height={6240}
+              />
+            </div>
+          </div>
+        </ScrollAnimation>
+        <ScrollAnimation animateIn="fadeInUp" delay={1 * 100}>
+          <div className={styles.container}>
+            <div className={styles.image}>
+              <Image
+                src="/EVJF/evjf5.jpg"
+                alt="photo"
+                width={4160}
+                height={6240}
+              />
+            </div>
+
+            <div className={styles.description}>
+              <p>
+                Envie de découvrir mon travail ? Cliquez ici pour explorer mon
+                portfolio et voir comment chaque image raconte une histoire
+                unique. À bientôt !
+              </p>
+              <Link href="/portfolio">
+                <button className={styles.button}>Mon portfolio</button>
+              </Link>
+            </div>
+          </div>
+        </ScrollAnimation>
+        <ScrollAnimation animateIn="fadeInUp" delay={1 * 100}>
+          <div className={styles.contactDescription}>
+            <p className={styles.contactText}>
+              Vous avez un projet en tête ou des questions ?<br /> N’hésitez pas
+              à me contacter, je serai ravi d’échanger avec vous et de créer
+              ensemble des images uniques !{" "}
             </p>
-            <Link href="/apropos">
-              <button className={styles.button}>Mon parcours</button>
+            <Link href="/contact">
+              <button className={styles.buttonContact}>Contact</button>
             </Link>
           </div>
-        </div>
-        <div className={styles.container} id="prestation">
-          <div className={styles.description}>
-            <p>
-              J'offres une gamme complète de services pour capturer les moments
-              qui comptent. <br />
-              Que ce soit pour des événements privés, des projets professionnels
-              ou des créations artistiques, chaque séance est pensée sur mesure
-              pour répondre à vos besoins.
-            </p>
-            <Link href="/prestation">
-              <button className={styles.buttonPrestation}>
-                Mes prestations
-              </button>
-            </Link>
-          </div>
-          <img src="/Couple/couple8.jpg" className={styles.image} alt="photo" />
-        </div>
-        <div className={styles.container} id="portfolio">
-          <img src="/EVJF/evjf5.jpg" className={styles.image} alt="photo" />
-          <div className={styles.description}>
-            <p>
-              Envie de découvrir mon travail ? Cliquez ici pour explorer mon
-              portfolio et voir comment chaque image raconte une histoire
-              unique. À bientôt !
-            </p>
-            <Link href="/portfolio">
-              <button className={styles.button}>Mon portfolio</button>
-            </Link>
-          </div>
-        </div>
-        <div className={styles.contactDescription} id="contact">
-          <p className={styles.contactText}>
-            Vous avez un projet en tête ou des questions ?<br /> N’hésitez pas à
-            me contacter, je serai ravi d’échanger avec vous et de créer
-            ensemble des images uniques !{" "}
-          </p>
-          <Link href="/contact">
-            <button className={styles.buttonContact}>Contact</button>
-          </Link>
-        </div>
+        </ScrollAnimation>
       </div>
-      <Footer className={styles.footerContainer}>
-        <div className={styles.footer}>
-          <a
-            href="https://www.instagram.com/"
-            className={styles.footerIcon}
-            target="_blank"
-          >
-            <FaInstagram className={styles.footerIcon} size={40} />
-          </a>
-          <div className={styles.coordoneesContainer}>
-            <p className={styles.texteCoordonnees}>(+33)6.54.28.97.60</p>
-            <p className={styles.texteCoordonnees}>solenephoto@gmail.com</p>
-          </div>
-        </div>
-      </Footer>
     </div>
   );
 }

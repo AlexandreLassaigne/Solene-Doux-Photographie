@@ -8,18 +8,19 @@ import ListItem from "@mui/material/ListItem";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Head from "next/head";
-import { Footer } from "flowbite-react";
 import { FaInstagram } from "react-icons/fa";
 import "typeface-poppins";
 import image from "../utils/image";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import { useEffect, useRef } from "react";
-
-gsap.registerPlugin(ScrollTrigger);
+import Image from "next/image";
+import ScrollAnimation from "react-animate-on-scroll";
+import "animate.css";
+import "animate.css/animate.compat.css";
+import { Carousel } from "nuka-carousel";
 
 function Portfolio() {
   const [open, setOpen] = useState(false);
+  const [imageOpen, setImageOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(""); //Stocke l'URL de l'image
 
   const handleOpen = (newOpen) => {
     setOpen(newOpen);
@@ -53,47 +54,35 @@ function Portfolio() {
     </Box>
   );
 
-  const imagePath = image.map((data, i) => {
-    return (
-      <img
-        key={i}
-        src={data.image}
-        className={styles.image}
-        alt={data.name}
-        ref={(el) => (imageRefs.current[i] = el)}
-      />
-    );
-  });
-
-  const imageRefs = useRef([]);
-
-  const slideToUp = (elem, delay, duration) => {
-    gsap.fromTo(
-      elem,
-      {
-        opacity: 0,
-        y: -200,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        scrollTrigger: {
-          trigger: elem,
-          start: "top center",
-          end: "bottom center",
-          scrub: true,
-        },
-      }
-    );
+  const handleImageClick = (imageSrc) => {
+    setSelectedImage(imageSrc);
+    setImageOpen(true);
   };
 
-  useEffect(() => {
-    imageRefs.current.forEach((elem) => {
-      if (elem) {
-        slideToUp(elem);
-      }
-    });
-  }, []);
+  const closeModal = () => {
+    setImageOpen(false);
+    setSelectedImage("");
+  };
+
+  const imagePath = image.map((data, i) => {
+    return (
+      <ScrollAnimation
+        animateIn="fadeInUp"
+        key={i}
+        className={styles.image}
+        delay={1 * 100}
+      >
+        <Image
+          src={data.image}
+          alt={data.name}
+          width={data.with}
+          height={data.height}
+          onClick={() => handleImageClick(data.image)}
+          style={{ cursor: "pointer" }}
+        />
+      </ScrollAnimation>
+    );
+  });
 
   return (
     <div>
@@ -108,30 +97,39 @@ function Portfolio() {
             className={styles.icon}
             size="2x"
           />
-          <Drawer open={open} onClose={() => handleOpen(false)}>
+          <Drawer
+            open={open}
+            onClose={() => handleOpen(false)}
+            sx={{ backgroundColor: "transparent" }}
+          >
             {drawerList}
           </Drawer>
           <Link href="/">
             <img src="/Logo/logo_nom2.png" className={styles.logo} />
           </Link>
+          <a
+            href="https://www.instagram.com/solenedoux_photographie/"
+            className={styles.instaIcon}
+            target="_blank"
+          >
+            <FaInstagram style={{ backgroundColor: "transparent" }} size={40} />
+          </a>
         </div>
       </div>
       <div className={styles.imageContainer}>{imagePath}</div>
-      <Footer className={styles.footerContainer}>
-        <div className={styles.footer}>
-          <a
-            href="https://www.instagram.com/"
-            className={styles.footerIcon}
-            target="_blank"
-          >
-            <FaInstagram className={styles.footerIcon} size={40} />
-          </a>
-          <div className={styles.coordoneesContainer}>
-            <p className={styles.texteCoordonnees}>(+33)6.54.28.97.60</p>
-            <p className={styles.texteCoordonnees}>solenephoto@gmail.com</p>
-          </div>
+      {imageOpen && (
+        <div className={styles.fullscreenModal} onClick={closeModal}>
+          <Carousel wrapMode="wrap" showArrows='hover' className="bg-green-500 cursor-pointer" >
+            <div className={styles.fullscreenImageContainer}>
+              <img
+                src={selectedImage}
+                alt="Fullscreen Image"
+                className={styles.fullscreenImage}
+              />
+            </div>
+          </Carousel>
         </div>
-      </Footer>
+      )}
     </div>
   );
 }
