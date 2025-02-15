@@ -94,7 +94,6 @@ function Prestation() {
       <ScrollAnimation
         animateIn="fadeInUp"
         className={styles.allContainer}
-        delay={1 * 100}
       >
         <div className={styles.container}>
           <Image
@@ -103,7 +102,7 @@ function Prestation() {
             width={3974}
             height={5961}
           />
-          <Link href="/mariage">
+          <Link href="/formule">
             <span className={styles.button}>Allaitement</span>
           </Link>
         </div>
@@ -114,7 +113,7 @@ function Prestation() {
             width={3913}
             height={5869}
           />
-          <Link href="/grossesse">
+          <Link href="/formule">
             <span className={styles.button}>Couple</span>
           </Link>
         </div>
@@ -131,7 +130,7 @@ function Prestation() {
             width={3978}
             height={5967}
           />
-          <Link href="/naissance">
+          <Link href="/formule">
             <span className={styles.button}>Décoration d'intérieur</span>
           </Link>
         </div>
@@ -142,7 +141,7 @@ function Prestation() {
             width={4160}
             height={6240}
           />
-          <Link href="/famille">
+          <Link href="/formule">
             <span className={styles.button}>EVJF</span>
           </Link>
         </div>
@@ -159,7 +158,7 @@ function Prestation() {
             width={3798}
             height={5697}
           />
-          <Link href="/naissance">
+          <Link href="/formule">
             <span className={styles.button}>Famille</span>
           </Link>
         </div>
@@ -170,7 +169,7 @@ function Prestation() {
             width={2267}
             height={3400}
           />
-          <Link href="/famille">
+          <Link href="/formule">
             <span className={styles.button}>Grossesse</span>
           </Link>
         </div>
@@ -187,7 +186,7 @@ function Prestation() {
             width={3455}
             height={5183}
           />
-          <Link href="/mariage">
+          <Link href="/formule">
             <span className={styles.button}>Mariage</span>
           </Link>
         </div>
@@ -198,7 +197,7 @@ function Prestation() {
             width={2875}
             height={4312}
           />
-          <Link href="/mariage">
+          <Link href="/formule">
             <span className={styles.button}>Naissance</span>
           </Link>
         </div>
@@ -215,7 +214,7 @@ function Prestation() {
             width={2527}
             height={3790}
           />
-          <Link href="/mariage">
+          <Link href="/formule">
             <span className={styles.button}>Professionnels - Marques</span>
           </Link>
         </div>
@@ -226,7 +225,7 @@ function Prestation() {
             width={4005}
             height={6008}
           />
-          <Link href="/mariage">
+          <Link href="/formule">
             <span className={styles.button}>Solo - Confiance en soi</span>
           </Link>
         </div>
@@ -243,7 +242,7 @@ function Prestation() {
             width={3648}
             height={5472}
           />
-          <Link href="/mariage">
+          <Link href="/formule">
             <span className={styles.button}>TBB</span>
           </Link>
         </div>

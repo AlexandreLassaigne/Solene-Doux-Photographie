@@ -8,7 +8,6 @@ import ListItem from "@mui/material/ListItem";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Head from "next/head";
-import { Footer } from "flowbite-react";
 import { FaInstagram } from "react-icons/fa";
 import "typeface-poppins";
 import { Carousel } from "nuka-carousel";
@@ -77,7 +76,7 @@ function Home() {
             className={styles.instaIcon}
             target="_blank"
           >
-            <FaInstagram style={{backgroundColor: 'transparent'}} size={40} />
+            <FaInstagram style={{ backgroundColor: "transparent" }} size={40} />
           </a>
         </div>
         <div className={styles.carouselContainer}>
@@ -88,9 +87,21 @@ function Home() {
             wrapMode="wrap"
             showArrows="hover"
           >
-              <img src="/Accueil/accueil3.jpg" alt='Photo acceuil couple'  className={styles.imageHead1}/>
-              <img src="/Accueil/accueil1.jpg" alt='Photo acceuil grossesse' className={styles.imageHead}/>
-              <img src="/Accueil/accueil2.jpg" alt='Photo acceuil naissance' className={styles.imageHead}/>
+            <img
+              src="/Accueil/accueil3.jpg"
+              alt="Photo acceuil couple"
+              className={styles.imageHead1}
+            />
+            <img
+              src="/Accueil/accueil1.jpg"
+              alt="Photo acceuil grossesse"
+              className={styles.imageHead}
+            />
+            <img
+              src="/Accueil/accueil2.jpg"
+              alt="Photo acceuil naissance"
+              className={styles.imageHead}
+            />
           </Carousel>
         </div>
       </div>

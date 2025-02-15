@@ -82,7 +82,7 @@ export default function Apropos() {
           </a>
         </div>
       </div>
-      <ScrollAnimation animateIn="fadeInUp" delay={1 * 100}>
+      <ScrollAnimation animateIn="fadeInUp" >
         <div className={styles.presentationContainer}>
           <p className={styles.presentationTexte}>
             Enchanté,

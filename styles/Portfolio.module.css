@@ -81,7 +81,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.85);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,11 +92,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .fullscreenImage {
-    max-width: 35%;
+    max-height: 90vh;
     object-fit: contain;
     display: flex;
     justify-content: center;

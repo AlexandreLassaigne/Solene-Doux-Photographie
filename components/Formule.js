@@ -1,4 +1,4 @@
-import styles from "../styles/Portfolio.module.css";
+import styles from "../styles/Mariage.module.css";
 import Link from "next/link";
 import { useState } from "react";
 import Box from "@mui/material/Box";
@@ -10,19 +10,9 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Head from "next/head";
 import { FaInstagram } from "react-icons/fa";
 import "typeface-poppins";
-import image from "../utils/image";
-import Image from "next/image";
-import ScrollAnimation from "react-animate-on-scroll";
-import "animate.css";
-import "animate.css/animate.compat.css";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
 
-function Portfolio() {
+function Formule(props) {
   const [open, setOpen] = useState(false);
-  const [imageOpen, setImageOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState(""); //Stocke l'URL de l'image
 
   const handleOpen = (newOpen) => {
     setOpen(newOpen);
@@ -56,34 +46,67 @@ function Portfolio() {
     </Box>
   );
 
-  const handleImageClick = (imageSrc) => {
-    setSelectedImage(imageSrc);
-    setImageOpen(true);
-  };
+  let formule;
 
-  const closeModal = () => {
-    setImageOpen(false);
-    setSelectedImage("");
-  };
-
-  const imagePath = image.map((data, i) => {
-    return (
-      <ScrollAnimation
-        animateIn="fadeInUp"
-        key={i}
-        className={styles.image}
-      >
-        <Image
-          src={data.image}
-          alt={data.name}
-          width={data.with}
-          height={data.height}
-          onClick={() => handleImageClick(data.image)}
-          style={{ cursor: "pointer" }}
-        />
-      </ScrollAnimation>
-    );
-  });
+   if (props.name === "mariage") {
+    formule =
+      <div>
+        <div>
+          <h1>Formule Instants</h1>
+          <span>650 €</span>
+          <p>
+            Cérémonie / Photos de groupe / Photo Couple / Début vin d'honneur
+            (2h)
+          </p>
+        </div>
+        <div>
+          <h1>Formule Douceur</h1>
+          <span>1500 €</span>
+          <p>
+            Préparatifs des mariés/ Cérémonie / Photos de groupe / Photo Couple / Vin d'honneur
+            (7h)
+          </p>
+        </div>
+        <div>
+          <h1>Formule Prestige</h1>
+          <span>2100 €</span>
+          <p>
+          Préparatifs des mariés/ Cérémonie / Photos de groupe / Photo Couple / Vin d'honneur / Jusqu'au gateau (00h00 MAX)
+          (10h)
+          </p>
+        </div>
+      </div>
+    ;
+  } else {
+    formule = 
+      <div>
+        <div>
+          <h1>Formule Instants</h1>
+          <h2>Séance de 30 min</h2>
+          <span>150 €</span>
+          <p>
+            Galerie complète envoyée (environ 50 photos)
+          </p>
+        </div>
+        <div>
+          <h1>Formule Douceur</h1>
+          <h2>Séance de 45 min</h2>
+          <span>200 €</span>
+          <p>
+          Galerie complète envoyée (environ 80 photos)
+          </p>
+        </div>
+        <div>
+          <h1>Formule Prestige</h1>
+          <h2>Séance d'1h</h2>
+          <span>250 €</span>
+          <p>
+          Galerie complète envoyée (environ 100 photos)
+          </p>
+        </div>
+      </div>
+  
+  }
 
   return (
     <div>
@@ -117,20 +140,11 @@ function Portfolio() {
           </a>
         </div>
       </div>
-      <div className={styles.imageContainer}>{imagePath}</div>
-      {imageOpen && (
-        <div className={styles.fullscreenModal} onClick={closeModal}>
-            <div className={styles.fullscreenImageContainer}>
-              <img
-                src={selectedImage}
-                alt="Fullscreen Image"
-                className={styles.fullscreenImage}
-              />
-            </div>
-        </div>
-      )}
+      <div>
+        <div className={styles.container}>{formule}</div>
+      </div>
     </div>
   );
 }
 
-export default Portfolio;
+export default Formule;
