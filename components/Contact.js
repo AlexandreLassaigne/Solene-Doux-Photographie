@@ -1,6 +1,6 @@
 import styles from "../styles/Contact.module.css";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
@@ -10,6 +10,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Head from "next/head";
 import { FaInstagram } from "react-icons/fa";
 import emailjs from "emailjs-com";
+import Image from "next/image";
 
 const SERVICE_ID = "service_g0noway";
 const TEMPLATE_ID = "template_u2k7z4r";
@@ -17,6 +18,16 @@ const PUBLIC_KEY = "EyXreh7zUmW7qIajw";
 
 function Contact() {
   const [open, setOpen] = useState(false);
+  const [nom, setNom] = useState("");
+  const [prenom, setPrenom] = useState("");
+  const [email, setEmail] = useState("");
+  const [tel, setTel] = useState("");
+  const [prestation, setPrestation] = useState("");
+  const [message, setMessage] = useState("");
+  const [messageError, setMessageError] = useState("");
+  const [wrongEmail, setWrongEmail] = useState(false);
+  const [wrongTel, setWrongTel] = useState(false);
+  const [emptyFields, setEmptyFields] = useState(false);
 
   const handleOpen = (newOpen) => {
     setOpen(newOpen);
@@ -53,19 +64,52 @@ function Contact() {
     </Box>
   );
 
+  const EMAIL_REGEX =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+  const TEL_REGEX =
+    /^(?:(?:\+|00)33[\s.-]{0,3}(?:\(0\)[\s.-]{0,3})?|0)[1-9](?:(?:[\s.-]?\d{2}){4}|\d{2}(?:[\s.-]?\d{3}){2})$/;
+
   const handleOnSubmit = (e) => {
     //empêche la page de se recharger lors de la soumission du formulaire
     e.preventDefault();
-    //envoie le formulaire via l'API EmailJS, en utilisant les paramètres
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY).then(
-      (result) => {
-        alert("Message envoyé");
-      },
-      (error) => {
-        alert("Désolé, il y a eu une erreur veuillez recommencer");
+    if (!email || !nom || !prenom || !tel || !prestation || !message) {
+      setEmptyFields(true);
+      setMessageError("Veuillez saisir tous les champs");
+    } else {
+      setEmptyFields(false);
+      if (!EMAIL_REGEX.test(email)) {
+        setWrongEmail(true);
+        setMessageError("Veuillez saisir un email au bon format");
+      } else {
+        setWrongEmail(false);
       }
-    );
-    e.target.reset();
+      if (!TEL_REGEX.test(tel)) {
+        setWrongTel(true);
+        setMessageError("Veuillez saisir un numéro de téléphone au bon format");
+      } else {
+        setWrongTel(false);
+      }
+      if (!wrongEmail && !wrongTel && !emptyFields) {
+        //envoie le formulaire via l'API EmailJS, en utilisant les paramètres
+        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY).then(
+          (result) => {
+            alert("Message envoyé");
+          },
+          (error) => {
+            alert("Désolé, il y a eu une erreur veuillez recommencer");
+          }
+        );
+        setEmail("");
+        setMessage("");
+        setNom("");
+        setPrenom("");
+        setPrestation("");
+        setTel('');
+        setMessageError('');
+        e.target.reset();
+      }
+    }
   };
 
   return (
@@ -89,7 +133,14 @@ function Contact() {
             {drawerList}
           </Drawer>
           <Link href="/">
-            <img src="/Logo/logo_nom2.png" className={styles.logo} />
+            <div className={styles.logo}>
+              <Image
+                width={296}
+                height={44}
+                src="/Logo/logo_nom2.png"
+                style={{ backgroundColor: "transparent" }}
+              />
+            </div>
           </Link>
           <a
             href="https://www.instagram.com/solenedoux_photographie/"
@@ -117,7 +168,8 @@ function Contact() {
               type="text"
               placeholder="Nom"
               className={styles.input}
-              required
+              onChange={(e) => setNom(e.target.value)}
+              value={nom}
               name="nom"
               id="nom"
             />
@@ -125,7 +177,8 @@ function Contact() {
               type="text"
               placeholder="Prénom"
               className={styles.input}
-              required
+              onChange={(e) => setPrenom(e.target.value)}
+              value={prenom}
               name="prenom"
               id="prenom"
             />
@@ -135,15 +188,17 @@ function Contact() {
               type="email"
               placeholder="Email"
               className={styles.input}
-              required
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
               name="email"
               id="email"
             />
             <input
-              type="téléphone"
+              type="tel"
               placeholder="Téléphone"
               className={styles.input}
-              required
+              onChange={(e) => setTel(e.target.value)}
+              value={tel}
               name="telephone"
               id="telephone"
             />
@@ -153,7 +208,8 @@ function Contact() {
               type="text"
               placeholder="Prestation"
               className={styles.input}
-              required
+              onChange={(e) => setPrestation(e.target.value)}
+              value={prestation}
               name="prestation"
               id="prestation"
             />
@@ -166,10 +222,14 @@ function Contact() {
               rows={8}
               cols={30}
               name="message"
-              required
+              onChange={(e) => setMessage(e.target.value)}
+              value={message}
             />
           </div>
           <div className={styles.buttonContainer}>
+            <div className={styles.messageError}>
+              {messageError}
+            </div>
             <button className={styles.button} type="submit">
               Envoyer
             </button>

@@ -15,6 +15,7 @@ import "animate.css";
 import "animate.css/animate.compat.css";
 import Image from "next/image";
 
+
 function Prestation() {
   const [open, setOpen] = useState(false);
 
@@ -71,7 +72,9 @@ function Prestation() {
             {drawerList}
           </Drawer>
           <Link href="/">
-            <img src="/Logo/logo_nom2.png" className={styles.logo} />
+          <div className={styles.logo}>
+            <Image width={296} height={44} src="/Logo/logo_nom2.png" style={{backgroundColor : 'transparent'}}/>
+          </div>
           </Link>
           <a
             href="https://www.instagram.com/solenedoux_photographie/"
@@ -102,7 +105,7 @@ function Prestation() {
             width={3974}
             height={5961}
           />
-          <Link href="/formule">
+          <Link href="/formuleAllaitement">
             <span className={styles.button}>Allaitement</span>
           </Link>
         </div>
@@ -113,7 +116,7 @@ function Prestation() {
             width={3913}
             height={5869}
           />
-          <Link href="/formule">
+          <Link href="/formuleCouple">
             <span className={styles.button}>Couple</span>
           </Link>
         </div>
@@ -130,7 +133,7 @@ function Prestation() {
             width={3978}
             height={5967}
           />
-          <Link href="/formule">
+          <Link href="/formuleDeco">
             <span className={styles.button}>Décoration d'intérieur</span>
           </Link>
         </div>
@@ -141,7 +144,7 @@ function Prestation() {
             width={4160}
             height={6240}
           />
-          <Link href="/formule">
+          <Link href="/formuleEVJF">
             <span className={styles.button}>EVJF</span>
           </Link>
         </div>
@@ -158,7 +161,7 @@ function Prestation() {
             width={3798}
             height={5697}
           />
-          <Link href="/formule">
+          <Link href="/formuleFamille">
             <span className={styles.button}>Famille</span>
           </Link>
         </div>
@@ -169,7 +172,7 @@ function Prestation() {
             width={2267}
             height={3400}
           />
-          <Link href="/formule">
+          <Link href="/formuleGrossesse">
             <span className={styles.button}>Grossesse</span>
           </Link>
         </div>
@@ -186,19 +189,19 @@ function Prestation() {
             width={3455}
             height={5183}
           />
-          <Link href="/formule">
+          <Link href="/formuleMariage">
             <span className={styles.button}>Mariage</span>
           </Link>
         </div>
         <div className={styles.container}>
           <Image
-            src="/Naissance/naissance4.jpg"
-            alt="photo de naissance"
-            width={2875}
-            height={4312}
+            src="/Professionnels_marques/professionnels_marques7.jpg"
+            alt="photo marques"
+            width={2527}
+            height={3790}
           />
-          <Link href="/formule">
-            <span className={styles.button}>Naissance</span>
+          <Link href="/formuleMarque">
+            <span className={styles.button}>Professionnels - Marques</span>
           </Link>
         </div>
       </ScrollAnimation>
@@ -209,13 +212,13 @@ function Prestation() {
       >
         <div className={styles.container}>
           <Image
-            src="/Professionnels_marques/professionnels_marques7.jpg"
-            alt="photo marques"
-            width={2527}
-            height={3790}
+            src="/Naissance/naissance4.jpg"
+            alt="photo de naissance"
+            width={2875}
+            height={4312}
           />
-          <Link href="/formule">
-            <span className={styles.button}>Professionnels - Marques</span>
+          <Link href="/formuleNaissance">
+            <span className={styles.button}>Naissance</span>
           </Link>
         </div>
         <div className={styles.container}>
@@ -225,7 +228,7 @@ function Prestation() {
             width={4005}
             height={6008}
           />
-          <Link href="/formule">
+          <Link href="/formuleSolo">
             <span className={styles.button}>Solo - Confiance en soi</span>
           </Link>
         </div>
@@ -242,7 +245,7 @@ function Prestation() {
             width={3648}
             height={5472}
           />
-          <Link href="/formule">
+          <Link href="/formuleTBB">
             <span className={styles.button}>TBB</span>
           </Link>
         </div>

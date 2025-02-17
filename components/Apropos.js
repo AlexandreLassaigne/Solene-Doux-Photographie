@@ -71,7 +71,14 @@ export default function Apropos() {
             {drawerList}
           </Drawer>
           <Link href="/">
-            <img src="/Logo/logo_nom2.png" className={styles.logo} />
+            <div className={styles.logo}>
+              <Image
+                width={296}
+                height={44}
+                src="/Logo/logo_nom2.png"
+                style={{ backgroundColor: "transparent" }}
+              />
+            </div>
           </Link>
           <a
             href="https://www.instagram.com/solenedoux_photographie/"
@@ -82,7 +89,7 @@ export default function Apropos() {
           </a>
         </div>
       </div>
-      <ScrollAnimation animateIn="fadeInUp" >
+      <ScrollAnimation animateIn="fadeInUp">
         <div className={styles.presentationContainer}>
           <p className={styles.presentationTexte}>
             Enchanté,

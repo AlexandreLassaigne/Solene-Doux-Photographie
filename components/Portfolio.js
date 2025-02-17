@@ -15,9 +15,6 @@ import Image from "next/image";
 import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css";
 import "animate.css/animate.compat.css";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
 
 function Portfolio() {
   const [open, setOpen] = useState(false);
@@ -106,7 +103,9 @@ function Portfolio() {
             {drawerList}
           </Drawer>
           <Link href="/">
-            <img src="/Logo/logo_nom2.png" className={styles.logo} />
+          <div className={styles.logo}>
+            <Image width={296} height={44} src="/Logo/logo_nom2.png" style={{backgroundColor : 'transparent'}}/>
+          </div>
           </Link>
           <a
             href="https://www.instagram.com/solenedoux_photographie/"

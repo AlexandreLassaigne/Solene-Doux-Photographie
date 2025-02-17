@@ -70,7 +70,10 @@ function Home() {
           >
             {drawerList}
           </Drawer>
-          <img src="/Logo/logo_nom2.png" className={styles.logo} />
+          <div className={styles.logo}>
+            <Image width={296} height={44} src="/Logo/logo_nom2.png" style={{backgroundColor : 'transparent'}}/>
+          </div>
+          
           <a
             href="https://www.instagram.com/solenedoux_photographie/"
             className={styles.instaIcon}
@@ -85,7 +88,6 @@ function Home() {
             autoplayInterval={3000}
             wrapAround={true}
             wrapMode="wrap"
-            showArrows="hover"
           >
             <img
               src="/Accueil/accueil3.jpg"
@@ -101,6 +103,11 @@ function Home() {
               src="/Accueil/accueil2.jpg"
               alt="Photo acceuil naissance"
               className={styles.imageHead}
+            />
+            <img
+              src="/Accueil/accueil4.jpg"
+              alt="Photo acceuil couple"
+              className={styles.imageHead1}
             />
           </Carousel>
         </div>

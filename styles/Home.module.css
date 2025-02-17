@@ -1,172 +1,184 @@
 .icon {
-    margin-top: 20px;
-    margin-left : 20px;
-    background-color: transparent;
-    cursor: pointer;
+  margin-top: 15px;
+  margin-left: 20px;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .list {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .lien {
-    cursor: pointer;
-    font-size: 32;
-    margin-top: 20px;
-    margin-bottom: 20px;
+  cursor: pointer;
+  font-size: 32;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .head {
-    display: flex;
-    width: 100vw;
-    height: 350px;
-    align-items: flex-start;
-    flex-wrap: wrap;
+  display: flex;
+  width: 100vw;
+  height: 350px;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .headContainer {
-    z-index: 1000;
-    display: flex;
-    width: 100vw;
-    align-items: flex-start;
-    background-color: rgba(228, 165, 113, 0.6);
-    position: fixed;
-    height: 70px;
+  z-index: 1000;
+  display: flex;
+  width: 100vw;
+  align-items: flex-start;
+  background-color: rgba(228, 165, 113, 0.6);
+  position: fixed;
+  height: 70px;
 }
 
-.carouselContainer{
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+.carouselContainer {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .logo {
-    margin-left: auto;
-    margin-right: auto;
-    background-color: transparent;
-    height: 50px;
-    margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: transparent;
+  margin-top: 10px;
 }
 
-.imageHead1{
-    width: 100vw;
-    object-fit: cover;
+.imageHead1 {
+  width: 100vw;
+  object-fit: cover;
 }
 
 .imageHead {
-    height: 100vh;
-    object-fit: cover;
+  height: 100vh;
+  object-fit: cover;
 }
 
 .image {
-    width: 40%;
-    margin: 10px;
+  width: 40%;
+  margin: 10px;
 }
 
 .allContainer {
-    margin-top : 500px;
+  margin-top: 500px;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
 }
 
 .description {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 30%;
-    height: auto;
-    margin: 100px;
-    font-size: 18px;
-    font-weight: normal;
-    font-family: 'Poppins' ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: auto;
+  margin: 100px;
+  font-size: 22px;
+  font-family: "Poppins serif";
 }
 
-
 .button {
-    border : solid 1px;
-    background-color: transparent;
-    cursor: pointer;
-    font-size: 18px;
-    height: 50px;
-    width: 50%;
-    border-radius: 30px;
-    transition: 0.5s;
-    font-family:'Poppins';
-    margin-top: 40px;
+  border: solid 1px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  width: 50%;
+  border-radius: 30px;
+  transition: 0.5s;
+  font-family: "Poppins";
+  margin-top: 40px;
 }
 
 .button:hover {
-    background-color: rgb(228, 165, 113, 0.8);
-    color : #ffffff
+  background-color: rgb(228, 165, 113, 0.8);
+  color: #ffffff;
 }
 
 .buttonPrestation {
-    border : solid 1px;
-    background-color: transparent;
-    cursor: pointer;
-    font-size: 18px;
-    height: 50px;
-    width: 50%;
-    border-radius: 30px;
-    transition: 0.5s;
-    font-family:'Poppins';
-    margin-top: 40px;
+  border: solid 1px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  width: 50%;
+  border-radius: 30px;
+  transition: 0.5s;
+  font-family: "Poppins";
+  margin-top: 40px;
 }
 
 .buttonPrestation:hover {
-    background-color: rgb(228, 165, 113, 0.8);
-    color : #ffffff
+  background-color: rgb(228, 165, 113, 0.8);
+  color: #ffffff;
 }
 
 .contactDescription {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    margin: 100px;
-    font-size: 18px;
-    font-weight: normal;
-    font-family: 'Poppins';
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin: 100px;
+  font-size: 22px;
+  font-family: "Poppins serif";
 }
 
 .buttonContact {
-    border : solid 1px;
-    background-color: transparent;
-    cursor: pointer;
-    font-size: 18px;
-    margin-right: 200px;
-    height: 50px;
-    width: 12%;
-    border-radius: 30px;
-    transition: 0.5s;
-    font-family:'Poppins';
-    margin-top: 40px;
+  border: solid 1px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  margin-right: 200px;
+  height: 50px;
+  width: 12%;
+  border-radius: 30px;
+  transition: 0.5s;
+  font-family: "Poppins";
+  margin-top: 40px;
 }
 
 .buttonContact:hover {
-    background-color: rgb(228, 165, 113, 0.8);
-    color : #ffffff
+  background-color: rgb(228, 165, 113, 0.8);
+  color: #ffffff;
 }
 
 .instaIcon {
-    background-color: transparent;
-    margin-top: 15px;
-    margin-right : 20px;
-    cursor: pointer;
-    color: #000000
+  background-color: transparent;
+  margin-top: 15px;
+  margin-right: 20px;
+  cursor: pointer;
+  color: #000000;
 }
 
 .swiperSlide {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
     align-items: center;
-    z-index: 1;
+    padding: 1rem;
   }
+  .image {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+  .description {
+    max-width: 100%;
+    text-align: center;
+  }
+}
