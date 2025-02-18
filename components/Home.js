@@ -25,6 +25,7 @@ function Home() {
   const drawerList = (
     <Box
       sx={{ width: 250, height: "100vh", fontSize: 34 }}
+      className={styles.box}
       role="presentation"
       onClick={() => handleOpen(false)}
     >

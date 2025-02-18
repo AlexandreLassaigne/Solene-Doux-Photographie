@@ -1,145 +1,167 @@
 .icon {
-    margin-top: 15px;
-    margin-left : 20px;
-    background-color: transparent;
-    cursor: pointer;
+  margin-top: 15px;
+  margin-left: 20px;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .list {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .lien {
-    cursor: pointer;
-    font-size: 32;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-family: 'Poppins';
+  cursor: pointer;
+  font-size: 32;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "Poppins";
 }
 
 .head {
-    display: flex;
-    width: 100vw;
-    height: 100px;
-    align-items: flex-start;
+  display: flex;
+  width: 100vw;
+  height: 100px;
+  align-items: flex-start;
 }
 
 .headContainer {
-    z-index: 1;
-    display: flex;
-    width: 100vw;
-    align-items: flex-start;
-    background-color: rgb(228, 165, 113, 0.6);
-    position: fixed;
-    height: 70px;
+  z-index: 1;
+  display: flex;
+  width: 100vw;
+  align-items: flex-start;
+  background-color: rgb(228, 165, 113, 0.6);
+  position: fixed;
+  height: 70px;
 }
 
 .logo {
-    margin-left: auto;
-    margin-right: auto;
-    background-color: transparent;
-    margin-top: 10px;
-    cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: transparent;
+  margin-top: 10px;
+  cursor: pointer;
 }
 
 .text {
-    font-size: 32px;
-    padding-left: 40px;
+  font-size: 32px;
+  padding-left: 40px;
 }
 
 .inputContainer {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
 
 .nom {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .input {
-    background-color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    height: 30px;
-    width: 300px;
-    margin: 10px;
-    padding-left: 5px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  width: 300px;
+  margin: 10px;
+  padding-left: 5px;
 }
 
 .coordonees {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .prestation {
-    display: flex;
-    justify-content: center;
-    margin: 10px;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
 }
 
 .choice {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  width: 300px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.message {
+  display: flex;
+  justify-content: center;
+}
+
+.projet {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  height: 200px;
+  width: 610px;
+  max-width: 700px;
+  margin: 10px;
+}
+
+.texte {
+  margin-top: 4px;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.button {
+  width: 150px;
+  height: 40px;
+  border: solid 1px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.button:hover {
+  background-color: rgb(228, 165, 113, 0.8);
+  color: #ffffff;
+}
+
+.messageError {
+  color: #ff4500;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.instaIcon {
+  background-color: transparent;
+  margin-top: 15px;
+  margin-right: 20px;
+  cursor: pointer;
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  .input {
     background-color: #ffffff;
     border: none;
     border-radius: 5px;
     height: 30px;
-    width: 300px;
-    margin-bottom: 10px;
-    margin-left: 10px;
-}
-
-.message {
-    display: flex;
-    justify-content: center;
-}
-
-.projet {
+    width: 200px;
+    margin: 10px;
+    padding-left: 5px;
+  }
+  .projet {
     background-color: #ffffff;
     border: none;
     border-radius: 5px;
-    height: 200px;
-    width: 610px;
+    height: 100px;
+    width: 400px;
     margin: 10px;
+    max-width: 450px;
+  }
 }
-
-.texte {
-    margin-top: 4px;
-}
-
-.buttonContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-}
-
-.button {
-    width: 150px;
-    height: 40px;
-    border: solid 1px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-.button:hover {
-    background-color: rgb(228, 165, 113, 0.8);
-    color : #ffffff
-}
-
-.messageError {
-    color: #FF4500;
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-.instaIcon {
-    background-color: transparent;
-    margin-top: 15px;
-    margin-right : 20px;
-    cursor: pointer;
-    color: #000000
- }

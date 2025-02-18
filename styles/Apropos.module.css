@@ -1,90 +1,99 @@
 .icon {
-    margin-top: 15px;
-    margin-left : 20px;
-    background-color: transparent;
-    cursor: pointer;
+  margin-top: 15px;
+  margin-left: 20px;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .list {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .lien {
-    cursor: pointer;
-    font-size: 32;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-family: 'Poppins';
+  cursor: pointer;
+  font-size: 32;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: "Poppins";
 }
 
 .head {
-    display: flex;
-    width: 100vw;
-    height: 100px;
-    align-items: flex-start;
+  display: flex;
+  width: 100vw;
+  height: 100px;
+  align-items: flex-start;
 }
 
 .headContainer {
-    z-index: 1;
-    display: flex;
-    width: 100vw;
-    align-items: flex-start;
-    background-color: rgb(228, 165, 113, 0.6);
-    position: fixed;
-    height: 70px;
+  z-index: 1;
+  display: flex;
+  width: 100vw;
+  align-items: flex-start;
+  background-color: rgb(228, 165, 113, 0.6);
+  position: fixed;
+  height: 70px;
 }
 
 .logo {
-    margin-left: auto;
-    margin-right: auto;
-    background-color: transparent;
-    margin-top: 10px;
-    cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: transparent;
+  margin-top: 10px;
+  cursor: pointer;
 }
 
-
 .presentationContainer {
-    display: flex;
-    justify-content: space-around;
-    font-family:'Poppins serif';
-    margin-bottom: 100px;
+  display: flex;
+  justify-content: space-around;
+  font-family: "Poppins serif";
+  margin-bottom: 100px;
 }
 
 .presentationTexte {
-    text-align: center;
-    width: 40%;
-    font-size: 22px;
-    margin-top: auto;
-    margin-bottom: auto;
+  text-align: center;
+  width: 40%;
+  font-size: 22px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .image {
-    width: 30%;
+  width: 30%;
 }
 
-
 .instaIcon {
-   background-color: transparent;
-   margin-top: 15px;
-   margin-right : 20px;
-   cursor: pointer;
-   color: #000000
+  background-color: transparent;
+  margin-top: 15px;
+  margin-right: 20px;
+  cursor: pointer;
+  color: #000000;
 }
 
 @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-      align-items: center;
-      padding: 1rem;
-    }
-    .image {
-      max-width: 100%;
-      margin-bottom: 1rem;
-    }
-    .description {
-      max-width: 100%;
-      text-align: center;
-    }
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
   }
-  
+  .image {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+  .description {
+    max-width: 100%;
+    text-align: center;
+  }
+  .presentationTexte {
+    text-align: center;
+    width: 40%;
+    font-size: 12px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .box {
+    width: 200px;
+    height: 100vh;
+    font-size: 24px;
+  }
+}

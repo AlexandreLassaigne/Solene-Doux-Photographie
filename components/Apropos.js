@@ -24,6 +24,7 @@ export default function Apropos() {
 
   const drawerList = (
     <Box
+    className={styles.box}
       sx={{ width: 250, height: "100vh", fontSize: 34 }}
       role="presentation"
       onClick={() => handleOpen(false)}
@@ -89,9 +90,10 @@ export default function Apropos() {
           </a>
         </div>
       </div>
-      <ScrollAnimation animateIn="fadeInUp">
-        <div className={styles.presentationContainer}>
-          <p className={styles.presentationTexte}>
+      <div>
+        <ScrollAnimation animateIn="fadeInUp">
+          <div className={styles.presentationContainer}>
+            <p className={styles.presentationTexte}>
             Enchanté,
             <br />
             <br />
@@ -120,11 +122,14 @@ export default function Apropos() {
               height={5758}
             />
           </div>
-        </div>
-      </ScrollAnimation>
-      <ScrollAnimation animateIn="fadeInUp" delay={1 * 100}>
-        <div className={styles.presentationContainer}>
-          <div className={styles.image}>
+          </div>
+        </ScrollAnimation>
+      </div>
+      <div>
+        {" "}
+        <ScrollAnimation animateIn="fadeInUp" delay={1 * 100}>
+          <div className={styles.presentationContainer}>
+            <div className={styles.image}>
             <Image
               src="/Solene/solene2.jpg"
               alt="photo de portrait"
@@ -148,8 +153,9 @@ export default function Apropos() {
             envies photographiques !
             <br />
           </p>
-        </div>
-      </ScrollAnimation>
+          </div>
+        </ScrollAnimation>
+      </div>
     </div>
   );
 }

@@ -5,6 +5,12 @@
   cursor: pointer;
 }
 
+.chevron {
+  margin-left: 20px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 .list {
   display: flex;
   flex-direction: column;
@@ -100,12 +106,19 @@
     align-items: center;
     padding: 1rem;
   }
-  .image {
-    max-width: 100%;
-    margin-bottom: 1rem;
-  }
   .description {
     max-width: 100%;
     text-align: center;
+  }
+  .button {
+    font-size: 12px;
+  }
+  .box {
+    width: 200px;
+    height: 100vh;
+    font-size: 24px;
+  }
+  .presationTexte {
+    font-size: 12px;
   }
 }
