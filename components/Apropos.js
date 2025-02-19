@@ -24,7 +24,7 @@ export default function Apropos() {
 
   const drawerList = (
     <Box
-    className={styles.box}
+      className={styles.box}
       sx={{ width: 250, height: "100vh", fontSize: 34 }}
       role="presentation"
       onClick={() => handleOpen(false)}
@@ -54,6 +54,10 @@ export default function Apropos() {
   return (
     <div>
       <Head>
+        <meta
+          name="description"
+          content="Photographe spécialisée dans les moments forts de la vie, mariage, maternité, famille, etc."
+        />
         <title>Solène Photographie</title>
       </Head>
       <div className={styles.head}>
@@ -63,11 +67,14 @@ export default function Apropos() {
             onClick={() => handleOpen(true)}
             className={styles.icon}
             size="2x"
+            aria-label="Menu"
+            role="Boutton"
           />
           <Drawer
             open={open}
             onClose={() => handleOpen(false)}
             sx={{ backgroundColor: "transparent" }}
+            keepMounted //Evite le rechargement du contenu lorsque le menu est fermé
           >
             {drawerList}
           </Drawer>
@@ -77,6 +84,7 @@ export default function Apropos() {
                 width={296}
                 height={44}
                 src="/Logo/logo_nom2.png"
+                alt="Logo Solene Doux"
                 style={{ backgroundColor: "transparent" }}
               />
             </div>
@@ -86,73 +94,76 @@ export default function Apropos() {
             className={styles.instaIcon}
             target="_blank"
           >
-            <FaInstagram size={40} style={{ backgroundColor: "transparent" }} />
+            <FaInstagram
+              size={40}
+              style={{ backgroundColor: "transparent" }}
+              aria-label="Instagram"
+            />
           </a>
         </div>
       </div>
       <div>
-        <ScrollAnimation animateIn="fadeInUp">
           <div className={styles.presentationContainer}>
             <p className={styles.presentationTexte}>
-            Enchanté,
-            <br />
-            <br />
-            Moi c’est Solène, j’ai 30 ans et je vis dans la région Toulousaine
-            depuis ma plus tendre enfance.
-            <br />
-            <br />
-            Photographe passionnée et spécialisée dans les moments forts de la
-            vie, mon objectif : capturer les émotions authentiques et sublimer
-            chaque instant avec sensibilité et professionnalisme
-            <br />
-            <br />
-            Que ce soit pour un mariage, une séance maternité, des photos de
-            famille ou encore un shooting pour des professionnels, je m'efforce
-            de créer des images intemporelles qui racontent votre histoire.
-            Chaque projet est unique, et j'aime m'adapter à vos envies et
-            besoins pour queles souvenirs que vous conserverez soient à la
-            hauteur de vos attentes.
-            <br />
-          </p>
-          <div className={styles.image}>
-            <Image
-              src="/Solene/solene4.jpg"
-              alt="photo de portrait"
-              width={3839}
-              height={5758}
-            />
+              Enchanté,
+              <br />
+              <br />
+              Moi c’est Solène, j’ai 30 ans et je vis dans la région Toulousaine
+              depuis ma plus tendre enfance.
+              <br />
+              <br />
+              Photographe passionnée et spécialisée dans les moments forts de la
+              vie, mon objectif : capturer les émotions authentiques et sublimer
+              chaque instant avec sensibilité et professionnalisme
+              <br />
+              <br />
+              Que ce soit pour un mariage, une séance maternité, des photos de
+              famille ou encore un shooting pour des professionnels, je
+              m'efforce de créer des images intemporelles qui racontent votre
+              histoire. Chaque projet est unique, et j'aime m'adapter à vos
+              envies et besoins pour queles souvenirs que vous conserverez
+              soient à la hauteur de vos attentes.
+              <br />
+            </p>
+            <div className={styles.image}>
+              <Image
+                src="/Solene/solene4.jpg"
+                alt="photo de Solene"
+                width={3839}
+                height={5758}
+              />
+            </div>
           </div>
-          </div>
-        </ScrollAnimation>
       </div>
       <div>
         {" "}
-        <ScrollAnimation animateIn="fadeInUp" delay={1 * 100}>
+        <ScrollAnimation animateIn="fadeInUp" delay={1 * 100} offset={100}>
           <div className={styles.presentationContainer}>
             <div className={styles.image}>
-            <Image
-              src="/Solene/solene2.jpg"
-              alt="photo de portrait"
-              width={3501}
-              height={5251}
-            />
-          </div>
-          <p className={styles.presentationTexte}>
-            Avec un oeil attentif aux détails et une approche naturelle, je
-            cherche à immortaliser les moments les plus précieux tout en vous
-            offrant une expérience conviviale et sans pression.
-            <br />
-            <br />
-            Ma priorité est que vous vous sentiez à l’aise devant l’objectif et
-            que chaque cliché reflète votre personnalité. Si vous recherchez des
-            images pleines d’émotions, sincères et créatives, je serai ravie de
-            vous accompagner dans cette aventure.
-            <br />
-            <br />
-            N’hésitez pas à me contacter pour discuter de vos projets et de vos
-            envies photographiques !
-            <br />
-          </p>
+              <Image
+                src="/Solene/solene2.jpg"
+                alt="photo de Solene"
+                width={3501}
+                height={5251}
+                loading="lazy"
+              />
+            </div>
+            <p className={styles.presentationTexte}>
+              Avec un oeil attentif aux détails et une approche naturelle, je
+              cherche à immortaliser les moments les plus précieux tout en vous
+              offrant une expérience conviviale et sans pression.
+              <br />
+              <br />
+              Ma priorité est que vous vous sentiez à l’aise devant l’objectif
+              et que chaque cliché reflète votre personnalité. Si vous
+              recherchez des images pleines d’émotions, sincères et créatives,
+              je serai ravie de vous accompagner dans cette aventure.
+              <br />
+              <br />
+              N’hésitez pas à me contacter pour discuter de vos projets et de
+              vos envies photographiques !
+              <br />
+            </p>
           </div>
         </ScrollAnimation>
       </div>

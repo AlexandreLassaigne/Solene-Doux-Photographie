@@ -80,25 +80,44 @@ function Prestation() {
   ];
 
   const prestation = prestations.map((data) => {
-    console.log(data.name);
+    const isScrollAnimationNeeded = prestations.indexOf(data) >= 3;
     return (
       <div className={styles.container}>
-        <ScrollAnimation animateIn="fadeInUp">
+        {isScrollAnimationNeeded ? (
+          <ScrollAnimation animateIn="fadeInUp" delay={1 * 100}>
+            <div className={styles.image}>
+              <Image
+                src={data.source}
+                alt={`photo ${data.name}`}
+                width={3974}
+                height={5961}
+                loading="lazy"
+              />
+            </div>
+            <button
+              className={styles.button}
+              onClick={() => handleFormule(data.name)}
+            >
+              {data.name}
+            </button>
+          </ScrollAnimation>
+        ) : (
           <div className={styles.image}>
             <Image
               src={data.source}
               alt={`photo ${data.name}`}
               width={3974}
               height={5961}
+              loading="lazy"
             />
+            <button
+              className={styles.button}
+              onClick={() => handleFormule(data.name)}
+            >
+              {data.name}
+            </button>
           </div>
-          <button
-            className={styles.button}
-            onClick={() => handleFormule(data.name)}
-          >
-            {data.name}
-          </button>
-        </ScrollAnimation>
+        )}
       </div>
     );
   });
@@ -150,6 +169,10 @@ function Prestation() {
   return (
     <div>
       <Head>
+        <meta
+          name="description"
+          content="Photographe spécialisée dans les moments forts de la vie, mariage, maternité, famille, etc."
+        />
         <title>Solène Photographie</title>
       </Head>
       <div className={styles.head}>
@@ -159,6 +182,8 @@ function Prestation() {
             onClick={() => handleOpen(true)}
             className={styles.icon}
             size="2x"
+            aria-label="Menu"
+            role="Boutton"
           />
           <Drawer
             open={open}
@@ -173,7 +198,9 @@ function Prestation() {
                 width={296}
                 height={44}
                 src="/Logo/logo_nom2.png"
+                alt="Logo Solene Doux"
                 style={{ backgroundColor: "transparent" }}
+                loading="lazy"
               />
             </div>
           </Link>
@@ -182,7 +209,11 @@ function Prestation() {
             className={styles.instaIcon}
             target="_blank"
           >
-            <FaInstagram style={{ backgroundColor: "transparent" }} size={40} />
+            <FaInstagram
+              style={{ backgroundColor: "transparent" }}
+              size={40}
+              aria-label="Instagram"
+            />
           </a>
         </div>
       </div>
@@ -207,6 +238,8 @@ function Prestation() {
             onClick={() => handlePresta()}
             className={styles.chevron}
             size="2x"
+            aria-label="Flèche"
+            role="Retour en arrière"
           />
           <Formule name={formuleName} />
         </div>

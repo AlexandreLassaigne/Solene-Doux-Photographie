@@ -54,6 +54,11 @@ function Home() {
   return (
     <div>
       <Head>
+        <link rel="preload" href="/Logo/logo_nom2.WebP" as="image" />
+        <meta
+          name="description"
+          content="Photographe spécialisée dans les moments forts de la vie, mariage, maternité, famille, etc."
+        />
         <title>Solène Photographie</title>
       </Head>
       <div className={styles.head}>
@@ -63,24 +68,39 @@ function Home() {
             onClick={() => handleOpen(true)}
             className={styles.icon}
             size="2x"
+            aria-label="Menu"
+            role="Boutton"
           />
           <Drawer
             open={open}
             onClose={() => handleOpen(false)}
             sx={{ backgroundColor: "transparent" }}
+            keepMounted //Evite le rechargement du contenu lorsque le menu est fermé
           >
             {drawerList}
           </Drawer>
           <div className={styles.logo}>
-            <Image width={296} height={44} src="/Logo/logo_nom2.png" style={{backgroundColor : 'transparent'}}/>
+            <Image
+              width={290}
+              height={44}
+              src="/Logo/logo_nom2.png"
+              alt="Logo Solene Doux"
+              style={{ backgroundColor: "transparent" }}
+              priority
+              loading="eager"
+            />
           </div>
-          
+
           <a
             href="https://www.instagram.com/solenedoux_photographie/"
             className={styles.instaIcon}
             target="_blank"
           >
-            <FaInstagram style={{ backgroundColor: "transparent" }} size={40} />
+            <FaInstagram
+              style={{ backgroundColor: "transparent" }}
+              size={40}
+              aria-label="Instagram"
+            />
           </a>
         </div>
         <div className={styles.carouselContainer}>
@@ -119,9 +139,10 @@ function Home() {
             <div className={styles.image}>
               <Image
                 src="/Solene/solene3.jpg"
-                alt="photo portrait"
+                alt="photo de Solene"
                 width={3510}
                 height={5270}
+                loading="lazy"
               />
             </div>
             <div className={styles.description}>
@@ -161,9 +182,10 @@ function Home() {
             <div className={styles.image}>
               <Image
                 src="/Couple/couple8.jpg"
-                alt="photo"
+                alt="photo de couple"
                 width={4160}
                 height={6240}
+                loading="lazy"
               />
             </div>
           </div>
@@ -173,9 +195,10 @@ function Home() {
             <div className={styles.image}>
               <Image
                 src="/EVJF/evjf5.jpg"
-                alt="photo"
+                alt="photo EVJF"
                 width={4160}
                 height={6240}
+                loading="lazy"
               />
             </div>
 
@@ -191,7 +214,7 @@ function Home() {
             </div>
           </div>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInUp" delay={1 * 100}>
+       {/*  <ScrollAnimation animateIn="fadeInUp" delay={1 * 100}>
           <div className={styles.contactDescription}>
             <p className={styles.contactText}>
               Vous avez un projet en tête ou des questions ?<br /> N’hésitez pas
@@ -202,7 +225,7 @@ function Home() {
               <button className={styles.buttonContact}>Contact</button>
             </Link>
           </div>
-        </ScrollAnimation>
+        </ScrollAnimation> */}
       </div>
     </div>
   );

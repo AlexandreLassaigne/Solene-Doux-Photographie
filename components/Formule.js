@@ -6,7 +6,6 @@ import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css/animate.compat.css";
 
 function Formule(props) {
-
   let formules;
   if (props.name === "Mariage") {
     formules = (
@@ -26,41 +25,40 @@ function Formule(props) {
             Cette séance se fait en extérieur ou chez vous, votre cocon.
           </p>
         </div>
-        <ScrollAnimation animateIn="fadeInUp">
-          <div className={styles.container}>
-            <div className={styles.image}>
-              <Image
-                src="/Mariage/mariage14.jpg"
-                alt="photo portrait"
-                width={3510}
-                height={5270}
-              />
+        <div className={styles.container}>
+          <div className={styles.image}>
+            <Image
+              src="/Mariage/mariage14.jpg"
+              alt="photo Mariage"
+              width={3510}
+              height={5270}
+              loading="lazy"
+            />
+          </div>
+          <div className={styles.description}>
+            <div>
+              <h1 className={styles.formulaTitle}>Formule Instants</h1>
+              <h2 className={styles.h2}>Durée total : 2h</h2>
+              <span className={styles.price}>650 €</span>
+              <p className={styles.p}>
+                Cérémonie / Photos de groupe / Photos de couple / Début du vin
+                d'honneur
+              </p>
             </div>
-            <div className={styles.description}>
-              <div>
-                <h1 className={styles.formulaTitle}>Formule Instants</h1>
-                <h2 className={styles.h2}>Durée total : 2h</h2>
-                <span className={styles.price}>650 €</span>
-                <p className={styles.p}>
-                  Cérémonie / Photos de groupe / Photos de couple / Début du vin
-                  d'honneur
+            <div>
+              <Link href="/contact">
+                <p style={{ textAlign: "center" }}>
+                  Pour plus d'informations{" "}
+                  <span
+                    style={{ cursor: "pointer", textDecoration: "underline" }}
+                  >
+                    Contactez-moi
+                  </span>
                 </p>
-              </div>
-              <div>
-                <Link href="/contact">
-                  <p style={{ textAlign: "center" }}>
-                    Pour plus d'informations{" "}
-                    <span
-                      style={{ cursor: "pointer", textDecoration: "underline" }}
-                    >
-                      Contactez-moi
-                    </span>
-                  </p>
-                </Link>
-              </div>
+              </Link>
             </div>
           </div>
-        </ScrollAnimation>
+        </div>
         <ScrollAnimation animateIn="fadeInRight" delay={1 * 100}>
           <div className={styles.container}>
             <div className={styles.description}>
@@ -89,9 +87,10 @@ function Formule(props) {
             <div className={styles.image}>
               <Image
                 src="/Mariage/mariage8.jpg"
-                alt="photo portrait"
+                alt="photo Mariage"
                 width={3510}
                 height={5270}
+                loading="lazy"
               />
             </div>
           </div>
@@ -101,9 +100,10 @@ function Formule(props) {
             <div className={styles.image}>
               <Image
                 src="/Mariage/mariage1.jpg"
-                alt="photo portrait"
+                alt="photo Mariage"
                 width={3510}
                 height={5270}
+                loading="lazy"
               />
             </div>
             <div className={styles.description}>
@@ -151,41 +151,40 @@ function Formule(props) {
             Cette séance se fait en extérieur ou chez vous, votre cocon.
           </p>
         </div>
-        <ScrollAnimation animateIn="fadeInUp">
-          <div className={styles.container}>
-            <div className={styles.image}>
-              <Image
-                src="/Allaitement/allaitement1.jpg"
-                alt="photo portrait"
-                width={3510}
-                height={5270}
-              />
+        <div className={styles.container}>
+          <div className={styles.image}>
+            <Image
+              src="/Allaitement/allaitement1.jpg"
+              alt="photo Allaitement"
+              width={3510}
+              height={5270}
+              loading="lazy"
+            />
+          </div>
+          <div className={styles.description}>
+            <div>
+              <h1 className={styles.formulaTitle}>Formule Instants</h1>
+              <h2 className={styles.h2}>Séance de 30 min</h2>
+              <span className={styles.price}>150 €</span>
+              <p className={styles.p}>
+                Galerie complète envoyée (environ 50 photos)
+              </p>
             </div>
-            <div className={styles.description}>
-              <div>
-                <h1 className={styles.formulaTitle}>Formule Instants</h1>
-                <h2 className={styles.h2}>Séance de 30 min</h2>
-                <span className={styles.price}>150 €</span>
-                <p className={styles.p}>
-                  Galerie complète envoyée (environ 50 photos)
-                </p>
-              </div>
 
-              <div>
-                <Link href="/contact">
-                  <p style={{ textAlign: "center" }}>
-                    Pour plus d'informations{" "}
-                    <span
-                      style={{ cursor: "pointer", textDecoration: "underline" }}
-                    >
-                      Contactez-moi
-                    </span>
-                  </p>
-                </Link>
-              </div>
+            <div>
+              <Link href="/contact">
+                <p style={{ textAlign: "center" }}>
+                  Pour plus d'informations{" "}
+                  <span
+                    style={{ cursor: "pointer", textDecoration: "underline" }}
+                  >
+                    Contactez-moi
+                  </span>
+                </p>
+              </Link>
             </div>
           </div>
-        </ScrollAnimation>
+        </div>
         <ScrollAnimation animateIn="fadeInRight" delay={1 * 100}>
           <div className={styles.container}>
             <div className={styles.description}>
@@ -213,9 +212,10 @@ function Formule(props) {
             <div className={styles.image}>
               <Image
                 src="/Allaitement/allaitement2.jpg"
-                alt="photo portrait"
+                alt="photo Allaitement"
                 width={3510}
                 height={5270}
+                loading="lazy"
               />
             </div>
           </div>
@@ -225,9 +225,10 @@ function Formule(props) {
             <div className={styles.image}>
               <Image
                 src="/Allaitement/allaitement3.jpg"
-                alt="photo portrait"
+                alt="photo Allaitement"
                 width={3510}
                 height={5270}
+                loading="lazy"
               />
             </div>
             <div className={styles.description}>
@@ -274,41 +275,40 @@ function Formule(props) {
             Cette séance se fait en extérieur ou chez vous, votre cocon.
           </p>
         </div>
-        <ScrollAnimation animateIn="fadeInUp">
-          <div className={styles.container}>
-            <div className={styles.image}>
-              <Image
-                src="/Couple/couple3.jpg"
-                alt="photo portrait"
-                width={3510}
-                height={5270}
-              />
+        <div className={styles.container}>
+          <div className={styles.image}>
+            <Image
+              src="/Couple/couple3.jpg"
+              alt="photo Couple"
+              width={3510}
+              height={5270}
+              loading="lazy"
+            />
+          </div>
+          <div className={styles.description}>
+            <div>
+              <h1 className={styles.formulaTitle}>Formule Instants</h1>
+              <h2 className={styles.h2}>Séance de 30 min</h2>
+              <span className={styles.price}>150 €</span>
+              <p className={styles.p}>
+                Galerie complète envoyée (environ 50 photos)
+              </p>
             </div>
-            <div className={styles.description}>
-              <div>
-                <h1 className={styles.formulaTitle}>Formule Instants</h1>
-                <h2 className={styles.h2}>Séance de 30 min</h2>
-                <span className={styles.price}>150 €</span>
-                <p className={styles.p}>
-                  Galerie complète envoyée (environ 50 photos)
-                </p>
-              </div>
 
-              <div>
-                <Link href="/contact">
-                  <p style={{ textAlign: "center" }}>
-                    Pour plus d'informations{" "}
-                    <span
-                      style={{ cursor: "pointer", textDecoration: "underline" }}
-                    >
-                      Contactez-moi
-                    </span>
-                  </p>
-                </Link>
-              </div>
+            <div>
+              <Link href="/contact">
+                <p style={{ textAlign: "center" }}>
+                  Pour plus d'informations{" "}
+                  <span
+                    style={{ cursor: "pointer", textDecoration: "underline" }}
+                  >
+                    Contactez-moi
+                  </span>
+                </p>
+              </Link>
             </div>
           </div>
-        </ScrollAnimation>
+        </div>
         <ScrollAnimation animateIn="fadeInRight" delay={1 * 100}>
           <div className={styles.container}>
             <div className={styles.description}>
@@ -336,9 +336,10 @@ function Formule(props) {
             <div className={styles.image}>
               <Image
                 src="/Couple/couple5.jpg"
-                alt="photo portrait"
+                alt="photo Couple"
                 width={3510}
                 height={5270}
+                loading="lazy"
               />
             </div>
           </div>
@@ -348,9 +349,10 @@ function Formule(props) {
             <div className={styles.image}>
               <Image
                 src="/Couple/couple7.jpg"
-                alt="photo portrait"
+                alt="photo Couple"
                 width={3510}
                 height={5270}
+                loading="lazy"
               />
             </div>
             <div className={styles.description}>
@@ -397,41 +399,40 @@ function Formule(props) {
             Cette séance se fait en extérieur ou chez vous, votre cocon.
           </p>
         </div>
-        <ScrollAnimation animateIn="fadeInUp">
-          <div className={styles.container}>
-            <div className={styles.image}>
-              <Image
-                src="/Deco/deco10.jpg"
-                alt="photo portrait"
-                width={3510}
-                height={5270}
-              />
+        <div className={styles.container}>
+          <div className={styles.image}>
+            <Image
+              src="/Deco/deco10.jpg"
+              alt="photo Décoration d'intérieur"
+              width={3510}
+              height={5270}
+              loading="lazy"
+            />
+          </div>
+          <div className={styles.description}>
+            <div>
+              <h1 className={styles.formulaTitle}>Formule Instants</h1>
+              <h2 className={styles.h2}>Séance de 30 min</h2>
+              <span className={styles.price}>150 €</span>
+              <p className={styles.p}>
+                Galerie complète envoyée (environ 50 photos)
+              </p>
             </div>
-            <div className={styles.description}>
-              <div>
-                <h1 className={styles.formulaTitle}>Formule Instants</h1>
-                <h2 className={styles.h2}>Séance de 30 min</h2>
-                <span className={styles.price}>150 €</span>
-                <p className={styles.p}>
-                  Galerie complète envoyée (environ 50 photos)
-                </p>
-              </div>
 
-              <div>
-                <Link href="/contact">
-                  <p style={{ textAlign: "center" }}>
-                    Pour plus d'informations{" "}
-                    <span
-                      style={{ cursor: "pointer", textDecoration: "underline" }}
-                    >
-                      Contactez-moi
-                    </span>
-                  </p>
-                </Link>
-              </div>
+            <div>
+              <Link href="/contact">
+                <p style={{ textAlign: "center" }}>
+                  Pour plus d'informations{" "}
+                  <span
+                    style={{ cursor: "pointer", textDecoration: "underline" }}
+                  >
+                    Contactez-moi
+                  </span>
+                </p>
+              </Link>
             </div>
           </div>
-        </ScrollAnimation>
+        </div>
         <ScrollAnimation animateIn="fadeInRight" delay={1 * 100}>
           <div className={styles.container}>
             <div className={styles.description}>
@@ -459,9 +460,10 @@ function Formule(props) {
             <div className={styles.image}>
               <Image
                 src="/Deco/deco5.jpg"
-                alt="photo portrait"
+                alt="photo Décoration d'intérieur"
                 width={3510}
                 height={5270}
+                loading="lazy"
               />
             </div>
           </div>
@@ -471,9 +473,10 @@ function Formule(props) {
             <div className={styles.image}>
               <Image
                 src="/Deco/deco3.jpg"
-                alt="photo portrait"
+                alt="photo Décoration d'intérieur"
                 width={3510}
                 height={5270}
+                loading="lazy"
               />
             </div>
             <div className={styles.description}>
@@ -520,41 +523,40 @@ function Formule(props) {
             Cette séance se fait en extérieur ou chez vous, votre cocon.
           </p>
         </div>
-        <ScrollAnimation animateIn="fadeInUp">
-          <div className={styles.container}>
-            <div className={styles.image}>
-              <Image
-                src="/EVJF/evjf1.jpg"
-                alt="photo portrait"
-                width={3510}
-                height={5270}
-              />
+        <div className={styles.container}>
+          <div className={styles.image}>
+            <Image
+              src="/EVJF/evjf1.jpg"
+              alt="photo EVJF"
+              width={3510}
+              height={5270}
+              loading="lazy"
+            />
+          </div>
+          <div className={styles.description}>
+            <div>
+              <h1 className={styles.formulaTitle}>Formule Instants</h1>
+              <h2 className={styles.h2}>Séance de 30 min</h2>
+              <span className={styles.price}>150 €</span>
+              <p className={styles.p}>
+                Galerie complète envoyée (environ 50 photos)
+              </p>
             </div>
-            <div className={styles.description}>
-              <div>
-                <h1 className={styles.formulaTitle}>Formule Instants</h1>
-                <h2 className={styles.h2}>Séance de 30 min</h2>
-                <span className={styles.price}>150 €</span>
-                <p className={styles.p}>
-                  Galerie complète envoyée (environ 50 photos)
-                </p>
-              </div>
 
-              <div>
-                <Link href="/contact">
-                  <p style={{ textAlign: "center" }}>
-                    Pour plus d'informations{" "}
-                    <span
-                      style={{ cursor: "pointer", textDecoration: "underline" }}
-                    >
-                      Contactez-moi
-                    </span>
-                  </p>
-                </Link>
-              </div>
+            <div>
+              <Link href="/contact">
+                <p style={{ textAlign: "center" }}>
+                  Pour plus d'informations{" "}
+                  <span
+                    style={{ cursor: "pointer", textDecoration: "underline" }}
+                  >
+                    Contactez-moi
+                  </span>
+                </p>
+              </Link>
             </div>
           </div>
-        </ScrollAnimation>
+        </div>
         <ScrollAnimation animateIn="fadeInRight" delay={1 * 100}>
           <div className={styles.container}>
             <div className={styles.description}>
@@ -582,9 +584,10 @@ function Formule(props) {
             <div className={styles.image}>
               <Image
                 src="/EVJF/evjf12.jpg"
-                alt="photo portrait"
+                alt="photo EVJF"
                 width={3510}
                 height={5270}
+                loading="lazy"
               />
             </div>
           </div>
@@ -594,9 +597,10 @@ function Formule(props) {
             <div className={styles.image}>
               <Image
                 src="/EVJF/evjf7.jpg"
-                alt="photo portrait"
+                alt="photo EVJF"
                 width={3510}
                 height={5270}
+                loading="lazy"
               />
             </div>
             <div className={styles.description}>
@@ -643,41 +647,40 @@ function Formule(props) {
             Cette séance se fait en extérieur ou chez vous, votre cocon.
           </p>
         </div>
-        <ScrollAnimation animateIn="fadeInUp">
-          <div className={styles.container}>
-            <div className={styles.image}>
-              <Image
-                src="/Famille/famille2.jpg"
-                alt="photo portrait"
-                width={3510}
-                height={5270}
-              />
+        <div className={styles.container}>
+          <div className={styles.image}>
+            <Image
+              src="/Famille/famille2.jpg"
+              alt="photo Famille"
+              width={3510}
+              height={5270}
+              loading="lazy"
+            />
+          </div>
+          <div className={styles.description}>
+            <div>
+              <h1 className={styles.formulaTitle}>Formule Instants</h1>
+              <h2 className={styles.h2}>Séance de 30 min</h2>
+              <span className={styles.price}>150 €</span>
+              <p className={styles.p}>
+                Galerie complète envoyée (environ 50 photos)
+              </p>
             </div>
-            <div className={styles.description}>
-              <div>
-                <h1 className={styles.formulaTitle}>Formule Instants</h1>
-                <h2 className={styles.h2}>Séance de 30 min</h2>
-                <span className={styles.price}>150 €</span>
-                <p className={styles.p}>
-                  Galerie complète envoyée (environ 50 photos)
-                </p>
-              </div>
 
-              <div>
-                <Link href="/contact">
-                  <p style={{ textAlign: "center" }}>
-                    Pour plus d'informations{" "}
-                    <span
-                      style={{ cursor: "pointer", textDecoration: "underline" }}
-                    >
-                      Contactez-moi
-                    </span>
-                  </p>
-                </Link>
-              </div>
+            <div>
+              <Link href="/contact">
+                <p style={{ textAlign: "center" }}>
+                  Pour plus d'informations{" "}
+                  <span
+                    style={{ cursor: "pointer", textDecoration: "underline" }}
+                  >
+                    Contactez-moi
+                  </span>
+                </p>
+              </Link>
             </div>
           </div>
-        </ScrollAnimation>
+        </div>
         <ScrollAnimation animateIn="fadeInRight" delay={1 * 100}>
           <div className={styles.container}>
             <div className={styles.description}>
@@ -705,9 +708,10 @@ function Formule(props) {
             <div className={styles.image}>
               <Image
                 src="/Famille/famille6.jpg"
-                alt="photo portrait"
+                alt="photo Famille"
                 width={3510}
                 height={5270}
+                loading="lazy"
               />
             </div>
           </div>
@@ -717,9 +721,10 @@ function Formule(props) {
             <div className={styles.image}>
               <Image
                 src="/Famille/famille5.jpg"
-                alt="photo portrait"
+                alt="photo Famille"
                 width={3510}
                 height={5270}
+                loading="lazy"
               />
             </div>
             <div className={styles.description}>
@@ -766,41 +771,40 @@ function Formule(props) {
             Cette séance se fait en extérieur ou chez vous, votre cocon.
           </p>
         </div>
-        <ScrollAnimation animateIn="fadeInUp">
-          <div className={styles.container}>
-            <div className={styles.image}>
-              <Image
-                src="/Grossesse/grossesse9.jpg"
-                alt="photo portrait"
-                width={3510}
-                height={5270}
-              />
+        <div className={styles.container}>
+          <div className={styles.image}>
+            <Image
+              src="/Grossesse/grossesse9.jpg"
+              alt="photo Grossesse"
+              width={3510}
+              height={5270}
+              loading="lazy"
+            />
+          </div>
+          <div className={styles.description}>
+            <div>
+              <h1 className={styles.formulaTitle}>Formule Instants</h1>
+              <h2 className={styles.h2}>Séance de 30 min</h2>
+              <span className={styles.price}>150 €</span>
+              <p className={styles.p}>
+                Galerie complète envoyée (environ 50 photos)
+              </p>
             </div>
-            <div className={styles.description}>
-              <div>
-                <h1 className={styles.formulaTitle}>Formule Instants</h1>
-                <h2 className={styles.h2}>Séance de 30 min</h2>
-                <span className={styles.price}>150 €</span>
-                <p className={styles.p}>
-                  Galerie complète envoyée (environ 50 photos)
-                </p>
-              </div>
 
-              <div>
-                <Link href="/contact">
-                  <p style={{ textAlign: "center" }}>
-                    Pour plus d'informations{" "}
-                    <span
-                      style={{ cursor: "pointer", textDecoration: "underline" }}
-                    >
-                      Contactez-moi
-                    </span>
-                  </p>
-                </Link>
-              </div>
+            <div>
+              <Link href="/contact">
+                <p style={{ textAlign: "center" }}>
+                  Pour plus d'informations{" "}
+                  <span
+                    style={{ cursor: "pointer", textDecoration: "underline" }}
+                  >
+                    Contactez-moi
+                  </span>
+                </p>
+              </Link>
             </div>
           </div>
-        </ScrollAnimation>
+        </div>
         <ScrollAnimation animateIn="fadeInRight" delay={1 * 100}>
           <div className={styles.container}>
             <div className={styles.description}>
@@ -828,9 +832,10 @@ function Formule(props) {
             <div className={styles.image}>
               <Image
                 src="/Grossesse/grossesse7.jpg"
-                alt="photo portrait"
+                alt="photo Grossesse"
                 width={3510}
                 height={5270}
+                loading="lazy"
               />
             </div>
           </div>
@@ -840,9 +845,10 @@ function Formule(props) {
             <div className={styles.image}>
               <Image
                 src="/Grossesse/grossesse10.jpg"
-                alt="photo portrait"
+                alt="photo Grossesse"
                 width={3510}
                 height={5270}
+                loading="lazy"
               />
             </div>
             <div className={styles.description}>
@@ -888,41 +894,40 @@ function Formule(props) {
             votre univers, pour des souvenirs tendres et intemporels.
           </p>
         </div>
-        <ScrollAnimation animateIn="fadeInUp">
-          <div className={styles.container}>
-            <div className={styles.image}>
-              <Image
-                src="/Naissance/naissance1.jpg"
-                alt="photo portrait"
-                width={3510}
-                height={5270}
-              />
+        <div className={styles.container}>
+          <div className={styles.image}>
+            <Image
+              src="/Naissance/naissance1.jpg"
+              alt="photo Naissance"
+              width={3510}
+              height={5270}
+              loading="lazy"
+            />
+          </div>
+          <div className={styles.description}>
+            <div>
+              <h1 className={styles.formulaTitle}>Formule Instants</h1>
+              <h2 className={styles.h2}>Séance de 30 min</h2>
+              <span className={styles.price}>150 €</span>
+              <p className={styles.p}>
+                Galerie complète envoyée (environ 50 photos)
+              </p>
             </div>
-            <div className={styles.description}>
-              <div>
-                <h1 className={styles.formulaTitle}>Formule Instants</h1>
-                <h2 className={styles.h2}>Séance de 30 min</h2>
-                <span className={styles.price}>150 €</span>
-                <p className={styles.p}>
-                  Galerie complète envoyée (environ 50 photos)
-                </p>
-              </div>
 
-              <div>
-                <Link href="/contact">
-                  <p style={{ textAlign: "center" }}>
-                    Pour plus d'informations{" "}
-                    <span
-                      style={{ cursor: "pointer", textDecoration: "underline" }}
-                    >
-                      Contactez-moi
-                    </span>
-                  </p>
-                </Link>
-              </div>
+            <div>
+              <Link href="/contact">
+                <p style={{ textAlign: "center" }}>
+                  Pour plus d'informations{" "}
+                  <span
+                    style={{ cursor: "pointer", textDecoration: "underline" }}
+                  >
+                    Contactez-moi
+                  </span>
+                </p>
+              </Link>
             </div>
           </div>
-        </ScrollAnimation>
+        </div>
         <ScrollAnimation animateIn="fadeInRight" delay={1 * 100}>
           <div className={styles.container}>
             <div className={styles.description}>
@@ -950,9 +955,10 @@ function Formule(props) {
             <div className={styles.image}>
               <Image
                 src="/Naissance/naissance7.jpg"
-                alt="photo portrait"
+                alt="photo Naissance"
                 width={3510}
                 height={5270}
+                loading="lazy"
               />
             </div>
           </div>
@@ -962,9 +968,10 @@ function Formule(props) {
             <div className={styles.image}>
               <Image
                 src="/Naissance/naissance2.jpg"
-                alt="photo portrait"
+                alt="photo Naissance"
                 width={3510}
                 height={5270}
+                loading="lazy"
               />
             </div>
             <div className={styles.description}>
@@ -1011,41 +1018,40 @@ function Formule(props) {
             Cette séance se fait en extérieur ou chez vous, votre cocon.
           </p>
         </div>
-        <ScrollAnimation animateIn="fadeInUp">
-          <div className={styles.container}>
-            <div className={styles.image}>
-              <Image
-                src="/Professionnels_marques/professionnels_marques2.jpg"
-                alt="photo portrait"
-                width={3510}
-                height={5270}
-              />
+        <div className={styles.container}>
+          <div className={styles.image}>
+            <Image
+              src="/Professionnels_marques/professionnels_marques2.jpg"
+              alt="photo Professionnels - Marques"
+              width={3510}
+              height={5270}
+              loading="lazy"
+            />
+          </div>
+          <div className={styles.description}>
+            <div>
+              <h1 className={styles.formulaTitle}>Formule Instants</h1>
+              <h2 className={styles.h2}>Séance de 30 min</h2>
+              <span className={styles.price}>150 €</span>
+              <p className={styles.p}>
+                Galerie complète envoyée (environ 50 photos)
+              </p>
             </div>
-            <div className={styles.description}>
-              <div>
-                <h1 className={styles.formulaTitle}>Formule Instants</h1>
-                <h2 className={styles.h2}>Séance de 30 min</h2>
-                <span className={styles.price}>150 €</span>
-                <p className={styles.p}>
-                  Galerie complète envoyée (environ 50 photos)
-                </p>
-              </div>
 
-              <div>
-                <Link href="/contact">
-                  <p style={{ textAlign: "center" }}>
-                    Pour plus d'informations{" "}
-                    <span
-                      style={{ cursor: "pointer", textDecoration: "underline" }}
-                    >
-                      Contactez-moi
-                    </span>
-                  </p>
-                </Link>
-              </div>
+            <div>
+              <Link href="/contact">
+                <p style={{ textAlign: "center" }}>
+                  Pour plus d'informations{" "}
+                  <span
+                    style={{ cursor: "pointer", textDecoration: "underline" }}
+                  >
+                    Contactez-moi
+                  </span>
+                </p>
+              </Link>
             </div>
           </div>
-        </ScrollAnimation>
+        </div>
         <ScrollAnimation animateIn="fadeInRight" delay={1 * 100}>
           <div className={styles.container}>
             <div className={styles.description}>
@@ -1073,9 +1079,10 @@ function Formule(props) {
             <div className={styles.image}>
               <Image
                 src="/Professionnels_marques/professionnels_marques12.jpg"
-                alt="photo portrait"
+                alt="photo Professionnels - Marques"
                 width={3510}
                 height={5270}
+                loading="lazy"
               />
             </div>
           </div>
@@ -1085,9 +1092,10 @@ function Formule(props) {
             <div className={styles.image}>
               <Image
                 src="/Professionnels_marques/professionnels_marques17.jpg"
-                alt="photo portrait"
+                alt="photo Professionnels - Marques"
                 width={3510}
                 height={5270}
+                loading="lazy"
               />
             </div>
             <div className={styles.description}>
@@ -1134,41 +1142,40 @@ function Formule(props) {
             Cette séance se fait en extérieur ou chez vous, votre cocon.
           </p>
         </div>
-        <ScrollAnimation animateIn="fadeInUp">
-          <div className={styles.container}>
-            <div className={styles.image}>
-              <Image
-                src="/Solo_confiance_en_soi/solo_confiance10.jpg"
-                alt="photo portrait"
-                width={3510}
-                height={5270}
-              />
+        <div className={styles.container}>
+          <div className={styles.image}>
+            <Image
+              src="/Solo_confiance_en_soi/solo_confiance10.jpg"
+              alt="photo Solo - Confiance en soi"
+              width={3510}
+              height={5270}
+              loading="lazy"
+            />
+          </div>
+          <div className={styles.description}>
+            <div>
+              <h1 className={styles.formulaTitle}>Formule Instants</h1>
+              <h2 className={styles.h2}>Séance de 30 min</h2>
+              <span className={styles.price}>150 €</span>
+              <p className={styles.p}>
+                Galerie complète envoyée (environ 50 photos)
+              </p>
             </div>
-            <div className={styles.description}>
-              <div>
-                <h1 className={styles.formulaTitle}>Formule Instants</h1>
-                <h2 className={styles.h2}>Séance de 30 min</h2>
-                <span className={styles.price}>150 €</span>
-                <p className={styles.p}>
-                  Galerie complète envoyée (environ 50 photos)
-                </p>
-              </div>
 
-              <div>
-                <Link href="/contact">
-                  <p style={{ textAlign: "center" }}>
-                    Pour plus d'informations{" "}
-                    <span
-                      style={{ cursor: "pointer", textDecoration: "underline" }}
-                    >
-                      Contactez-moi
-                    </span>
-                  </p>
-                </Link>
-              </div>
+            <div>
+              <Link href="/contact">
+                <p style={{ textAlign: "center" }}>
+                  Pour plus d'informations{" "}
+                  <span
+                    style={{ cursor: "pointer", textDecoration: "underline" }}
+                  >
+                    Contactez-moi
+                  </span>
+                </p>
+              </Link>
             </div>
           </div>
-        </ScrollAnimation>
+        </div>
         <ScrollAnimation animateIn="fadeInRight" delay={1 * 100}>
           <div className={styles.container}>
             <div className={styles.description}>
@@ -1196,9 +1203,10 @@ function Formule(props) {
             <div className={styles.image}>
               <Image
                 src="/Solo_confiance_en_soi/solo_confiance4.jpg"
-                alt="photo portrait"
+                alt="photo Solo - Confiance en soi"
                 width={3510}
                 height={5270}
+                loading="lazy"
               />
             </div>
           </div>
@@ -1208,9 +1216,10 @@ function Formule(props) {
             <div className={styles.image}>
               <Image
                 src="/Solo_confiance_en_soi/solo_confiance1.jpg"
-                alt="photo portrait"
+                alt="photo Solo - Confiance en soi"
                 width={3510}
                 height={5270}
+                loading="lazy"
               />
             </div>
             <div className={styles.description}>
@@ -1257,41 +1266,40 @@ function Formule(props) {
             Cette séance se fait en extérieur ou chez vous, votre cocon.
           </p>
         </div>
-        <ScrollAnimation animateIn="fadeInUp">
-          <div className={styles.container}>
-            <div className={styles.image}>
-              <Image
-                src="/TBB/tbb4.jpg"
-                alt="photo portrait"
-                width={3510}
-                height={5270}
-              />
+        <div className={styles.container}>
+          <div className={styles.image}>
+            <Image
+              src="/TBB/tbb4.jpg"
+              alt="photo TBB"
+              width={3510}
+              height={5270}
+              loading="lazy"
+            />
+          </div>
+          <div className={styles.description}>
+            <div>
+              <h1 className={styles.formulaTitle}>Formule Instants</h1>
+              <h2 className={styles.h2}>Séance de 30 min</h2>
+              <span className={styles.price}>150 €</span>
+              <p className={styles.p}>
+                Galerie complète envoyée (environ 50 photos)
+              </p>
             </div>
-            <div className={styles.description}>
-              <div>
-                <h1 className={styles.formulaTitle}>Formule Instants</h1>
-                <h2 className={styles.h2}>Séance de 30 min</h2>
-                <span className={styles.price}>150 €</span>
-                <p className={styles.p}>
-                  Galerie complète envoyée (environ 50 photos)
-                </p>
-              </div>
 
-              <div>
-                <Link href="/contact">
-                  <p style={{ textAlign: "center" }}>
-                    Pour plus d'informations{" "}
-                    <span
-                      style={{ cursor: "pointer", textDecoration: "underline" }}
-                    >
-                      Contactez-moi
-                    </span>
-                  </p>
-                </Link>
-              </div>
+            <div>
+              <Link href="/contact">
+                <p style={{ textAlign: "center" }}>
+                  Pour plus d'informations{" "}
+                  <span
+                    style={{ cursor: "pointer", textDecoration: "underline" }}
+                  >
+                    Contactez-moi
+                  </span>
+                </p>
+              </Link>
             </div>
           </div>
-        </ScrollAnimation>
+        </div>
         <ScrollAnimation animateIn="fadeInRight" delay={1 * 100}>
           <div className={styles.container}>
             <div className={styles.description}>
@@ -1319,9 +1327,10 @@ function Formule(props) {
             <div className={styles.image}>
               <Image
                 src="/TBB/tbb2.jpg"
-                alt="photo portrait"
+                alt="photo TBB"
                 width={3510}
                 height={5270}
+                loading="lazy"
               />
             </div>
           </div>
@@ -1330,10 +1339,11 @@ function Formule(props) {
           <div className={styles.container}>
             <div className={styles.image}>
               <Image
-                src="/TBB/tbb9.jpg.jpg"
-                alt="photo portrait"
+                src="/TBB/tbb9.jpg"
+                alt="photo TBB"
                 width={3510}
                 height={5270}
+                loading="lazy"
               />
             </div>
             <div className={styles.description}>
@@ -1363,7 +1373,7 @@ function Formule(props) {
       </div>
     );
   }
-  
+
   return <div>{formules}</div>;
 }
 

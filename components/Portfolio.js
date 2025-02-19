@@ -63,13 +63,9 @@ function Portfolio() {
     setSelectedImage("");
   };
 
-  const imagePath = image.map((data, i) => {
+  const imagePath = image.map((data) => {
     return (
-      <ScrollAnimation
-        animateIn="fadeInUp"
-        key={i}
-        className={styles.image}
-      >
+      <ScrollAnimation animateIn="fadeInUp" className={styles.image}>
         <Image
           src={data.image}
           alt={data.name}
@@ -77,6 +73,7 @@ function Portfolio() {
           height={data.height}
           onClick={() => handleImageClick(data.image)}
           style={{ cursor: "pointer" }}
+          loading="lazy"
         />
       </ScrollAnimation>
     );
@@ -85,6 +82,10 @@ function Portfolio() {
   return (
     <div>
       <Head>
+        <meta
+          name="description"
+          content="Photographe spécialisée dans les moments forts de la vie, mariage, maternité, famille, etc."
+        />
         <title>Solène Photographie</title>
       </Head>
       <div className={styles.head}>
@@ -94,6 +95,8 @@ function Portfolio() {
             onClick={() => handleOpen(true)}
             className={styles.icon}
             size="2x"
+            aria-label="Menu"
+            role="Boutton"
           />
           <Drawer
             open={open}
@@ -103,29 +106,40 @@ function Portfolio() {
             {drawerList}
           </Drawer>
           <Link href="/">
-          <div className={styles.logo}>
-            <Image width={296} height={44} src="/Logo/logo_nom2.png" style={{backgroundColor : 'transparent'}}/>
-          </div>
+            <div className={styles.logo}>
+              <Image
+                width={296}
+                height={44}
+                src="/Logo/logo_nom2.png"
+                alt="Logo Solene Doux"
+                style={{ backgroundColor: "transparent" }}
+                loading="lazy"
+              />
+            </div>
           </Link>
           <a
             href="https://www.instagram.com/solenedoux_photographie/"
             className={styles.instaIcon}
             target="_blank"
           >
-            <FaInstagram style={{ backgroundColor: "transparent" }} size={40} />
+            <FaInstagram
+              style={{ backgroundColor: "transparent" }}
+              size={40}
+              aria-label="Instagram"
+            />
           </a>
         </div>
       </div>
       <div className={styles.imageContainer}>{imagePath}</div>
       {imageOpen && (
         <div className={styles.fullscreenModal} onClick={closeModal}>
-            <div className={styles.fullscreenImageContainer}>
-              <img
-                src={selectedImage}
-                alt="Fullscreen Image"
-                className={styles.fullscreenImage}
-              />
-            </div>
+          <div className={styles.fullscreenImageContainer}>
+            <img
+              src={selectedImage}
+              alt="Fullscreen Image"
+              className={styles.fullscreenImage}
+            />
+          </div>
         </div>
       )}
     </div>

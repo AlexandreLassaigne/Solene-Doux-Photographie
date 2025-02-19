@@ -11,10 +11,11 @@ import Head from "next/head";
 import { FaInstagram } from "react-icons/fa";
 import emailjs from "emailjs-com";
 import Image from "next/image";
+import Iframe from "react-iframe";
 
-const SERVICE_ID = "service_g0noway";
+/* const SERVICE_ID = "service_g0noway";
 const TEMPLATE_ID = "template_u2k7z4r";
-const PUBLIC_KEY = "EyXreh7zUmW7qIajw";
+const PUBLIC_KEY = "EyXreh7zUmW7qIajw"; */
 
 function Contact() {
   const [open, setOpen] = useState(false);
@@ -32,6 +33,10 @@ function Contact() {
   const handleOpen = (newOpen) => {
     setOpen(newOpen);
   };
+
+  const REACT_APP_SERVICE_ID = "service_g0noway";
+  const REACT_APP_TEMPLATE_ID = "template_u2k7z4r";
+  const REACT_APP_PUBLIC_KEY = "EyXreh7zUmW7qIajw";
 
   const drawerList = (
     <Box
@@ -92,21 +97,28 @@ function Contact() {
       }
       if (!wrongEmail && !wrongTel && !emptyFields) {
         //envoie le formulaire via l'API EmailJS, en utilisant les paramètres
-        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY).then(
-          (result) => {
-            alert("Message envoyé");
-          },
-          (error) => {
-            alert("Désolé, il y a eu une erreur veuillez recommencer");
-          }
-        );
+        emailjs
+          .sendForm(
+            REACT_APP_SERVICE_ID,
+            REACT_APP_TEMPLATE_ID,
+            e.target,
+            REACT_APP_PUBLIC_KEY
+          )
+          .then(
+            (result) => {
+              alert("Message envoyé");
+            },
+            (error) => {
+              alert("Désolé, il y a eu une erreur veuillez recommencer");
+            }
+          );
         setEmail("");
         setMessage("");
         setNom("");
         setPrenom("");
         setPrestation("");
-        setTel('');
-        setMessageError('');
+        setTel("");
+        setMessageError("");
         e.target.reset();
       }
     }
@@ -115,6 +127,10 @@ function Contact() {
   return (
     <div>
       <Head>
+        <meta
+          name="description"
+          content="Photographe spécialisée dans les moments forts de la vie, mariage, maternité, famille, etc."
+        />
         <title>Solène Photographie</title>
       </Head>
       <div className={styles.head}>
@@ -124,6 +140,8 @@ function Contact() {
             onClick={() => handleOpen(true)}
             className={styles.icon}
             size="2x"
+            aria-label="Menu"
+            role="Boutton"
           />
           <Drawer
             open={open}
@@ -138,7 +156,9 @@ function Contact() {
                 width={296}
                 height={44}
                 src="/Logo/logo_nom2.png"
+                alt="Logo Solene Doux"
                 style={{ backgroundColor: "transparent" }}
+                loading="lazy"
               />
             </div>
           </Link>
@@ -147,21 +167,18 @@ function Contact() {
             className={styles.instaIcon}
             target="_blank"
           >
-            <FaInstagram style={{ backgroundColor: "transparent" }} size={40} />
+            <FaInstagram
+              style={{ backgroundColor: "transparent" }}
+              size={40}
+              aria-label="Instagram"
+            />
           </a>
         </div>
       </div>
-      <div className={styles.titreContainer}>
-        <p className={styles.text}>Parlez moi de votre projet</p>
+      <div>
+        <h2 className={styles.text}>Parlez moi de votre projet</h2>
       </div>
-      <div
-        style={{
-          width: "100vw",
-          height: "100vh",
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
+      <div className={styles.form}>
         <form className={styles.inputContainer} onSubmit={handleOnSubmit}>
           <div className={styles.nom}>
             <input
@@ -227,14 +244,24 @@ function Contact() {
             />
           </div>
           <div className={styles.buttonContainer}>
-            <div className={styles.messageError}>
-              {messageError}
-            </div>
+            <div className={styles.messageError}>{messageError}</div>
             <button className={styles.button} type="submit">
               Envoyer
             </button>
           </div>
         </form>
+      </div>
+      <div>
+        <h2 className={styles.text}>
+          Sélectionnez un créneau pour un shooting
+        </h2>
+      </div>
+
+      <div className={styles.creneau}>
+        <Iframe
+          url="https://calendly.com/lassaignealexandre"
+          className={styles.calendly}
+        />
       </div>
     </div>
   );
