@@ -9,7 +9,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Head from "next/head";
 import { FaInstagram } from "react-icons/fa";
-import "typeface-poppins";
 import { Carousel } from "nuka-carousel";
 import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css/animate.compat.css";
@@ -54,7 +53,7 @@ function Home() {
   return (
     <div>
       <Head>
-        <link rel="preload" href="/Logo/logo_nom2.WebP" as="image" />
+        <link rel="preload" href="/Logo/logo_nom2.png" as="image" />
         <meta
           name="description"
           content="Photographe spécialisée dans les moments forts de la vie, mariage, maternité, famille, etc."
@@ -87,7 +86,6 @@ function Home() {
               alt="Logo Solene Doux"
               style={{ backgroundColor: "transparent" }}
               priority
-              loading="eager"
             />
           </div>
 
@@ -116,6 +114,11 @@ function Home() {
               className={styles.imageHead1}
             />
             <img
+              src="/Accueil/accueil4.jpg"
+              alt="Photo acceuil couple"
+              className={styles.imageHead1}
+            />
+            <img
               src="/Accueil/accueil1.jpg"
               alt="Photo acceuil grossesse"
               className={styles.imageHead}
@@ -125,11 +128,7 @@ function Home() {
               alt="Photo acceuil naissance"
               className={styles.imageHead}
             />
-            <img
-              src="/Accueil/accueil4.jpg"
-              alt="Photo acceuil couple"
-              className={styles.imageHead1}
-            />
+            
           </Carousel>
         </div>
       </div>

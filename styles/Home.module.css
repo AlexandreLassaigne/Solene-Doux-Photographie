@@ -92,7 +92,7 @@
   border: solid 1px;
   background-color: transparent;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px;
   height: 50px;
   width: 50%;
   border-radius: 30px;
@@ -110,7 +110,7 @@
   border: solid 1px;
   background-color: transparent;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px;
   height: 50px;
   width: 50%;
   border-radius: 30px;
@@ -135,7 +135,7 @@
   font-family: "Poppins serif";
 }
 
-.buttonContact {
+/* .buttonContact {
   border: solid 1px;
   background-color: transparent;
   cursor: pointer;
@@ -147,12 +147,12 @@
   transition: 0.5s;
   font-family: "Poppins";
   margin-top: 40px;
-}
+} */
 
-.buttonContact:hover {
+/* .buttonContact:hover {
   background-color: rgb(228, 165, 113, 0.8);
   color: #ffffff;
-}
+} */
 
 .instaIcon {
   background-color: transparent;
@@ -171,6 +171,86 @@
 
 @media (max-width: 768px) {
   .allContainer {
+    margin-top: 500px;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .image {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+  .description {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    height: auto;
+    margin: 50px;
+    font-size: 14px;
+    font-family: "Poppins serif";
+  }
+  .imageHead {
+    width: 100vw;
+  }
+  .imageHead1 {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+  .imageHeadVert{
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+  .button {
+    border: solid 1px;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    height: 50px;
+    width: 80%;
+    border-radius: 30px;
+    transition: 0.5s;
+    font-family: "Poppins";
+    margin-top: 40px;
+  }
+  .buttonPrestation {
+    border: solid 1px;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    height: 50px;
+    width: 80%;
+    border-radius: 30px;
+    transition: 0.5s;
+    font-family: "Poppins";
+    margin-top: 40px;
+  }
+/*   .buttonContact {
+    border: solid 1px;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 12px;
+    margin-right: 200px;
+    height: 50px;
+    width: 45%;
+    border-radius: 30px;
+    transition: 0.5s;
+    font-family: "Poppins";
+    margin-top: 40px;
+  } */
+  /* .contactDescription {
+    font-size: 14px;
+  } */
+  .box {
+    width: 200px;
+    height: 100vh;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 490px) {
+  .allContainer {
     margin-top: 300px;
   }
   .container {
@@ -184,8 +264,6 @@
   }
   .description {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 30%;
     height: auto;
@@ -198,6 +276,10 @@
     margin-bottom: 1rem;
   }
   .imageHead1 {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+  .imageHeadVert{
     max-width: 100%;
     margin-bottom: 1rem;
   }
@@ -225,7 +307,7 @@
     font-family: "Poppins";
     margin-top: 40px;
   }
-  .buttonContact {
+/*   .buttonContact {
     border: solid 1px;
     background-color: transparent;
     cursor: pointer;
@@ -237,7 +319,7 @@
     transition: 0.5s;
     font-family: "Poppins";
     margin-top: 40px;
-  }
+  } */
   .contactDescription {
     font-size: 14px;
   }

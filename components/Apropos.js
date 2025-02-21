@@ -9,7 +9,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Head from "next/head";
 import { FaInstagram } from "react-icons/fa";
-import "typeface-poppins";
 import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css";
 import "animate.css/animate.compat.css";

@@ -1,6 +1,5 @@
 import styles from "../styles/Formule.module.css";
 import Link from "next/link";
-import "typeface-poppins";
 import Image from "next/image";
 import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css/animate.compat.css";
@@ -12,7 +11,7 @@ function Formule(props) {
       <div>
         <div style={{ textAlign: "center", fontFamily: "serif" }}>
           <h1>Séance Mariage</h1>
-          <p style={{ fontSize: 18 }}>
+          <p className={styles.présentation}>
             Célébrez l’un des moments les plus précieux de votre vie, en créant
             un souvenir intemporel de cette période unique.
             <br /> Mon objectif étant de capturer la beauté et la magie de votre
@@ -73,7 +72,7 @@ function Formule(props) {
               </div>
               <div>
                 <Link href="/contact">
-                  <p style={{ textAlign: "center" }}>
+                  <p className={styles.contact} style={{ textAlign: "center" }}>
                     Pour plus d'informations{" "}
                     <span
                       style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -262,7 +261,7 @@ function Formule(props) {
       <div>
         <div style={{ textAlign: "center", fontFamily: "serif" }}>
           <h1>Séance Couple</h1>
-          <p style={{ fontSize: 18 }}>
+          <p className={styles.présentation}>
             Célébrez l’un des moments les plus précieux de votre vie, en créant
             un souvenir intemporel de cette période unique.
             <br /> Mon objectif étant de capturer la beauté et la magie de votre
@@ -386,7 +385,7 @@ function Formule(props) {
       <div>
         <div style={{ textAlign: "center", fontFamily: "serif" }}>
           <h1>Séance Décoration d'intérieur</h1>
-          <p style={{ fontSize: 18 }}>
+          <p className={styles.présentation}>
             Célébrez l’un des moments les plus précieux de votre vie, en créant
             un souvenir intemporel de cette période unique.
             <br /> Mon objectif étant de capturer la beauté et la magie de votre
@@ -510,7 +509,7 @@ function Formule(props) {
       <div>
         <div style={{ textAlign: "center", fontFamily: "serif" }}>
           <h1>Séance EVJF</h1>
-          <p style={{ fontSize: 18 }}>
+          <p className={styles.présentation}>
             Célébrez l’un des moments les plus précieux de votre vie, en créant
             un souvenir intemporel de cette période unique.
             <br /> Mon objectif étant de capturer la beauté et la magie de votre
@@ -535,11 +534,17 @@ function Formule(props) {
           </div>
           <div className={styles.description}>
             <div>
-              <h1 className={styles.formulaTitle}>Formule Instants</h1>
-              <h2 className={styles.h2}>Séance de 30 min</h2>
-              <span className={styles.price}>150 €</span>
+              <h1 className={styles.formulaTitle}>EVJF</h1>
+              <h2 className={styles.h2}>Séance d'1h</h2>
+              <span className={styles.price}>300 €</span>
               <p className={styles.p}>
-                Galerie complète envoyée (environ 50 photos)
+                Galerie complète envoyée (environ 100 photos)
+                <br />
+                En extérieur et/ou en intérieur
+                <br />
+                Dress code et accessoires recommandés
+                <br />
+                (lunettes, ballons, bulles, coupes de champagne)
               </p>
             </div>
 
@@ -557,76 +562,6 @@ function Formule(props) {
             </div>
           </div>
         </div>
-        <ScrollAnimation animateIn="fadeInRight" delay={1 * 100}>
-          <div className={styles.container}>
-            <div className={styles.description}>
-              <div>
-                <h1 className={styles.formulaTitle}>Formule Douceur</h1>
-                <h2 className={styles.h2}>Séance de 45 min</h2>
-                <span className={styles.price}>200 €</span>
-                <p className={styles.p}>
-                  Galerie complète envoyée (environ 80 photos)
-                </p>
-              </div>
-              <div>
-                <Link href="/contact">
-                  <p style={{ textAlign: "center" }}>
-                    Pour plus d'informations{" "}
-                    <span
-                      style={{ cursor: "pointer", textDecoration: "underline" }}
-                    >
-                      Contactez-moi
-                    </span>
-                  </p>
-                </Link>
-              </div>
-            </div>
-            <div className={styles.image}>
-              <Image
-                src="/EVJF/evjf12.jpg"
-                alt="photo EVJF"
-                width={3510}
-                height={5270}
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInLeft" delay={1 * 100}>
-          <div className={styles.container}>
-            <div className={styles.image}>
-              <Image
-                src="/EVJF/evjf7.jpg"
-                alt="photo EVJF"
-                width={3510}
-                height={5270}
-                loading="lazy"
-              />
-            </div>
-            <div className={styles.description}>
-              <div>
-                <h1 className={styles.formulaTitle}>Formule Prestige</h1>
-                <h2 className={styles.h2}>Séance d'1h</h2>
-                <span className={styles.price}>250 €</span>
-                <p className={styles.p}>
-                  Galerie complète envoyée (environ 100 photos)
-                </p>
-              </div>
-              <div>
-                <Link href="/contact">
-                  <p style={{ textAlign: "center" }}>
-                    Pour plus d'informations{" "}
-                    <span
-                      style={{ cursor: "pointer", textDecoration: "underline" }}
-                    >
-                      Contactez-moi
-                    </span>
-                  </p>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </ScrollAnimation>
       </div>
     );
   } else if (props.name === "Famille") {
@@ -634,7 +569,7 @@ function Formule(props) {
       <div>
         <div style={{ textAlign: "center", fontFamily: "serif" }}>
           <h1>Séance Famille</h1>
-          <p style={{ fontSize: 18 }}>
+          <p className={styles.présentation}>
             Célébrez l’un des moments les plus précieux de votre vie, en créant
             un souvenir intemporel de cette période unique.
             <br /> Mon objectif étant de capturer la beauté et la magie de votre
@@ -758,7 +693,7 @@ function Formule(props) {
       <div>
         <div style={{ textAlign: "center", fontFamily: "serif" }}>
           <h1>Séance Grossesse</h1>
-          <p style={{ fontSize: 20 }}>
+          <p className={styles.présentation}>
             Célébrez l’un des moments les plus précieux de votre vie, en créant
             un souvenir intemporel de cette période unique.
             <br /> Mon objectif étant de capturer la beauté et la magie de votre
@@ -882,7 +817,7 @@ function Formule(props) {
       <div>
         <div style={{ textAlign: "center", fontFamily: "serif" }}>
           <h1>Séance Naissance</h1>
-          <p style={{ fontSize: 18 }}>
+          <p className={styles.présentation}>
             La séance photo naissance est un moment magique où je capture les
             premiers jours de vie de votre bébé, dans toute sa douceur et sa
             fragilité.
@@ -1005,7 +940,7 @@ function Formule(props) {
       <div>
         <div style={{ textAlign: "center", fontFamily: "serif" }}>
           <h1>Séance Professionnels - Marques</h1>
-          <p style={{ fontSize: 18 }}>
+          <p className={styles.présentation}>
             Célébrez l’un des moments les plus précieux de votre vie, en créant
             un souvenir intemporel de cette période unique.
             <br /> Mon objectif étant de capturer la beauté et la magie de votre
@@ -1129,7 +1064,7 @@ function Formule(props) {
       <div>
         <div style={{ textAlign: "center", fontFamily: "serif" }}>
           <h1>Séance Solo - Confiance en soi</h1>
-          <p style={{ fontSize: 18 }}>
+          <p className={styles.présentation}>
             Célébrez l’un des moments les plus précieux de votre vie, en créant
             un souvenir intemporel de cette période unique.
             <br /> Mon objectif étant de capturer la beauté et la magie de votre
@@ -1253,7 +1188,7 @@ function Formule(props) {
       <div>
         <div style={{ textAlign: "center", fontFamily: "serif" }}>
           <h1>Séance TBB</h1>
-          <p style={{ fontSize: 18 }}>
+          <p className={styles.présentation}>
             Célébrez l’un des moments les plus précieux de votre vie, en créant
             un souvenir intemporel de cette période unique.
             <br /> Mon objectif étant de capturer la beauté et la magie de votre
@@ -1372,8 +1307,188 @@ function Formule(props) {
         </ScrollAnimation>
       </div>
     );
-  }
+  } else if (props.name === "Grossesse - Naissance") {
+    formules = (
+      <div>
+        <div style={{ textAlign: "center", fontFamily: "serif" }}>
+          <h1>Pack Duo Grossesse - Naissance</h1>
+          <p className={styles.présentation}>
+            Célébrez l’un des moments les plus précieux de votre vie, en créant
+            un souvenir intemporel de cette période unique.
+            <br /> Mon objectif étant de capturer la beauté et la magie de votre
+            grossesse, tout en vous mettant à l’aise. <br />
+            Accompagnés de conseils sur les tenues et les poses, je vous
+            guiderai tout au long du processus pour obtenir des photos
+            naturelles et à votre image. <br />
+            Chaque cliché est pensé pour mettre en valeur votre ventre rond et
+            l’amour qui grandit à l’intérieur. <br />
+            Cette séance se fait en extérieur ou chez vous, votre cocon.
+          </p>
+        </div>
+        <div className={styles.container}>
+          <div className={styles.image}>
+            <Image
+              src="/TBB/tbb4.jpg"
+              alt="photo TBB"
+              width={3510}
+              height={5270}
+              loading="lazy"
+            />
+          </div>
+          <div className={styles.description}>
+            <div>
+              <h1 className={styles.formulaTitle}>Formule Instants</h1>
+              <h2 className={styles.h2}> 2 Séances de 30 min</h2>
+              <span className={styles.price}>250 €</span>
+              <p className={styles.p}>
+                Galerie complète envoyée (environ 50 photos par galerie)
+              </p>
+            </div>
 
+            <div>
+              <Link href="/contact">
+                <p style={{ textAlign: "center" }}>
+                  Pour plus d'informations{" "}
+                  <span
+                    style={{ cursor: "pointer", textDecoration: "underline" }}
+                  >
+                    Contactez-moi
+                  </span>
+                </p>
+              </Link>
+            </div>
+          </div>
+        </div>
+        <ScrollAnimation animateIn="fadeInRight" delay={1 * 100}>
+          <div className={styles.container}>
+            <div className={styles.description}>
+              <div>
+                <h1 className={styles.formulaTitle}>Formule Douceur</h1>
+                <h2 className={styles.h2}>2 Séances de 45 min</h2>
+                <span className={styles.price}>350 €</span>
+                <p className={styles.p}>
+                  Galerie complète envoyée (environ 80 photos par galerie)
+                </p>
+              </div>
+              <div>
+                <Link href="/contact">
+                  <p style={{ textAlign: "center" }}>
+                    Pour plus d'informations{" "}
+                    <span
+                      style={{ cursor: "pointer", textDecoration: "underline" }}
+                    >
+                      Contactez-moi
+                    </span>
+                  </p>
+                </Link>
+              </div>
+            </div>
+            <div className={styles.image}>
+              <Image
+                src="/TBB/tbb2.jpg"
+                alt="photo TBB"
+                width={3510}
+                height={5270}
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </ScrollAnimation>
+        <ScrollAnimation animateIn="fadeInLeft" delay={1 * 100}>
+          <div className={styles.container}>
+            <div className={styles.image}>
+              <Image
+                src="/TBB/tbb9.jpg"
+                alt="photo TBB"
+                width={3510}
+                height={5270}
+                loading="lazy"
+              />
+            </div>
+            <div className={styles.description}>
+              <div>
+                <h1 className={styles.formulaTitle}>Formule Prestige</h1>
+                <h2 className={styles.h2}>2 Séances d'1h</h2>
+                <span className={styles.price}>450 €</span>
+                <p className={styles.p}>
+                  Galerie complète envoyée (environ 100 photos par galerie)
+                </p>
+              </div>
+              <div>
+                <Link href="/contact">
+                  <p style={{ textAlign: "center" }}>
+                    Pour plus d'informations{" "}
+                    <span
+                      style={{ cursor: "pointer", textDecoration: "underline" }}
+                    >
+                      Contactez-moi
+                    </span>
+                  </p>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </ScrollAnimation>
+      </div>
+    );
+  } else if (props.name === "Baptême") {
+    formules = (
+      <div>
+        <div style={{ textAlign: "center", fontFamily: "serif" }}>
+          <h1>Séance Baptême</h1>
+          <p className={styles.présentation}>
+            Célébrez l’un des moments les plus précieux de votre vie, en créant
+            un souvenir intemporel de cette période unique.
+            <br /> Mon objectif étant de capturer la beauté et la magie de votre
+            grossesse, tout en vous mettant à l’aise. <br />
+            Accompagnés de conseils sur les tenues et les poses, je vous
+            guiderai tout au long du processus pour obtenir des photos
+            naturelles et à votre image. <br />
+            Chaque cliché est pensé pour mettre en valeur votre ventre rond et
+            l’amour qui grandit à l’intérieur. <br />
+            Cette séance se fait en extérieur ou chez vous, votre cocon.
+          </p>
+        </div>
+        <div className={styles.container}>
+          <div className={styles.image}>
+            <Image
+              src="/TBB/tbb4.jpg"
+              alt="photo TBB"
+              width={3510}
+              height={5270}
+              loading="lazy"
+            />
+          </div>
+          <div className={styles.description}>
+            <div>
+              <h2 className={styles.h2}>Séance de 2h</h2>
+              <span className={styles.price}>450 €</span>
+              <p className={styles.p}>
+                Galerie complète envoyée sur galerie en ligne (environ 180 photos)<br/>
+                Cérémonie mairie ou église <br/>
+                Photos grand groupe <br/>
+                Photos petits groupes (Parents / Parrain / Marraine / Grands-parents / Amis) <br/>
+                Début du vin d'honner / Apérétif / Gouter / Repas
+              </p>
+            </div>
+
+            <div>
+              <Link href="/contact">
+                <p style={{ textAlign: "center" }}>
+                  Pour plus d'informations{" "}
+                  <span
+                    style={{ cursor: "pointer", textDecoration: "underline" }}
+                  >
+                    Contactez-moi
+                  </span>
+                </p>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
   return <div>{formules}</div>;
 }
 

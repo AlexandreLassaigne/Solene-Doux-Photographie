@@ -1,6 +1,6 @@
 import styles from "../styles/Contact.module.css";
 import Link from "next/link";
-import { useState, useSyncExternalStore } from "react";
+import { useState } from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
@@ -11,11 +11,6 @@ import Head from "next/head";
 import { FaInstagram } from "react-icons/fa";
 import emailjs from "emailjs-com";
 import Image from "next/image";
-import Iframe from "react-iframe";
-
-/* const SERVICE_ID = "service_g0noway";
-const TEMPLATE_ID = "template_u2k7z4r";
-const PUBLIC_KEY = "EyXreh7zUmW7qIajw"; */
 
 function Contact() {
   const [open, setOpen] = useState(false);
@@ -33,10 +28,6 @@ function Contact() {
   const handleOpen = (newOpen) => {
     setOpen(newOpen);
   };
-
-  const REACT_APP_SERVICE_ID = "service_g0noway";
-  const REACT_APP_TEMPLATE_ID = "template_u2k7z4r";
-  const REACT_APP_PUBLIC_KEY = "EyXreh7zUmW7qIajw";
 
   const drawerList = (
     <Box
@@ -99,10 +90,10 @@ function Contact() {
         //envoie le formulaire via l'API EmailJS, en utilisant les paramètres
         emailjs
           .sendForm(
-            REACT_APP_SERVICE_ID,
-            REACT_APP_TEMPLATE_ID,
+            process.env.NEXT_PUBLIC_SERVICE_ID,
+            process.env.NEXT_PUBLIC_TEMPLATE_ID,
             e.target,
-            REACT_APP_PUBLIC_KEY
+            process.env.NEXT_PUBLIC_PUBLIC_KEY
           )
           .then(
             (result) => {
@@ -158,7 +149,8 @@ function Contact() {
                 src="/Logo/logo_nom2.png"
                 alt="Logo Solene Doux"
                 style={{ backgroundColor: "transparent" }}
-                loading="lazy"
+                layout="intrinsic"
+                priority
               />
             </div>
           </Link>
@@ -175,9 +167,7 @@ function Contact() {
           </a>
         </div>
       </div>
-      <div>
         <h2 className={styles.text}>Parlez moi de votre projet</h2>
-      </div>
       <div className={styles.form}>
         <form className={styles.inputContainer} onSubmit={handleOnSubmit}>
           <div className={styles.nom}>
@@ -250,18 +240,6 @@ function Contact() {
             </button>
           </div>
         </form>
-      </div>
-      <div>
-        <h2 className={styles.text}>
-          Sélectionnez un créneau pour un shooting
-        </h2>
-      </div>
-
-      <div className={styles.creneau}>
-        <Iframe
-          url="https://calendly.com/lassaignealexandre"
-          className={styles.calendly}
-        />
       </div>
     </div>
   );

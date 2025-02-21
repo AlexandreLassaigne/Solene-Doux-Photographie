@@ -9,7 +9,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import Head from "next/head";
 import { FaInstagram } from "react-icons/fa";
-import "typeface-poppins";
 import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css";
 import "animate.css/animate.compat.css";
@@ -28,54 +27,64 @@ function Prestation() {
       id: 1,
     },
     {
+      name: "Baptême",
+      source: require("../public/Allaitement/allaitement2.jpg"),
+      id: 2,
+    },
+    {
       name: "Couple",
       source: require("../public/Couple/couple2.jpg"),
-      id: 2,
+      id: 3,
     },
     {
       name: `Décoration d'intérieur`,
       source: require("../public/Deco/deco4.jpg"),
-      id: 3,
+      id: 4,
     },
     {
       name: "EVJF",
       source: require("../public/EVJF/evjf10.jpg"),
-      id: 4,
+      id: 5,
     },
     {
       name: "Famille",
       source: require("../public/Famille/famille4.jpg"),
-      id: 5,
+      id: 6,
     },
     {
       name: "Grossesse",
       source: require("../public/Grossesse/grossesse6.jpg"),
-      id: 6,
+      id: 7,
     },
     {
       name: "Mariage",
       source: require("../public/Mariage/mariage4.jpg"),
-      id: 7,
+      id: 8,
     },
     {
       name: "Naissance",
       source: require("../public/Naissance/naissance4.jpg"),
-      id: 8,
+      id: 9,
     },
     {
       name: "Professionnels - Marques",
       source: require("../public/Professionnels_marques/professionnels_marques7.jpg"),
-      id: 9,
+      id: 10,
     },
     {
       name: "Solo - Confiance en soi",
       source: require("../public//Solo_confiance_en_soi/solo_confiance3.jpg"),
-      id: 10,
+      id: 11,
     },
     {
       name: "TBB",
       source: require("../public//TBB/tbb7.jpg"),
-      id: 11,
+      id: 12,
+    },
+    {
+      name: "Grossesse - Naissance",
+      source: require("../public//TBB/tbb7.jpg"),
+      id: 13,
     },
   ];
 

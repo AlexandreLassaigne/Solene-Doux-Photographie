@@ -46,16 +46,17 @@
 .presentationContainer {
   display: flex;
   justify-content: space-around;
-  font-family: "Poppins serif";
   margin-bottom: 100px;
 }
 
 .presentationTexte {
   text-align: center;
-  width: 40%;
+  width: 40vw;
+  height: 70vh;
   font-size: 22px;
-  margin-top: auto;
-  margin-bottom: auto;
+  display: flex;
+  align-items: center;
+  font-family: Helvetica serif;
 }
 
 .image {
@@ -71,6 +72,8 @@
   cursor: pointer;
   color: #000000;
 }
+
+
 
 @media (max-width: 768px) {
   .container {
