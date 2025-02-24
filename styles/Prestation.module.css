@@ -1,8 +1,64 @@
-.icon {
-  margin-top: 15px;
-  margin-left: 20px;
+@font-face {
+  font-family: 'Glitther Syavina';
+  src: url('../fonts/GlittherSyavinafree.ttf');
+}
+
+@font-face {
+  font-family: 'Inria serif';
+  src: url('../fonts/InriaSerif-Regular.ttf');
+}
+
+.head {
+  display: flex;
+  width: 100vw;
+  height: 100px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.headContainer {
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  background-color: rgba(186, 174, 152, 0.6);
+  position: fixed;
+  height: 70px;
+}
+
+.logo {
   background-color: transparent;
+  margin-top: 10px;
+  margin-left: 100px;
   cursor: pointer;
+}
+
+.headerRight{
+  background-color: transparent;
+  display: flex;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+}
+
+.lien {
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 30px;
+  margin-right: 20px;
+  font-family: 'Glitther Syavina';
+}
+
+.instaIcon {
+  background-color: transparent;
+  margin-top: 15px;
+  margin-left: 40px;
+  margin-right: 40px;
+  cursor: pointer;
+  color: #000000;
 }
 
 .chevron {
@@ -11,50 +67,12 @@
   cursor: pointer;
 }
 
-.list {
-  display: flex;
-  flex-direction: column;
-}
-
-.lien {
-  cursor: pointer;
-  font-size: 32;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-family: Arial, Helvetica, serif;
-}
-
-.head {
-  display: flex;
-  width: 100vw;
-  height: 100px;
-  align-items: flex-start;
-}
-
-.headContainer {
-  z-index: 1;
-  display: flex;
-  width: 100vw;
-  align-items: flex-start;
-  background-color: rgb(228, 165, 113, 0.6);
-  position: fixed;
-  height: 70px;
-}
-
-.logo {
-  margin-left: auto;
-  margin-right: auto;
-  background-color: transparent;
-  margin-top: 10px;
-  cursor: pointer;
-}
-
 .presationTexte {
+  font-family: 'Inria serif';
   text-align: center;
-  display: flex;
-  justify-content: center;
-  font-family: Arial, Helvetica, serif;
+  margin: auto;
   font-size: 22px;
+  width: 80vw;
 }
 
 .allContainer {
@@ -79,7 +97,7 @@
   height: 50px;
   width: 100%;
   transition: 0.5s;
-  font-family: Arial, Helvetica, serif;
+  font-family: 'Inria serif';
   display: flex;
   align-items: center;
   justify-content: center;
@@ -91,13 +109,6 @@
   border: none;
 }
 
-.instaIcon {
-  background-color: transparent;
-  margin-top: 15px;
-  margin-right: 20px;
-  cursor: pointer;
-  color: #000000;
-}
 
 @media (max-width: 860px) {
   .container {

@@ -1,12 +1,5 @@
 import styles from "../styles/Home.module.css";
-import { useState } from "react";
 import Link from "next/link";
-import Box from "@mui/material/Box";
-import Drawer from "@mui/material/Drawer";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Head from "next/head";
 import { FaInstagram } from "react-icons/fa";
 import { Carousel } from "nuka-carousel";
@@ -15,40 +8,6 @@ import "animate.css/animate.compat.css";
 import Image from "next/image";
 
 function Home() {
-  const [open, setOpen] = useState(false);
-
-  const handleOpen = (newOpen) => {
-    setOpen(newOpen);
-  };
-
-  const drawerList = (
-    <Box
-      sx={{ width: 250, height: "100vh", fontSize: 34 }}
-      className={styles.box}
-      role="presentation"
-      onClick={() => handleOpen(false)}
-    >
-      <List>
-        <ListItem className={styles.list} disablePadding>
-          <Link href="/apropos">
-            <span className={styles.lien}>Mon parcours</span>
-          </Link>
-          <Link href="/prestation">
-            <span className={styles.lien}>Prestation</span>
-          </Link>
-          <Link href="/portfolio">
-            <span className={styles.lien}>Portfolio</span>
-          </Link>
-          <Link href="/">
-            <span className={styles.lien}>Galerie privée</span>
-          </Link>
-          <Link href="/contact">
-            <span className={styles.lien}>Contact</span>
-          </Link>
-        </ListItem>
-      </List>
-    </Box>
-  );
 
   return (
     <div>
@@ -62,22 +21,6 @@ function Home() {
       </Head>
       <div className={styles.head}>
         <div className={styles.headContainer}>
-          <FontAwesomeIcon
-            icon={faBars}
-            onClick={() => handleOpen(true)}
-            className={styles.icon}
-            size="2x"
-            aria-label="Menu"
-            role="Boutton"
-          />
-          <Drawer
-            open={open}
-            onClose={() => handleOpen(false)}
-            sx={{ backgroundColor: "transparent" }}
-            keepMounted //Evite le rechargement du contenu lorsque le menu est fermé
-          >
-            {drawerList}
-          </Drawer>
           <div className={styles.logo}>
             <Image
               width={290}
@@ -88,18 +31,34 @@ function Home() {
               priority
             />
           </div>
+          <div className={styles.headerRight}>
+            <div className={styles.menu}>
+              <Link href="/apropos">
+                <span className={styles.lien}>A propos</span>
+              </Link>
+              <Link href="/prestation">
+                <span className={styles.lien}>Prestation</span>
+              </Link>
+              <Link href="/portfolio">
+                <span className={styles.lien}>Portfolio</span>
+              </Link>
+              <Link href="/contact">
+                <span className={styles.lien}>Contact</span>
+              </Link>
+            </div>
 
-          <a
-            href="https://www.instagram.com/solenedoux_photographie/"
-            className={styles.instaIcon}
-            target="_blank"
-          >
-            <FaInstagram
-              style={{ backgroundColor: "transparent" }}
-              size={40}
-              aria-label="Instagram"
-            />
-          </a>
+            <a
+              href="https://www.instagram.com/solenedoux_photographie/"
+              className={styles.instaIcon}
+              target="_blank"
+            >
+              <FaInstagram
+                style={{ backgroundColor: "transparent" }}
+                size={40}
+                aria-label="Instagram"
+              />
+            </a>
+          </div>
         </div>
         <div className={styles.carouselContainer}>
           <Carousel
@@ -119,16 +78,15 @@ function Home() {
               className={styles.imageHead1}
             />
             <img
-              src="/Accueil/accueil1.jpg"
+              src="/Accueil/accueil1.jpeg"
               alt="Photo acceuil grossesse"
-              className={styles.imageHead}
+              className={styles.imageHead1}
             />
             <img
-              src="/Accueil/accueil2.jpg"
+              src="/Accueil/accueil2.jpeg"
               alt="Photo acceuil naissance"
-              className={styles.imageHead}
+              className={styles.imageHead1}
             />
-            
           </Carousel>
         </div>
       </div>
@@ -200,7 +158,6 @@ function Home() {
                 loading="lazy"
               />
             </div>
-
             <div className={styles.description}>
               <p>
                 Envie de découvrir mon travail ? Cliquez ici pour explorer mon
@@ -213,18 +170,6 @@ function Home() {
             </div>
           </div>
         </ScrollAnimation>
-       {/*  <ScrollAnimation animateIn="fadeInUp" delay={1 * 100}>
-          <div className={styles.contactDescription}>
-            <p className={styles.contactText}>
-              Vous avez un projet en tête ou des questions ?<br /> N’hésitez pas
-              à me contacter, je serai ravi d’échanger avec vous et de créer
-              ensemble des images uniques !{" "}
-            </p>
-            <Link href="/contact">
-              <button className={styles.buttonContact}>Contact</button>
-            </Link>
-          </div>
-        </ScrollAnimation> */}
       </div>
     </div>
   );

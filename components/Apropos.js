@@ -1,12 +1,5 @@
 import styles from "../styles/Apropos.module.css";
 import Link from "next/link";
-import { useState } from "react";
-import Box from "@mui/material/Box";
-import Drawer from "@mui/material/Drawer";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Head from "next/head";
 import { FaInstagram } from "react-icons/fa";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -15,40 +8,6 @@ import "animate.css/animate.compat.css";
 import Image from "next/image";
 
 export default function Apropos() {
-  const [open, setOpen] = useState(false);
-
-  const handleOpen = (newOpen) => {
-    setOpen(newOpen);
-  };
-
-  const drawerList = (
-    <Box
-      className={styles.box}
-      sx={{ width: 250, height: "100vh", fontSize: 34 }}
-      role="presentation"
-      onClick={() => handleOpen(false)}
-    >
-      <List>
-        <ListItem className={styles.list} disablePadding>
-          <Link href="/apropos">
-            <span className={styles.lien}>Mon parcours</span>
-          </Link>
-          <Link href="/prestation">
-            <span className={styles.lien}>Prestation</span>
-          </Link>
-          <Link href="/portfolio">
-            <span className={styles.lien}>Portfolio</span>
-          </Link>
-          <Link href="/">
-            <span className={styles.lien}>Galerie privée</span>
-          </Link>
-          <Link href="/contact">
-            <span className={styles.lien}>Contact</span>
-          </Link>
-        </ListItem>
-      </List>
-    </Box>
-  );
 
   return (
     <div>
@@ -61,22 +20,6 @@ export default function Apropos() {
       </Head>
       <div className={styles.head}>
         <div className={styles.headContainer}>
-          <FontAwesomeIcon
-            icon={faBars}
-            onClick={() => handleOpen(true)}
-            className={styles.icon}
-            size="2x"
-            aria-label="Menu"
-            role="Boutton"
-          />
-          <Drawer
-            open={open}
-            onClose={() => handleOpen(false)}
-            sx={{ backgroundColor: "transparent" }}
-            keepMounted //Evite le rechargement du contenu lorsque le menu est fermé
-          >
-            {drawerList}
-          </Drawer>
           <Link href="/">
             <div className={styles.logo}>
               <Image
@@ -88,51 +31,66 @@ export default function Apropos() {
               />
             </div>
           </Link>
-          <a
-            href="https://www.instagram.com/solenedoux_photographie/"
-            className={styles.instaIcon}
-            target="_blank"
-          >
-            <FaInstagram
-              size={40}
-              style={{ backgroundColor: "transparent" }}
-              aria-label="Instagram"
-            />
-          </a>
+          <div className={styles.headerRight}>
+            <div className={styles.menu}>
+              <Link href="/apropos">
+                <span className={styles.lien}>A propos</span>
+              </Link>
+              <Link href="/prestation">
+                <span className={styles.lien}>Prestation</span>
+              </Link>
+              <Link href="/portfolio">
+                <span className={styles.lien}>Portfolio</span>
+              </Link>
+              <Link href="/contact">
+                <span className={styles.lien}>Contact</span>
+              </Link>
+            </div>
+            <a
+              href="https://www.instagram.com/solenedoux_photographie/"
+              className={styles.instaIcon}
+              target="_blank"
+            >
+              <FaInstagram
+                style={{ backgroundColor: "transparent" }}
+                aria-label="Instagram"
+              />
+            </a>
+          </div>
         </div>
       </div>
       <div>
-          <div className={styles.presentationContainer}>
-            <p className={styles.presentationTexte}>
-              Enchanté,
-              <br />
-              <br />
-              Moi c’est Solène, j’ai 30 ans et je vis dans la région Toulousaine
-              depuis ma plus tendre enfance.
-              <br />
-              <br />
-              Photographe passionnée et spécialisée dans les moments forts de la
-              vie, mon objectif : capturer les émotions authentiques et sublimer
-              chaque instant avec sensibilité et professionnalisme
-              <br />
-              <br />
-              Que ce soit pour un mariage, une séance maternité, des photos de
-              famille ou encore un shooting pour des professionnels, je
-              m'efforce de créer des images intemporelles qui racontent votre
-              histoire. Chaque projet est unique, et j'aime m'adapter à vos
-              envies et besoins pour queles souvenirs que vous conserverez
-              soient à la hauteur de vos attentes.
-              <br />
-            </p>
-            <div className={styles.image}>
-              <Image
-                src="/Solene/solene4.jpg"
-                alt="photo de Solene"
-                width={3839}
-                height={5758}
-              />
-            </div>
+        <div className={styles.presentationContainer}>
+          <p className={styles.presentationTexte}>
+            Enchanté,
+            <br />
+            <br />
+            Moi c’est Solène, j’ai 30 ans et je vis dans la région Toulousaine
+            depuis ma plus tendre enfance.
+            <br />
+            <br />
+            Photographe passionnée et spécialisée dans les moments forts de la
+            vie, mon objectif : capturer les émotions authentiques et sublimer
+            chaque instant avec sensibilité et professionnalisme
+            <br />
+            <br />
+            Que ce soit pour un mariage, une séance maternité, des photos de
+            famille ou encore un shooting pour des professionnels, je m'efforce
+            de créer des images intemporelles qui racontent votre histoire.
+            Chaque projet est unique, et j'aime m'adapter à vos envies et
+            besoins pour queles souvenirs que vous conserverez soient à la
+            hauteur de vos attentes.
+            <br />
+          </p>
+          <div className={styles.image}>
+            <Image
+              src="/Solene/solene4.jpg"
+              alt="photo de Solene"
+              width={3839}
+              height={5758}
+            />
           </div>
+        </div>
       </div>
       <div>
         {" "}

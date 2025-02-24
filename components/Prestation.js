@@ -1,12 +1,8 @@
 import styles from "../styles/Prestation.module.css";
 import Link from "next/link";
 import { useState } from "react";
-import Box from "@mui/material/Box";
-import Drawer from "@mui/material/Drawer";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import Head from "next/head";
 import { FaInstagram } from "react-icons/fa";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -16,34 +12,33 @@ import Image from "next/image";
 import Formule from "./Formule";
 
 function Prestation() {
-  const [open, setOpen] = useState(false);
   const [formule, setFormule] = useState(false);
   const [formuleName, setFormuleName] = useState(null);
 
   const prestations = [
     {
       name: "Allaitement",
-      source: require("../public/Allaitement/allaitement2.jpg"),
+      source: require("../public/Allaitement/allaitement3.jpg"),
       id: 1,
     },
     {
       name: "Baptême",
-      source: require("../public/Allaitement/allaitement2.jpg"),
+      source: require("../public/Baptême/baptême1.jpg"),
       id: 2,
     },
     {
       name: "Couple",
-      source: require("../public/Couple/couple2.jpg"),
+      source: require("../public/Couple/couple7.jpg"),
       id: 3,
     },
     {
       name: `Décoration d'intérieur`,
-      source: require("../public/Deco/deco4.jpg"),
+      source: require("../public/Deco/deco6.jpg"),
       id: 4,
     },
     {
-      name: "EVJF",
-      source: require("../public/EVJF/evjf10.jpg"),
+      name: "EVJF / EVG",
+      source: require("../public/EVJF/evjf12.jpg"),
       id: 5,
     },
     {
@@ -57,34 +52,39 @@ function Prestation() {
       id: 7,
     },
     {
-      name: "Mariage",
-      source: require("../public/Mariage/mariage4.jpg"),
+      name: "Grossesse - Naissance",
+      source: require("../public//Grossesse/grossesse9.jpg"),
       id: 8,
     },
     {
-      name: "Naissance",
-      source: require("../public/Naissance/naissance4.jpg"),
+      name: "Mariage",
+      source: require("../public/Mariage/mariage16.jpg"),
       id: 9,
     },
     {
-      name: "Professionnels - Marques",
-      source: require("../public/Professionnels_marques/professionnels_marques7.jpg"),
+      name: "Naissance",
+      source: require("../public/Naissance/naissance3.jpg"),
       id: 10,
     },
     {
-      name: "Solo - Confiance en soi",
-      source: require("../public//Solo_confiance_en_soi/solo_confiance3.jpg"),
+      name: "Professionnels - Marques",
+      source: require("../public/Professionnels_marques/professionnels_marques20.jpg"),
       id: 11,
     },
     {
-      name: "TBB",
-      source: require("../public//TBB/tbb7.jpg"),
+      name: "Séance à thème",
+      source: require("../public/Seances_theme/seance_theme1.jpg"),
       id: 12,
     },
     {
-      name: "Grossesse - Naissance",
-      source: require("../public//TBB/tbb7.jpg"),
+      name: "Solo - Confiance en soi",
+      source: require("../public//Solo_confiance_en_soi/solo_confiance5.jpg"),
       id: 13,
+    },
+    {
+      name: "TBB",
+      source: require("../public//TBB/tbb3.jpg"),
+      id: 14,
     },
   ];
 
@@ -142,38 +142,6 @@ function Prestation() {
     setFormule(false);
   };
 
-  const handleOpen = (newOpen) => {
-    setOpen(newOpen);
-  };
-
-  const drawerList = (
-    <Box
-      sx={{ width: 250, height: "100vh", fontSize: 34 }}
-      className={styles.box}
-      role="presentation"
-      onClick={() => handleOpen(false)}
-    >
-      <List>
-        <ListItem className={styles.list} disablePadding>
-          <Link href="/apropos" onClick={handlePresta}>
-            <span className={styles.lien}>Mon parcours</span>
-          </Link>
-          <Link href="/prestation">
-            <span className={styles.lien}>Prestation</span>
-          </Link>
-          <Link href="/portfolio">
-            <span className={styles.lien}>Portfolio</span>
-          </Link>
-          <Link href="/">
-            <span className={styles.lien}>Galerie privée</span>
-          </Link>
-          <Link href="/contact">
-            <span className={styles.lien}>Contact</span>
-          </Link>
-        </ListItem>
-      </List>
-    </Box>
-  );
 
   return (
     <div>
@@ -186,21 +154,6 @@ function Prestation() {
       </Head>
       <div className={styles.head}>
         <div className={styles.headContainer}>
-          <FontAwesomeIcon
-            icon={faBars}
-            onClick={() => handleOpen(true)}
-            className={styles.icon}
-            size="2x"
-            aria-label="Menu"
-            role="Boutton"
-          />
-          <Drawer
-            open={open}
-            onClose={() => handleOpen(false)}
-            sx={{ backgroundColor: "transparent" }}
-          >
-            {drawerList}
-          </Drawer>
           <Link href="/">
             <div className={styles.logo}>
               <Image
@@ -213,30 +166,47 @@ function Prestation() {
               />
             </div>
           </Link>
-          <a
-            href="https://www.instagram.com/solenedoux_photographie/"
-            className={styles.instaIcon}
-            target="_blank"
-          >
-            <FaInstagram
-              style={{ backgroundColor: "transparent" }}
-              size={40}
-              aria-label="Instagram"
-            />
-          </a>
+          <div className={styles.headerRight}>
+            <div className={styles.menu}>
+              <Link href="/apropos">
+                <span className={styles.lien}>A propos</span>
+              </Link>
+              <Link href="/prestation">
+                <span className={styles.lien}>Prestation</span>
+              </Link>
+              <Link href="/portfolio">
+                <span className={styles.lien}>Portfolio</span>
+              </Link>
+              <Link href="/contact">
+                <span className={styles.lien}>Contact</span>
+              </Link>
+            </div>
+
+            <a
+              href="https://www.instagram.com/solenedoux_photographie/"
+              className={styles.instaIcon}
+              target="_blank"
+            >
+              <FaInstagram
+                style={{ backgroundColor: "transparent" }}
+                size={40}
+                aria-label="Instagram"
+              />
+            </a>
+          </div>
         </div>
       </div>
       {!formule && (
         <div>
-          <div className={styles.presationTexte}>
+{/*           <div className={styles.presationTexte}>
             <p>
               Que ce soit pour capturer des instants uniques ou sublimer votre
-              image, nos prestations photographiques sont conçues pour répondre
-              à vos besoins spécifiques. Nous offrons une approche sur mesure
+              image, mes prestations photographiques sont conçues pour répondre
+              à vos besoins spécifiques. J'offres une approche sur mesure
               pour chaque projet, en mettant l’accent sur la qualité, la
               créativité et l’émotion.
             </p>
-          </div>
+          </div> */}
           <div className={styles.allContainer}>{prestation}</div>
         </div>
       )}
