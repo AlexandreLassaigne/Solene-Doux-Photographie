@@ -1,64 +1,23 @@
 import styles from "../styles/Apropos.module.css";
-import Link from "next/link";
 import Head from "next/head";
-import { FaInstagram } from "react-icons/fa";
 import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css";
 import "animate.css/animate.compat.css";
 import Image from "next/image";
+import Header from "./Header";
 
 export default function Apropos() {
-
   return (
     <div>
       <Head>
+      <link rel="preload" href="/Logo/logo_nom2.png" as="image"/>
         <meta
           name="description"
           content="Photographe spécialisée dans les moments forts de la vie, mariage, maternité, famille, etc."
         />
         <title>Solène Photographie</title>
       </Head>
-      <div className={styles.head}>
-        <div className={styles.headContainer}>
-          <Link href="/">
-            <div className={styles.logo}>
-              <Image
-                width={296}
-                height={44}
-                src="/Logo/logo_nom2.png"
-                alt="Logo Solene Doux"
-                style={{ backgroundColor: "transparent" }}
-              />
-            </div>
-          </Link>
-          <div className={styles.headerRight}>
-            <div className={styles.menu}>
-              <Link href="/apropos">
-                <span className={styles.lien}>A propos</span>
-              </Link>
-              <Link href="/prestation">
-                <span className={styles.lien}>Prestation</span>
-              </Link>
-              <Link href="/portfolio">
-                <span className={styles.lien}>Portfolio</span>
-              </Link>
-              <Link href="/contact">
-                <span className={styles.lien}>Contact</span>
-              </Link>
-            </div>
-            <a
-              href="https://www.instagram.com/solenedoux_photographie/"
-              className={styles.instaIcon}
-              target="_blank"
-            >
-              <FaInstagram
-                style={{ backgroundColor: "transparent" }}
-                aria-label="Instagram"
-              />
-            </a>
-          </div>
-        </div>
-      </div>
+      <Header/>
       <div>
         <div className={styles.presentationContainer}>
           <p className={styles.presentationTexte}>

@@ -1,11 +1,9 @@
 import styles from "../styles/Contact.module.css";
-import Link from "next/link";
 import { useState } from "react";
 import Head from "next/head";
-import { FaInstagram } from "react-icons/fa";
 import emailjs from "emailjs-com";
-import Image from "next/image";
 import Faq from "react-faq-component";
+import Header from "./Header";
 
 function Contact() {
   const [nom, setNom] = useState("");
@@ -98,70 +96,31 @@ function Contact() {
   return (
     <div>
       <Head>
+      <link rel="preload" href="/Logo/logo_nom2.png" as="image" />
         <meta
           name="description"
           content="Photographe spécialisée dans les moments forts de la vie, mariage, maternité, famille, etc."
         />
         <title>Solène Photographie</title>
       </Head>
-      <div className={styles.head}>
-        <div className={styles.headContainer}>
-          <Link href="/">
-            <div className={styles.logo}>
-              <Image
-                width={296}
-                height={44}
-                src="/Logo/logo_nom2.png"
-                alt="Logo Solene Doux"
-                style={{ backgroundColor: "transparent" }}
-                layout="intrinsic"
-                priority
-              />
-            </div>
-          </Link>
-          <div className={styles.headerRight}>
-            <div className={styles.menu}>
-              <Link href="/apropos">
-                <span className={styles.lien}>A propos</span>
-              </Link>
-              <Link href="/prestation">
-                <span className={styles.lien}>Prestation</span>
-              </Link>
-              <Link href="/portfolio">
-                <span className={styles.lien}>Portfolio</span>
-              </Link>
-              <Link href="/contact">
-                <span className={styles.lien}>Contact</span>
-              </Link>
-            </div>
-
-            <a
-              href="https://www.instagram.com/solenedoux_photographie/"
-              className={styles.instaIcon}
-              target="_blank"
-            >
-              <FaInstagram
-                style={{ backgroundColor: "transparent" }}
-                aria-label="Instagram"
-              />
-            </a>
-          </div>
-        </div>
+      <Header />
+      <div className={styles.faq}>
+        <Faq
+          data={data}
+          styles={{
+            rowTitleColor: "#78789a",
+            rowTitlePaddingBottom: "5px",
+            rowContentColor: "#48484a",
+            rowContentPaddingTop: "10px",
+            rowContentPaddingBottom: "10px",
+            rowContentPaddingLeft: "50px",
+            rowContentPaddingRight: "150px",
+            rowTitleTextPaddingLeft: "30px",
+            arrowColor: "black",
+          }}
+        />
       </div>
-      <Faq
-        data={data}
-        styles={{
-          rowTitleColor: "#78789a",
-          rowTitlePaddingBottom : "5px",
-          rowContentColor: "#48484a",
-          rowContentPaddingTop: "10px",
-          rowContentPaddingBottom: "10px",
-          rowContentPaddingLeft: "50px",
-          rowContentPaddingRight: "150px",
-          rowTitleTextPaddingLeft : "30px",
-          arrowColor: "black",
-        }}
-      />
+
       <h2 className={styles.text}>Parlez moi de votre projet</h2>
       <div className={styles.form}>
         <form className={styles.inputContainer} onSubmit={handleOnSubmit}>

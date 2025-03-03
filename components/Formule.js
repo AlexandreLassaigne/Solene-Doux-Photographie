@@ -1299,23 +1299,35 @@ function Formule(props) {
         <div style={{ textAlign: "center", fontFamily: "Inria serif" }}>
           <h1>Pack Duo Grossesse - Naissance</h1>
           <p className={styles.presentation}>
-            Célébrez l’un des moments les plus précieux de votre vie, en créant
-            un souvenir intemporel de cette période unique.
-            <br /> Mon objectif étant de capturer la beauté et la magie de votre
-            grossesse, tout en vous mettant à l’aise. <br />
-            Accompagnés de conseils sur les tenues et les poses, je vous
-            guiderai tout au long du processus pour obtenir des photos
-            naturelles et à votre image. <br />
+            Le pack duo grossesse-naissance vous permet de capturer deux moments
+            inoubliables : la beauté de votre grossesse et les premiers instants
+            de vie de votre bébé.
+            <br /> En combinant ces deux séances photo, vous bénéficiez non
+            seulement de souvenirs précieux, mais également d'une réduction sur
+            le motant total.
+            <br />
+            <br />
+            Séance grossesse : Mon objectif étant de capturer la beauté et la
+            magie de votre grossesse, tout en vous mettant à l’aise. <br />
             Chaque cliché est pensé pour mettre en valeur votre ventre rond et
             l’amour qui grandit à l’intérieur. <br />
             Cette séance se fait en extérieur ou chez vous, votre cocon.
+            <br />
+            <br />
+            Séance naissance : Immortalisée dans les 30 premiers jours, cette
+            séance permet de photographier votre tout-petit dans des poses
+            naturelles et sécurisées, en mettant l’accent sur les détails
+            précieux. <br />
+            Elle se déroulera à domicile, pour que chaque photo soit réalisée
+            dans le respect du bien-être de votre nouveau-né, tout en étant dans
+            votre univers, pour des souvenirs tendres et intemporels. <br />
           </p>
         </div>
         <div className={styles.container}>
           <div className={styles.image}>
             <Image
-              src="/TBB/tbb4.jpg"
-              alt="photo TBB"
+              src="/Duo_Grossesse_Naissance/grossesse_naissance1.jpg"
+              alt="photo grossesse"
               width={3510}
               height={5270}
               loading="lazy"
@@ -1371,8 +1383,8 @@ function Formule(props) {
             </div>
             <div className={styles.image}>
               <Image
-                src="/TBB/tbb2.jpg"
-                alt="photo TBB"
+                src="/Duo_Grossesse_Naissance/grossesse_naissance4.jpg"
+                alt="photo naissance"
                 width={3510}
                 height={5270}
                 loading="lazy"
@@ -1384,7 +1396,7 @@ function Formule(props) {
           <div className={styles.container}>
             <div className={styles.image}>
               <Image
-                src="/TBB/tbb9.jpg"
+                src="/Duo_Grossesse_Naissance/grossesse_naissance2.jpg"
                 alt="photo TBB"
                 width={3510}
                 height={5270}
@@ -1423,16 +1435,16 @@ function Formule(props) {
         <div style={{ textAlign: "center", fontFamily: "Inria serif" }}>
           <h1>Séance Baptême</h1>
           <p className={styles.presentation}>
-            Célébrez l’un des moments les plus précieux de votre vie, en créant
-            un souvenir intemporel de cette période unique.
-            <br /> Mon objectif étant de capturer la beauté et la magie de votre
-            grossesse, tout en vous mettant à l’aise. <br />
-            Accompagnés de conseils sur les tenues et les poses, je vous
-            guiderai tout au long du processus pour obtenir des photos
-            naturelles et à votre image. <br />
-            Chaque cliché est pensé pour mettre en valeur votre ventre rond et
-            l’amour qui grandit à l’intérieur. <br />
-            Cette séance se fait en extérieur ou chez vous, votre cocon.
+            Le baptême est un moment particulier, chargé de symbolisme et
+            d'émotions.
+            <br /> Offrez-vous la possibilité de capturer ces instants précieux
+            grâce à une séance photo sur mesure <br />
+            Que ce soit lors de la cérémonie à l'église ou à la mairie, des
+            moments de partage en famille ou des portraits tout en douceur, je
+            vous propose une approche discrète et naturelle pour saisir
+            l'authenticité de chaque instant. Mon objectif est de vous offrir
+            des souvenirs émouvants, qui témoignent de la beauté et de la joie
+            de ce jour spécial.
           </p>
         </div>
         <div className={styles.container}>

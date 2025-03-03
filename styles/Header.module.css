@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "Glitther Syavina";
+  src: url("../fonts/GlittherSyavinafree.ttf");
+}
+.head {
+  display: flex;
+  width: 100vw;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.headContainer {
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  background-color: rgba(186, 174, 152, 0.6);
+  position: fixed;
+  height: 70px;
+}
+
+.logo {
+  background-color: transparent;
+  margin-top: 10px;
+  margin-left: 100px;
+  cursor: pointer;
+}
+
+.headerRight {
+  background-color: transparent;
+  display: flex;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+}
+
+.lien {
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 30px;
+  margin-right: 20px;
+  font-family: "Glitther Syavina";
+}
+
+.lienGallerie {
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 30px;
+  margin-right: 20px;
+  font-family: "Glitther Syavina";
+  color: #000000;
+}
+
+.instaIcon {
+  background-color: transparent;
+  margin-top: 15px;
+  margin-left: 40px;
+  margin-right: 40px;
+  font-size: 40px;
+  cursor: pointer;
+  color: #000000;
+}

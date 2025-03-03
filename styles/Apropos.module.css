@@ -13,63 +13,11 @@
   src: url('../fonts/Safira-March.ttf');
 }
 
-.head {
-  display: flex;
-  width: 100vw;
-  height: 100px;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-.headContainer {
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  width: 100vw;
-  background-color: rgba(186, 174, 152, 0.6);
-  position: fixed;
-  height: 70px;
-}
-
-.logo {
-  background-color: transparent;
-  margin-top: 10px;
-  margin-left: 100px;
-  cursor: pointer;
-}
-
-.headerRight{
-  background-color: transparent;
-  display: flex;
-}
-
-.menu {
-  display: flex;
-  align-items: center;
-  background-color: transparent;
-}
-
-.lien {
-  cursor: pointer;
-  background-color: transparent;
-  font-size: 30px;
-  margin-right: 20px;
-  font-family: 'Glitther Syavina';
-}
-
-.instaIcon {
-  background-color: transparent;
-  margin-top: 15px;
-  margin-left: 40px;
-  margin-right: 40px;
-  cursor: pointer;
-  color: #000000;
-}
-
 .presentationContainer {
   display: flex;
   justify-content: space-around;
   margin-bottom: 100px;
+  margin-top: 100px;
 }
 
 .presentationTexte {
@@ -120,6 +68,10 @@
     font-size: 16px;
     margin-left: 5px;
   }
+  .lienGallerie {
+    font-size: 16px;
+    margin-right: 5px;
+  }
   .logo {
     margin-top: 10px;
     margin-left: 5px;
@@ -161,6 +113,10 @@
   .lien {
     font-size: 12px;
     margin-left: 5px;
+  }
+  .lienGallerie {
+    font-size: 12px;
+    margin-right: 5px;
   }
   .instaIcon {
     margin-top: 25px;

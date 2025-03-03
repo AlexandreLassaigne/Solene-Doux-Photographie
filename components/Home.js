@@ -1,65 +1,24 @@
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import Head from "next/head";
-import { FaInstagram } from "react-icons/fa";
 import { Carousel } from "nuka-carousel";
 import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css/animate.compat.css";
 import Image from "next/image";
+import Header from "./Header";
 
 function Home() {
-
   return (
     <div>
       <Head>
-        <link rel="preload" href="/Logo/logo_nom2.png" as="image" />
         <meta
           name="description"
           content="Photographe spécialisée dans les moments forts de la vie, mariage, maternité, famille, etc."
         />
         <title>Solène Photographie</title>
       </Head>
-      <div className={styles.head}>
-        <div className={styles.headContainer}>
-          <div className={styles.logo}>
-            <Image
-              width={290}
-              height={44}
-              src="/Logo/logo_nom2.png"
-              alt="Logo Solene Doux"
-              style={{ backgroundColor: "transparent" }}
-              priority
-            />
-          </div>
-          <div className={styles.headerRight}>
-            <div className={styles.menu}>
-              <Link href="/apropos">
-                <span className={styles.lien}>A propos</span>
-              </Link>
-              <Link href="/prestation">
-                <span className={styles.lien}>Prestation</span>
-              </Link>
-              <Link href="/portfolio">
-                <span className={styles.lien}>Portfolio</span>
-              </Link>
-              <Link href="/contact">
-                <span className={styles.lien}>Contact</span>
-              </Link>
-            </div>
-
-            <a
-              href="https://www.instagram.com/solenedoux_photographie/"
-              className={styles.instaIcon}
-              target="_blank"
-            >
-              <FaInstagram
-                style={{ backgroundColor: "transparent" }}
-                size={40}
-                aria-label="Instagram"
-              />
-            </a>
-          </div>
-        </div>
+      <div>
+        <Header />
         <div className={styles.carouselContainer}>
           <Carousel
             autoplay={true}
@@ -95,7 +54,7 @@ function Home() {
           <div className={styles.container}>
             <div className={styles.image}>
               <Image
-                src="/Solene/solene3.jpg"
+                src="/Solene/solene4.jpg"
                 alt="photo de Solene"
                 width={3510}
                 height={5270}
@@ -104,18 +63,20 @@ function Home() {
             </div>
             <div className={styles.description}>
               <p>
-                Solène Doux photographe passionné, spécialisé dans le portrait
-                et le paysage. <br />
-                Mon travail se distingue par une utilisation subtile de la
-                lumière naturelle et une approche minimaliste.
-                <br /> Je cherche à capturer des moments authentiques, souvent
-                empreints d’émotion.
+                Photographe passionnée et spécialisée dans les moments forts de
+                la vie, mon objectif : capturer les émotions authentiques et
+                sublimer chaque instant avec sensibilité et professionnalisme{" "}
                 <br />
-                Exposé dans plusieurs galeries, je collabore également avec des
-                magazines et des entreprises.
+                <br />
+                Que ce soit pour un mariage, une séance maternité, des photos de
+                famille ou encore un shooting pour des professionnels, je
+                m'efforce de créer des images intemporelles qui racontent votre
+                histoire. Chaque projet est unique, et j'aime m'adapter à vos
+                envies et besoins pour queles souvenirs que vous conserverez
+                soient à la hauteur de vos attentes.
               </p>
               <Link href="/apropos">
-                <button className={styles.button}>Mon parcours</button>
+                <button className={styles.button}>A propos</button>
               </Link>
             </div>
           </div>
@@ -151,7 +112,7 @@ function Home() {
           <div className={styles.container}>
             <div className={styles.image}>
               <Image
-                src="/EVJF/evjf5.jpg"
+                src="/Solo_confiance_en_soi/solo_confiance12.jpg"
                 alt="photo EVJF"
                 width={4160}
                 height={6240}
@@ -160,9 +121,10 @@ function Home() {
             </div>
             <div className={styles.description}>
               <p>
-                Envie de découvrir mon travail ? Cliquez ici pour explorer mon
-                portfolio et voir comment chaque image raconte une histoire
-                unique. À bientôt !
+                Découvrez mon portfolio, un espace où chaque projet reflète ma
+                passion et mon approche de cet art qu’est la photographie.
+                Plongez dans mon univers et n’hésitez pas à me contacter afin de
+                me partager vos projets et vos envies.
               </p>
               <Link href="/portfolio">
                 <button className={styles.button}>Mon portfolio</button>
