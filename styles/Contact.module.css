@@ -130,7 +130,7 @@
   justify-content: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 750px) {
   .input {
     background-color: #ffffff;
     border: none;
@@ -152,7 +152,7 @@
   }
 }
 
-@media (max-width: 465px) {
+@media (max-width: 480px) {
   .input {
     background-color: #ffffff;
     border: none;

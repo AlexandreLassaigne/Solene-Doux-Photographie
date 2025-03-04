@@ -4,7 +4,7 @@
 }
 .head {
   display: flex;
-  width: 100vw;
+  width: 100%;
   align-items: flex-start;
   flex-wrap: wrap;
 }
@@ -13,7 +13,7 @@
   z-index: 1000;
   display: flex;
   justify-content: space-between;
-  width: 100vw;
+  width: 100%;
   background-color: rgba(186, 174, 152, 0.6);
   position: fixed;
   height: 70px;
@@ -29,6 +29,7 @@
 .headerRight {
   background-color: transparent;
   display: flex;
+  margin-left: 40px;
 }
 
 .menu {
@@ -62,4 +63,53 @@
   font-size: 40px;
   cursor: pointer;
   color: #000000;
+}
+
+@media (max-width : 1024px){
+  .logo{
+    margin-left: 50px;
+  }
+  .lien, .lienGallerie{
+    font-size: 22px;
+  }
+  .instaIcon{
+    font-size: 35px;
+  }
+}
+@media (max-width : 850px){
+  .logo{
+    margin : 15px 10px
+  }
+  .lien, .lienGallerie{
+    font-size: 18px;
+    margin: 10px 5px;
+  }
+  .instaIcon{
+    font-size: 30px;
+    margin: 15px 5px;
+  }
+}
+@media (max-width : 600px){
+  .logo{
+    margin : 20px 10px
+  }
+  .lien, .lienGallerie{
+    font-size: 14px;
+  }
+  .instaIcon{
+    font-size: 20px;
+    margin: 25px 5px;
+  }
+}
+@media (max-width : 480px){
+  .logo{
+    margin : 25px 10px
+  }
+  .lien, .lienGallerie{
+    font-size: 10px;
+  }
+  .instaIcon{
+    font-size: 15px;
+    margin: 30px 5px;
+  }
 }

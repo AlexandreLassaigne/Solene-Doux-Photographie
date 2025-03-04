@@ -8,9 +8,11 @@
   src: url('../fonts/InriaSerif-Regular.ttf');
 }
 
-@font-face {
-  font-family: 'Safira';
-  src: url('../fonts/Safira-March.ttf');
+.presentation {
+  font-size: 18px;
+  width: 80vw;
+  margin: auto;
+  line-height: 130%;
 }
 
 .container {
@@ -32,8 +34,8 @@
   height: auto;
   font-family: 'Inria serif';
   max-width: 50%;
-  padding: 0 1rem;
-  margin: 100px;
+  margin-left: 20px;
+  margin-right: 20px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -47,22 +49,19 @@
 
 .formulaTitle {
   font-size: 32px;
-  font-weight: bold;
   font-family: 'Glitther Syavina';
   color: #333;
   margin-bottom: 8px;
 }
 
-.price {
-  font-size: 24px;
-  color: #c04e3c;
+.h2 {
+  font-size: 20px;
   font-family: 'Inria serif';
 }
 
-.h2 {
+.price {
   font-size: 18px;
-  margin-bottom: 16px;
-  font-weight: normal;
+  color: #c04e3c;
   font-family: 'Inria serif';
 }
 
@@ -72,73 +71,112 @@
   font-family: 'Inria serif';
 }
 
-.presentation {
-  font-size: 18px;
-  width: 80vw;
-  margin: auto;
-  line-height: 130%;
-}
-
 .contact {
   font-size: 14px;
   font-family: 'Inria serif';
-  text-align: center;
 }
 
-@media (max-width: 768px) {
-  .container {
-    display: flex;
-    justify-content: center;
-  }
-  .image {
-    width: 200%;
-    margin-bottom: 1rem;
-  }
-  .description {
-    max-width: 100%;
-    text-align: center;
-  }
+
+@media (max-width: 1024px) {
   .presentation {
-    font-size: 12px;
+    font-size: 16px;
+    width: 80vw;
+    margin: auto;
+    line-height: 130%;
   }
+
+  .description {
+    max-width: 40%;
+  }
+  
+  .image {
+    width: 30%;
+    margin: 10px;
+  }
+  
   .formulaTitle {
-    font-size: 26px;
+    font-size: 30px;
+    margin-bottom: 8px;
+  }
+  
+  .h2 {
+    font-size: 20px;
   }
   
   .price {
     font-size: 18px;
   }
   
-  .h2 {
-    font-size: 12px;
+  .p {
+    font-size: 16px;
   }
   
+  .contact {
+    font-size: 14px;
+  }
+ 
+}
+@media (max-width: 850px) {
+  .presentation {
+    font-size: 14px;
+  }
+  .image {
+    width: 30%;
+    margin: 10px;
+  }
+  .description {
+    max-width: 30%;
+  }
+  .formulaTitle {
+    font-size: 26px;
+  }
+  .h2 {
+    font-size: 18px;
+  }
+  .price {
+    font-size: 16px;
+  }
   .p {
-    font-size: 10px;
+    font-size: 14px;
   }
   .contact {
     font-size: 12px;
   }
 }
-
-@media (max-width: 500px) {
-  .container {
-    display: flex;
-    justify-content: center;
+@media (max-width: 600px) {
+  .presentation {
+    font-size: 14px;
   }
   .image {
-    width: 400%;
-    margin-bottom: 1rem;
+    width: 30%;
+    margin: 10px;
   }
   .description {
-    width: 50%;
-    text-align: center;
-  }
-  .presentation {
-    font-size: 10px;
+    max-width: 30%;
   }
   .formulaTitle {
-    font-size: 20px;
+    font-size: 22px;
+  }
+  .h2 {
+    font-size: 16px;
+  }
+  .price {
+    font-size: 14px;
+  }
+  .p {
+    font-size: 12px;
+  }
+  .contact {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .presentation {
+    font-size: 12px;
+  }
+  .formulaTitle {
+    font-size: 18px;
   }
   
   .price {
@@ -146,11 +184,11 @@
   }
   
   .h2 {
-    font-size: 10px;
+    font-size: 14px;
   }
   
   .p {
-    font-size: 8px;
+    font-size: 10px;
   }
   .contact {
     font-size: 8px;

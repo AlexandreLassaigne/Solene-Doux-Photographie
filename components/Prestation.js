@@ -26,8 +26,8 @@ function Prestation() {
               <Image
                 src={data.source}
                 alt={`photo ${data.name}`}
-                width={3974}
-                height={5961}
+                width={3777}
+                height={5666}
                 loading="lazy"
               />
             </div>
@@ -43,8 +43,8 @@ function Prestation() {
             <Image
               src={data.source}
               alt={`photo ${data.name}`}
-              width={3974}
-              height={5961}
+              width={3777}
+              height={5666}
               loading="lazy"
             />
             <button

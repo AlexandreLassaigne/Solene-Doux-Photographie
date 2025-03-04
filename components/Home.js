@@ -1,13 +1,28 @@
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import Head from "next/head";
-import { Carousel } from "nuka-carousel";
 import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css/animate.compat.css";
 import Image from "next/image";
 import Header from "./Header";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function Home() {
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+    lazyLoad: "ondemand", // Lazy load des images
+  };
+
   return (
     <div>
       <Head>
@@ -19,37 +34,39 @@ function Home() {
       </Head>
       <div>
         <Header />
-        <div className={styles.carouselContainer}>
-          <Carousel
-            autoplay={true}
-            autoplayInterval={3000}
-            wrapAround={true}
-            wrapMode="wrap"
-          >
-            <img
-              src="/Accueil/accueil3.jpg"
-              alt="Photo acceuil couple"
-              className={styles.imageHead1}
-            />
-            <img
-              src="/Accueil/accueil4.jpg"
-              alt="Photo acceuil couple"
-              className={styles.imageHead1}
-            />
-            <img
-              src="/Accueil/accueil1.jpeg"
-              alt="Photo acceuil grossesse"
-              className={styles.imageHead1}
-            />
-            <img
-              src="/Accueil/accueil2.jpeg"
-              alt="Photo acceuil naissance"
-              className={styles.imageHead1}
-            />
-          </Carousel>
-        </div>
+        <Slider {...settings}>
+          <Image
+            src="/Accueil/accueil3.webp"
+            alt="Photo acceuil couple"
+            width={6239}
+            height={3818}
+            className={styles.imageHead}
+            priority
+          />
+          <Image
+            src="/Accueil/accueil1.webp"
+            alt="Photo acceuil grossesse"
+            width={4070}
+            height={2713}
+            className={styles.imageHead}
+          />
+          <Image
+            src="/Accueil/accueil4.webp"
+            alt="Photo acceuil couple"
+            width={6240}
+            height={4160}
+            className={styles.imageHead}
+          />
+          <Image
+            src="/Accueil/accueil2.webp"
+            alt="Photo acceuil naissance"
+            width={4156}
+            height={2550}
+            className={styles.imageHead}
+          />
+        </Slider>
       </div>
-      <div className={styles.allContainer}>
+      <div>
         <ScrollAnimation animateIn="fadeInUp" delay={1 * 100}>
           <div className={styles.container}>
             <div className={styles.image}>

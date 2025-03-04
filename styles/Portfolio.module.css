@@ -43,12 +43,30 @@
   justify-content: center;
 }
 
+@media (max-width: 1024px) {
+  .image {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+  .fullscreenImage {
+    max-width: 95%;
+  }
+}
 @media (max-width: 768px) {
   .image {
     max-width: 100%;
     margin-bottom: 1rem;
   }
   .fullscreenImage {
-    max-height: 45vh;
+    max-width: 95%;
+  }
+}
+@media (max-width: 480px) {
+  .image {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+  .fullscreenImage {
+    max-width: 95%;
   }
 }

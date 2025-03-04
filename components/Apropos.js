@@ -10,7 +10,6 @@ export default function Apropos() {
   return (
     <div>
       <Head>
-      <link rel="preload" href="/Logo/logo_nom2.png" as="image"/>
         <meta
           name="description"
           content="Photographe spécialisée dans les moments forts de la vie, mariage, maternité, famille, etc."

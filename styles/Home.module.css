@@ -1,26 +1,18 @@
 @font-face {
-  font-family: 'Glitther Syavina';
-  src: url('../fonts/GlittherSyavinafree.ttf');
-}
-
-@font-face {
   font-family: 'Inria serif';
-  src: url('../fonts/InriaSerif-Regular.ttf');
-}
-
-@font-face {
-  font-family: 'Safira';
-  src: url('../fonts/Safira-March.ttf');
+  src: url('../fonts/InriaSerif-Regular.ttf') format("woff2");
+  font-display: swap;
 }
 
 .carouselContainer {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
 }
 
-.imageHead1 {
-  width: 100vw;
+.imageHead {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -34,7 +26,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 50px;
   margin-bottom: 30px;
 }
 
@@ -43,9 +35,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 30%;
+  max-width: 30%;
   height: auto;
-  margin: 100px;
+  margin: 50px;
   font-size: 22px;
   font-family: "Inria serif";
 }
@@ -87,138 +79,108 @@
 }
 
 
-.swiperSlide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-}
+@media (max-width: 1024px) {
+  .container{
+    margin-top: 0;
+  }
 
-@media (max-width: 768px) {
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   .image {
-    max-width: 100%;
-    margin-bottom: 1rem;
-  }
-  .description {
-    display: flex;
-    align-items: center;
     width: 30%;
-    height: auto;
-    margin: 50px;
-    font-size: 14px;
-    font-family: "Poppins serif";
+    margin: 10px;
   }
-  .imageHead {
-    width: 100vw;
+
+  .description {
+    font-size: 18px;
+    max-width: 30%;
   }
-  .imageHead1 {
-    max-width: 100%;
-    margin-bottom: 1rem;
-  }
-  .imageHeadVert{
-    max-width: 100%;
-    margin-bottom: 1rem;
-  }
+
   .button {
-    border: solid 1px;
-    background-color: transparent;
-    cursor: pointer;
-    font-size: 14px;
+    font-size: 18px;
     height: 50px;
     width: 80%;
-    border-radius: 30px;
-    transition: 0.5s;
-    font-family: "Poppins";
-    margin-top: 40px;
   }
   .buttonPrestation {
-    border: solid 1px;
-    background-color: transparent;
-    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    width: 80%;
+  }
+}
+@media (max-width: 850px) {
+  .container{
+    margin-top: 0;
+  }
+
+  .image {
+    width: 40%;
+    margin: 10px;
+  }
+
+  .description {
+    font-size: 16px;
+    max-width: 30%;
+  }
+
+  .button {
+    font-size: 16px;
+    height: 50px;
+    width: 80%;
+  }
+  .buttonPrestation {
+    font-size: 16px;
+    height: 50px;
+    width: 80%;
+  }
+}
+@media (max-width: 600px) {
+  .container{
+    margin-top: 0px;
+  }
+
+  .image {
+    width: 40%;
+    margin: 10px;
+  }
+
+  .description {
+    font-size: 14px;
+    max-width: 40%;
+  }
+
+  .button {
     font-size: 14px;
     height: 50px;
     width: 80%;
-    border-radius: 30px;
-    transition: 0.5s;
-    font-family: "Poppins";
-    margin-top: 40px;
   }
-  .box {
-    width: 200px;
-    height: 100vh;
-    font-size: 24px;
+  .buttonPrestation {
+    font-size: 14px;
+    height: 50px;
+    width: 80%;
   }
 }
 
-@media (max-width: 490px) {
-/*   .allContainer {
-    margin-top: 300px;
-  } */
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@media (max-width: 480px) {
+  .container{
+    margin-top: 0;
   }
+
   .image {
-    max-width: 100%;
-    margin-bottom: 1rem;
+    width: 40%;
+    margin: 10px;
   }
+
   .description {
-    display: flex;
-    align-items: center;
-    width: 30%;
-    height: auto;
-    margin: 50px;
-    font-size: 12px;
-    font-family: "Poppins serif";
+    font-size: 10px;
+    max-width: 40%;
   }
-  .imageHead {
-    max-width: 100%;
-    margin-bottom: 1rem;
-  }
-  .imageHead1 {
-    max-width: 100%;
-    margin-bottom: 1rem;
-  }
-  .imageHeadVert{
-    max-width: 100%;
-    margin-bottom: 1rem;
-  }
+
   .button {
-    border: solid 1px;
-    background-color: transparent;
-    cursor: pointer;
     font-size: 12px;
     height: 50px;
     width: 80%;
-    border-radius: 30px;
-    transition: 0.5s;
-    font-family: "Poppins";
-    margin-top: 40px;
   }
   .buttonPrestation {
-    border: solid 1px;
-    background-color: transparent;
-    cursor: pointer;
     font-size: 12px;
     height: 50px;
     width: 80%;
-    border-radius: 30px;
-    transition: 0.5s;
-    font-family: "Poppins";
-    margin-top: 40px;
-  }
-  .contactDescription {
-    font-size: 14px;
-  }
-  .box {
-    width: 200px;
-    height: 100vh;
-    font-size: 24px;
   }
 }

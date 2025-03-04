@@ -71,17 +71,12 @@
   .button {
     font-size: 18px;
   }
-  .box {
-    width: 200px;
-    height: 100vh;
-    font-size: 24px;
-  }
   .presationTexte {
     font-size: 14px;
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 600px) {
   .container {
     flex-direction: column;
     align-items: center;
@@ -94,11 +89,25 @@
   .button {
     font-size: 13px;
   }
-  .box {
-    width: 200px;
-    height: 100vh;
-    font-size: 24px;
+
+  .presationTexte {
+    font-size: 12px;
   }
+}
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  .description {
+    max-width: 100%;
+    text-align: center;
+  }
+  .button {
+    font-size: 9px;
+  }
+
   .presationTexte {
     font-size: 12px;
   }

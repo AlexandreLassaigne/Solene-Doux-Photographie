@@ -114,7 +114,7 @@ function Contact() {
             rowContentPaddingTop: "10px",
             rowContentPaddingBottom: "10px",
             rowContentPaddingLeft: "50px",
-            rowContentPaddingRight: "150px",
+            rowContentPaddingRight: "50px",
             rowTitleTextPaddingLeft: "30px",
             arrowColor: "black",
           }}
