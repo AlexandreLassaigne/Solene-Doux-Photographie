@@ -1,6 +1,7 @@
 @font-face {
   font-family: 'Inria serif';
   src: url('../fonts/InriaSerif-Regular.ttf');
+  font-display: swap;
 }
 
 .presentationContainer {
@@ -13,12 +14,11 @@
 
 .presentationTexte {
   text-align: center;
-  width: 40%;
-  height: 70%;
   font-size: 22px;
-  display: flex;
-  align-items: center;
-  font-family: 'Inria serif';
+  display: block;
+  font-family: 'Inria serif', sans-serif; 
+  margin: 0 ;
+  max-width: 500px; 
 }
 
 .image {

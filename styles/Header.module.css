@@ -41,6 +41,7 @@
 .lien {
   cursor: pointer;
   background-color: transparent;
+  text-decoration: none;
   font-size: 30px;
   margin-right: 20px;
   font-family: "Glitther Syavina";

@@ -4,30 +4,32 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import Head from "next/head";
-import ScrollAnimation from "react-animate-on-scroll";
-import "animate.css";
-import "animate.css/animate.compat.css";
 import Image from "next/image";
-import Formule from "./Formule";
 import prestations from "../utils/prestation";
+import dynamic from "next/dynamic";
+import Formule from './Formule'
+import ScrollAnimation from "react-animate-on-scroll";
+
+/* const Formule = dynamic(() => import("./Formule"), { ssr: false });*/  
+/*const ScrollAnimation = dynamic(() => import("react-animate-on-scroll"), { ssr: false }); */
 
 function Prestation() {
   const [formule, setFormule] = useState(false);
   const [formuleName, setFormuleName] = useState(null);
 
 
-  const prestation = prestations.map((data) => {
-    const isScrollAnimationNeeded = prestations.indexOf(data) >= 3;
+  const prestation = prestations.map((data,i) => {
+    const isScrollAnimationNeeded = prestations.indexOf(data) >= 6;
     return (
-      <div className={styles.container}>
+      <div key={i} className={styles.container}>
         {isScrollAnimationNeeded ? (
-          <ScrollAnimation animateIn="fadeInUp" delay={1 * 100} key={prestations.id}>
+          <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={100}>
             <div className={styles.image}>
               <Image
                 src={data.source}
                 alt={`photo ${data.name}`}
-                width={3777}
-                height={5666}
+                width={800}
+                height={1200}
                 loading="lazy"
               />
             </div>
@@ -39,12 +41,13 @@ function Prestation() {
             </button>
           </ScrollAnimation>
         ) : (
-          <div className={styles.image} key={prestations.id}>
+          <div className={styles.image}>
             <Image
               src={data.source}
               alt={`photo ${data.name}`}
-              width={3777}
-              height={5666}
+              width={800}
+              height={1200}
+              layout="intrinsic"
               loading="lazy"
             />
             <button
@@ -73,14 +76,14 @@ function Prestation() {
   return (
     <div>
       <Head>
+      <title>Photographie Solène</title>
         <meta
           name="description"
-          content="Photographe spécialisée dans les moments forts de la vie, mariage, maternité, famille, etc."
+          content="Photographe dans la région Toulousaine spécialisée dans les moments forts de la vie, mariage, maternité, famille, etc."
         />
-        <title>Solène Photographie</title>
       </Head>
       <Header/>
-      {!formule && (
+      {!formule &&(
         <div>
           <div className={styles.allContainer}>{prestation}</div>
         </div>
@@ -91,9 +94,9 @@ function Prestation() {
             icon={faChevronLeft}
             onClick={() => handlePresta()}
             className={styles.chevron}
-            size="2x"
             aria-label="Flèche"
             role="Retour en arrière"
+            style={{width : '40px', height: '40px'}}
           />
           <Formule name={formuleName} />
         </div>

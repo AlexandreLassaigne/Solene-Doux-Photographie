@@ -1,6 +1,5 @@
 import styles from "../styles/Apropos.module.css";
 import Head from "next/head";
-import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css";
 import "animate.css/animate.compat.css";
 import Image from "next/image";
@@ -10,13 +9,20 @@ export default function Apropos() {
   return (
     <div>
       <Head>
+        <title>Photographie Solène</title>
         <meta
           name="description"
-          content="Photographe spécialisée dans les moments forts de la vie, mariage, maternité, famille, etc."
+          content="Photographe dans la région Toulousaine spécialisée dans les moments forts de la vie, mariage, maternité, famille, etc."
         />
-        <title>Solène Photographie</title>
+        <link
+          rel="preload"
+          href="/fonts/InriaSerif-Regular.ttf"
+          as="font"
+          type="font/ttf"
+          crossorigin="anonymous"
+        />
       </Head>
-      <Header/>
+      <Header />
       <div>
         <div className={styles.presentationContainer}>
           <p className={styles.presentationTexte}>
@@ -42,45 +48,44 @@ export default function Apropos() {
           </p>
           <div className={styles.image}>
             <Image
-              src="/Solene/solene4.jpg"
+              src="/Solene/solene4.webp"
               alt="photo de Solene"
               width={3839}
               height={5758}
+              priority
             />
           </div>
         </div>
       </div>
       <div>
         {" "}
-        <ScrollAnimation animateIn="fadeInUp" delay={1 * 100} offset={100}>
-          <div className={styles.presentationContainer}>
-            <div className={styles.image}>
-              <Image
-                src="/Solene/solene2.jpg"
-                alt="photo de Solene"
-                width={3501}
-                height={5251}
-                loading="lazy"
-              />
-            </div>
-            <p className={styles.presentationTexte}>
-              Avec un oeil attentif aux détails et une approche naturelle, je
-              cherche à immortaliser les moments les plus précieux tout en vous
-              offrant une expérience conviviale et sans pression.
-              <br />
-              <br />
-              Ma priorité est que vous vous sentiez à l’aise devant l’objectif
-              et que chaque cliché reflète votre personnalité. Si vous
-              recherchez des images pleines d’émotions, sincères et créatives,
-              je serai ravie de vous accompagner dans cette aventure.
-              <br />
-              <br />
-              N’hésitez pas à me contacter pour discuter de vos projets et de
-              vos envies photographiques !
-              <br />
-            </p>
+        <div className={styles.presentationContainer}>
+          <div className={styles.image}>
+            <Image
+              src="/Solene/solene2.webp"
+              alt="photo de Solene"
+              width={3501}
+              height={5251}
+              loading="lazy"
+            />
           </div>
-        </ScrollAnimation>
+          <p className={styles.presentationTexte}>
+            Avec un oeil attentif aux détails et une approche naturelle, je
+            cherche à immortaliser les moments les plus précieux tout en vous
+            offrant une expérience conviviale et sans pression.
+            <br />
+            <br />
+            Ma priorité est que vous vous sentiez à l’aise devant l’objectif et
+            que chaque cliché reflète votre personnalité. Si vous recherchez des
+            images pleines d’émotions, sincères et créatives, je serai ravie de
+            vous accompagner dans cette aventure.
+            <br />
+            <br />
+            N’hésitez pas à me contacter pour discuter de vos projets et de vos
+            envies photographiques !
+            <br />
+          </p>
+        </div>
       </div>
     </div>
   );

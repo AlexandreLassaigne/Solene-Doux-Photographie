@@ -10,7 +10,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function Home() {
-
   const settings = {
     dots: false,
     infinite: true,
@@ -21,16 +20,23 @@ function Home() {
     autoplaySpeed: 3000,
     arrows: false,
     lazyLoad: "ondemand", // Lazy load des images
+    pauseOnHover : false,
   };
 
   return (
     <div>
       <Head>
+        <title>Photographie Solène</title>
         <meta
           name="description"
-          content="Photographe spécialisée dans les moments forts de la vie, mariage, maternité, famille, etc."
+          content="Photographe dans la région Toulousaine spécialisée dans les moments forts de la vie, mariage, maternité, famille, etc."
         />
-        <title>Solène Photographie</title>
+        <link
+          rel="preload"
+          href="/Accueil/accueil3.webp"
+          as="image"
+          type="image/webp"
+        />
       </Head>
       <div>
         <Header />
@@ -38,40 +44,44 @@ function Home() {
           <Image
             src="/Accueil/accueil3.webp"
             alt="Photo acceuil couple"
-            width={6239}
-            height={3818}
+            width={1500}
+            height={850}
             className={styles.imageHead}
             priority
+            loading="eager"
           />
           <Image
             src="/Accueil/accueil1.webp"
             alt="Photo acceuil grossesse"
-            width={4070}
-            height={2713}
+            width={1500}
+            height={850}
             className={styles.imageHead}
+            loading="lazy"
           />
           <Image
             src="/Accueil/accueil4.webp"
             alt="Photo acceuil couple"
-            width={6240}
-            height={4160}
+            width={1500}
+            height={850}
             className={styles.imageHead}
+            loading="lazy"
           />
           <Image
             src="/Accueil/accueil2.webp"
             alt="Photo acceuil naissance"
-            width={4156}
-            height={2550}
+            width={1500}
+            height={850}
             className={styles.imageHead}
+            loading="lazy"
           />
         </Slider>
       </div>
       <div>
-        <ScrollAnimation animateIn="fadeInUp" delay={1 * 100}>
+        <div>
           <div className={styles.container}>
             <div className={styles.image}>
               <Image
-                src="/Solene/solene4.jpg"
+                src="/Solene/solene4.webp"
                 alt="photo de Solene"
                 width={3510}
                 height={5270}
@@ -97,8 +107,8 @@ function Home() {
               </Link>
             </div>
           </div>
-        </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInUp" delay={1 * 100}>
+        </div>
+        <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={1 * 100}>
           <div className={styles.container}>
             <div className={styles.description}>
               <p>
@@ -116,7 +126,7 @@ function Home() {
             </div>
             <div className={styles.image}>
               <Image
-                src="/Couple/couple8.jpg"
+                src="/Couple/couple8.webp"
                 alt="photo de couple"
                 width={4160}
                 height={6240}
@@ -125,11 +135,11 @@ function Home() {
             </div>
           </div>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInUp" delay={1 * 100}>
+        <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={1 * 100}>
           <div className={styles.container}>
             <div className={styles.image}>
               <Image
-                src="/Solo_confiance_en_soi/solo_confiance12.jpg"
+                src="/Solo_confiance_en_soi/solo_confiance12.webp"
                 alt="photo EVJF"
                 width={4160}
                 height={6240}

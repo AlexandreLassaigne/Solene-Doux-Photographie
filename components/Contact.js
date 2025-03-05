@@ -96,12 +96,11 @@ function Contact() {
   return (
     <div>
       <Head>
-      <link rel="preload" href="/Logo/logo_nom2.png" as="image" />
+      <title>Photographie Solène</title>
         <meta
           name="description"
-          content="Photographe spécialisée dans les moments forts de la vie, mariage, maternité, famille, etc."
+          content="Photographe dans la région Toulousaine spécialisée dans les moments forts de la vie, mariage, maternité, famille, etc."
         />
-        <title>Solène Photographie</title>
       </Head>
       <Header />
       <div className={styles.faq}>
