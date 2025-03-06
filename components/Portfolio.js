@@ -33,7 +33,6 @@ function Portfolio() {
           onClick={() => handleImageClick(data.image)}
           style={{ cursor: "pointer" }}
           loading="lazy"
-          quality={75}
         />
       </ScrollAnimation>
     );

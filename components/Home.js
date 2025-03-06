@@ -83,8 +83,8 @@ function Home() {
               <Image
                 src="/Solene/solene4.webp"
                 alt="photo de Solene"
-                width={3510}
-                height={5270}
+                width={500}
+                height={750}
                 loading="lazy"
               />
             </div>
@@ -126,10 +126,10 @@ function Home() {
             </div>
             <div className={styles.image}>
               <Image
-                src="/Couple/couple8.webp"
+                src="/Couple/couple6.webp"
                 alt="photo de couple"
-                width={4160}
-                height={6240}
+                width={500}
+                height={750}
               />
             </div>
           </div>
@@ -140,8 +140,8 @@ function Home() {
               <Image
                 src="/Solo_confiance_en_soi/solo_confiance12.webp"
                 alt="photo EVJF"
-                width={4160}
-                height={6240}
+                width={500}
+                height={750}
               />
             </div>
             <div className={styles.description}>

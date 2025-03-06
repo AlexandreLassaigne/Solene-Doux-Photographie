@@ -11,7 +11,7 @@ const prestations = [
   },
   {
     name: "Couple",
-    source: require("../public/Couple/couple7.webp"),
+    source: require("../public/Couple/couple1.webp"),
     id: 3,
   },
   {
