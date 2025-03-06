@@ -58,6 +58,7 @@ function Home() {
             height={850}
             className={styles.imageHead}
             loading="lazy"
+            layout="intrinsic"
           />
           <Image
             src="/Accueil/accueil4.webp"
@@ -66,6 +67,7 @@ function Home() {
             height={850}
             className={styles.imageHead}
             loading="lazy"
+            layout="intrinsic"
           />
           <Image
             src="/Accueil/accueil2.webp"
@@ -74,6 +76,7 @@ function Home() {
             height={850}
             className={styles.imageHead}
             loading="lazy"
+            layout="intrinsic"
           />
         </Slider>
         </div>
