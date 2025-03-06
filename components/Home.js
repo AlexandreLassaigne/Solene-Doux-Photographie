@@ -49,6 +49,7 @@ function Home() {
             className={styles.imageHead}
             priority
             loading="eager"
+            quality={75}
           />
           <Image
             src="/Accueil/accueil1.webp"
@@ -57,6 +58,7 @@ function Home() {
             height={850}
             className={styles.imageHead}
             loading="lazy"
+            quality={75}
           />
           <Image
             src="/Accueil/accueil4.webp"
@@ -65,6 +67,7 @@ function Home() {
             height={850}
             className={styles.imageHead}
             loading="lazy"
+            quality={75}
           />
           <Image
             src="/Accueil/accueil2.webp"
@@ -73,6 +76,7 @@ function Home() {
             height={850}
             className={styles.imageHead}
             loading="lazy"
+            quality={75}
           />
         </Slider>
       </div>
@@ -86,6 +90,7 @@ function Home() {
                 width={500}
                 height={750}
                 loading="lazy"
+                quality={75}
               />
             </div>
             <div className={styles.description}>
@@ -93,14 +98,6 @@ function Home() {
                 Photographe passionnée et spécialisée dans les moments forts de
                 la vie, mon objectif : capturer les émotions authentiques et
                 sublimer chaque instant avec sensibilité et professionnalisme{" "}
-                {/* <br />
-                <br />
-                Que ce soit pour un mariage, une séance maternité, des photos de
-                famille ou encore un shooting pour des professionnels, je
-                m'efforce de créer des images intemporelles qui racontent votre
-                histoire. Chaque projet est unique, et j'aime m'adapter à vos
-                envies et besoins pour queles souvenirs que vous conserverez
-                soient à la hauteur de vos attentes. */}
               </p>
               <Link href="/apropos">
                 <button className={styles.button}>A propos</button>
@@ -130,6 +127,8 @@ function Home() {
                 alt="photo de couple"
                 width={500}
                 height={750}
+                loading="lazy"
+                quality={75}
               />
             </div>
           </div>
@@ -142,6 +141,8 @@ function Home() {
                 alt="photo EVJF"
                 width={500}
                 height={750}
+                loading="lazy"
+                quality={75}
               />
             </div>
             <div className={styles.description}>
