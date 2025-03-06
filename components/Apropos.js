@@ -50,8 +50,9 @@ export default function Apropos() {
             <Image
               src="/Solene/solene4.webp"
               alt="photo de Solene"
-              width={3839}
-              height={5758}
+              width={500}
+              height={750}
+              quality={75}
               priority
             />
           </div>
@@ -64,8 +65,9 @@ export default function Apropos() {
             <Image
               src="/Solene/solene2.webp"
               alt="photo de Solene"
-              width={3501}
-              height={5251}
+              width={500}
+              height={750}
+              quality={75}
             />
           </div>
           <p className={styles.presentationTexte}>
