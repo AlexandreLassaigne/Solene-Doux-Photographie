@@ -130,7 +130,6 @@ function Home() {
                 alt="photo de couple"
                 width={4160}
                 height={6240}
-                loading="lazy"
               />
             </div>
           </div>
@@ -143,7 +142,6 @@ function Home() {
                 alt="photo EVJF"
                 width={4160}
                 height={6240}
-                loading="lazy"
               />
             </div>
             <div className={styles.description}>

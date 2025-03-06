@@ -66,7 +66,6 @@ export default function Apropos() {
               alt="photo de Solene"
               width={3501}
               height={5251}
-              loading="lazy"
             />
           </div>
           <p className={styles.presentationTexte}>
