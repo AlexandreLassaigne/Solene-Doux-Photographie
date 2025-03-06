@@ -50,26 +50,26 @@ const image = [
   {
     name : "Couple",
     image : '/Couple/couple3.webp',
-    width : 500,
-    height : 750
+    width : 750,
+    height : 500
   },
   {
     name : "Couple",
     image : '/Couple/couple4.webp',
-    width : 750,
-    height : 500
-  },
-  {
-    name : "Couple",
-    image : '/Couple/couple5.webp',
     width : 500,
     height : 750
   },
   {
     name : "Couple",
-    image : '/Couple/couple6.webp',
+    image : '/Couple/couple5.webp',
     width : 750,
     height : 500
+  },
+  {
+    name : "Couple",
+    image : '/Couple/couple6.webp',
+    width : 500,
+    height : 750
   },
   {
     name : "Couple",
