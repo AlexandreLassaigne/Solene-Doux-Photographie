@@ -123,6 +123,12 @@
   font-family: "Inria serif";
 }
 
+.messageEnvoye {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-family: "Inria serif";
+}
+
 .form {
   width: 100vw;
   height: 70vh;

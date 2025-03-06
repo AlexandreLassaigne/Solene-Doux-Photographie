@@ -13,6 +13,7 @@ function Contact() {
   const [prestation, setPrestation] = useState("");
   const [message, setMessage] = useState("");
   const [messageError, setMessageError] = useState("");
+  const [messageEnvoye, setMessageenvoye] = useState("");
   const [wrongEmail, setWrongEmail] = useState(false);
   const [wrongTel, setWrongTel] = useState(false);
   const [emptyFields, setEmptyFields] = useState(false);
@@ -67,6 +68,7 @@ function Contact() {
         setPrestation("");
         setTel("");
         setMessageError("");
+        setMessageenvoye("Message envoyé")
         e.target.reset();
       }
     }
@@ -188,6 +190,7 @@ function Contact() {
           </div>
           <div className={styles.buttonContainer}>
             <div className={styles.messageError}>{messageError}</div>
+            <div className={styles.messageEnvoye}>{messageEnvoye}</div>
             <button className={styles.button} type="submit">
               Envoyer
             </button>

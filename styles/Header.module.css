@@ -113,4 +113,7 @@
     font-size: 15px;
     margin: 30px 5px;
   }
+  .headContainer {
+    height: 50px;
+  }
 }
