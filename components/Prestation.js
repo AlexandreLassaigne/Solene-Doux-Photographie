@@ -96,7 +96,6 @@ function Prestation() {
             className={styles.chevron}
             aria-label="Flèche"
             role="Retour en arrière"
-            style={{width : '40px', height: '40px'}}
           />
           <Formule name={formuleName} />
         </div>
