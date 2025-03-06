@@ -93,14 +93,14 @@ function Home() {
                 Photographe passionnée et spécialisée dans les moments forts de
                 la vie, mon objectif : capturer les émotions authentiques et
                 sublimer chaque instant avec sensibilité et professionnalisme{" "}
-                <br />
+                {/* <br />
                 <br />
                 Que ce soit pour un mariage, une séance maternité, des photos de
                 famille ou encore un shooting pour des professionnels, je
                 m'efforce de créer des images intemporelles qui racontent votre
                 histoire. Chaque projet est unique, et j'aime m'adapter à vos
                 envies et besoins pour queles souvenirs que vous conserverez
-                soient à la hauteur de vos attentes.
+                soient à la hauteur de vos attentes. */}
               </p>
               <Link href="/apropos">
                 <button className={styles.button}>A propos</button>
