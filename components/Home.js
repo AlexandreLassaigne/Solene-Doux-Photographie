@@ -49,7 +49,7 @@ function Home() {
             height={850}
             className={styles.imageHead}
             priority
-            loading="intrinsic"
+            layout="intrinsic"
           />
           <Image
             src="/Accueil/accueil1.webp"
