@@ -148,8 +148,11 @@
   }
 }
 @media (max-width: 480px) {
-  .allContainer, .formuleContainer{
+  .allContainer{
     margin-top: 10px;
+  }
+  .formuleContainer{
+    margin-top: 40px;
   }
   .container {
     flex-direction: column;
