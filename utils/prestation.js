@@ -36,7 +36,7 @@ const prestations = [
   },
   {
     name: "Grossesse - Naissance",
-    source: require("../public//Grossesse/grossesse9.webp"),
+    source: require("../public/Duo_Grossesse_Naissance/grossesse_naissance3.webp"),
     id: 8,
   },
   {

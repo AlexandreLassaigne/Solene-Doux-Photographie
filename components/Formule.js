@@ -33,7 +33,6 @@ function Formule(props) {
               alt="photo Mariage"
               width={3510}
               height={5270}
-              loading="lazy"
             />
           </div>
           <div className={styles.description}>
@@ -91,7 +90,6 @@ function Formule(props) {
                 alt="photo Mariage"
                 width={3510}
                 height={5270}
-                loading="lazy"
               />
             </div>
           </div>
@@ -104,7 +102,6 @@ function Formule(props) {
                 alt="photo Mariage"
                 width={3510}
                 height={5270}
-                loading="lazy"
               />
             </div>
             <div className={styles.description}>
@@ -154,7 +151,6 @@ function Formule(props) {
               alt="photo Allaitement"
               width={3510}
               height={5270}
-              loading="lazy"
             />
           </div>
           <div className={styles.description}>
@@ -211,7 +207,6 @@ function Formule(props) {
                 alt="photo Allaitement"
                 width={3510}
                 height={5270}
-                loading="lazy"
               />
             </div>
           </div>
@@ -224,7 +219,6 @@ function Formule(props) {
                 alt="photo Allaitement"
                 width={3510}
                 height={5270}
-                loading="lazy"
               />
             </div>
             <div className={styles.description}>
@@ -270,11 +264,10 @@ function Formule(props) {
         <div className={styles.container}>
           <div className={styles.image}>
             <Image
-              src="/Couple/couple3.webp"
+              src="/Couple/couple2.webp"
               alt="photo Couple"
               width={3510}
               height={5270}
-              loading="lazy"
             />
           </div>
           <div className={styles.description}>
@@ -327,11 +320,10 @@ function Formule(props) {
             </div>
             <div className={styles.image}>
               <Image
-                src="/Couple/couple5.webp"
+                src="/Couple/couple4.webp"
                 alt="photo Couple"
                 width={3510}
                 height={5270}
-                loading="lazy"
               />
             </div>
           </div>
@@ -340,11 +332,10 @@ function Formule(props) {
           <div className={styles.container}>
             <div className={styles.image}>
               <Image
-                src="/Couple/couple7.webp"
+                src="/Couple/couple6.webp"
                 alt="photo Couple"
                 width={3510}
                 height={5270}
-                loading="lazy"
               />
             </div>
             <div className={styles.description}>
@@ -394,7 +385,6 @@ function Formule(props) {
               alt="photo Décoration d'intérieur"
               width={3510}
               height={5270}
-              loading="lazy"
             />
           </div>
           <div className={styles.description}>
@@ -451,7 +441,6 @@ function Formule(props) {
                 alt="photo Décoration d'intérieur"
                 width={3510}
                 height={5270}
-                loading="lazy"
               />
             </div>
           </div>
@@ -464,7 +453,6 @@ function Formule(props) {
                 alt="photo Décoration d'intérieur"
                 width={3510}
                 height={5270}
-                loading="lazy"
               />
             </div>
             <div className={styles.description}>
@@ -519,7 +507,6 @@ function Formule(props) {
               alt="photo EVJF"
               width={3510}
               height={5270}
-              loading="lazy"
             />
           </div>
           <div className={styles.description}>
@@ -574,7 +561,6 @@ function Formule(props) {
               alt="photo Famille"
               width={3510}
               height={5270}
-              loading="lazy"
             />
           </div>
           <div className={styles.description}>
@@ -631,7 +617,6 @@ function Formule(props) {
                 alt="photo Famille"
                 width={3510}
                 height={5270}
-                loading="lazy"
               />
             </div>
           </div>
@@ -644,7 +629,6 @@ function Formule(props) {
                 alt="photo Famille"
                 width={3510}
                 height={5270}
-                loading="lazy"
               />
             </div>
             <div className={styles.description}>
@@ -698,7 +682,6 @@ function Formule(props) {
               alt="photo Grossesse"
               width={3510}
               height={5270}
-              loading="lazy"
             />
           </div>
           <div className={styles.description}>
@@ -755,7 +738,6 @@ function Formule(props) {
                 alt="photo Grossesse"
                 width={3510}
                 height={5270}
-                loading="lazy"
               />
             </div>
           </div>
@@ -768,7 +750,6 @@ function Formule(props) {
                 alt="photo Grossesse"
                 width={3510}
                 height={5270}
-                loading="lazy"
               />
             </div>
             <div className={styles.description}>
@@ -821,7 +802,6 @@ function Formule(props) {
               alt="photo Naissance"
               width={3510}
               height={5270}
-              loading="lazy"
             />
           </div>
           <div className={styles.description}>
@@ -878,7 +858,6 @@ function Formule(props) {
                 alt="photo Naissance"
                 width={3510}
                 height={5270}
-                loading="lazy"
               />
             </div>
           </div>
@@ -891,7 +870,6 @@ function Formule(props) {
                 alt="photo Naissance"
                 width={3510}
                 height={5270}
-                loading="lazy"
               />
             </div>
             <div className={styles.description}>
@@ -947,7 +925,6 @@ function Formule(props) {
               alt="photo Professionnels - Marques"
               width={3510}
               height={5270}
-              loading="lazy"
             />
           </div>
           <div className={styles.description}>
@@ -1004,7 +981,6 @@ function Formule(props) {
                 alt="photo Professionnels - Marques"
                 width={3510}
                 height={5270}
-                loading="lazy"
               />
             </div>
           </div>
@@ -1017,7 +993,6 @@ function Formule(props) {
                 alt="photo Professionnels - Marques"
                 width={3510}
                 height={5270}
-                loading="lazy"
               />
             </div>
             <div className={styles.description}>
@@ -1071,7 +1046,6 @@ function Formule(props) {
               alt="photo Solo - Confiance en soi"
               width={3510}
               height={5270}
-              loading="lazy"
             />
           </div>
           <div className={styles.description}>
@@ -1128,7 +1102,6 @@ function Formule(props) {
                 alt="photo Solo - Confiance en soi"
                 width={3510}
                 height={5270}
-                loading="lazy"
               />
             </div>
           </div>
@@ -1141,7 +1114,6 @@ function Formule(props) {
                 alt="photo Solo - Confiance en soi"
                 width={3510}
                 height={5270}
-                loading="lazy"
               />
             </div>
             <div className={styles.description}>
@@ -1194,7 +1166,6 @@ function Formule(props) {
               alt="photo TBB"
               width={3510}
               height={5270}
-              loading="lazy"
             />
           </div>
           <div className={styles.description}>
@@ -1251,7 +1222,6 @@ function Formule(props) {
                 alt="photo TBB"
                 width={3510}
                 height={5270}
-                loading="lazy"
               />
             </div>
           </div>
@@ -1264,7 +1234,6 @@ function Formule(props) {
                 alt="photo TBB"
                 width={3510}
                 height={5270}
-                loading="lazy"
               />
             </div>
             <div className={styles.description}>
@@ -1330,7 +1299,6 @@ function Formule(props) {
               alt="photo grossesse"
               width={3510}
               height={5270}
-              loading="lazy"
             />
           </div>
           <div className={styles.description}>
@@ -1387,7 +1355,6 @@ function Formule(props) {
                 alt="photo naissance"
                 width={3510}
                 height={5270}
-                loading="lazy"
               />
             </div>
           </div>
@@ -1400,7 +1367,6 @@ function Formule(props) {
                 alt="photo TBB"
                 width={3510}
                 height={5270}
-                loading="lazy"
               />
             </div>
             <div className={styles.description}>
@@ -1454,7 +1420,6 @@ function Formule(props) {
               alt="photo baptême"
               width={3510}
               height={5270}
-              loading="lazy"
             />
           </div>
           <div className={styles.description}>
@@ -1516,7 +1481,6 @@ function Formule(props) {
               alt="photo séance à thème"
               width={3510}
               height={5270}
-              loading="lazy"
             />
           </div>
           <div className={styles.description}>
@@ -1573,7 +1537,6 @@ function Formule(props) {
                 alt="photo séance à thème"
                 width={3510}
                 height={5270}
-                loading="lazy"
               />
             </div>
           </div>
@@ -1586,7 +1549,6 @@ function Formule(props) {
                 alt="photo séance à thème"
                 width={3510}
                 height={5270}
-                loading="lazy"
               />
             </div>
             <div className={styles.description}>

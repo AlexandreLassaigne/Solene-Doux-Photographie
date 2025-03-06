@@ -78,12 +78,6 @@ const image = [
     height : 750
   },
   {
-    name : "Couple",
-    image : '/Couple/couple8.webp',
-    width : 500,
-    height : 750
-  },
-  {
     name : "Décoration d'intérieur",
     image : "/Deco/deco1.webp",
     width : 750,
