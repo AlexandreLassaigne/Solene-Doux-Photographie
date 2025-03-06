@@ -89,7 +89,7 @@ function Prestation() {
         </div>
       )}
       {formule && (
-        <div style={{marginTop : "100px"}}>
+        <div className={styles.formuleContainer}>
           <FontAwesomeIcon
             icon={faChevronLeft}
             onClick={() => handlePresta()}
