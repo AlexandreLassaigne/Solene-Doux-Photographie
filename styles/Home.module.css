@@ -10,6 +10,13 @@
   overflow: hidden;
 }
 
+.sliderContainer {
+  width: 100%;
+  height: 850px; /* Hauteur fixée pour éviter le décalage */
+  overflow: hidden;
+  position: relative;
+}
+
 .imageHead {
   width: 100%;
   object-fit: cover;

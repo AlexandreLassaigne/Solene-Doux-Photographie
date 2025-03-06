@@ -38,9 +38,10 @@ function Home() {
           type="image/webp"
         />
       </Head>
-      <div>
+      <div className={styles.sliderContainer}>
         <Header />
-        <Slider {...settings}>
+        <div>
+          <Slider {...settings}>
           <Image
             src="/Accueil/accueil3.webp"
             alt="Photo acceuil couple"
@@ -48,8 +49,7 @@ function Home() {
             height={850}
             className={styles.imageHead}
             priority
-            loading="eager"
-            quality={75}
+            loading="intrinsic"
           />
           <Image
             src="/Accueil/accueil1.webp"
@@ -58,7 +58,6 @@ function Home() {
             height={850}
             className={styles.imageHead}
             loading="lazy"
-            quality={75}
           />
           <Image
             src="/Accueil/accueil4.webp"
@@ -67,7 +66,6 @@ function Home() {
             height={850}
             className={styles.imageHead}
             loading="lazy"
-            quality={75}
           />
           <Image
             src="/Accueil/accueil2.webp"
@@ -76,9 +74,9 @@ function Home() {
             height={850}
             className={styles.imageHead}
             loading="lazy"
-            quality={75}
           />
         </Slider>
+        </div>
       </div>
       <div>
         <div>
@@ -90,7 +88,6 @@ function Home() {
                 width={500}
                 height={750}
                 loading="lazy"
-                quality={75}
               />
             </div>
             <div className={styles.description}>
@@ -128,7 +125,6 @@ function Home() {
                 width={500}
                 height={750}
                 loading="lazy"
-                quality={75}
               />
             </div>
           </div>
@@ -142,7 +138,6 @@ function Home() {
                 width={500}
                 height={750}
                 loading="lazy"
-                quality={75}
               />
             </div>
             <div className={styles.description}>
