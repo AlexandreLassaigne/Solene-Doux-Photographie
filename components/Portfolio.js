@@ -1,5 +1,5 @@
 import styles from "../styles/Portfolio.module.css";
-import Header from './Header'
+import Header from "./Header";
 import { useState } from "react";
 import Head from "next/head";
 import image from "../utils/image";
@@ -22,9 +22,14 @@ function Portfolio() {
     setSelectedImage("");
   };
 
-  const imagePath = image.map((data) => {
+  const imagePath = image.map((data, i) => {
     return (
-      <ScrollAnimation animateIn="fadeInUp" animateOnce={true} className={styles.image}>
+      <ScrollAnimation
+        animateIn="fadeInUp"
+        animateOnce={true}
+        className={styles.image}
+        key={i}
+      >
         <Image
           src={data.image}
           alt={data.name}
@@ -42,20 +47,22 @@ function Portfolio() {
   return (
     <div>
       <Head>
-      <title>Photographie Solène</title>
+        <title>Solène Doux Photographie</title>
         <meta
           name="description"
           content="Photographe dans la région Toulousaine spécialisée dans les moments forts de la vie, mariage, maternité, famille, etc."
         />
       </Head>
-      <Header/>
+      <Header />
       <div className={styles.imageContainer}>{imagePath}</div>
       {imageOpen && (
-        <div className={styles.fullscreenModal} onClick={closeModal}>
+        <div className={styles.fullscreenModal} onClick={closeModal} aria-hidden={imageOpen}>
           <div className={styles.fullscreenImageContainer}>
-            <img
+            <Image
               src={selectedImage}
               alt="Fullscreen Image"
+              layout="fill"
+              objectFit="contain"
               className={styles.fullscreenImage}
             />
           </div>
