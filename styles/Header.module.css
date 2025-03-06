@@ -16,14 +16,20 @@
   width: 100%;
   background-color: rgba(186, 174, 152, 0.6);
   position: fixed;
-  height: 70px;
+  height: 60px;
+}
+
+.logoContainer {
+  background-color: transparent;
+  margin-left: 50px;
+  width: 25%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .logo {
   background-color: transparent;
-  margin-top: 10px;
-  margin-left: 100px;
-  cursor: pointer;
 }
 
 .headerRight {
@@ -42,19 +48,12 @@
   cursor: pointer;
   background-color: transparent;
   text-decoration: none;
-  font-size: 30px;
-  margin-right: 20px;
-  font-family: "Glitther Syavina";
-}
-
-.lienGallerie {
-  cursor: pointer;
-  background-color: transparent;
-  font-size: 30px;
+  font-size: 22px;
   margin-right: 20px;
   font-family: "Glitther Syavina";
   color: #000000;
 }
+
 
 .instaIcon {
   background-color: transparent;
@@ -67,53 +66,68 @@
 }
 
 @media (max-width : 1024px){
-  .logo{
-    margin-left: 50px;
+  .logoContainer{
+    margin-left: 30px;
+    width: 25%;
   }
-  .lien, .lienGallerie{
-    font-size: 22px;
+  .lien{
+    font-size: 18px;
   }
   .instaIcon{
     font-size: 35px;
   }
+  .headContainer {
+    height: 50px;
+  }
 }
 @media (max-width : 850px){
-  .logo{
-    margin : 15px 10px
+  .logoContainer{
+    margin-left: 10px;
+    width: 25%;
   }
-  .lien, .lienGallerie{
-    font-size: 18px;
-    margin: 10px 5px;
+  .lien{
+    font-size: 16px;
+    margin: 10px 10px;
   }
   .instaIcon{
-    font-size: 30px;
-    margin: 15px 5px;
+    font-size: 25px;
+    margin: 10px 10px;
+  }
+  .headContainer {
+    height: 40px;
   }
 }
 @media (max-width : 600px){
-  .logo{
-    margin : 20px 10px
+  .logoContainer{
+    margin-left :5px;
+    width: 30%;
   }
-  .lien, .lienGallerie{
-    font-size: 14px;
+  .lien{
+    font-size: 12px;
+    margin: 10px 5px;
   }
   .instaIcon{
     font-size: 20px;
-    margin: 25px 5px;
+    margin-top: 7px;
+  }
+  .headContainer {
+    height: 35px;
   }
 }
 @media (max-width : 480px){
-  .logo{
-    margin : 25px 10px
+  .logoContainer{
+    margin-left : 5px;
+    width: 25%;
   }
-  .lien, .lienGallerie{
+  .lien{
     font-size: 10px;
+    margin: 5px;
   }
   .instaIcon{
     font-size: 15px;
-    margin: 30px 5px;
+    margin: 7px 7px;
   }
   .headContainer {
-    height: 50px;
+    height: 30px;
   }
 }

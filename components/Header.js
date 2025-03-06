@@ -7,18 +7,18 @@ export default function Header() {
   return (
     <div className={styles.head}>
       <div className={styles.headContainer}>
-        <Link href="/">
-          <div className={styles.logo}>
+        <div className={styles.logoContainer}>
+          <Link href="/">
             <Image
               width={296}
               height={44}
               src="/Logo/logo_nom2.webp"
               alt="Logo Solene Doux"
-              style={{ background: "transparent" }}
+              className={styles.logo}
               priority
             />
-          </div>
-        </Link>
+          </Link>
+        </div>
         <div className={styles.headerRight}>
           <div className={styles.menu}>
             <Link href="/apropos">
@@ -33,27 +33,28 @@ export default function Header() {
             <Link href="/contact">
               <span className={styles.lien}>Contact</span>
             </Link>
+            <Link href="https://solenedouxphotographie31.pixieset.com/">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.lien}
+              >
+                Gallerie privee
+              </a>
+            </Link>
+          </div>
+          <div className={styles.instaIcon}>
             <a
-              href="https://solenedouxphotographie31.pixieset.com/"
+              href="https://www.instagram.com/solenedoux_photographie/"
               target="_blank"
-              style={{
-                backgroundColor: "transparent",
-                textDecoration: "none",
-              }}
+              style={{backgroundColor : "transparent", color : "#000000"}}
             >
-              <span className={styles.lienGallerie}>Gallerie privee</span>
+              <FaInstagram
+                style={{ backgroundColor: "transparent" }}
+                aria-label="Instagram"
+              />
             </a>
           </div>
-          <a
-            href="https://www.instagram.com/solenedoux_photographie/"
-            className={styles.instaIcon}
-            target="_blank"
-          >
-            <FaInstagram
-              style={{ backgroundColor: "transparent" }}
-              aria-label="Instagram"
-            />
-          </a>
         </div>
       </div>
     </div>
