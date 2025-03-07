@@ -8,6 +8,7 @@ import Header from "./Header";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Footer from "./Footer";
 
 function Home() {
   const settings = {
@@ -20,7 +21,7 @@ function Home() {
     autoplaySpeed: 3000,
     arrows: false,
     lazyLoad: "ondemand", // Lazy load des images
-    pauseOnHover : false,
+    pauseOnHover: false,
   };
 
   return (
@@ -42,43 +43,43 @@ function Home() {
         <Header />
         <div>
           <Slider {...settings}>
-          <Image
-            src="/Accueil/accueil3.webp"
-            alt="Photo acceuil couple"
-            width={1500}
-            height={850}
-            className={styles.imageHead}
-            priority
-            layout="intrinsic"
-          />
-          <Image
-            src="/Accueil/accueil1.webp"
-            alt="Photo acceuil grossesse"
-            width={1500}
-            height={850}
-            className={styles.imageHead}
-            loading="lazy"
-            layout="intrinsic"
-          />
-          <Image
-            src="/Accueil/accueil4.webp"
-            alt="Photo acceuil couple"
-            width={1500}
-            height={850}
-            className={styles.imageHead}
-            loading="lazy"
-            layout="intrinsic"
-          />
-          <Image
-            src="/Accueil/accueil2.webp"
-            alt="Photo acceuil naissance"
-            width={1500}
-            height={850}
-            className={styles.imageHead}
-            loading="lazy"
-            layout="intrinsic"
-          />
-        </Slider>
+            <Image
+              src="/Accueil/accueil3.webp"
+              alt="Photo acceuil couple"
+              width={1500}
+              height={850}
+              className={styles.imageHead}
+              priority
+              layout="intrinsic"
+            />
+            <Image
+              src="/Accueil/accueil1.webp"
+              alt="Photo acceuil grossesse"
+              width={1500}
+              height={850}
+              className={styles.imageHead}
+              loading="lazy"
+              layout="intrinsic"
+            />
+            <Image
+              src="/Accueil/accueil4.webp"
+              alt="Photo acceuil couple"
+              width={1500}
+              height={850}
+              className={styles.imageHead}
+              loading="lazy"
+              layout="intrinsic"
+            />
+            <Image
+              src="/Accueil/accueil2.webp"
+              alt="Photo acceuil naissance"
+              width={1500}
+              height={850}
+              className={styles.imageHead}
+              loading="lazy"
+              layout="intrinsic"
+            />
+          </Slider>
         </div>
       </div>
       <div>
@@ -105,7 +106,11 @@ function Home() {
             </div>
           </div>
         </div>
-        <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={1 * 100}>
+        <ScrollAnimation
+          animateIn="fadeInUp"
+          animateOnce={true}
+          delay={1 * 100}
+        >
           <div className={styles.container}>
             <div className={styles.description}>
               <p>
@@ -132,7 +137,11 @@ function Home() {
             </div>
           </div>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInUp" animateOnce={true} delay={1 * 100}>
+        <ScrollAnimation
+          animateIn="fadeInUp"
+          animateOnce={true}
+          delay={1 * 100}
+        >
           <div className={styles.container}>
             <div className={styles.image}>
               <Image
@@ -157,6 +166,7 @@ function Home() {
           </div>
         </ScrollAnimation>
       </div>
+      <Footer />
     </div>
   );
 }

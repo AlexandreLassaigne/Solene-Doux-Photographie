@@ -9,6 +9,7 @@ import prestations from "../utils/prestation";
 import dynamic from "next/dynamic";
 import Formule from './Formule'
 import ScrollAnimation from "react-animate-on-scroll";
+import Footer from "./Footer";
 
 /* const Formule = dynamic(() => import("./Formule"), { ssr: false });*/  
 /*const ScrollAnimation = dynamic(() => import("react-animate-on-scroll"), { ssr: false }); */
@@ -100,6 +101,7 @@ function Prestation() {
           <Formule name={formuleName} />
         </div>
       )}
+      <Footer/>
     </div>
   );
 }

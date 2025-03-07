@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "Glitther Syavina";
+  src: url("../fonts/GlittherSyavinafree.ttf");
+}
+
+.footer {
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(186, 174, 152, 0.6);
+}
+
+.name {
+    background-color: transparent;
+    font-size: 16px;
+    margin-right: 20px;
+    font-family: "Glitther Syavina";
+}
+
+.lien {
+  cursor: pointer;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 16px;
+  margin-right: 20px;
+  font-family: "Glitther Syavina";
+}
+
+@media (max-width: 750px) {
+  .footer{
+    height: 40px;
+  }
+  .lien{
+    font-size: 14px;
+  }
+  .name{
+    font-size: 14px;
+  }
+}
+@media (max-width: 550px) {
+  .footer{
+    height: 30px;
+  }
+  .lien{
+    font-size: 10px;
+  }
+  .name{
+    font-size: 10px;
+  }
+}
+@media (max-width: 360px) {
+  .lien{
+    font-size: 8px;
+  }
+  .name{
+    font-size: 8px;
+  }
+}

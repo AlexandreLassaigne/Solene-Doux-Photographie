@@ -4,6 +4,7 @@ import Head from "next/head";
 import emailjs from "emailjs-com";
 import Faq from "react-faq-component";
 import Header from "./Header";
+import Footer from "./Footer";
 
 function Contact() {
   const [nom, setNom] = useState("");
@@ -90,7 +91,7 @@ function Contact() {
       {
         title: "Comment s'habiller ?",
         content:
-          "Je vous conseille toujours de vous accorder entre vous et de porter des couleurs et textures naturelles tels que : le beige, l'écru, le marron, le kaki, le gris, le jean, le lin. Evitez les couleurs vives et motifstrès colorés.",
+          "Je vous conseille toujours de vous accorder entre vous et de porter des couleurs et textures naturelles tels que : le beige, l'écru, le marron, le kaki, le gris, le jean, le lin. Evitez les couleurs vives et motifs très colorés.",
       },
     ],
   };
@@ -197,6 +198,7 @@ function Contact() {
           </div>
         </form>
       </div>
+      <Footer/>
     </div>
   );
 }

@@ -7,6 +7,7 @@ import Image from "next/image";
 import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css";
 import "animate.css/animate.compat.css";
+import Footer from "./Footer";
 
 function Portfolio() {
   const [imageOpen, setImageOpen] = useState(false);
@@ -68,6 +69,7 @@ function Portfolio() {
           </div>
         </div>
       )}
+      <Footer/>
     </div>
   );
 }

@@ -4,6 +4,7 @@ import "animate.css";
 import "animate.css/animate.compat.css";
 import Image from "next/image";
 import Header from "./Header";
+import Footer from "./Footer";
 
 export default function Apropos() {
   return (
@@ -88,6 +89,7 @@ export default function Apropos() {
           </p>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }
