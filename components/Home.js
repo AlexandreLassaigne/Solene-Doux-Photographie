@@ -14,7 +14,7 @@ function Home() {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 400,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
@@ -22,6 +22,7 @@ function Home() {
     arrows: false,
     lazyLoad: "ondemand", // Lazy load des images
     pauseOnHover: false,
+    fade : true,
   };
 
   return (

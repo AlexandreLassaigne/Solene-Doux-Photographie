@@ -5,6 +5,11 @@ import emailjs from "emailjs-com";
 import Faq from "react-faq-component";
 import Header from "./Header";
 import Footer from "./Footer";
+import ReCAPTCHA from "react-google-recaptcha";
+import {
+  GoogleReCaptchaProvider,
+  GoogleReCaptchaCheckbox,
+} from "@google-recaptcha/react";
 
 function Contact() {
   const [nom, setNom] = useState("");
@@ -18,6 +23,7 @@ function Contact() {
   const [wrongEmail, setWrongEmail] = useState(false);
   const [wrongTel, setWrongTel] = useState(false);
   const [emptyFields, setEmptyFields] = useState(false);
+  const [recaptchaToken, setRecaptchaToken] = useState("");
 
   const EMAIL_REGEX =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -45,6 +51,10 @@ function Contact() {
       } else {
         setWrongTel(false);
       }
+      if (!recaptchaToken) {
+        setMessageError("Veuillez valider le reCAPTCHA !");
+        return;
+      }
       if (!wrongEmail && !wrongTel && !emptyFields) {
         //envoie le formulaire via l'API EmailJS, en utilisant les paramètres
         emailjs
@@ -69,7 +79,8 @@ function Contact() {
         setPrestation("");
         setTel("");
         setMessageError("");
-        setMessageenvoye("Message envoyé")
+        setMessageenvoye("Message envoyé");
+        setRecaptchaToken(""); // Réinitialise le reCAPTCHA après l'envoi
         e.target.reset();
       }
     }
@@ -99,7 +110,7 @@ function Contact() {
   return (
     <div>
       <Head>
-      <title>Solène Doux Photographie</title>
+        <title>Solène Doux Photographie</title>
         <meta
           name="description"
           content="Photographe dans la région Toulousaine spécialisée dans les moments forts de la vie, mariage, maternité, famille, etc."
@@ -192,13 +203,27 @@ function Contact() {
           <div className={styles.buttonContainer}>
             <div className={styles.messageError}>{messageError}</div>
             <div className={styles.messageEnvoye}>{messageEnvoye}</div>
+            {/*             <ReCAPTCHA
+              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} // Ta clé publique reCAPTCHA
+              onChange={(token) => setRecaptchaToken(token)} // Stocke le token généré
+            /> */}
+            <GoogleReCaptchaProvider
+              type="v2-checkbox"
+              siteKey="6LdoDPEqAAAAACq_SsMNndj0u9e-BaCF33G_9d4j"
+            >
+              <GoogleReCaptchaCheckbox
+                onChange={(token) => {
+                  console.log(token);
+                }}
+              />
+            </GoogleReCaptchaProvider>
             <button className={styles.button} type="submit">
               Envoyer
             </button>
           </div>
         </form>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
