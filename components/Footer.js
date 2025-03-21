@@ -7,11 +7,11 @@ function Footer() {
       <p className={styles.name}>
         © {new Date().getFullYear()} Alexandre Lassaigne
       </p>
-        <Link href="/mentions-legales" style={{ backgroundColor: "transparent" }}>
-          <span className={styles.lien}>Mentions legales</span>
+        <Link href="/mentions-legales" className={styles.lien}>
+          Mentions legales
         </Link>
-        <Link href="/politique-confidentialite" style={{ backgroundColor: "transparent" }}>
-          <span className={styles.lien}>Politiques de confidentialite</span>
+        <Link href="/politique-confidentialite" className={styles.lien}>
+          Politiques de confidentialite
         </Link>
     </div>
   );

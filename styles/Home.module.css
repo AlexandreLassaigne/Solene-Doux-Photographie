@@ -4,12 +4,6 @@
   font-display: swap;
 }
 
-.carouselContainer {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
 .sliderContainer {
   width: 100%;
   overflow: hidden;
@@ -23,18 +17,22 @@
   display: block;
 }
 
-.image {
-  width: 40%;
-  display: flex;
-  align-items: center;
-}
-
 .container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   margin-top: 50px;
   margin-bottom: 30px;
+}
+
+.containerPhoto {
+  width: 40%;
+}
+
+.image {
+  width: 80%;
+  height: 80%;
+  border-radius: 10px;
 }
 
 .description {
@@ -42,21 +40,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 30%;
+  width: 30%;
   height: auto;
-  margin: 50px;
   font-size: 22px;
   font-family: "Inria serif";
 }
 
 .button, .buttonPrestation {
-  min-width: 150px;
-  min-height: 50px;
   border: solid 1px;
   background-color: transparent;
   cursor: pointer;
   font-size: 18px;
-  width: 50%;
+  width: 200px;
+  height: 50px;
   border-radius: 30px;
   transition: 0.5s;
   font-family: "Inria serif";
@@ -73,26 +69,20 @@
   .container{
     margin-top: 0;
   }
-
   .image {
-    width: 30%;
-    margin: 20px;
+    width: 70%;
+    margin-top: 10px;
   }
 
   .description {
     font-size: 18px;
-    max-width: 30%;
+    max-width: 20%;
   }
 
-  .button {
+  .button, .buttonPrestation {
     font-size: 18px;
     height: 50px;
-    width: 80%;
-  }
-  .buttonPrestation {
-    font-size: 18px;
-    height: 50px;
-    width: 80%;
+    width: 200px;
   }
 }
 @media (max-width: 850px) {
@@ -101,24 +91,19 @@
   }
 
   .image {
-    width: 40%;
+    width: 60%;
     margin: 10px;
   }
 
   .description {
     font-size: 16px;
-    max-width: 30%;
+    max-width: 20%;
   }
 
-  .button {
+  .button, .buttonPrestation {
     font-size: 16px;
-    height: 50px;
-    width: 80%;
-  }
-  .buttonPrestation {
-    font-size: 16px;
-    height: 50px;
-    width: 80%;
+    height: 40px;
+    width: 150px;
   }
 }
 @media (max-width: 600px) {
@@ -126,8 +111,12 @@
     margin-top: 0px;
   }
 
+  .containerPhoto {
+    width: 50%;
+  }
+
   .image {
-    width: 40%;
+    width: 50%;
     margin: 20px;
   }
 
@@ -136,15 +125,10 @@
     max-width: 40%;
   }
 
-  .button {
+  .button, .buttonPrestation {
     font-size: 14px;
-    height: 50px;
-    width: 80%;
-  }
-  .buttonPrestation {
-    font-size: 14px;
-    height: 50px;
-    width: 80%;
+    height: 40px;
+    width: 150px;
   }
 }
 
@@ -163,14 +147,9 @@
     max-width: 30%;
   }
 
-  .button {
-    font-size: 12px;
-    height: 50px;
-    width: 80%;
-  }
-  .buttonPrestation {
-    font-size: 12px;
-    height: 50px;
-    width: 80%;
+  .button, .buttonPrestation {
+    font-size: 10px;
+    height: 40px;
+    width: 100px;
   }
 }

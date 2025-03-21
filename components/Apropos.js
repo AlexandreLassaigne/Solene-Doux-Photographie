@@ -24,9 +24,9 @@ export default function Apropos() {
         />
       </Head>
       <Header />
-      <div>
-        <div className={styles.presentationContainer}>
-          <p className={styles.presentationTexte}>
+      <div className={styles.presentationContainer}>
+        <div className={styles.presentationTexte}>
+          <p>
             Enchanté,
             <br />
             <br />
@@ -47,31 +47,28 @@ export default function Apropos() {
             hauteur de vos attentes.
             <br />
           </p>
-          <div className={styles.image}>
-            <Image
-              src="/Solene/solene4.webp"
-              alt="photo de Solene"
-              width={500}
-              height={750}
-              quality={75}
-              priority
-            />
-          </div>
         </div>
+        <Image
+          src="/Solene/solene4.webp"
+          alt="photo de Solene"
+          width={500}
+          height={750}
+          quality={75}
+          priority
+          className={styles.image}
+        />
       </div>
-      <div>
-        {" "}
-        <div className={styles.presentationContainer}>
-          <div className={styles.image}>
-            <Image
-              src="/Solene/solene2.webp"
-              alt="photo de Solene"
-              width={500}
-              height={750}
-              quality={75}
-            />
-          </div>
-          <p className={styles.presentationTexte}>
+      <div className={styles.presentationContainer}>
+        <Image
+          src="/Solene/solene2.webp"
+          alt="photo de Solene"
+          width={500}
+          height={750}
+          quality={75}
+          className={styles.image}
+        />
+        <div className={styles.presentationTexte}>
+          <p>
             Avec un oeil attentif aux détails et une approche naturelle, je
             cherche à immortaliser les moments les plus précieux tout en vous
             offrant une expérience conviviale et sans pression.
@@ -89,7 +86,7 @@ export default function Apropos() {
           </p>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

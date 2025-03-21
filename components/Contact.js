@@ -5,11 +5,11 @@ import emailjs from "emailjs-com";
 import Faq from "react-faq-component";
 import Header from "./Header";
 import Footer from "./Footer";
-import ReCAPTCHA from "react-google-recaptcha";
+/* import ReCAPTCHA from "react-google-recaptcha";
 import {
   GoogleReCaptchaProvider,
   GoogleReCaptchaCheckbox,
-} from "@google-recaptcha/react";
+} from "@google-recaptcha/react"; */
 
 function Contact() {
   const [nom, setNom] = useState("");
@@ -203,10 +203,10 @@ function Contact() {
           <div className={styles.buttonContainer}>
             <div className={styles.messageError}>{messageError}</div>
             <div className={styles.messageEnvoye}>{messageEnvoye}</div>
-            {/*             <ReCAPTCHA
+           {/*  <ReCAPTCHA
               sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} // Ta clé publique reCAPTCHA
               onChange={(token) => setRecaptchaToken(token)} // Stocke le token généré
-            /> */}
+            />
             <GoogleReCaptchaProvider
               type="v2-checkbox"
               siteKey="6LdoDPEqAAAAACq_SsMNndj0u9e-BaCF33G_9d4j"
@@ -216,7 +216,7 @@ function Contact() {
                   console.log(token);
                 }}
               />
-            </GoogleReCaptchaProvider>
+            </GoogleReCaptchaProvider> */}
             <button className={styles.button} type="submit">
               Envoyer
             </button>

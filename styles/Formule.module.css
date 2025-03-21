@@ -74,6 +74,8 @@
 .contact {
   font-size: 14px;
   font-family: 'Inria serif';
+  text-decoration: none;
+  color : #000000;
 }
 
 

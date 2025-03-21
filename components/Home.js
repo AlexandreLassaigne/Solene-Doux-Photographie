@@ -86,13 +86,14 @@ function Home() {
       <div>
         <div>
           <div className={styles.container}>
-            <div className={styles.image}>
+            <div className={styles.containerPhoto}>
               <Image
                 src="/Solene/solene4.webp"
                 alt="photo de Solene"
                 width={500}
                 height={750}
                 loading="lazy"
+                className={styles.image}
               />
             </div>
             <div className={styles.description}>
@@ -127,12 +128,13 @@ function Home() {
                 </button>
               </Link>
             </div>
-            <div className={styles.image}>
+            <div className={styles.containerPhoto}>
               <Image
                 src="/Couple/couple6.webp"
                 alt="photo de couple"
                 width={500}
                 height={750}
+                className={styles.image}
                 loading="lazy"
               />
             </div>
@@ -144,13 +146,14 @@ function Home() {
           delay={1 * 100}
         >
           <div className={styles.container}>
-            <div className={styles.image}>
+            <div className={styles.containerPhoto}>
               <Image
                 src="/Solo_confiance_en_soi/solo_confiance12.webp"
                 alt="photo EVJF"
                 width={500}
                 height={750}
                 loading="lazy"
+                className={styles.image}
               />
             </div>
             <div className={styles.description}>

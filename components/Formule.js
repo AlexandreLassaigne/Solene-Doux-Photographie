@@ -31,8 +31,8 @@ function Formule(props) {
             <Image
               src="/Mariage/mariage14.webp"
               alt="photo Mariage"
-              width={3510}
-              height={5270}
+              width={400}
+              height={600}
             />
           </div>
           <div className={styles.description}>
@@ -46,8 +46,8 @@ function Formule(props) {
               </p>
             </div>
             <div>
-              <Link href="/contact">
-                <p className={styles.contact}>
+              <Link href="/contact" className={styles.contact}>
+                <p>
                   Pour plus d'informations{" "}
                   <span
                     style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -72,8 +72,8 @@ function Formule(props) {
                 </p>
               </div>
               <div>
-                <Link href="/contact">
-                  <p className={styles.contact}>
+                <Link href="/contact" className={styles.contact}>
+                  <p>
                     Pour plus d'informations{" "}
                     <span
                       style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -88,8 +88,8 @@ function Formule(props) {
               <Image
                 src="/Mariage/mariage8.webp"
                 alt="photo Mariage"
-                width={3510}
-                height={5270}
+                width={400}
+                height={600}
               />
             </div>
           </div>
@@ -100,8 +100,8 @@ function Formule(props) {
               <Image
                 src="/Mariage/mariage1.webp"
                 alt="photo Mariage"
-                width={3510}
-                height={5270}
+                width={400}
+                height={600}
               />
             </div>
             <div className={styles.description}>
@@ -115,8 +115,8 @@ function Formule(props) {
                 </p>
               </div>
               <div>
-                <Link href="/contact">
-                  <p className={styles.contact}>
+                <Link href="/contact" className={styles.contact}>
+                  <p>
                     Pour plus d'informations{" "}
                     <span
                       style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -149,8 +149,8 @@ function Formule(props) {
             <Image
               src="/Allaitement/allaitement1.webp"
               alt="photo Allaitement"
-              width={3510}
-              height={5270}
+              width={400}
+              height={600}
             />
           </div>
           <div className={styles.description}>
@@ -164,8 +164,8 @@ function Formule(props) {
             </div>
 
             <div>
-              <Link href="/contact">
-                <p className={styles.contact}>
+              <Link href="/contact" className={styles.contact}>
+                <p>
                   Pour plus d'informations{" "}
                   <span
                     style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -189,8 +189,8 @@ function Formule(props) {
                 </p>
               </div>
               <div>
-                <Link href="/contact">
-                  <p className={styles.contact}>
+                <Link href="/contact" className={styles.contact}>
+                  <p>
                     Pour plus d'informations{" "}
                     <span
                       style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -205,8 +205,8 @@ function Formule(props) {
               <Image
                 src="/Allaitement/allaitement2.webp"
                 alt="photo Allaitement"
-                width={3510}
-                height={5270}
+                width={400}
+                height={600}
               />
             </div>
           </div>
@@ -217,8 +217,8 @@ function Formule(props) {
               <Image
                 src="/Allaitement/allaitement3.webp"
                 alt="photo Allaitement"
-                width={3510}
-                height={5270}
+                width={400}
+                height={600}
               />
             </div>
             <div className={styles.description}>
@@ -231,8 +231,8 @@ function Formule(props) {
                 </p>
               </div>
               <div>
-                <Link href="/contact">
-                  <p className={styles.contact}>
+                <Link href="/contact" className={styles.contact}>
+                  <p>
                     Pour plus d'informations{" "}
                     <span
                       style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -266,8 +266,8 @@ function Formule(props) {
             <Image
               src="/Couple/couple2.webp"
               alt="photo Couple"
-              width={3510}
-              height={5270}
+              width={400}
+              height={600}
             />
           </div>
           <div className={styles.description}>
@@ -281,8 +281,8 @@ function Formule(props) {
             </div>
 
             <div>
-              <Link href="/contact">
-                <p className={styles.contact}>
+              <Link href="/contact" className={styles.contact}>
+                <p>
                   Pour plus d'informations{" "}
                   <span
                     style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -306,8 +306,8 @@ function Formule(props) {
                 </p>
               </div>
               <div>
-                <Link href="/contact">
-                  <p className={styles.contact}>
+                <Link href="/contact" className={styles.contact}>
+                  <p>
                     Pour plus d'informations{" "}
                     <span
                       style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -322,8 +322,8 @@ function Formule(props) {
               <Image
                 src="/Couple/couple4.webp"
                 alt="photo Couple"
-                width={3510}
-                height={5270}
+                width={400}
+                height={600}
               />
             </div>
           </div>
@@ -334,8 +334,8 @@ function Formule(props) {
               <Image
                 src="/Couple/couple6.webp"
                 alt="photo Couple"
-                width={3510}
-                height={5270}
+                width={400}
+                height={600}
               />
             </div>
             <div className={styles.description}>
@@ -348,8 +348,8 @@ function Formule(props) {
                 </p>
               </div>
               <div>
-                <Link href="/contact">
-                  <p className={styles.contact}>
+                <Link href="/contact" className={styles.contact}>
+                  <p>
                     Pour plus d'informations{" "}
                     <span
                       style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -383,8 +383,8 @@ function Formule(props) {
             <Image
               src="/Deco/deco10.webp"
               alt="photo Décoration d'intérieur"
-              width={3510}
-              height={5270}
+              width={400}
+              height={600}
             />
           </div>
           <div className={styles.description}>
@@ -398,8 +398,8 @@ function Formule(props) {
             </div>
 
             <div>
-              <Link href="/contact">
-                <p className={styles.contact}>
+              <Link href="/contact" className={styles.contact}>
+                <p>
                   Pour plus d'informations{" "}
                   <span
                     style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -423,8 +423,8 @@ function Formule(props) {
                 </p>
               </div>
               <div>
-                <Link href="/contact">
-                  <p className={styles.contact}>
+                <Link href="/contact" className={styles.contact}>
+                  <p>
                     Pour plus d'informations{" "}
                     <span
                       style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -439,8 +439,8 @@ function Formule(props) {
               <Image
                 src="/Deco/deco5.webp"
                 alt="photo Décoration d'intérieur"
-                width={3510}
-                height={5270}
+                width={400}
+                height={600}
               />
             </div>
           </div>
@@ -451,8 +451,8 @@ function Formule(props) {
               <Image
                 src="/Deco/deco3.webp"
                 alt="photo Décoration d'intérieur"
-                width={3510}
-                height={5270}
+                width={400}
+                height={600}
               />
             </div>
             <div className={styles.description}>
@@ -465,8 +465,8 @@ function Formule(props) {
                 </p>
               </div>
               <div>
-                <Link href="/contact">
-                  <p className={styles.contact}>
+                <Link href="/contact" className={styles.contact}>
+                  <p>
                     Pour plus d'informations{" "}
                     <span
                       style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -505,8 +505,8 @@ function Formule(props) {
             <Image
               src="/EVJF/evjf1.webp"
               alt="photo EVJF"
-              width={3510}
-              height={5270}
+              width={400}
+              height={600}
             />
           </div>
           <div className={styles.description}>
@@ -526,8 +526,8 @@ function Formule(props) {
             </div>
 
             <div>
-              <Link href="/contact">
-                <p className={styles.contact}>
+              <Link href="/contact" className={styles.contact}>
+                <p>
                   Pour plus d'informations{" "}
                   <span
                     style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -559,8 +559,8 @@ function Formule(props) {
             <Image
               src="/Famille/famille2.webp"
               alt="photo Famille"
-              width={3510}
-              height={5270}
+              width={400}
+              height={600}
             />
           </div>
           <div className={styles.description}>
@@ -574,8 +574,8 @@ function Formule(props) {
             </div>
 
             <div>
-              <Link href="/contact">
-                <p className={styles.contact}>
+              <Link href="/contact" className={styles.contact}>
+                <p>
                   Pour plus d'informations{" "}
                   <span
                     style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -599,8 +599,8 @@ function Formule(props) {
                 </p>
               </div>
               <div>
-                <Link href="/contact">
-                  <p className={styles.contact}>
+                <Link href="/contact" className={styles.contact}>
+                  <p>
                     Pour plus d'informations{" "}
                     <span
                       style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -615,8 +615,8 @@ function Formule(props) {
               <Image
                 src="/Famille/famille6.webp"
                 alt="photo Famille"
-                width={3510}
-                height={5270}
+                width={400}
+                height={600}
               />
             </div>
           </div>
@@ -627,8 +627,8 @@ function Formule(props) {
               <Image
                 src="/Famille/famille5.webp"
                 alt="photo Famille"
-                width={3510}
-                height={5270}
+                width={400}
+                height={600}
               />
             </div>
             <div className={styles.description}>
@@ -641,8 +641,8 @@ function Formule(props) {
                 </p>
               </div>
               <div>
-                <Link href="/contact">
-                  <p className={styles.contact}>
+                <Link href="/contact" className={styles.contact}>
+                  <p>
                     Pour plus d'informations{" "}
                     <span
                       style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -680,8 +680,8 @@ function Formule(props) {
             <Image
               src="/Grossesse/grossesse9.webp"
               alt="photo Grossesse"
-              width={3510}
-              height={5270}
+              width={400}
+              height={600}
             />
           </div>
           <div className={styles.description}>
@@ -695,8 +695,8 @@ function Formule(props) {
             </div>
 
             <div>
-              <Link href="/contact">
-                <p className={styles.contact}>
+              <Link href="/contact" className={styles.contact}>
+                <p>
                   Pour plus d'informations{" "}
                   <span
                     style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -720,8 +720,8 @@ function Formule(props) {
                 </p>
               </div>
               <div>
-                <Link href="/contact">
-                  <p className={styles.contact}>
+                <Link href="/contact" className={styles.contact}>
+                  <p>
                     Pour plus d'informations{" "}
                     <span
                       style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -736,8 +736,8 @@ function Formule(props) {
               <Image
                 src="/Grossesse/grossesse7.webp"
                 alt="photo Grossesse"
-                width={3510}
-                height={5270}
+                width={400}
+                height={600}
               />
             </div>
           </div>
@@ -748,8 +748,8 @@ function Formule(props) {
               <Image
                 src="/Grossesse/grossesse10.webp"
                 alt="photo Grossesse"
-                width={3510}
-                height={5270}
+                width={400}
+                height={600}
               />
             </div>
             <div className={styles.description}>
@@ -762,8 +762,8 @@ function Formule(props) {
                 </p>
               </div>
               <div>
-                <Link href="/contact">
-                  <p className={styles.contact}>
+                <Link href="/contact" className={styles.contact}>
+                  <p>
                     Pour plus d'informations{" "}
                     <span
                       style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -800,8 +800,8 @@ function Formule(props) {
             <Image
               src="/Naissance/naissance1.webp"
               alt="photo Naissance"
-              width={3510}
-              height={5270}
+              width={400}
+              height={600}
             />
           </div>
           <div className={styles.description}>
@@ -815,8 +815,8 @@ function Formule(props) {
             </div>
 
             <div>
-              <Link href="/contact">
-                <p className={styles.contact}>
+              <Link href="/contact" className={styles.contact}>
+                <p>
                   Pour plus d'informations{" "}
                   <span
                     style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -840,8 +840,8 @@ function Formule(props) {
                 </p>
               </div>
               <div>
-                <Link href="/contact">
-                  <p className={styles.contact}>
+                <Link href="/contact" className={styles.contact}>
+                  <p>
                     Pour plus d'informations{" "}
                     <span
                       style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -856,8 +856,8 @@ function Formule(props) {
               <Image
                 src="/Naissance/naissance7.webp"
                 alt="photo Naissance"
-                width={3510}
-                height={5270}
+                width={400}
+                height={600}
               />
             </div>
           </div>
@@ -868,8 +868,8 @@ function Formule(props) {
               <Image
                 src="/Naissance/naissance2.webp"
                 alt="photo Naissance"
-                width={3510}
-                height={5270}
+                width={400}
+                height={600}
               />
             </div>
             <div className={styles.description}>
@@ -882,8 +882,8 @@ function Formule(props) {
                 </p>
               </div>
               <div>
-                <Link href="/contact">
-                  <p className={styles.contact}>
+                <Link href="/contact" className={styles.contact}>
+                  <p>
                     Pour plus d'informations{" "}
                     <span
                       style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -923,8 +923,8 @@ function Formule(props) {
             <Image
               src="/Professionnels_marques/professionnels_marques2.webp"
               alt="photo Professionnels - Marques"
-              width={3510}
-              height={5270}
+              width={400}
+              height={600}
             />
           </div>
           <div className={styles.description}>
@@ -938,8 +938,8 @@ function Formule(props) {
             </div>
 
             <div>
-              <Link href="/contact">
-                <p className={styles.contact}>
+              <Link href="/contact" className={styles.contact}>
+                <p>
                   Pour plus d'informations{" "}
                   <span
                     style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -963,8 +963,8 @@ function Formule(props) {
                 </p>
               </div>
               <div>
-                <Link href="/contact">
-                  <p className={styles.contact}>
+                <Link href="/contact" className={styles.contact}>
+                  <p>
                     Pour plus d'informations{" "}
                     <span
                       style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -979,8 +979,8 @@ function Formule(props) {
               <Image
                 src="/Professionnels_marques/professionnels_marques12.webp"
                 alt="photo Professionnels - Marques"
-                width={3510}
-                height={5270}
+                width={400}
+                height={600}
               />
             </div>
           </div>
@@ -991,8 +991,8 @@ function Formule(props) {
               <Image
                 src="/Professionnels_marques/professionnels_marques17.webp"
                 alt="photo Professionnels - Marques"
-                width={3510}
-                height={5270}
+                width={400}
+                height={600}
               />
             </div>
             <div className={styles.description}>
@@ -1005,8 +1005,8 @@ function Formule(props) {
                 </p>
               </div>
               <div>
-                <Link href="/contact">
-                  <p className={styles.contact}>
+                <Link href="/contact" className={styles.contact}>
+                  <p>
                     Pour plus d'informations{" "}
                     <span
                       style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -1044,8 +1044,8 @@ function Formule(props) {
             <Image
               src="/Solo_confiance_en_soi/solo_confiance10.webp"
               alt="photo Solo - Confiance en soi"
-              width={3510}
-              height={5270}
+              width={400}
+              height={600}
             />
           </div>
           <div className={styles.description}>
@@ -1059,8 +1059,8 @@ function Formule(props) {
             </div>
 
             <div>
-              <Link href="/contact">
-                <p className={styles.contact}>
+              <Link href="/contact" className={styles.contact}>
+                <p>
                   Pour plus d'informations{" "}
                   <span
                     style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -1084,8 +1084,8 @@ function Formule(props) {
                 </p>
               </div>
               <div>
-                <Link href="/contact">
-                  <p className={styles.contact}>
+                <Link href="/contact" className={styles.contact}>
+                  <p>
                     Pour plus d'informations{" "}
                     <span
                       style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -1100,8 +1100,8 @@ function Formule(props) {
               <Image
                 src="/Solo_confiance_en_soi/solo_confiance4.webp"
                 alt="photo Solo - Confiance en soi"
-                width={3510}
-                height={5270}
+                width={400}
+                height={600}
               />
             </div>
           </div>
@@ -1112,8 +1112,8 @@ function Formule(props) {
               <Image
                 src="/Solo_confiance_en_soi/solo_confiance1.webp"
                 alt="photo Solo - Confiance en soi"
-                width={3510}
-                height={5270}
+                width={400}
+                height={600}
               />
             </div>
             <div className={styles.description}>
@@ -1126,8 +1126,8 @@ function Formule(props) {
                 </p>
               </div>
               <div>
-                <Link href="/contact">
-                  <p className={styles.contact}>
+                <Link href="/contact" className={styles.contact}>
+                  <p>
                     Pour plus d'informations{" "}
                     <span
                       style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -1164,8 +1164,8 @@ function Formule(props) {
             <Image
               src="/TBB/tbb4.webp"
               alt="photo TBB"
-              width={3510}
-              height={5270}
+              width={400}
+              height={600}
             />
           </div>
           <div className={styles.description}>
@@ -1179,8 +1179,8 @@ function Formule(props) {
             </div>
 
             <div>
-              <Link href="/contact">
-                <p className={styles.contact}>
+              <Link href="/contact" className={styles.contact}>
+                <p>
                   Pour plus d'informations{" "}
                   <span
                     style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -1204,8 +1204,8 @@ function Formule(props) {
                 </p>
               </div>
               <div>
-                <Link href="/contact">
-                  <p className={styles.contact}>
+                <Link href="/contact" className={styles.contact}>
+                  <p>
                     Pour plus d'informations{" "}
                     <span
                       style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -1220,8 +1220,8 @@ function Formule(props) {
               <Image
                 src="/TBB/tbb2.webp"
                 alt="photo TBB"
-                width={3510}
-                height={5270}
+                width={400}
+                height={600}
               />
             </div>
           </div>
@@ -1232,8 +1232,8 @@ function Formule(props) {
               <Image
                 src="/TBB/tbb9.webp"
                 alt="photo TBB"
-                width={3510}
-                height={5270}
+                width={400}
+                height={600}
               />
             </div>
             <div className={styles.description}>
@@ -1246,8 +1246,8 @@ function Formule(props) {
                 </p>
               </div>
               <div>
-                <Link href="/contact">
-                  <p className={styles.contact}>
+                <Link href="/contact" className={styles.contact}>
+                  <p>
                     Pour plus d'informations{" "}
                     <span
                       style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -1297,8 +1297,8 @@ function Formule(props) {
             <Image
               src="/Duo_Grossesse_Naissance/grossesse_naissance1.webp"
               alt="photo grossesse"
-              width={3510}
-              height={5270}
+              width={400}
+              height={600}
             />
           </div>
           <div className={styles.description}>
@@ -1312,8 +1312,8 @@ function Formule(props) {
             </div>
 
             <div>
-              <Link href="/contact">
-                <p className={styles.contact}>
+              <Link href="/contact" className={styles.contact}>
+                <p>
                   Pour plus d'informations{" "}
                   <span
                     style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -1337,8 +1337,8 @@ function Formule(props) {
                 </p>
               </div>
               <div>
-                <Link href="/contact">
-                  <p className={styles.contact}>
+                <Link href="/contact" className={styles.contact}>
+                  <p>
                     Pour plus d'informations{" "}
                     <span
                       style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -1353,8 +1353,8 @@ function Formule(props) {
               <Image
                 src="/Duo_Grossesse_Naissance/grossesse_naissance4.webp"
                 alt="photo naissance"
-                width={3510}
-                height={5270}
+                width={400}
+                height={600}
               />
             </div>
           </div>
@@ -1365,8 +1365,8 @@ function Formule(props) {
               <Image
                 src="/Duo_Grossesse_Naissance/grossesse_naissance2.webp"
                 alt="photo TBB"
-                width={3510}
-                height={5270}
+                width={400}
+                height={600}
               />
             </div>
             <div className={styles.description}>
@@ -1379,8 +1379,8 @@ function Formule(props) {
                 </p>
               </div>
               <div>
-                <Link href="/contact">
-                  <p className={styles.contact}>
+                <Link href="/contact" className={styles.contact}>
+                  <p>
                     Pour plus d'informations{" "}
                     <span
                       style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -1418,8 +1418,8 @@ function Formule(props) {
             <Image
               src="/Baptême/baptême2.webp"
               alt="photo baptême"
-              width={3510}
-              height={5270}
+              width={400}
+              height={600}
             />
           </div>
           <div className={styles.description}>
@@ -1439,8 +1439,8 @@ function Formule(props) {
             </div>
 
             <div>
-              <Link href="/contact">
-                <p className={styles.contact}>
+              <Link href="/contact" className={styles.contact}>
+                <p>
                   Pour plus d'informations{" "}
                   <span
                     style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -1479,8 +1479,8 @@ function Formule(props) {
             <Image
               src="/Seances_theme/seance_theme3.webp"
               alt="photo séance à thème"
-              width={3510}
-              height={5270}
+              width={400}
+              height={600}
             />
           </div>
           <div className={styles.description}>
@@ -1494,8 +1494,8 @@ function Formule(props) {
             </div>
 
             <div>
-              <Link href="/contact">
-                <p className={styles.contact}>
+              <Link href="/contact" className={styles.contact}>
+                <p>
                   Pour plus d'informations{" "}
                   <span
                     style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -1519,8 +1519,8 @@ function Formule(props) {
                 </p>
               </div>
               <div>
-                <Link href="/contact">
-                  <p className={styles.contact}>
+                <Link href="/contact" className={styles.contact}>
+                  <p>
                     Pour plus d'informations{" "}
                     <span
                       style={{ cursor: "pointer", textDecoration: "underline" }}
@@ -1535,8 +1535,8 @@ function Formule(props) {
               <Image
                 src="/Seances_theme/seance_theme5.webp"
                 alt="photo séance à thème"
-                width={3510}
-                height={5270}
+                width={400}
+                height={600}
               />
             </div>
           </div>
@@ -1547,8 +1547,8 @@ function Formule(props) {
               <Image
                 src="/Seances_theme/seance_theme2.webp"
                 alt="photo séance à thème"
-                width={3510}
-                height={5270}
+                width={400}
+                height={600}
               />
             </div>
             <div className={styles.description}>
@@ -1561,8 +1561,8 @@ function Formule(props) {
                 </p>
               </div>
               <div>
-                <Link href="/contact">
-                  <p className={styles.contact}>
+                <Link href="/contact" className={styles.contact}>
+                  <p>
                     Pour plus d'informations{" "}
                     <span
                       style={{ cursor: "pointer", textDecoration: "underline" }}

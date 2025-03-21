@@ -25,23 +25,21 @@ function Portfolio() {
 
   const imagePath = image.map((data, i) => {
     return (
-      <ScrollAnimation
-        animateIn="fadeInUp"
-        animateOnce={true}
-        className={styles.image}
-        key={i}
-      >
-        <Image
-          src={data.image}
-          alt={data.name}
-          width={data.width}
-          height={data.height}
-          onClick={() => handleImageClick(data.image)}
-          style={{ cursor: "pointer" }}
-          loading="lazy"
-          quality={75}
-        />
-      </ScrollAnimation>
+      <div key={i}>
+        <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
+          <Image
+            src={data.image}
+            alt={data.name}
+            width={data.width}
+            height={data.height}
+            onClick={() => handleImageClick(data.image)}
+            style={{ cursor: "pointer" }}
+            loading="lazy"
+            quality={75}
+            className={styles.image}
+          />
+        </ScrollAnimation>
+      </div>
     );
   });
 
@@ -57,7 +55,11 @@ function Portfolio() {
       <Header />
       <div className={styles.imageContainer}>{imagePath}</div>
       {imageOpen && (
-        <div className={styles.fullscreenModal} onClick={closeModal} aria-hidden={imageOpen}>
+        <div
+          className={styles.fullscreenModal}
+          onClick={closeModal}
+          aria-hidden={imageOpen}
+        >
           <div className={styles.fullscreenImageContainer}>
             <Image
               src={selectedImage}
@@ -69,7 +71,7 @@ function Portfolio() {
           </div>
         </div>
       )}
-      <Footer/>
+      <Footer />
     </div>
   );
 }

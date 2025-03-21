@@ -4,16 +4,16 @@
 }
 
 .image{
-  width: 30vw;
-  object-fit: cover;
-  margin: 5px;
+  width: 30%;
+  height: 30%;
+  margin : 5px;
+  border-radius: 10px;
 }
 
 .imageContainer {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
   margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .fullscreenModal {
@@ -23,24 +23,19 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.85);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   z-index: 1000;
 }
 
 .fullscreenImageContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: rgba(0, 0, 0, 0);
 }
 
 .fullscreenImage {
   max-height: 90vh;
   object-fit: contain;
-  display: flex;
-  justify-content: center;
+  background-color: rgba(0, 0, 0, 0);
+  margin: auto;
+  border-radius: 10px;
 }
 
 @media (max-width: 1024px) {

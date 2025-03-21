@@ -8,7 +8,7 @@ export default function Header() {
     <div className={styles.head}>
       <div className={styles.headContainer}>
         <div className={styles.logoContainer}>
-          <Link href="/">
+          <Link href="/" className={styles.logo}>
             <Image
               width={296}
               height={44}
@@ -21,26 +21,20 @@ export default function Header() {
         </div>
         <div className={styles.headerRight}>
           <div className={styles.menu}>
-            <Link href="/apropos">
-              <span className={styles.lien}>A propos</span>
+            <Link href="/apropos" className={styles.lien}>
+             A propos
             </Link>
-            <Link href="/prestation">
-              <span className={styles.lien}>Prestations</span>
+            <Link href="/prestation" className={styles.lien}>
+              Prestations
             </Link>
-            <Link href="/portfolio">
-              <span className={styles.lien}>Portfolio</span>
+            <Link href="/portfolio" className={styles.lien}>
+              Portfolio
             </Link>
-            <Link href="/contact">
-              <span className={styles.lien}>Contact</span>
+            <Link href="/contact" className={styles.lien}>
+             Contact
             </Link>
-            <Link href="https://solenedouxphotographie31.pixieset.com/">
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.lien}
-              >
+            <Link href="https://solenedouxphotographie31.pixieset.com/" target="_blank" className={styles.lien}>
                 Gallerie privee
-              </a>
             </Link>
           </div>
           <div className={styles.instaIcon}>
