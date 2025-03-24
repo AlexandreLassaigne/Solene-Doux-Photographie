@@ -27,14 +27,13 @@ function Formule(props) {
           </p>
         </div>
         <div className={styles.container}>
-          <div className={styles.image}>
-            <Image
-              src="/Mariage/mariage14.webp"
-              alt="photo Mariage"
-              width={400}
-              height={600}
-            />
-          </div>
+          <Image
+            src="/Mariage/mariage14.webp"
+            alt="photo Mariage"
+            width={400}
+            height={600}
+            className={styles.image}
+          />
           <div className={styles.description}>
             <div>
               <h1 className={styles.formulaTitle}>Formule Instants</h1>
@@ -45,6 +44,7 @@ function Formule(props) {
                 d'honneur
               </p>
             </div>
+
             <div>
               <Link href="/contact" className={styles.contact}>
                 <p>
@@ -59,7 +59,11 @@ function Formule(props) {
             </div>
           </div>
         </div>
-        <ScrollAnimation animateIn="fadeInRight" animateOnce={true} delay={1 * 100}>
+        <ScrollAnimation
+          animateIn="fadeInRight"
+          animateOnce={true}
+          delay={1 * 100}
+        >
           <div className={styles.container}>
             <div className={styles.description}>
               <div>
@@ -84,26 +88,28 @@ function Formule(props) {
                 </Link>
               </div>
             </div>
-            <div className={styles.image}>
-              <Image
-                src="/Mariage/mariage8.webp"
-                alt="photo Mariage"
-                width={400}
-                height={600}
-              />
-            </div>
+            <Image
+              src="/Mariage/mariage8.webp"
+              alt="photo Mariage"
+              width={400}
+              height={600}
+              className={styles.image}
+            />
           </div>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} delay={1 * 100}>
+        <ScrollAnimation
+          animateIn="fadeInLeft"
+          animateOnce={true}
+          delay={1 * 100}
+        >
           <div className={styles.container}>
-            <div className={styles.image}>
-              <Image
-                src="/Mariage/mariage1.webp"
-                alt="photo Mariage"
-                width={400}
-                height={600}
-              />
-            </div>
+            <Image
+              src="/Mariage/mariage1.webp"
+              alt="photo Mariage"
+              width={400}
+              height={600}
+              className={styles.image}
+            />
             <div className={styles.description}>
               <div>
                 <h1 className={styles.formulaTitle}>Formule Prestige</h1>
@@ -145,14 +151,13 @@ function Formule(props) {
           </p>
         </div>
         <div className={styles.container}>
-          <div className={styles.image}>
-            <Image
-              src="/Allaitement/allaitement1.webp"
-              alt="photo Allaitement"
-              width={400}
-              height={600}
-            />
-          </div>
+          <Image
+            src="/Allaitement/allaitement1.webp"
+            alt="photo Allaitement"
+            width={400}
+            height={600}
+            className={styles.image}
+          />
           <div className={styles.description}>
             <div>
               <h1 className={styles.formulaTitle}>Formule Instants</h1>
@@ -177,7 +182,11 @@ function Formule(props) {
             </div>
           </div>
         </div>
-        <ScrollAnimation animateIn="fadeInRight" animateOnce={true} delay={1 * 100}>
+        <ScrollAnimation
+          animateIn="fadeInRight"
+          animateOnce={true}
+          delay={1 * 100}
+        >
           <div className={styles.container}>
             <div className={styles.description}>
               <div>
@@ -201,26 +210,28 @@ function Formule(props) {
                 </Link>
               </div>
             </div>
-            <div className={styles.image}>
-              <Image
-                src="/Allaitement/allaitement2.webp"
-                alt="photo Allaitement"
-                width={400}
-                height={600}
-              />
-            </div>
+            <Image
+              src="/Allaitement/allaitement2.webp"
+              alt="photo Allaitement"
+              width={400}
+              height={600}
+              className={styles.image}
+            />
           </div>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} delay={1 * 100}>
+        <ScrollAnimation
+          animateIn="fadeInLeft"
+          animateOnce={true}
+          delay={1 * 100}
+        >
           <div className={styles.container}>
-            <div className={styles.image}>
-              <Image
-                src="/Allaitement/allaitement3.webp"
-                alt="photo Allaitement"
-                width={400}
-                height={600}
-              />
-            </div>
+            <Image
+              src="/Allaitement/allaitement3.webp"
+              alt="photo Allaitement"
+              width={400}
+              height={600}
+              className={styles.image}
+            />
             <div className={styles.description}>
               <div>
                 <h1 className={styles.formulaTitle}>Formule Prestige</h1>
@@ -262,14 +273,13 @@ function Formule(props) {
           </p>
         </div>
         <div className={styles.container}>
-          <div className={styles.image}>
-            <Image
-              src="/Couple/couple2.webp"
-              alt="photo Couple"
-              width={400}
-              height={600}
-            />
-          </div>
+          <Image
+            src="/Couple/couple2.webp"
+            alt="photo Couple"
+            width={400}
+            height={600}
+            className={styles.image}
+          />
           <div className={styles.description}>
             <div>
               <h1 className={styles.formulaTitle}>Formule Instants</h1>
@@ -294,7 +304,11 @@ function Formule(props) {
             </div>
           </div>
         </div>
-        <ScrollAnimation animateIn="fadeInRight" animateOnce={true} delay={1 * 100}>
+        <ScrollAnimation
+          animateIn="fadeInRight"
+          animateOnce={true}
+          delay={1 * 100}
+        >
           <div className={styles.container}>
             <div className={styles.description}>
               <div>
@@ -318,26 +332,28 @@ function Formule(props) {
                 </Link>
               </div>
             </div>
-            <div className={styles.image}>
-              <Image
-                src="/Couple/couple4.webp"
-                alt="photo Couple"
-                width={400}
-                height={600}
-              />
-            </div>
+            <Image
+              src="/Couple/couple4.webp"
+              alt="photo Couple"
+              width={400}
+              height={600}
+              className={styles.image}
+            />
           </div>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} delay={1 * 100}>
+        <ScrollAnimation
+          animateIn="fadeInLeft"
+          animateOnce={true}
+          delay={1 * 100}
+        >
           <div className={styles.container}>
-            <div className={styles.image}>
-              <Image
-                src="/Couple/couple6.webp"
-                alt="photo Couple"
-                width={400}
-                height={600}
-              />
-            </div>
+            <Image
+              src="/Couple/couple6.webp"
+              alt="photo Couple"
+              width={400}
+              height={600}
+              className={styles.image}
+            />
             <div className={styles.description}>
               <div>
                 <h1 className={styles.formulaTitle}>Formule Prestige</h1>
@@ -379,14 +395,13 @@ function Formule(props) {
           </p>
         </div>
         <div className={styles.container}>
-          <div className={styles.image}>
-            <Image
-              src="/Deco/deco10.webp"
-              alt="photo Décoration d'intérieur"
-              width={400}
-              height={600}
-            />
-          </div>
+          <Image
+            src="/Deco/deco10.webp"
+            alt="photo Décoration d'intérieur"
+            width={400}
+            height={600}
+            className={styles.image}
+          />
           <div className={styles.description}>
             <div>
               <h1 className={styles.formulaTitle}>Formule Instants</h1>
@@ -411,7 +426,11 @@ function Formule(props) {
             </div>
           </div>
         </div>
-        <ScrollAnimation animateIn="fadeInRight" animateOnce={true} delay={1 * 100}>
+        <ScrollAnimation
+          animateIn="fadeInRight"
+          animateOnce={true}
+          delay={1 * 100}
+        >
           <div className={styles.container}>
             <div className={styles.description}>
               <div>
@@ -435,26 +454,28 @@ function Formule(props) {
                 </Link>
               </div>
             </div>
-            <div className={styles.image}>
-              <Image
-                src="/Deco/deco5.webp"
-                alt="photo Décoration d'intérieur"
-                width={400}
-                height={600}
-              />
-            </div>
+            <Image
+              src="/Deco/deco5.webp"
+              alt="photo Décoration d'intérieur"
+              width={400}
+              height={600}
+              className={styles.image}
+            />
           </div>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} delay={1 * 100}>
+        <ScrollAnimation
+          animateIn="fadeInLeft"
+          animateOnce={true}
+          delay={1 * 100}
+        >
           <div className={styles.container}>
-            <div className={styles.image}>
-              <Image
-                src="/Deco/deco3.webp"
-                alt="photo Décoration d'intérieur"
-                width={400}
-                height={600}
-              />
-            </div>
+            <Image
+              src="/Deco/deco3.webp"
+              alt="photo Décoration d'intérieur"
+              width={400}
+              height={600}
+              className={styles.image}
+            />
             <div className={styles.description}>
               <div>
                 <h1 className={styles.formulaTitle}>Formule Prestige</h1>
@@ -501,14 +522,13 @@ function Formule(props) {
           </p>
         </div>
         <div className={styles.container}>
-          <div className={styles.image}>
-            <Image
-              src="/EVJF/evjf1.webp"
-              alt="photo EVJF"
-              width={400}
-              height={600}
-            />
-          </div>
+          <Image
+            src="/EVJF/evjf1.webp"
+            alt="photo EVJF"
+            width={400}
+            height={600}
+            className={styles.image}
+          />
           <div className={styles.description}>
             <div>
               <h1 className={styles.formulaTitle}>EVJF / EVG</h1>
@@ -555,14 +575,13 @@ function Formule(props) {
           </p>
         </div>
         <div className={styles.container}>
-          <div className={styles.image}>
-            <Image
-              src="/Famille/famille2.webp"
-              alt="photo Famille"
-              width={400}
-              height={600}
-            />
-          </div>
+          <Image
+            src="/Famille/famille2.webp"
+            alt="photo Famille"
+            width={400}
+            height={600}
+            className={styles.image}
+          />
           <div className={styles.description}>
             <div>
               <h1 className={styles.formulaTitle}>Formule Instants</h1>
@@ -587,7 +606,11 @@ function Formule(props) {
             </div>
           </div>
         </div>
-        <ScrollAnimation animateIn="fadeInRight" animateOnce={true} delay={1 * 100}>
+        <ScrollAnimation
+          animateIn="fadeInRight"
+          animateOnce={true}
+          delay={1 * 100}
+        >
           <div className={styles.container}>
             <div className={styles.description}>
               <div>
@@ -611,26 +634,28 @@ function Formule(props) {
                 </Link>
               </div>
             </div>
-            <div className={styles.image}>
-              <Image
-                src="/Famille/famille6.webp"
-                alt="photo Famille"
-                width={400}
-                height={600}
-              />
-            </div>
+            <Image
+              src="/Famille/famille6.webp"
+              alt="photo Famille"
+              width={400}
+              height={600}
+              className={styles.image}
+            />
           </div>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} delay={1 * 100}>
+        <ScrollAnimation
+          animateIn="fadeInLeft"
+          animateOnce={true}
+          delay={1 * 100}
+        >
           <div className={styles.container}>
-            <div className={styles.image}>
-              <Image
-                src="/Famille/famille5.webp"
-                alt="photo Famille"
-                width={400}
-                height={600}
-              />
-            </div>
+            <Image
+              src="/Famille/famille5.webp"
+              alt="photo Famille"
+              width={400}
+              height={600}
+              className={styles.image}
+            />
             <div className={styles.description}>
               <div>
                 <h1 className={styles.formulaTitle}>Formule Prestige</h1>
@@ -676,14 +701,13 @@ function Formule(props) {
           </p>
         </div>
         <div className={styles.container}>
-          <div className={styles.image}>
-            <Image
-              src="/Grossesse/grossesse9.webp"
-              alt="photo Grossesse"
-              width={400}
-              height={600}
-            />
-          </div>
+          <Image
+            src="/Grossesse/grossesse9.webp"
+            alt="photo Grossesse"
+            width={400}
+            height={600}
+            className={styles.image}
+          />
           <div className={styles.description}>
             <div>
               <h1 className={styles.formulaTitle}>Formule Instants</h1>
@@ -708,7 +732,11 @@ function Formule(props) {
             </div>
           </div>
         </div>
-        <ScrollAnimation animateIn="fadeInRight" animateOnce={true} delay={1 * 100}>
+        <ScrollAnimation
+          animateIn="fadeInRight"
+          animateOnce={true}
+          delay={1 * 100}
+        >
           <div className={styles.container}>
             <div className={styles.description}>
               <div>
@@ -732,26 +760,28 @@ function Formule(props) {
                 </Link>
               </div>
             </div>
-            <div className={styles.image}>
-              <Image
-                src="/Grossesse/grossesse7.webp"
-                alt="photo Grossesse"
-                width={400}
-                height={600}
-              />
-            </div>
+            <Image
+              src="/Grossesse/grossesse7.webp"
+              alt="photo Grossesse"
+              width={400}
+              height={600}
+              className={styles.image}
+            />
           </div>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} delay={1 * 100}>
+        <ScrollAnimation
+          animateIn="fadeInLeft"
+          animateOnce={true}
+          delay={1 * 100}
+        >
           <div className={styles.container}>
-            <div className={styles.image}>
-              <Image
-                src="/Grossesse/grossesse10.webp"
-                alt="photo Grossesse"
-                width={400}
-                height={600}
-              />
-            </div>
+            <Image
+              src="/Grossesse/grossesse10.webp"
+              alt="photo Grossesse"
+              width={400}
+              height={600}
+              className={styles.image}
+            />
             <div className={styles.description}>
               <div>
                 <h1 className={styles.formulaTitle}>Formule Prestige</h1>
@@ -796,14 +826,13 @@ function Formule(props) {
           </p>
         </div>
         <div className={styles.container}>
-          <div className={styles.image}>
-            <Image
-              src="/Naissance/naissance1.webp"
-              alt="photo Naissance"
-              width={400}
-              height={600}
-            />
-          </div>
+          <Image
+            src="/Naissance/naissance1.webp"
+            alt="photo Naissance"
+            width={400}
+            height={600}
+            className={styles.image}
+          />
           <div className={styles.description}>
             <div>
               <h1 className={styles.formulaTitle}>Formule Instants</h1>
@@ -828,7 +857,11 @@ function Formule(props) {
             </div>
           </div>
         </div>
-        <ScrollAnimation animateIn="fadeInRight" animateOnce={true} delay={1 * 100}>
+        <ScrollAnimation
+          animateIn="fadeInRight"
+          animateOnce={true}
+          delay={1 * 100}
+        >
           <div className={styles.container}>
             <div className={styles.description}>
               <div>
@@ -852,26 +885,28 @@ function Formule(props) {
                 </Link>
               </div>
             </div>
-            <div className={styles.image}>
-              <Image
-                src="/Naissance/naissance7.webp"
-                alt="photo Naissance"
-                width={400}
-                height={600}
-              />
-            </div>
+            <Image
+              src="/Naissance/naissance7.webp"
+              alt="photo Naissance"
+              width={400}
+              height={600}
+              className={styles.image}
+            />
           </div>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} delay={1 * 100}>
+        <ScrollAnimation
+          animateIn="fadeInLeft"
+          animateOnce={true}
+          delay={1 * 100}
+        >
           <div className={styles.container}>
-            <div className={styles.image}>
-              <Image
-                src="/Naissance/naissance2.webp"
-                alt="photo Naissance"
-                width={400}
-                height={600}
-              />
-            </div>
+            <Image
+              src="/Naissance/naissance2.webp"
+              alt="photo Naissance"
+              width={400}
+              height={600}
+              className={styles.image}
+            />
             <div className={styles.description}>
               <div>
                 <h1 className={styles.formulaTitle}>Formule Prestige</h1>
@@ -919,14 +954,13 @@ function Formule(props) {
           </p>
         </div>
         <div className={styles.container}>
-          <div className={styles.image}>
-            <Image
-              src="/Professionnels_marques/professionnels_marques2.webp"
-              alt="photo Professionnels - Marques"
-              width={400}
-              height={600}
-            />
-          </div>
+          <Image
+            src="/Professionnels_marques/professionnels_marques2.webp"
+            alt="photo Professionnels - Marques"
+            width={400}
+            height={600}
+            className={styles.image}
+          />
           <div className={styles.description}>
             <div>
               <h1 className={styles.formulaTitle}>Formule Instants</h1>
@@ -951,7 +985,11 @@ function Formule(props) {
             </div>
           </div>
         </div>
-        <ScrollAnimation animateIn="fadeInRight" animateOnce={true} delay={1 * 100}>
+        <ScrollAnimation
+          animateIn="fadeInRight"
+          animateOnce={true}
+          delay={1 * 100}
+        >
           <div className={styles.container}>
             <div className={styles.description}>
               <div>
@@ -975,26 +1013,28 @@ function Formule(props) {
                 </Link>
               </div>
             </div>
-            <div className={styles.image}>
-              <Image
-                src="/Professionnels_marques/professionnels_marques12.webp"
-                alt="photo Professionnels - Marques"
-                width={400}
-                height={600}
-              />
-            </div>
+            <Image
+              src="/Professionnels_marques/professionnels_marques12.webp"
+              alt="photo Professionnels - Marques"
+              width={400}
+              height={600}
+              className={styles.image}
+            />
           </div>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} delay={1 * 100}>
+        <ScrollAnimation
+          animateIn="fadeInLeft"
+          animateOnce={true}
+          delay={1 * 100}
+        >
           <div className={styles.container}>
-            <div className={styles.image}>
-              <Image
-                src="/Professionnels_marques/professionnels_marques17.webp"
-                alt="photo Professionnels - Marques"
-                width={400}
-                height={600}
-              />
-            </div>
+            <Image
+              src="/Professionnels_marques/professionnels_marques17.webp"
+              alt="photo Professionnels - Marques"
+              width={400}
+              height={600}
+              className={styles.image}
+            />
             <div className={styles.description}>
               <div>
                 <h1 className={styles.formulaTitle}>Formule Prestige</h1>
@@ -1040,14 +1080,13 @@ function Formule(props) {
           </p>
         </div>
         <div className={styles.container}>
-          <div className={styles.image}>
-            <Image
-              src="/Solo_confiance_en_soi/solo_confiance10.webp"
-              alt="photo Solo - Confiance en soi"
-              width={400}
-              height={600}
-            />
-          </div>
+          <Image
+            src="/Solo_confiance_en_soi/solo_confiance10.webp"
+            alt="photo Solo - Confiance en soi"
+            width={400}
+            height={600}
+            className={styles.image}
+          />
           <div className={styles.description}>
             <div>
               <h1 className={styles.formulaTitle}>Formule Instants</h1>
@@ -1072,7 +1111,11 @@ function Formule(props) {
             </div>
           </div>
         </div>
-        <ScrollAnimation animateIn="fadeInRight" animateOnce={true} delay={1 * 100}>
+        <ScrollAnimation
+          animateIn="fadeInRight"
+          animateOnce={true}
+          delay={1 * 100}
+        >
           <div className={styles.container}>
             <div className={styles.description}>
               <div>
@@ -1096,26 +1139,28 @@ function Formule(props) {
                 </Link>
               </div>
             </div>
-            <div className={styles.image}>
-              <Image
-                src="/Solo_confiance_en_soi/solo_confiance4.webp"
-                alt="photo Solo - Confiance en soi"
-                width={400}
-                height={600}
-              />
-            </div>
+            <Image
+              src="/Solo_confiance_en_soi/solo_confiance4.webp"
+              alt="photo Solo - Confiance en soi"
+              width={400}
+              height={600}
+              className={styles.image}
+            />
           </div>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} delay={1 * 100}>
+        <ScrollAnimation
+          animateIn="fadeInLeft"
+          animateOnce={true}
+          delay={1 * 100}
+        >
           <div className={styles.container}>
-            <div className={styles.image}>
-              <Image
-                src="/Solo_confiance_en_soi/solo_confiance1.webp"
-                alt="photo Solo - Confiance en soi"
-                width={400}
-                height={600}
-              />
-            </div>
+            <Image
+              src="/Solo_confiance_en_soi/solo_confiance1.webp"
+              alt="photo Solo - Confiance en soi"
+              width={400}
+              height={600}
+              className={styles.image}
+            />
             <div className={styles.description}>
               <div>
                 <h1 className={styles.formulaTitle}>Formule Prestige</h1>
@@ -1160,14 +1205,13 @@ function Formule(props) {
           </p>
         </div>
         <div className={styles.container}>
-          <div className={styles.image}>
-            <Image
-              src="/TBB/tbb4.webp"
-              alt="photo TBB"
-              width={400}
-              height={600}
-            />
-          </div>
+          <Image
+            src="/TBB/tbb4.webp"
+            alt="photo TBB"
+            width={400}
+            height={600}
+            className={styles.image}
+          />
           <div className={styles.description}>
             <div>
               <h1 className={styles.formulaTitle}>Formule Instants</h1>
@@ -1192,7 +1236,11 @@ function Formule(props) {
             </div>
           </div>
         </div>
-        <ScrollAnimation animateIn="fadeInRight" animateOnce={true} delay={1 * 100}>
+        <ScrollAnimation
+          animateIn="fadeInRight"
+          animateOnce={true}
+          delay={1 * 100}
+        >
           <div className={styles.container}>
             <div className={styles.description}>
               <div>
@@ -1216,26 +1264,28 @@ function Formule(props) {
                 </Link>
               </div>
             </div>
-            <div className={styles.image}>
-              <Image
-                src="/TBB/tbb2.webp"
-                alt="photo TBB"
-                width={400}
-                height={600}
-              />
-            </div>
+            <Image
+              src="/TBB/tbb2.webp"
+              alt="photo TBB"
+              width={400}
+              height={600}
+              className={styles.image}
+            />
           </div>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} delay={1 * 100}>
+        <ScrollAnimation
+          animateIn="fadeInLeft"
+          animateOnce={true}
+          delay={1 * 100}
+        >
           <div className={styles.container}>
-            <div className={styles.image}>
-              <Image
-                src="/TBB/tbb9.webp"
-                alt="photo TBB"
-                width={400}
-                height={600}
-              />
-            </div>
+            <Image
+              src="/TBB/tbb9.webp"
+              alt="photo TBB"
+              width={400}
+              height={600}
+              className={styles.image}
+            />
             <div className={styles.description}>
               <div>
                 <h1 className={styles.formulaTitle}>Formule Prestige</h1>
@@ -1293,14 +1343,13 @@ function Formule(props) {
           </p>
         </div>
         <div className={styles.container}>
-          <div className={styles.image}>
-            <Image
-              src="/Duo_Grossesse_Naissance/grossesse_naissance1.webp"
-              alt="photo grossesse"
-              width={400}
-              height={600}
-            />
-          </div>
+          <Image
+            src="/Duo_Grossesse_Naissance/grossesse_naissance1.webp"
+            alt="photo grossesse"
+            width={400}
+            height={600}
+            className={styles.image}
+          />
           <div className={styles.description}>
             <div>
               <h1 className={styles.formulaTitle}>Formule Instants</h1>
@@ -1325,7 +1374,11 @@ function Formule(props) {
             </div>
           </div>
         </div>
-        <ScrollAnimation animateIn="fadeInRight" animateOnce={true} delay={1 * 100}>
+        <ScrollAnimation
+          animateIn="fadeInRight"
+          animateOnce={true}
+          delay={1 * 100}
+        >
           <div className={styles.container}>
             <div className={styles.description}>
               <div>
@@ -1349,26 +1402,28 @@ function Formule(props) {
                 </Link>
               </div>
             </div>
-            <div className={styles.image}>
-              <Image
-                src="/Duo_Grossesse_Naissance/grossesse_naissance4.webp"
-                alt="photo naissance"
-                width={400}
-                height={600}
-              />
-            </div>
+            <Image
+              src="/Duo_Grossesse_Naissance/grossesse_naissance4.webp"
+              alt="photo naissance"
+              width={400}
+              height={600}
+              className={styles.image}
+            />
           </div>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} delay={1 * 100}>
+        <ScrollAnimation
+          animateIn="fadeInLeft"
+          animateOnce={true}
+          delay={1 * 100}
+        >
           <div className={styles.container}>
-            <div className={styles.image}>
-              <Image
-                src="/Duo_Grossesse_Naissance/grossesse_naissance2.webp"
-                alt="photo TBB"
-                width={400}
-                height={600}
-              />
-            </div>
+            <Image
+              src="/Duo_Grossesse_Naissance/grossesse_naissance2.webp"
+              alt="photo TBB"
+              width={400}
+              height={600}
+              className={styles.image}
+            />
             <div className={styles.description}>
               <div>
                 <h1 className={styles.formulaTitle}>Formule Prestige</h1>
@@ -1414,14 +1469,13 @@ function Formule(props) {
           </p>
         </div>
         <div className={styles.container}>
-          <div className={styles.image}>
-            <Image
-              src="/Baptême/baptême2.webp"
-              alt="photo baptême"
-              width={400}
-              height={600}
-            />
-          </div>
+          <Image
+            src="/Baptême/baptême2.webp"
+            alt="photo baptême"
+            width={400}
+            height={600}
+            className={styles.image}
+          />
           <div className={styles.description}>
             <div>
               <h2 className={styles.h2}>Séance de 2h</h2>
@@ -1475,14 +1529,13 @@ function Formule(props) {
           </p>
         </div>
         <div className={styles.container}>
-          <div className={styles.image}>
-            <Image
-              src="/Seances_theme/seance_theme3.webp"
-              alt="photo séance à thème"
-              width={400}
-              height={600}
-            />
-          </div>
+          <Image
+            src="/Seances_theme/seance_theme3.webp"
+            alt="photo séance à thème"
+            width={400}
+            height={600}
+            className={styles.image}
+          />
           <div className={styles.description}>
             <div>
               <h1 className={styles.formulaTitle}>Formule Instants</h1>
@@ -1507,7 +1560,11 @@ function Formule(props) {
             </div>
           </div>
         </div>
-        <ScrollAnimation animateIn="fadeInRight" animateOnce={true} delay={1 * 100}>
+        <ScrollAnimation
+          animateIn="fadeInRight"
+          animateOnce={true}
+          delay={1 * 100}
+        >
           <div className={styles.container}>
             <div className={styles.description}>
               <div>
@@ -1531,26 +1588,28 @@ function Formule(props) {
                 </Link>
               </div>
             </div>
-            <div className={styles.image}>
-              <Image
-                src="/Seances_theme/seance_theme5.webp"
-                alt="photo séance à thème"
-                width={400}
-                height={600}
-              />
-            </div>
+            <Image
+              src="/Seances_theme/seance_theme5.webp"
+              alt="photo séance à thème"
+              width={400}
+              height={600}
+              className={styles.image}
+            />
           </div>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInLeft" animateOnce={true} delay={1 * 100}>
+        <ScrollAnimation
+          animateIn="fadeInLeft"
+          animateOnce={true}
+          delay={1 * 100}
+        >
           <div className={styles.container}>
-            <div className={styles.image}>
-              <Image
-                src="/Seances_theme/seance_theme2.webp"
-                alt="photo séance à thème"
-                width={400}
-                height={600}
-              />
-            </div>
+            <Image
+              src="/Seances_theme/seance_theme2.webp"
+              alt="photo séance à thème"
+              width={400}
+              height={600}
+              className={styles.image}
+            />
             <div className={styles.description}>
               <div>
                 <h1 className={styles.formulaTitle}>Formule Prestige</h1>

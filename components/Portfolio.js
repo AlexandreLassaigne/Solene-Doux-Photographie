@@ -25,7 +25,7 @@ function Portfolio() {
 
   const imagePath = image.map((data, i) => {
     return (
-      <div key={i}>
+      <div key={i} className={styles.imageContainer}>
         <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
           <Image
             src={data.image}
@@ -53,7 +53,7 @@ function Portfolio() {
         />
       </Head>
       <Header />
-      <div className={styles.imageContainer}>{imagePath}</div>
+      <div className={styles.imagesContainer}>{imagePath}</div>
       {imageOpen && (
         <div
           className={styles.fullscreenModal}

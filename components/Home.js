@@ -22,7 +22,7 @@ function Home() {
     arrows: false,
     lazyLoad: "ondemand", // Lazy load des images
     pauseOnHover: false,
-    fade : true,
+    fade: true,
   };
 
   return (
@@ -84,28 +84,24 @@ function Home() {
         </div>
       </div>
       <div>
-        <div>
-          <div className={styles.container}>
-            <div className={styles.containerPhoto}>
-              <Image
-                src="/Solene/solene4.webp"
-                alt="photo de Solene"
-                width={500}
-                height={750}
-                loading="lazy"
-                className={styles.image}
-              />
-            </div>
-            <div className={styles.description}>
-              <p>
-                Photographe passionnée et spécialisée dans les moments forts de
-                la vie, mon objectif : capturer les émotions authentiques et
-                sublimer chaque instant avec sensibilité et professionnalisme{" "}
-              </p>
-              <Link href="/apropos">
-                <button className={styles.button}>A propos</button>
-              </Link>
-            </div>
+        <div className={styles.container}>
+          <Image
+            src="/Solene/solene4.webp"
+            alt="photo de Solene"
+            width={500}
+            height={750}
+            loading="lazy"
+            className={styles.image}
+          />
+          <div className={styles.description}>
+            <p>
+              Photographe passionnée et spécialisée dans les moments forts de la
+              vie, mon objectif : capturer les émotions authentiques et sublimer
+              chaque instant avec sensibilité et professionnalisme{" "}
+            </p>
+            <Link href="/apropos">
+              <button className={styles.button}>A propos</button>
+            </Link>
           </div>
         </div>
         <ScrollAnimation
@@ -128,7 +124,6 @@ function Home() {
                 </button>
               </Link>
             </div>
-            <div className={styles.containerPhoto}>
               <Image
                 src="/Couple/couple6.webp"
                 alt="photo de couple"
@@ -137,7 +132,6 @@ function Home() {
                 className={styles.image}
                 loading="lazy"
               />
-            </div>
           </div>
         </ScrollAnimation>
         <ScrollAnimation
@@ -146,7 +140,6 @@ function Home() {
           delay={1 * 100}
         >
           <div className={styles.container}>
-            <div className={styles.containerPhoto}>
               <Image
                 src="/Solo_confiance_en_soi/solo_confiance12.webp"
                 alt="photo EVJF"
@@ -155,7 +148,6 @@ function Home() {
                 loading="lazy"
                 className={styles.image}
               />
-            </div>
             <div className={styles.description}>
               <p>
                 Découvrez mon portfolio, un espace où chaque projet reflète ma
