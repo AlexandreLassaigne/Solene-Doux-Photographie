@@ -51,10 +51,10 @@ function Contact() {
       } else {
         setWrongTel(false);
       }
-      if (!recaptchaToken) {
+/*       if (!recaptchaToken) {
         setMessageError("Veuillez valider le reCAPTCHA !");
         return;
-      }
+      } */
       if (!wrongEmail && !wrongTel && !emptyFields) {
         //envoie le formulaire via l'API EmailJS, en utilisant les paramètres
         emailjs
@@ -117,93 +117,93 @@ function Contact() {
         />
       </Head>
       <Header />
-      <div className={styles.faq}>
-        <Faq
-          data={data}
-          styles={{
-            rowTitleColor: "#78789a",
-            rowTitlePaddingBottom: "5px",
-            rowContentColor: "#48484a",
-            rowContentPaddingTop: "10px",
-            rowContentPaddingBottom: "10px",
-            rowContentPaddingLeft: "50px",
-            rowContentPaddingRight: "50px",
-            rowTitleTextPaddingLeft: "30px",
-            arrowColor: "black",
-          }}
-        />
-      </div>
-
-      <h2 className={styles.text}>Parlez moi de votre projet</h2>
-      <div className={styles.form}>
-        <form className={styles.inputContainer} onSubmit={handleOnSubmit}>
-          <div className={styles.nom}>
-            <input
-              type="text"
-              placeholder="Nom"
-              className={styles.input}
-              onChange={(e) => setNom(e.target.value)}
-              value={nom}
-              name="nom"
-              id="nom"
-            />
-            <input
-              type="text"
-              placeholder="Prénom"
-              className={styles.input}
-              onChange={(e) => setPrenom(e.target.value)}
-              value={prenom}
-              name="prenom"
-              id="prenom"
-            />
-          </div>
-          <div className={styles.coordonees}>
-            <input
-              type="email"
-              placeholder="Email"
-              className={styles.input}
-              onChange={(e) => setEmail(e.target.value)}
-              value={email}
-              name="email"
-              id="email"
-            />
-            <input
-              type="tel"
-              placeholder="Téléphone"
-              className={styles.input}
-              onChange={(e) => setTel(e.target.value)}
-              value={tel}
-              name="telephone"
-              id="telephone"
-            />
-          </div>
-          <div className={styles.prestation}>
-            <input
-              type="text"
-              placeholder="Prestation"
-              className={styles.input}
-              onChange={(e) => setPrestation(e.target.value)}
-              value={prestation}
-              name="prestation"
-              id="prestation"
-            />
-          </div>
-          <div className={styles.message}>
-            <textarea
-              type="text"
-              placeholder="Décrivez-moi votre projet"
-              className={styles.projet}
-              rows={8}
-              cols={30}
-              name="message"
-              onChange={(e) => setMessage(e.target.value)}
-              value={message}
-            />
-          </div>
-          <div className={styles.buttonContainer}>
-            <div className={styles.messageError}>{messageError}</div>
-            <div className={styles.messageEnvoye}>{messageEnvoye}</div>
-           {/*  <ReCAPTCHA
+      <main>
+        <div className={styles.faq}>
+          <Faq
+            data={data}
+            styles={{
+              rowTitleColor: "#78789a",
+              rowTitlePaddingBottom: "5px",
+              rowContentColor: "#48484a",
+              rowContentPaddingTop: "10px",
+              rowContentPaddingBottom: "10px",
+              rowContentPaddingLeft: "50px",
+              rowContentPaddingRight: "50px",
+              rowTitleTextPaddingLeft: "30px",
+              arrowColor: "black",
+            }}
+          />
+        </div>
+        <h2 className={styles.text}>Parlez moi de votre projet</h2>
+        <div className={styles.form}>
+          <form className={styles.inputContainer} onSubmit={handleOnSubmit}>
+            <div className={styles.nom}>
+              <input
+                type="text"
+                placeholder="Nom"
+                className={styles.input}
+                onChange={(e) => setNom(e.target.value)}
+                value={nom}
+                name="nom"
+                id="nom"
+              />
+              <input
+                type="text"
+                placeholder="Prénom"
+                className={styles.input}
+                onChange={(e) => setPrenom(e.target.value)}
+                value={prenom}
+                name="prenom"
+                id="prenom"
+              />
+            </div>
+            <div className={styles.coordonees}>
+              <input
+                type="email"
+                placeholder="Email"
+                className={styles.input}
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
+                name="email"
+                id="email"
+              />
+              <input
+                type="tel"
+                placeholder="Téléphone"
+                className={styles.input}
+                onChange={(e) => setTel(e.target.value)}
+                value={tel}
+                name="telephone"
+                id="telephone"
+              />
+            </div>
+            <div className={styles.prestation}>
+              <input
+                type="text"
+                placeholder="Prestation"
+                className={styles.input}
+                onChange={(e) => setPrestation(e.target.value)}
+                value={prestation}
+                name="prestation"
+                id="prestation"
+              />
+            </div>
+            <div className={styles.message}>
+              <textarea
+                type="text"
+                placeholder="Décrivez-moi votre projet"
+                className={styles.projet}
+                rows={8}
+                cols={30}
+                name="message"
+                onChange={(e) => setMessage(e.target.value)}
+                value={message}
+              />
+            </div>
+            <div className={styles.buttonContainer}>
+              <div className={styles.messageError}>{messageError}</div>
+              <div className={styles.messageEnvoye}>{messageEnvoye}</div>
+              {/*  <ReCAPTCHA
               sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} // Ta clé publique reCAPTCHA
               onChange={(token) => setRecaptchaToken(token)} // Stocke le token généré
             />
@@ -217,12 +217,13 @@ function Contact() {
                 }}
               />
             </GoogleReCaptchaProvider> */}
-            <button className={styles.button} type="submit">
-              Envoyer
-            </button>
-          </div>
-        </form>
-      </div>
+              <button className={styles.button} type="submit">
+                Envoyer
+              </button>
+            </div>
+          </form>
+        </div>
+      </main>
       <Footer />
     </div>
   );

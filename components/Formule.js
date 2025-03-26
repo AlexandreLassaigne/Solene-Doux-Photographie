@@ -9,117 +9,43 @@ function Formule(props) {
   if (props.name === "Mariage") {
     formules = (
       <div>
-        <div style={{ textAlign: "center", fontFamily: "Inria serif" }}>
-          <h1>Séance Mariage</h1>
-          <p className={styles.presentation}>
-            Votre mariage est un moment unique qui mérite d’être immortalisé de
-            la plus belle des manières.
-            <br /> Avec mon approche artistique et douce, j’aime capturer non
-            seulement les moments importants, mais aussi les petites émotions
-            discrètes, les regards ou encore les gestes tendres qui font la
-            beauté de cette journée.
-            <br />À travers un reportage photo sur-mesure, je vous propose de
-            raconter votre histoire d'amour de manière naturelle et poétique en
-            créant un souvenir authentique, intemporel et chargé d’émotions.
-            Chaque image est une oeuvre qui traduit la douceur de l'instant, à
-            travers des lumières subtiles, des compositions soignées et une
-            attention particulière portée aux détails.
-          </p>
-        </div>
-        <div className={styles.container}>
-          <Image
-            src="/Mariage/mariage14.webp"
-            alt="photo Mariage"
-            width={400}
-            height={600}
-            className={styles.image}
-          />
-          <div className={styles.description}>
-            <div>
-              <h1 className={styles.formulaTitle}>Formule Instants</h1>
-              <h2 className={styles.h2}>Durée total : 2h</h2>
-              <span className={styles.price}>650 €</span>
-              <p className={styles.p}>
-                Cérémonie / Photos de groupe / Photos de couple / Début du vin
-                d'honneur
-              </p>
-            </div>
+        <main>
+          <div style={{ textAlign: "center", fontFamily: "Inria serif" }}>
+            <h1>Séance Mariage</h1>
+            <p className={styles.presentation}>
+              Votre mariage est un moment unique qui mérite d’être immortalisé
+              de la plus belle des manières.
+              <br /> Avec mon approche artistique et douce, j’aime capturer non
+              seulement les moments importants, mais aussi les petites émotions
+              discrètes, les regards ou encore les gestes tendres qui font la
+              beauté de cette journée.
+              <br />À travers un reportage photo sur-mesure, je vous propose de
+              raconter votre histoire d'amour de manière naturelle et poétique
+              en créant un souvenir authentique, intemporel et chargé
+              d’émotions. Chaque image est une oeuvre qui traduit la douceur de
+              l'instant, à travers des lumières subtiles, des compositions
+              soignées et une attention particulière portée aux détails.
+            </p>
+          </div>
+          <div className={styles.container}>
+            <Image
+              src="/Mariage/mariage14.webp"
+              alt="photo Mariage"
+              width={400}
+              height={600}
+              className={styles.image}
+            />
+            <div className={styles.description}>
+              <div>
+                <h1 className={styles.formulaTitle}>Formule Instants</h1>
+                <h2 className={styles.h2}>Durée total : 2h</h2>
+                <span className={styles.price}>650 €</span>
+                <p className={styles.p}>
+                  Cérémonie / Photos de groupe / Photos de couple / Début du vin
+                  d'honneur
+                </p>
+              </div>
 
-            <div>
-              <Link href="/contact" className={styles.contact}>
-                <p>
-                  Pour plus d'informations{" "}
-                  <span
-                    style={{ cursor: "pointer", textDecoration: "underline" }}
-                  >
-                    Contactez-moi
-                  </span>
-                </p>
-              </Link>
-            </div>
-          </div>
-        </div>
-        <ScrollAnimation
-          animateIn="fadeInRight"
-          animateOnce={true}
-          delay={1 * 100}
-        >
-          <div className={styles.container}>
-            <div className={styles.description}>
-              <div>
-                <h1 className={styles.formulaTitle}>Formule Douceur</h1>
-                <h2 className={styles.h2}>Durée total : 7h</h2>
-                <span className={styles.price}>1500 €</span>
-                <p className={styles.p}>
-                  Préparatifs des mariés / Cérémonie / Photos de groupe / Photos
-                  de couple / Vin d'honneur
-                </p>
-              </div>
-              <div>
-                <Link href="/contact" className={styles.contact}>
-                  <p>
-                    Pour plus d'informations{" "}
-                    <span
-                      style={{ cursor: "pointer", textDecoration: "underline" }}
-                    >
-                      Contactez-moi
-                    </span>
-                  </p>
-                </Link>
-              </div>
-            </div>
-            <Image
-              src="/Mariage/mariage8.webp"
-              alt="photo Mariage"
-              width={400}
-              height={600}
-              className={styles.image}
-            />
-          </div>
-        </ScrollAnimation>
-        <ScrollAnimation
-          animateIn="fadeInLeft"
-          animateOnce={true}
-          delay={1 * 100}
-        >
-          <div className={styles.container}>
-            <Image
-              src="/Mariage/mariage1.webp"
-              alt="photo Mariage"
-              width={400}
-              height={600}
-              className={styles.image}
-            />
-            <div className={styles.description}>
-              <div>
-                <h1 className={styles.formulaTitle}>Formule Prestige</h1>
-                <h2 className={styles.h2}>Durée total : 10h</h2>
-                <span className={styles.price}>2100 €</span>
-                <p className={styles.p}>
-                  Préparatifs des mariés / Cérémonie / Photos de groupe / Photos
-                  de couple / Vin d'honneur / Jusqu'au gâteau (00h00 max)
-                </p>
-              </div>
               <div>
                 <Link href="/contact" className={styles.contact}>
                   <p>
@@ -134,113 +60,124 @@ function Formule(props) {
               </div>
             </div>
           </div>
-        </ScrollAnimation>
+          <ScrollAnimation
+            animateIn="fadeInRight"
+            animateOnce={true}
+            delay={1 * 100}
+          >
+            <div className={styles.container}>
+              <div className={styles.description}>
+                <div>
+                  <h1 className={styles.formulaTitle}>Formule Douceur</h1>
+                  <h2 className={styles.h2}>Durée total : 7h</h2>
+                  <span className={styles.price}>1500 €</span>
+                  <p className={styles.p}>
+                    Préparatifs des mariés / Cérémonie / Photos de groupe /
+                    Photos de couple / Vin d'honneur
+                  </p>
+                </div>
+                <div>
+                  <Link href="/contact" className={styles.contact}>
+                    <p>
+                      Pour plus d'informations{" "}
+                      <span
+                        style={{
+                          cursor: "pointer",
+                          textDecoration: "underline",
+                        }}
+                      >
+                        Contactez-moi
+                      </span>
+                    </p>
+                  </Link>
+                </div>
+              </div>
+              <Image
+                src="/Mariage/mariage8.webp"
+                alt="photo Mariage"
+                width={400}
+                height={600}
+                className={styles.image}
+              />
+            </div>
+          </ScrollAnimation>
+          <ScrollAnimation
+            animateIn="fadeInLeft"
+            animateOnce={true}
+            delay={1 * 100}
+          >
+            <div className={styles.container}>
+              <Image
+                src="/Mariage/mariage1.webp"
+                alt="photo Mariage"
+                width={400}
+                height={600}
+                className={styles.image}
+              />
+              <div className={styles.description}>
+                <div>
+                  <h1 className={styles.formulaTitle}>Formule Prestige</h1>
+                  <h2 className={styles.h2}>Durée total : 10h</h2>
+                  <span className={styles.price}>2100 €</span>
+                  <p className={styles.p}>
+                    Préparatifs des mariés / Cérémonie / Photos de groupe /
+                    Photos de couple / Vin d'honneur / Jusqu'au gâteau (00h00
+                    max)
+                  </p>
+                </div>
+                <div>
+                  <Link href="/contact" className={styles.contact}>
+                    <p>
+                      Pour plus d'informations{" "}
+                      <span
+                        style={{
+                          cursor: "pointer",
+                          textDecoration: "underline",
+                        }}
+                      >
+                        Contactez-moi
+                      </span>
+                    </p>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </ScrollAnimation>
+        </main>
       </div>
     );
   } else if (props.name === "Allaitement") {
     formules = (
       <div>
-        <div style={{ textAlign: "center", fontFamily: "Inria serif" }}>
-          <h1>Séance Allaitement</h1>
-          <p className={styles.presentation}>
-            Offrez-vous un souvenir intemporel de ce moment de complicité avec
-            votre bébé. Intime et naturel, souvent rempli d’émotions et de
-            tendresse, cette étape de votre maternité mérite d’être immortalisé
-            à travers des images douces et authentiques pour mettre en valeur la
-            beauté de votre lien avec votre enfant.
-          </p>
-        </div>
-        <div className={styles.container}>
-          <Image
-            src="/Allaitement/allaitement1.webp"
-            alt="photo Allaitement"
-            width={400}
-            height={600}
-            className={styles.image}
-          />
-          <div className={styles.description}>
-            <div>
-              <h1 className={styles.formulaTitle}>Formule Instants</h1>
-              <h2 className={styles.h2}>Séance de 30 min</h2>
-              <span className={styles.price}>150 €</span>
-              <p className={styles.p}>
-                Galerie complète envoyée (environ 50 photos)
-              </p>
-            </div>
+        <main>
+          <div style={{ textAlign: "center", fontFamily: "Inria serif" }}>
+            <h1>Séance Allaitement</h1>
+            <p className={styles.presentation}>
+              Offrez-vous un souvenir intemporel de ce moment de complicité avec
+              votre bébé. Intime et naturel, souvent rempli d’émotions et de
+              tendresse, cette étape de votre maternité mérite d’être
+              immortalisé à travers des images douces et authentiques pour
+              mettre en valeur la beauté de votre lien avec votre enfant.
+            </p>
+          </div>
+          <div className={styles.container}>
+            <Image
+              src="/Allaitement/allaitement1.webp"
+              alt="photo Allaitement"
+              width={400}
+              height={600}
+              className={styles.image}
+            />
+            <div className={styles.description}>
+              <div>
+                <h1 className={styles.formulaTitle}>Formule Instants</h1>
+                <h2 className={styles.h2}>Séance de 30 min</h2>
+                <span className={styles.price}>150 €</span>
+                <p className={styles.p}>
+                  Galerie complète envoyée (environ 50 photos)
+                </p>
+              </div>
 
-            <div>
-              <Link href="/contact" className={styles.contact}>
-                <p>
-                  Pour plus d'informations{" "}
-                  <span
-                    style={{ cursor: "pointer", textDecoration: "underline" }}
-                  >
-                    Contactez-moi
-                  </span>
-                </p>
-              </Link>
-            </div>
-          </div>
-        </div>
-        <ScrollAnimation
-          animateIn="fadeInRight"
-          animateOnce={true}
-          delay={1 * 100}
-        >
-          <div className={styles.container}>
-            <div className={styles.description}>
-              <div>
-                <h1 className={styles.formulaTitle}>Formule Douceur</h1>
-                <h2 className={styles.h2}>Séance de 45 min</h2>
-                <span className={styles.price}>200 €</span>
-                <p className={styles.p}>
-                  Galerie complète envoyée (environ 80 photos)
-                </p>
-              </div>
-              <div>
-                <Link href="/contact" className={styles.contact}>
-                  <p>
-                    Pour plus d'informations{" "}
-                    <span
-                      style={{ cursor: "pointer", textDecoration: "underline" }}
-                    >
-                      Contactez-moi
-                    </span>
-                  </p>
-                </Link>
-              </div>
-            </div>
-            <Image
-              src="/Allaitement/allaitement2.webp"
-              alt="photo Allaitement"
-              width={400}
-              height={600}
-              className={styles.image}
-            />
-          </div>
-        </ScrollAnimation>
-        <ScrollAnimation
-          animateIn="fadeInLeft"
-          animateOnce={true}
-          delay={1 * 100}
-        >
-          <div className={styles.container}>
-            <Image
-              src="/Allaitement/allaitement3.webp"
-              alt="photo Allaitement"
-              width={400}
-              height={600}
-              className={styles.image}
-            />
-            <div className={styles.description}>
-              <div>
-                <h1 className={styles.formulaTitle}>Formule Prestige</h1>
-                <h2 className={styles.h2}>Séance d'1h</h2>
-                <span className={styles.price}>250 €</span>
-                <p className={styles.p}>
-                  Galerie complète envoyée (environ 100 photos)
-                </p>
-              </div>
               <div>
                 <Link href="/contact" className={styles.contact}>
                   <p>
@@ -255,114 +192,122 @@ function Formule(props) {
               </div>
             </div>
           </div>
-        </ScrollAnimation>
+          <ScrollAnimation
+            animateIn="fadeInRight"
+            animateOnce={true}
+            delay={1 * 100}
+          >
+            <div className={styles.container}>
+              <div className={styles.description}>
+                <div>
+                  <h1 className={styles.formulaTitle}>Formule Douceur</h1>
+                  <h2 className={styles.h2}>Séance de 45 min</h2>
+                  <span className={styles.price}>200 €</span>
+                  <p className={styles.p}>
+                    Galerie complète envoyée (environ 80 photos)
+                  </p>
+                </div>
+                <div>
+                  <Link href="/contact" className={styles.contact}>
+                    <p>
+                      Pour plus d'informations{" "}
+                      <span
+                        style={{
+                          cursor: "pointer",
+                          textDecoration: "underline",
+                        }}
+                      >
+                        Contactez-moi
+                      </span>
+                    </p>
+                  </Link>
+                </div>
+              </div>
+              <Image
+                src="/Allaitement/allaitement2.webp"
+                alt="photo Allaitement"
+                width={400}
+                height={600}
+                className={styles.image}
+              />
+            </div>
+          </ScrollAnimation>
+          <ScrollAnimation
+            animateIn="fadeInLeft"
+            animateOnce={true}
+            delay={1 * 100}
+          >
+            <div className={styles.container}>
+              <Image
+                src="/Allaitement/allaitement3.webp"
+                alt="photo Allaitement"
+                width={400}
+                height={600}
+                className={styles.image}
+              />
+              <div className={styles.description}>
+                <div>
+                  <h1 className={styles.formulaTitle}>Formule Prestige</h1>
+                  <h2 className={styles.h2}>Séance d'1h</h2>
+                  <span className={styles.price}>250 €</span>
+                  <p className={styles.p}>
+                    Galerie complète envoyée (environ 100 photos)
+                  </p>
+                </div>
+                <div>
+                  <Link href="/contact" className={styles.contact}>
+                    <p>
+                      Pour plus d'informations{" "}
+                      <span
+                        style={{
+                          cursor: "pointer",
+                          textDecoration: "underline",
+                        }}
+                      >
+                        Contactez-moi
+                      </span>
+                    </p>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </ScrollAnimation>
+        </main>
       </div>
     );
   } else if (props.name === "Couple") {
     formules = (
       <div>
-        <div style={{ textAlign: "center", fontFamily: "Inria serif" }}>
-          <h1>Séance Couple</h1>
-          <p className={styles.presentation}>
-            Immortalisez votre complicité et votre amour à travers une séance
-            photo couple intime et authentique. Cette expérience unique sera
-            l’occasion de capturer chaque geste, chaque sourire et chaque regard
-            avec délicatesse. Que ce soit dans un cadre cosy, chez vous ou en
-            extérieur, chaque instant sera capturé de manière à sublimer votre
-            connexion et à raconter l’histoire de votre amour.
-          </p>
-        </div>
-        <div className={styles.container}>
-          <Image
-            src="/Couple/couple2.webp"
-            alt="photo Couple"
-            width={400}
-            height={600}
-            className={styles.image}
-          />
-          <div className={styles.description}>
-            <div>
-              <h1 className={styles.formulaTitle}>Formule Instants</h1>
-              <h2 className={styles.h2}>Séance de 30 min</h2>
-              <span className={styles.price}>150 €</span>
-              <p className={styles.p}>
-                Galerie complète envoyée (environ 50 photos)
-              </p>
-            </div>
+        <main>
+          <div style={{ textAlign: "center", fontFamily: "Inria serif" }}>
+            <h1>Séance Couple</h1>
+            <p className={styles.presentation}>
+              Immortalisez votre complicité et votre amour à travers une séance
+              photo couple intime et authentique. Cette expérience unique sera
+              l’occasion de capturer chaque geste, chaque sourire et chaque
+              regard avec délicatesse. Que ce soit dans un cadre cosy, chez vous
+              ou en extérieur, chaque instant sera capturé de manière à sublimer
+              votre connexion et à raconter l’histoire de votre amour.
+            </p>
+          </div>
+          <div className={styles.container}>
+            <Image
+              src="/Couple/couple2.webp"
+              alt="photo Couple"
+              width={400}
+              height={600}
+              className={styles.image}
+            />
+            <div className={styles.description}>
+              <div>
+                <h1 className={styles.formulaTitle}>Formule Instants</h1>
+                <h2 className={styles.h2}>Séance de 30 min</h2>
+                <span className={styles.price}>150 €</span>
+                <p className={styles.p}>
+                  Galerie complète envoyée (environ 50 photos)
+                </p>
+              </div>
 
-            <div>
-              <Link href="/contact" className={styles.contact}>
-                <p>
-                  Pour plus d'informations{" "}
-                  <span
-                    style={{ cursor: "pointer", textDecoration: "underline" }}
-                  >
-                    Contactez-moi
-                  </span>
-                </p>
-              </Link>
-            </div>
-          </div>
-        </div>
-        <ScrollAnimation
-          animateIn="fadeInRight"
-          animateOnce={true}
-          delay={1 * 100}
-        >
-          <div className={styles.container}>
-            <div className={styles.description}>
-              <div>
-                <h1 className={styles.formulaTitle}>Formule Douceur</h1>
-                <h2 className={styles.h2}>Séance de 45 min</h2>
-                <span className={styles.price}>200 €</span>
-                <p className={styles.p}>
-                  Galerie complète envoyée (environ 80 photos)
-                </p>
-              </div>
-              <div>
-                <Link href="/contact" className={styles.contact}>
-                  <p>
-                    Pour plus d'informations{" "}
-                    <span
-                      style={{ cursor: "pointer", textDecoration: "underline" }}
-                    >
-                      Contactez-moi
-                    </span>
-                  </p>
-                </Link>
-              </div>
-            </div>
-            <Image
-              src="/Couple/couple4.webp"
-              alt="photo Couple"
-              width={400}
-              height={600}
-              className={styles.image}
-            />
-          </div>
-        </ScrollAnimation>
-        <ScrollAnimation
-          animateIn="fadeInLeft"
-          animateOnce={true}
-          delay={1 * 100}
-        >
-          <div className={styles.container}>
-            <Image
-              src="/Couple/couple6.webp"
-              alt="photo Couple"
-              width={400}
-              height={600}
-              className={styles.image}
-            />
-            <div className={styles.description}>
-              <div>
-                <h1 className={styles.formulaTitle}>Formule Prestige</h1>
-                <h2 className={styles.h2}>Séance d'1h</h2>
-                <span className={styles.price}>250 €</span>
-                <p className={styles.p}>
-                  Galerie complète envoyée (environ 100 photos)
-                </p>
-              </div>
               <div>
                 <Link href="/contact" className={styles.contact}>
                   <p>
@@ -377,114 +322,122 @@ function Formule(props) {
               </div>
             </div>
           </div>
-        </ScrollAnimation>
+          <ScrollAnimation
+            animateIn="fadeInRight"
+            animateOnce={true}
+            delay={1 * 100}
+          >
+            <div className={styles.container}>
+              <div className={styles.description}>
+                <div>
+                  <h1 className={styles.formulaTitle}>Formule Douceur</h1>
+                  <h2 className={styles.h2}>Séance de 45 min</h2>
+                  <span className={styles.price}>200 €</span>
+                  <p className={styles.p}>
+                    Galerie complète envoyée (environ 80 photos)
+                  </p>
+                </div>
+                <div>
+                  <Link href="/contact" className={styles.contact}>
+                    <p>
+                      Pour plus d'informations{" "}
+                      <span
+                        style={{
+                          cursor: "pointer",
+                          textDecoration: "underline",
+                        }}
+                      >
+                        Contactez-moi
+                      </span>
+                    </p>
+                  </Link>
+                </div>
+              </div>
+              <Image
+                src="/Couple/couple4.webp"
+                alt="photo Couple"
+                width={400}
+                height={600}
+                className={styles.image}
+              />
+            </div>
+          </ScrollAnimation>
+          <ScrollAnimation
+            animateIn="fadeInLeft"
+            animateOnce={true}
+            delay={1 * 100}
+          >
+            <div className={styles.container}>
+              <Image
+                src="/Couple/couple6.webp"
+                alt="photo Couple"
+                width={400}
+                height={600}
+                className={styles.image}
+              />
+              <div className={styles.description}>
+                <div>
+                  <h1 className={styles.formulaTitle}>Formule Prestige</h1>
+                  <h2 className={styles.h2}>Séance d'1h</h2>
+                  <span className={styles.price}>250 €</span>
+                  <p className={styles.p}>
+                    Galerie complète envoyée (environ 100 photos)
+                  </p>
+                </div>
+                <div>
+                  <Link href="/contact" className={styles.contact}>
+                    <p>
+                      Pour plus d'informations{" "}
+                      <span
+                        style={{
+                          cursor: "pointer",
+                          textDecoration: "underline",
+                        }}
+                      >
+                        Contactez-moi
+                      </span>
+                    </p>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </ScrollAnimation>
+        </main>
       </div>
     );
   } else if (props.name === `Décoration d'intérieur`) {
     formules = (
       <div>
-        <div style={{ textAlign: "center", fontFamily: "Inria serif" }}>
-          <h1>Séance Décoration d'intérieur</h1>
-          <p className={styles.presentation}>
-            Mettez en valeur l'élégance et le style unique de votre intérieur
-            grâce à un reportage photo dédié à votre décoration d’intérieur et à
-            votre home design. Que vous soyez un particulier, un designer ou un
-            architecte d'intérieur, cette prestation est l’occasion parfaite de
-            capturer l’essence de vos créations et de sublimer chaque détail de
-            votre espace.
-          </p>
-        </div>
-        <div className={styles.container}>
-          <Image
-            src="/Deco/deco10.webp"
-            alt="photo Décoration d'intérieur"
-            width={400}
-            height={600}
-            className={styles.image}
-          />
-          <div className={styles.description}>
-            <div>
-              <h1 className={styles.formulaTitle}>Formule Instants</h1>
-              <h2 className={styles.h2}>Séance de 30 min</h2>
-              <span className={styles.price}>150 €</span>
-              <p className={styles.p}>
-                Galerie complète envoyée (environ 50 photos)
-              </p>
-            </div>
+        <main>
+          <div style={{ textAlign: "center", fontFamily: "Inria serif" }}>
+            <h1>Séance Décoration d'intérieur</h1>
+            <p className={styles.presentation}>
+              Mettez en valeur l'élégance et le style unique de votre intérieur
+              grâce à un reportage photo dédié à votre décoration d’intérieur et
+              à votre home design. Que vous soyez un particulier, un designer ou
+              un architecte d'intérieur, cette prestation est l’occasion
+              parfaite de capturer l’essence de vos créations et de sublimer
+              chaque détail de votre espace.
+            </p>
+          </div>
+          <div className={styles.container}>
+            <Image
+              src="/Deco/deco10.webp"
+              alt="photo Décoration d'intérieur"
+              width={400}
+              height={600}
+              className={styles.image}
+            />
+            <div className={styles.description}>
+              <div>
+                <h1 className={styles.formulaTitle}>Formule Instants</h1>
+                <h2 className={styles.h2}>Séance de 30 min</h2>
+                <span className={styles.price}>150 €</span>
+                <p className={styles.p}>
+                  Galerie complète envoyée (environ 50 photos)
+                </p>
+              </div>
 
-            <div>
-              <Link href="/contact" className={styles.contact}>
-                <p>
-                  Pour plus d'informations{" "}
-                  <span
-                    style={{ cursor: "pointer", textDecoration: "underline" }}
-                  >
-                    Contactez-moi
-                  </span>
-                </p>
-              </Link>
-            </div>
-          </div>
-        </div>
-        <ScrollAnimation
-          animateIn="fadeInRight"
-          animateOnce={true}
-          delay={1 * 100}
-        >
-          <div className={styles.container}>
-            <div className={styles.description}>
-              <div>
-                <h1 className={styles.formulaTitle}>Formule Douceur</h1>
-                <h2 className={styles.h2}>Séance de 45 min</h2>
-                <span className={styles.price}>200 €</span>
-                <p className={styles.p}>
-                  Galerie complète envoyée (environ 80 photos)
-                </p>
-              </div>
-              <div>
-                <Link href="/contact" className={styles.contact}>
-                  <p>
-                    Pour plus d'informations{" "}
-                    <span
-                      style={{ cursor: "pointer", textDecoration: "underline" }}
-                    >
-                      Contactez-moi
-                    </span>
-                  </p>
-                </Link>
-              </div>
-            </div>
-            <Image
-              src="/Deco/deco5.webp"
-              alt="photo Décoration d'intérieur"
-              width={400}
-              height={600}
-              className={styles.image}
-            />
-          </div>
-        </ScrollAnimation>
-        <ScrollAnimation
-          animateIn="fadeInLeft"
-          animateOnce={true}
-          delay={1 * 100}
-        >
-          <div className={styles.container}>
-            <Image
-              src="/Deco/deco3.webp"
-              alt="photo Décoration d'intérieur"
-              width={400}
-              height={600}
-              className={styles.image}
-            />
-            <div className={styles.description}>
-              <div>
-                <h1 className={styles.formulaTitle}>Formule Prestige</h1>
-                <h2 className={styles.h2}>Séance d'1h</h2>
-                <span className={styles.price}>250 €</span>
-                <p className={styles.p}>
-                  Galerie complète envoyée (environ 100 photos)
-                </p>
-              </div>
               <div>
                 <Link href="/contact" className={styles.contact}>
                   <p>
@@ -499,13 +452,94 @@ function Formule(props) {
               </div>
             </div>
           </div>
-        </ScrollAnimation>
+          <ScrollAnimation
+            animateIn="fadeInRight"
+            animateOnce={true}
+            delay={1 * 100}
+          >
+            <div className={styles.container}>
+              <div className={styles.description}>
+                <div>
+                  <h1 className={styles.formulaTitle}>Formule Douceur</h1>
+                  <h2 className={styles.h2}>Séance de 45 min</h2>
+                  <span className={styles.price}>200 €</span>
+                  <p className={styles.p}>
+                    Galerie complète envoyée (environ 80 photos)
+                  </p>
+                </div>
+                <div>
+                  <Link href="/contact" className={styles.contact}>
+                    <p>
+                      Pour plus d'informations{" "}
+                      <span
+                        style={{
+                          cursor: "pointer",
+                          textDecoration: "underline",
+                        }}
+                      >
+                        Contactez-moi
+                      </span>
+                    </p>
+                  </Link>
+                </div>
+              </div>
+              <Image
+                src="/Deco/deco5.webp"
+                alt="photo Décoration d'intérieur"
+                width={400}
+                height={600}
+                className={styles.image}
+              />
+            </div>
+          </ScrollAnimation>
+          <ScrollAnimation
+            animateIn="fadeInLeft"
+            animateOnce={true}
+            delay={1 * 100}
+          >
+            <div className={styles.container}>
+              <Image
+                src="/Deco/deco3.webp"
+                alt="photo Décoration d'intérieur"
+                width={400}
+                height={600}
+                className={styles.image}
+              />
+              <div className={styles.description}>
+                <div>
+                  <h1 className={styles.formulaTitle}>Formule Prestige</h1>
+                  <h2 className={styles.h2}>Séance d'1h</h2>
+                  <span className={styles.price}>250 €</span>
+                  <p className={styles.p}>
+                    Galerie complète envoyée (environ 100 photos)
+                  </p>
+                </div>
+                <div>
+                  <Link href="/contact" className={styles.contact}>
+                    <p>
+                      Pour plus d'informations{" "}
+                      <span
+                        style={{
+                          cursor: "pointer",
+                          textDecoration: "underline",
+                        }}
+                      >
+                        Contactez-moi
+                      </span>
+                    </p>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </ScrollAnimation>
+        </main>
       </div>
     );
   } else if (props.name === "EVJF / EVG") {
     formules = (
       <div>
-        <div style={{ textAlign: "center", fontFamily: "Inria serif" }}>
+        <main>
+          <div style={{ textAlign: "center", fontFamily: "Inria serif" }}>
           <h1>Séance EVJF / EVG</h1>
           <p className={styles.presentation}>
             Offrez-vous des souvenirs mémorables et fun lors d’une séance photo
@@ -559,112 +593,42 @@ function Formule(props) {
             </div>
           </div>
         </div>
+        </main>
+        
       </div>
     );
   } else if (props.name === "Famille") {
     formules = (
       <div>
-        <div style={{ textAlign: "center", fontFamily: "Inria serif" }}>
-          <h1>Séance Famille</h1>
-          <p className={styles.presentation}>
-            La famille, c'est le coeur de vos souvenirs, et chaque instant passé
-            ensemble mérite d’être capturé. Avec une séance photo famille, je
-            vous propose de créer des images intemporelles qui racontent votre
-            histoire et capturent l’amour, la complicité et la joie qui vous
-            unissent.
-          </p>
-        </div>
-        <div className={styles.container}>
-          <Image
-            src="/Famille/famille2.webp"
-            alt="photo Famille"
-            width={400}
-            height={600}
-            className={styles.image}
-          />
-          <div className={styles.description}>
-            <div>
-              <h1 className={styles.formulaTitle}>Formule Instants</h1>
-              <h2 className={styles.h2}>Séance de 30 min</h2>
-              <span className={styles.price}>150 €</span>
-              <p className={styles.p}>
-                Galerie complète envoyée (environ 50 photos)
-              </p>
-            </div>
+        <main>
+          <div style={{ textAlign: "center", fontFamily: "Inria serif" }}>
+            <h1>Séance Famille</h1>
+            <p className={styles.presentation}>
+              La famille, c'est le coeur de vos souvenirs, et chaque instant
+              passé ensemble mérite d’être capturé. Avec une séance photo
+              famille, je vous propose de créer des images intemporelles qui
+              racontent votre histoire et capturent l’amour, la complicité et la
+              joie qui vous unissent.
+            </p>
+          </div>
+          <div className={styles.container}>
+            <Image
+              src="/Famille/famille2.webp"
+              alt="photo Famille"
+              width={400}
+              height={600}
+              className={styles.image}
+            />
+            <div className={styles.description}>
+              <div>
+                <h1 className={styles.formulaTitle}>Formule Instants</h1>
+                <h2 className={styles.h2}>Séance de 30 min</h2>
+                <span className={styles.price}>150 €</span>
+                <p className={styles.p}>
+                  Galerie complète envoyée (environ 50 photos)
+                </p>
+              </div>
 
-            <div>
-              <Link href="/contact" className={styles.contact}>
-                <p>
-                  Pour plus d'informations{" "}
-                  <span
-                    style={{ cursor: "pointer", textDecoration: "underline" }}
-                  >
-                    Contactez-moi
-                  </span>
-                </p>
-              </Link>
-            </div>
-          </div>
-        </div>
-        <ScrollAnimation
-          animateIn="fadeInRight"
-          animateOnce={true}
-          delay={1 * 100}
-        >
-          <div className={styles.container}>
-            <div className={styles.description}>
-              <div>
-                <h1 className={styles.formulaTitle}>Formule Douceur</h1>
-                <h2 className={styles.h2}>Séance de 45 min</h2>
-                <span className={styles.price}>200 €</span>
-                <p className={styles.p}>
-                  Galerie complète envoyée (environ 80 photos)
-                </p>
-              </div>
-              <div>
-                <Link href="/contact" className={styles.contact}>
-                  <p>
-                    Pour plus d'informations{" "}
-                    <span
-                      style={{ cursor: "pointer", textDecoration: "underline" }}
-                    >
-                      Contactez-moi
-                    </span>
-                  </p>
-                </Link>
-              </div>
-            </div>
-            <Image
-              src="/Famille/famille6.webp"
-              alt="photo Famille"
-              width={400}
-              height={600}
-              className={styles.image}
-            />
-          </div>
-        </ScrollAnimation>
-        <ScrollAnimation
-          animateIn="fadeInLeft"
-          animateOnce={true}
-          delay={1 * 100}
-        >
-          <div className={styles.container}>
-            <Image
-              src="/Famille/famille5.webp"
-              alt="photo Famille"
-              width={400}
-              height={600}
-              className={styles.image}
-            />
-            <div className={styles.description}>
-              <div>
-                <h1 className={styles.formulaTitle}>Formule Prestige</h1>
-                <h2 className={styles.h2}>Séance d'1h</h2>
-                <span className={styles.price}>250 €</span>
-                <p className={styles.p}>
-                  Galerie complète envoyée (environ 100 photos)
-                </p>
-              </div>
               <div>
                 <Link href="/contact" className={styles.contact}>
                   <p>
@@ -679,13 +643,94 @@ function Formule(props) {
               </div>
             </div>
           </div>
-        </ScrollAnimation>
+          <ScrollAnimation
+            animateIn="fadeInRight"
+            animateOnce={true}
+            delay={1 * 100}
+          >
+            <div className={styles.container}>
+              <div className={styles.description}>
+                <div>
+                  <h1 className={styles.formulaTitle}>Formule Douceur</h1>
+                  <h2 className={styles.h2}>Séance de 45 min</h2>
+                  <span className={styles.price}>200 €</span>
+                  <p className={styles.p}>
+                    Galerie complète envoyée (environ 80 photos)
+                  </p>
+                </div>
+                <div>
+                  <Link href="/contact" className={styles.contact}>
+                    <p>
+                      Pour plus d'informations{" "}
+                      <span
+                        style={{
+                          cursor: "pointer",
+                          textDecoration: "underline",
+                        }}
+                      >
+                        Contactez-moi
+                      </span>
+                    </p>
+                  </Link>
+                </div>
+              </div>
+              <Image
+                src="/Famille/famille6.webp"
+                alt="photo Famille"
+                width={400}
+                height={600}
+                className={styles.image}
+              />
+            </div>
+          </ScrollAnimation>
+          <ScrollAnimation
+            animateIn="fadeInLeft"
+            animateOnce={true}
+            delay={1 * 100}
+          >
+            <div className={styles.container}>
+              <Image
+                src="/Famille/famille5.webp"
+                alt="photo Famille"
+                width={400}
+                height={600}
+                className={styles.image}
+              />
+              <div className={styles.description}>
+                <div>
+                  <h1 className={styles.formulaTitle}>Formule Prestige</h1>
+                  <h2 className={styles.h2}>Séance d'1h</h2>
+                  <span className={styles.price}>250 €</span>
+                  <p className={styles.p}>
+                    Galerie complète envoyée (environ 100 photos)
+                  </p>
+                </div>
+                <div>
+                  <Link href="/contact" className={styles.contact}>
+                    <p>
+                      Pour plus d'informations{" "}
+                      <span
+                        style={{
+                          cursor: "pointer",
+                          textDecoration: "underline",
+                        }}
+                      >
+                        Contactez-moi
+                      </span>
+                    </p>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </ScrollAnimation>
+        </main>
       </div>
     );
   } else if (props.name === "Grossesse") {
     formules = (
       <div>
-        <div style={{ textAlign: "center", fontFamily: "Inria serif" }}>
+        <main>
+          <div style={{ textAlign: "center", fontFamily: "Inria serif" }}>
           <h1>Séance Grossesse</h1>
           <p className={styles.presentation}>
             Célébrez l’un des moments les plus précieux de votre vie, en créant
@@ -806,12 +851,15 @@ function Formule(props) {
             </div>
           </div>
         </ScrollAnimation>
+        </main>
+        
       </div>
     );
   } else if (props.name === "Naissance") {
     formules = (
       <div>
-        <div style={{ textAlign: "center", fontFamily: "Inria serif" }}>
+        <main>
+          <div style={{ textAlign: "center", fontFamily: "Inria serif" }}>
           <h1>Séance Naissance</h1>
           <p className={styles.presentation}>
             La séance photo naissance est un moment magique où je capture les
@@ -931,12 +979,15 @@ function Formule(props) {
             </div>
           </div>
         </ScrollAnimation>
+        </main>
+        
       </div>
     );
   } else if (props.name === "Professionnels - Marques") {
     formules = (
       <div>
-        <div style={{ textAlign: "center", fontFamily: "Inria serif" }}>
+        <main>
+          <div style={{ textAlign: "center", fontFamily: "Inria serif" }}>
           <h1>Séance Professionnels - Marques</h1>
           <p className={styles.presentation}>
             Que vous soyez un entrepreneur, un créateur, ou que vous ayez besoin
@@ -1059,12 +1110,15 @@ function Formule(props) {
             </div>
           </div>
         </ScrollAnimation>
+        </main>
+        
       </div>
     );
   } else if (props.name === "Solo - Confiance en soi") {
     formules = (
       <div>
-        <div style={{ textAlign: "center", fontFamily: "Inria serif" }}>
+        <main>
+          <div style={{ textAlign: "center", fontFamily: "Inria serif" }}>
           <h1>Séance Solo - Confiance en soi</h1>
           <p className={styles.presentation}>
             Cette séance est bien plus qu'une simple séance photo : c'est une
@@ -1185,12 +1239,15 @@ function Formule(props) {
             </div>
           </div>
         </ScrollAnimation>
+        </main>
+        
       </div>
     );
   } else if (props.name === "TBB") {
     formules = (
       <div>
-        <div style={{ textAlign: "center", fontFamily: "Inria serif" }}>
+        <main>
+          <div style={{ textAlign: "center", fontFamily: "Inria serif" }}>
           <h1>Séance TBB</h1>
           <p className={styles.presentation}>
             La séance photo lors d’un TBB est une expérience exceptionnelle qui
@@ -1310,12 +1367,15 @@ function Formule(props) {
             </div>
           </div>
         </ScrollAnimation>
+        </main>
+        
       </div>
     );
   } else if (props.name === "Grossesse - Naissance") {
     formules = (
       <div>
-        <div style={{ textAlign: "center", fontFamily: "Inria serif" }}>
+        <main>
+          <div style={{ textAlign: "center", fontFamily: "Inria serif" }}>
           <h1>Pack Duo Grossesse - Naissance</h1>
           <p className={styles.presentation}>
             Le pack duo grossesse-naissance vous permet de capturer deux moments
@@ -1448,12 +1508,15 @@ function Formule(props) {
             </div>
           </div>
         </ScrollAnimation>
+        </main>
+        
       </div>
     );
   } else if (props.name === "Baptême") {
     formules = (
       <div>
-        <div style={{ textAlign: "center", fontFamily: "Inria serif" }}>
+        <main>
+          <div style={{ textAlign: "center", fontFamily: "Inria serif" }}>
           <h1>Séance Baptême</h1>
           <p className={styles.presentation}>
             Le baptême est un moment particulier, chargé de symbolisme et
@@ -1506,119 +1569,49 @@ function Formule(props) {
             </div>
           </div>
         </div>
+        </main>
+        
       </div>
     );
   } else if (props.name === "Séance à thème") {
     formules = (
       <div>
-        <div style={{ textAlign: "center", fontFamily: "Inria serif" }}>
-          <h1>Séance à thème</h1>
-          <p className={styles.presentation}>
-            Offrez-vous des souvenirs inoubliables avec les minis séances à
-            thème ! Ces séances photo rapides et pleines de créativité sont
-            l'occasion parfaite de capturer des moments spéciaux pour des
-            occasions comme Noël, la fête des mères, la Saint-Valentin et bien
-            d'autres encore. <br />
-            Que ce soit pour immortaliser l'esprit des fêtes ou créer un
-            souvenir original pour vous et vos proches, ces séances sont conçues
-            pour être fun, chaleureuses et pleines d'émotions. <br />
-            Chaque thème est soigneusement élaboré pour offrir une ambiance
-            unique, avec des décors et accessoires adaptés à l’occasion. Ne
-            manquez pas ces moments magiques et réservez dès maintenant votre
-            mini séance à thème ! <br />
-          </p>
-        </div>
-        <div className={styles.container}>
-          <Image
-            src="/Seances_theme/seance_theme3.webp"
-            alt="photo séance à thème"
-            width={400}
-            height={600}
-            className={styles.image}
-          />
-          <div className={styles.description}>
-            <div>
-              <h1 className={styles.formulaTitle}>Formule Instants</h1>
-              <h2 className={styles.h2}>Séance de 30 min</h2>
-              <span className={styles.price}>150 €</span>
-              <p className={styles.p}>
-                Galerie complète envoyée (environ 50 photos)
-              </p>
-            </div>
+        <main>
+          <div style={{ textAlign: "center", fontFamily: "Inria serif" }}>
+            <h1>Séance à thème</h1>
+            <p className={styles.presentation}>
+              Offrez-vous des souvenirs inoubliables avec les minis séances à
+              thème ! Ces séances photo rapides et pleines de créativité sont
+              l'occasion parfaite de capturer des moments spéciaux pour des
+              occasions comme Noël, la fête des mères, la Saint-Valentin et bien
+              d'autres encore. <br />
+              Que ce soit pour immortaliser l'esprit des fêtes ou créer un
+              souvenir original pour vous et vos proches, ces séances sont
+              conçues pour être fun, chaleureuses et pleines d'émotions. <br />
+              Chaque thème est soigneusement élaboré pour offrir une ambiance
+              unique, avec des décors et accessoires adaptés à l’occasion. Ne
+              manquez pas ces moments magiques et réservez dès maintenant votre
+              mini séance à thème ! <br />
+            </p>
+          </div>
+          <div className={styles.container}>
+            <Image
+              src="/Seances_theme/seance_theme3.webp"
+              alt="photo séance à thème"
+              width={400}
+              height={600}
+              className={styles.image}
+            />
+            <div className={styles.description}>
+              <div>
+                <h1 className={styles.formulaTitle}>Formule Instants</h1>
+                <h2 className={styles.h2}>Séance de 30 min</h2>
+                <span className={styles.price}>150 €</span>
+                <p className={styles.p}>
+                  Galerie complète envoyée (environ 50 photos)
+                </p>
+              </div>
 
-            <div>
-              <Link href="/contact" className={styles.contact}>
-                <p>
-                  Pour plus d'informations{" "}
-                  <span
-                    style={{ cursor: "pointer", textDecoration: "underline" }}
-                  >
-                    Contactez-moi
-                  </span>
-                </p>
-              </Link>
-            </div>
-          </div>
-        </div>
-        <ScrollAnimation
-          animateIn="fadeInRight"
-          animateOnce={true}
-          delay={1 * 100}
-        >
-          <div className={styles.container}>
-            <div className={styles.description}>
-              <div>
-                <h1 className={styles.formulaTitle}>Formule Douceur</h1>
-                <h2 className={styles.h2}>Séance de 45 min</h2>
-                <span className={styles.price}>200 €</span>
-                <p className={styles.p}>
-                  Galerie complète envoyée (environ 80 photos)
-                </p>
-              </div>
-              <div>
-                <Link href="/contact" className={styles.contact}>
-                  <p>
-                    Pour plus d'informations{" "}
-                    <span
-                      style={{ cursor: "pointer", textDecoration: "underline" }}
-                    >
-                      Contactez-moi
-                    </span>
-                  </p>
-                </Link>
-              </div>
-            </div>
-            <Image
-              src="/Seances_theme/seance_theme5.webp"
-              alt="photo séance à thème"
-              width={400}
-              height={600}
-              className={styles.image}
-            />
-          </div>
-        </ScrollAnimation>
-        <ScrollAnimation
-          animateIn="fadeInLeft"
-          animateOnce={true}
-          delay={1 * 100}
-        >
-          <div className={styles.container}>
-            <Image
-              src="/Seances_theme/seance_theme2.webp"
-              alt="photo séance à thème"
-              width={400}
-              height={600}
-              className={styles.image}
-            />
-            <div className={styles.description}>
-              <div>
-                <h1 className={styles.formulaTitle}>Formule Prestige</h1>
-                <h2 className={styles.h2}>Séance d'1h</h2>
-                <span className={styles.price}>250 €</span>
-                <p className={styles.p}>
-                  Galerie complète envoyée (environ 100 photos)
-                </p>
-              </div>
               <div>
                 <Link href="/contact" className={styles.contact}>
                   <p>
@@ -1633,7 +1626,87 @@ function Formule(props) {
               </div>
             </div>
           </div>
-        </ScrollAnimation>
+          <ScrollAnimation
+            animateIn="fadeInRight"
+            animateOnce={true}
+            delay={1 * 100}
+          >
+            <div className={styles.container}>
+              <div className={styles.description}>
+                <div>
+                  <h1 className={styles.formulaTitle}>Formule Douceur</h1>
+                  <h2 className={styles.h2}>Séance de 45 min</h2>
+                  <span className={styles.price}>200 €</span>
+                  <p className={styles.p}>
+                    Galerie complète envoyée (environ 80 photos)
+                  </p>
+                </div>
+                <div>
+                  <Link href="/contact" className={styles.contact}>
+                    <p>
+                      Pour plus d'informations{" "}
+                      <span
+                        style={{
+                          cursor: "pointer",
+                          textDecoration: "underline",
+                        }}
+                      >
+                        Contactez-moi
+                      </span>
+                    </p>
+                  </Link>
+                </div>
+              </div>
+              <Image
+                src="/Seances_theme/seance_theme5.webp"
+                alt="photo séance à thème"
+                width={400}
+                height={600}
+                className={styles.image}
+              />
+            </div>
+          </ScrollAnimation>
+          <ScrollAnimation
+            animateIn="fadeInLeft"
+            animateOnce={true}
+            delay={1 * 100}
+          >
+            <div className={styles.container}>
+              <Image
+                src="/Seances_theme/seance_theme2.webp"
+                alt="photo séance à thème"
+                width={400}
+                height={600}
+                className={styles.image}
+              />
+              <div className={styles.description}>
+                <div>
+                  <h1 className={styles.formulaTitle}>Formule Prestige</h1>
+                  <h2 className={styles.h2}>Séance d'1h</h2>
+                  <span className={styles.price}>250 €</span>
+                  <p className={styles.p}>
+                    Galerie complète envoyée (environ 100 photos)
+                  </p>
+                </div>
+                <div>
+                  <Link href="/contact" className={styles.contact}>
+                    <p>
+                      Pour plus d'informations{" "}
+                      <span
+                        style={{
+                          cursor: "pointer",
+                          textDecoration: "underline",
+                        }}
+                      >
+                        Contactez-moi
+                      </span>
+                    </p>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </ScrollAnimation>
+        </main>
       </div>
     );
   }

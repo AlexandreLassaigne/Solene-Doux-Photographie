@@ -10,3 +10,8 @@ body {
   box-sizing: border-box;
   background-color: #E8DCCA;
 }
+
+
+main {
+  flex-grow: 1; 
+}

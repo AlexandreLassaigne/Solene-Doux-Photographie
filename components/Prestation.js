@@ -84,23 +84,25 @@ function Prestation() {
         />
       </Head>
       <Header />
-      {!formule && (
-        <div>
-          <div className={styles.allContainer}>{prestation}</div>
-        </div>
-      )}
-      {formule && (
-        <div className={styles.formuleContainer}>
-          <FontAwesomeIcon
-            icon={faChevronLeft}
-            onClick={() => handlePresta()}
-            className={styles.chevron}
-            aria-label="Flèche"
-            role="Retour en arrière"
-          />
-          <Formule name={formuleName} />
-        </div>
-      )}
+      <main>
+        {!formule && (
+          <div>
+            <div className={styles.allContainer}>{prestation}</div>
+          </div>
+        )}
+        {formule && (
+          <div className={styles.formuleContainer}>
+            <FontAwesomeIcon
+              icon={faChevronLeft}
+              onClick={() => handlePresta()}
+              className={styles.chevron}
+              aria-label="Flèche"
+              role="Retour en arrière"
+            />
+            <Formule name={formuleName} />
+          </div>
+        )}
+      </main>
       <Footer />
     </div>
   );

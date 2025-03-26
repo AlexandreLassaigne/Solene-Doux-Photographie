@@ -92,11 +92,6 @@
     max-width: 40%;
   }
   
-  .image {
-    width: 30%;
-    margin: 10px;
-  }
-  
   .formulaTitle {
     font-size: 30px;
     margin-bottom: 8px;
@@ -123,10 +118,6 @@
   .presentation {
     font-size: 14px;
   }
-  .image {
-    width: 30%;
-    margin: 10px;
-  }
   .description {
     max-width: 30%;
   }
@@ -149,10 +140,6 @@
 @media (max-width: 600px) {
   .presentation {
     font-size: 14px;
-  }
-  .image {
-    width: 30%;
-    margin: 10px;
   }
   .description {
     max-width: 30%;
@@ -191,7 +178,7 @@
   }
   
   .p {
-    font-size: 10px;
+    font-size: 9px;
   }
   .contact {
     font-size: 8px;

@@ -4,9 +4,9 @@ import Link from "next/link";
 function Footer() {
   return (
     <div className={styles.footer}>
-      <p className={styles.name}>
-        © {new Date().getFullYear()} Alexandre Lassaigne
-      </p>
+        <p className={styles.name}>
+          © {new Date().getFullYear()} Alexandre Lassaigne
+        </p>
         <Link href="/mentions-legales" className={styles.lien}>
           Mentions legales
         </Link>

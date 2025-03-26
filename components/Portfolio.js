@@ -24,8 +24,9 @@ function Portfolio() {
   };
 
   const imagePath = image.map((data, i) => {
+    const portrait = data.width < data.height
     return (
-      <div key={i} className={styles.imageContainer}>
+      <div className={`${styles.imageContainer} ${portrait ? styles.portrait : ""}`} key={i}>
         <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
           <Image
             src={data.image}
@@ -33,7 +34,6 @@ function Portfolio() {
             width={data.width}
             height={data.height}
             onClick={() => handleImageClick(data.image)}
-            style={{ cursor: "pointer" }}
             loading="lazy"
             quality={75}
             className={styles.image}
@@ -43,6 +43,7 @@ function Portfolio() {
     );
   });
 
+  console.log(styles);
   return (
     <div>
       <Head>
@@ -53,24 +54,26 @@ function Portfolio() {
         />
       </Head>
       <Header />
-      <div className={styles.imagesContainer}>{imagePath}</div>
-      {imageOpen && (
-        <div
-          className={styles.fullscreenModal}
-          onClick={closeModal}
-          aria-hidden={imageOpen}
-        >
-          <div className={styles.fullscreenImageContainer}>
-            <Image
-              src={selectedImage}
-              alt="Fullscreen Image"
-              layout="fill"
-              objectFit="contain"
-              className={styles.fullscreenImage}
-            />
+      <main>
+        <div className={styles.imagesContainer}>{imagePath}</div>
+        {imageOpen && (
+          <div
+            className={styles.fullscreenModal}
+            onClick={closeModal}
+            aria-hidden={imageOpen}
+          >
+            <div className={styles.fullscreenImageContainer}>
+              <Image
+                src={selectedImage}
+                alt="Fullscreen Image"
+                layout="fill"
+                objectFit="contain"
+                className={styles.fullscreenImage}
+              />
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </main>
       <Footer />
     </div>
   );

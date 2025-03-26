@@ -7,8 +7,10 @@ export default function Header() {
   return (
     <div className={styles.head}>
       <div className={styles.headContainer}>
-        <div className={styles.logoContainer}>
-          <Link href="/" className={styles.logo}>
+          <Link
+            href="/"
+            className={styles.logoContainer}
+          >
             <Image
               width={296}
               height={44}
@@ -18,11 +20,10 @@ export default function Header() {
               priority
             />
           </Link>
-        </div>
         <div className={styles.headerRight}>
           <div className={styles.menu}>
             <Link href="/apropos" className={styles.lien}>
-             A propos
+              A propos
             </Link>
             <Link href="/prestation" className={styles.lien}>
               Prestations
@@ -31,17 +32,21 @@ export default function Header() {
               Portfolio
             </Link>
             <Link href="/contact" className={styles.lien}>
-             Contact
+              Contact
             </Link>
-            <Link href="https://solenedouxphotographie31.pixieset.com/" target="_blank" className={styles.lien}>
-                Gallerie privee
+            <Link
+              href="https://solenedouxphotographie31.pixieset.com/"
+              target="_blank"
+              className={styles.lien}
+            >
+              Gallerie privee
             </Link>
           </div>
           <div className={styles.instaIcon}>
             <a
               href="https://www.instagram.com/solenedoux_photographie/"
               target="_blank"
-              style={{backgroundColor : "transparent", color : "#000000"}}
+              style={{ backgroundColor: "transparent", color: "#000000" }}
             >
               <FaInstagram
                 style={{ backgroundColor: "transparent" }}

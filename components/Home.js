@@ -83,47 +83,48 @@ function Home() {
           </Slider>
         </div>
       </div>
-      <div>
-        <div className={styles.container}>
-          <Image
-            src="/Solene/solene4.webp"
-            alt="photo de Solene"
-            width={500}
-            height={750}
-            loading="lazy"
-            className={styles.image}
-          />
-          <div className={styles.description}>
-            <p>
-              Photographe passionnée et spécialisée dans les moments forts de la
-              vie, mon objectif : capturer les émotions authentiques et sublimer
-              chaque instant avec sensibilité et professionnalisme{" "}
-            </p>
-            <Link href="/apropos">
-              <button className={styles.button}>A propos</button>
-            </Link>
-          </div>
-        </div>
-        <ScrollAnimation
-          animateIn="fadeInUp"
-          animateOnce={true}
-          delay={1 * 100}
-        >
+      <main>
+        <div>
           <div className={styles.container}>
+            <Image
+              src="/Solene/solene4.webp"
+              alt="photo de Solene"
+              width={500}
+              height={750}
+              loading="lazy"
+              className={styles.image}
+            />
             <div className={styles.description}>
               <p>
-                J'offres une gamme complète de services pour capturer les
-                moments qui comptent. <br />
-                Que ce soit pour des événements privés, des projets
-                professionnels ou des créations artistiques, chaque séance est
-                pensée sur mesure pour répondre à vos besoins.
+                Photographe passionnée et spécialisée dans les moments forts de
+                la vie, mon objectif : capturer les émotions authentiques et
+                sublimer chaque instant avec sensibilité et professionnalisme{" "}
               </p>
-              <Link href="/prestation">
-                <button className={styles.buttonPrestation}>
-                  Mes prestations
-                </button>
+              <Link href="/apropos">
+                <button className={styles.button}>A propos</button>
               </Link>
             </div>
+          </div>
+          <ScrollAnimation
+            animateIn="fadeInUp"
+            animateOnce={true}
+            delay={1 * 100}
+          >
+            <div className={styles.container}>
+              <div className={styles.description}>
+                <p>
+                  J'offres une gamme complète de services pour capturer les
+                  moments qui comptent. <br />
+                  Que ce soit pour des événements privés, des projets
+                  professionnels ou des créations artistiques, chaque séance est
+                  pensée sur mesure pour répondre à vos besoins.
+                </p>
+                <Link href="/prestation">
+                  <button className={styles.buttonPrestation}>
+                    Mes prestations
+                  </button>
+                </Link>
+              </div>
               <Image
                 src="/Couple/couple6.webp"
                 alt="photo de couple"
@@ -132,14 +133,14 @@ function Home() {
                 className={styles.image}
                 loading="lazy"
               />
-          </div>
-        </ScrollAnimation>
-        <ScrollAnimation
-          animateIn="fadeInUp"
-          animateOnce={true}
-          delay={1 * 100}
-        >
-          <div className={styles.container}>
+            </div>
+          </ScrollAnimation>
+          <ScrollAnimation
+            animateIn="fadeInUp"
+            animateOnce={true}
+            delay={1 * 100}
+          >
+            <div className={styles.container}>
               <Image
                 src="/Solo_confiance_en_soi/solo_confiance12.webp"
                 alt="photo EVJF"
@@ -148,20 +149,21 @@ function Home() {
                 loading="lazy"
                 className={styles.image}
               />
-            <div className={styles.description}>
-              <p>
-                Découvrez mon portfolio, un espace où chaque projet reflète ma
-                passion et mon approche de cet art qu’est la photographie.
-                Plongez dans mon univers et n’hésitez pas à me contacter afin de
-                me partager vos projets et vos envies.
-              </p>
-              <Link href="/portfolio">
-                <button className={styles.button}>Mon portfolio</button>
-              </Link>
+              <div className={styles.description}>
+                <p>
+                  Découvrez mon portfolio, un espace où chaque projet reflète ma
+                  passion et mon approche de cet art qu’est la photographie.
+                  Plongez dans mon univers et n’hésitez pas à me contacter afin
+                  de me partager vos projets et vos envies.
+                </p>
+                <Link href="/portfolio">
+                  <button className={styles.button}>Mon portfolio</button>
+                </Link>
+              </div>
             </div>
-          </div>
-        </ScrollAnimation>
-      </div>
+          </ScrollAnimation>
+        </div>
+      </main>
       <Footer />
     </div>
   );
