@@ -24,28 +24,10 @@ function Portfolio() {
   };
 
   const imagePath = image.map((data, i) => {
-    const portrait = data.width < data.height;
-    const isScrollAnimationNeeded = prestations.indexOf(data) >= 6;
+    const portrait = data.width < data.height
     return (
-      <div
-        className={`${styles.imageContainer} ${portrait ? styles.portrait : ""}`}
-        key={i}
-      >
-        {isScrollAnimationNeeded ? (
-            <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
-              <Image
-                src={data.image}
-                alt={data.name}
-                width={data.width}
-                height={data.height}
-                onClick={() => handleImageClick(data.image)}
-                loading="lazy"
-                quality={75}
-                className={styles.image}
-              />
-            </ScrollAnimation>
-        ) : (
-          <div>
+      <div className={`${styles.imageContainer} ${portrait ? styles.portrait : ""}`} key={i}>
+{/*         <ScrollAnimation animateIn="fadeInUp" animateOnce={true}> */}
           <Image
             src={data.image}
             alt={data.name}
@@ -56,8 +38,7 @@ function Portfolio() {
             quality={75}
             className={styles.image}
           />
-          </div>
-        )}
+{/*         </ScrollAnimation> */}
       </div>
     );
   });
