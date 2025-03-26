@@ -45,6 +45,7 @@ function Portfolio() {
               />
             </ScrollAnimation>
         ) : (
+          <div>
           <Image
             src={data.image}
             alt={data.name}
@@ -55,6 +56,7 @@ function Portfolio() {
             quality={75}
             className={styles.image}
           />
+          </div>
         )}
       </div>
     );
