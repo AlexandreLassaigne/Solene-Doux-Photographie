@@ -594,9 +594,9 @@ function Formule(props) {
             </div>
           </div>
         </main>
-        <div className={styles.footer}>
+{/*         <div className={styles.footer}>
           <Footer />
-        </div>
+        </div> */}
       </div>
     );
   } else if (props.name === "Famille") {
@@ -1603,9 +1603,9 @@ function Formule(props) {
             </div>
           </div>
         </main>
-        <div className={styles.footer}>
+{/*         <div className={styles.footer}>
           <Footer />
-        </div>
+        </div> */}
       </div>
     );
   } else if (props.name === "Séance à thème") {
