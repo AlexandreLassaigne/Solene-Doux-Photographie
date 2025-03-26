@@ -76,7 +76,7 @@ export default function Politique() {
         <p>
           Si vous avez des questions concernant cette politique de
           confidentialité ou si vous souhaitez exercer vos droits, veuillez me
-          contacter à l'adresse suivante : ✉️ solenedoux.photographie@gamil.com
+          contacter à l'adresse suivante : ✉️ solenedoux.photographie@gmail.com
         </p>
       </div>
       <Footer />

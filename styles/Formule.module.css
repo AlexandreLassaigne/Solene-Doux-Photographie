@@ -183,4 +183,9 @@
   .contact {
     font-size: 8px;
   }
+  .footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
 }

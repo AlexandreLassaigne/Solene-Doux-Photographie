@@ -14,7 +14,7 @@ export default function Mentions() {
             Le présent site est édité par : <strong>Solene Doux</strong>
           </li>
           <li>Statut juridique : Auto-entrepreneur</li>
-          <li>Email : solenedoux.photographie@gamil.com </li>
+          <li>Email : solenedoux.photographie@gmail.com </li>
           <li>Téléphone : 06 28 55 35 67</li>
           <li>Numéro SIRET : 849 262 555 00022</li>
         </ul>
@@ -46,7 +46,7 @@ export default function Mentions() {
           pendant 1 an maximum. Vous disposez des droits d'accès, de
           rectification et de suppression de vos données personnelles. Pour
           exercer ces droits, vous pouvez me contacter à l'adresse suivante :
-          ✉️ solenedoux.photographie@gamil.com
+          ✉️ solenedoux.photographie@gmail.com
         </p>
         <h2 className={styles.title}>5. Cookies</h2>
         <p style={{textAlign:'center'}}>
@@ -71,7 +71,7 @@ export default function Mentions() {
         <h2 className={styles.title}>8. Contact</h2>
         <p style={{textAlign:'center'}}>
           Pour toute question, vous pouvez me contacter à : ✉️
-          solenedoux.photographie@gamil.com
+          solenedoux.photographie@gmail.com
         </p>
       </div>
       <Footer />
