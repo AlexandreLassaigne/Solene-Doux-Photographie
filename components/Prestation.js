@@ -88,6 +88,7 @@ function Prestation() {
         {!formule && (
           <div>
             <div className={styles.allContainer}>{prestation}</div>
+              <Footer />
           </div>
         )}
         {formule && (
@@ -103,7 +104,6 @@ function Prestation() {
           </div>
         )}
       </main>
-      <Footer />
     </div>
   );
 }
