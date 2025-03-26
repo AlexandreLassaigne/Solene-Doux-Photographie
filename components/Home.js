@@ -27,19 +27,6 @@ function Home() {
 
   return (
     <div>
-      <Head>
-        <title>Solène Doux Photographie</title>
-        <meta
-          name="description"
-          content="Photographe dans la région Toulousaine spécialisée dans les moments forts de la vie, mariage, maternité, famille, etc."
-        />
-        <link
-          rel="preload"
-          href="/Accueil/accueil3.webp"
-          as="image"
-          type="image/webp"
-        />
-      </Head>
       <div className={styles.sliderContainer}>
         <Header />
         <div>

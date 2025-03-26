@@ -14,9 +14,9 @@ export default function Mentions() {
             Le présent site est édité par : <strong>Solene Doux</strong>
           </li>
           <li>Statut juridique : Auto-entrepreneur</li>
-          <li>Email : **contact@monsite.com** </li>
+          <li>Email : solenedoux.photographie@gamil.com </li>
           <li>Téléphone : 06 28 55 35 67</li>
-          <li>Numéro SIRET : **123 456 789 00000** (si entreprise)</li>
+          <li>Numéro SIRET : 849 262 555 00022</li>
         </ul>
         <h2 className={styles.title}>2. Hébergeur du site</h2>
         <ul>
@@ -39,14 +39,14 @@ export default function Mentions() {
         <p style={{textAlign:'center'}}>
           Conformément à la loi Informatique et Libertés du 6 janvier 1978
           modifiée, ainsi qu’au règlement général sur la protection des données
-          (RGPD), nous vous informons que vos données personnelles collectées
+          (RGPD), je vous informes que vos données personnelles collectées
           via le formulaire de contact ne sont utilisées que pour répondre à vos
           demandes. Ces informations ne sont ni stockées dans une base de
           données ni partagées avec des tiers. Les données sont conservées
           pendant 1 an maximum. Vous disposez des droits d'accès, de
           rectification et de suppression de vos données personnelles. Pour
-          exercer ces droits, vous pouvez nous contacter à l'adresse suivante :
-          ✉️ **contact@monsite.com**
+          exercer ces droits, vous pouvez me contacter à l'adresse suivante :
+          ✉️ solenedoux.photographie@gamil.com
         </p>
         <h2 className={styles.title}>5. Cookies</h2>
         <p style={{textAlign:'center'}}>
@@ -63,15 +63,15 @@ export default function Mentions() {
         </p>
         <h2 className={styles.title}>7. Modifications des mentions légales</h2>
         <p style={{textAlign:'center'}}>
-          Nous nous réservons le droit de modifier ces mentions légales à tout
-          moment, afin de nous conformer aux évolutions légales et
+          Je me réserve le droit de modifier ces mentions légales à tout
+          moment, afin de me conformer aux évolutions légales et
           réglementaires. Les utilisateurs sont donc invités à consulter cette
           page régulièrement.
         </p>
         <h2 className={styles.title}>8. Contact</h2>
         <p style={{textAlign:'center'}}>
-          Pour toute question, vous pouvez nous contacter à : ✉️
-          **contact@monsite.com**
+          Pour toute question, vous pouvez me contacter à : ✉️
+          solenedoux.photographie@gamil.com
         </p>
       </div>
       <Footer />

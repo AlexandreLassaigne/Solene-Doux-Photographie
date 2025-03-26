@@ -41,7 +41,6 @@ export default function Politique() {
           Je ne stockes pas vos informations dans une base de données ni ne
           les partages avec des tiers.
         </p>
-
         <h2>
           4. Conservation des données
         </h2>
@@ -51,7 +50,6 @@ export default function Politique() {
           temps nécessaire pour répondre à votre demande. Une fois votre demande
           traitée, ces informations sont supprimées.
         </p>
-
         <h2>5. Sécurité des données</h2>
         <p>
           Je m'engages à protéger vos informations personnelles.
@@ -59,7 +57,6 @@ export default function Politique() {
           la protection des informations est limitée à la gestion de vos
           échanges par email ou via mon formulaire de contact.
         </p>
-
         <h2>6. Vos droits</h2>
         <p>
           Conformément au RGPD, vous avez le droit d’accéder à vos
@@ -68,20 +65,18 @@ export default function Politique() {
           personnelles.
           <br />
           Pour exercer vos droits, veuillez me contacter par email à
-          **contact@monsite.com**.
+          solenedoux.photographie@gamil.com.
         </p>
-
         <h2>7. Cookies</h2>
         <p>
           Ce site ne collecte pas de cookies. Aucun suivi de votre
           navigation n’est effectué à des fins commerciales ou analytiques.
         </p>
-
         <h2>8. Contact</h2>
         <p>
           Si vous avez des questions concernant cette politique de
           confidentialité ou si vous souhaitez exercer vos droits, veuillez me
-          contacter à l'adresse suivante : ✉️ **contact@monsite.com**
+          contacter à l'adresse suivante : ✉️ solenedoux.photographie@gamil.com
         </p>
       </div>
       <Footer />
