@@ -50,7 +50,7 @@ export default function Apropos() {
             </p>
           </div>
           <Image
-            src="/Solene/solene4.webp"
+            src="/Solene/solene6.jpeg"
             alt="photo de Solene"
             width={500}
             height={750}

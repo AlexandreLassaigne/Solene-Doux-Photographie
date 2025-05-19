@@ -74,7 +74,7 @@ function Home() {
         <div>
           <div className={styles.container}>
             <Image
-              src="/Solene/solene4.webp"
+              src="/Solene/solene5.jpeg"
               alt="photo de Solene"
               width={500}
               height={750}
