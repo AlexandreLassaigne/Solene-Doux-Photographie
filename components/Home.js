@@ -1,6 +1,5 @@
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
-import Head from "next/head";
 import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css/animate.compat.css";
 import Image from "next/image";
@@ -71,6 +70,14 @@ function Home() {
         </div>
       </div>
       <main>
+        <h1 className={styles.h1}>Solene Doux - Photographe professionnelle</h1>
+        <p>
+          Photographe passionnée à <strong>Toulouse</strong>, je suis
+          spécialisée dans les <strong>photos de mariage</strong>,{" "}
+          <strong>grossesse</strong>,<strong>famille</strong>,{" "}
+          <strong>naissance</strong> et <strong>portraits</strong>. Mon objectif
+          : capturer vos plus belles émotions avec authenticité.
+        </p>
         <div>
           <div className={styles.container}>
             <Image
