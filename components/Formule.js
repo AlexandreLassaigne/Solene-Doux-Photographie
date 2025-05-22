@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css/animate.compat.css";
-import Footer from "./Footer";
 
 function Formule(props) {
   let formules;
