@@ -12,8 +12,7 @@ function Index() {
       />
       <link
         rel="icon"
-        type="image/png"
-        href="/logo.png"
+        href="/favicon.ico"
         alt="logo site solene doux photographie"
       />
     </Head>

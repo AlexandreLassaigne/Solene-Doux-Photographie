@@ -11,11 +11,10 @@ function Portfolios() {
         content="Photographe dans la région Toulousaine spécialisée dans les moments forts de la vie, mariage, maternité, famille, etc."
       />
       <link
-        rel="icon"
-        type="image/png"
-        href="/logo.png"
-        alt="logo site solene doux photographie"
-      />
+          rel="icon"
+          href="/favicon.ico"
+          alt="logo site solene doux photographie"
+        />
     </Head>
     <Portfolio />
   </>
