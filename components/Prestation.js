@@ -42,7 +42,7 @@ function Prestation() {
             </ScrollAnimation>
           </div>
         ) : (
-          <div className={styles.image}>
+          <div>
             <Image
               src={data.source}
               alt={`photo ${data.name}`}

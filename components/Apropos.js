@@ -8,7 +8,7 @@ import Footer from "./Footer";
 
 export default function Apropos() {
   return (
-    <div>
+    <div className={styles.pageWrapper}>
       <Head>
         <title>Solène Doux Photographie</title>
         <meta
@@ -24,7 +24,7 @@ export default function Apropos() {
         />
       </Head>
       <Header />
-      <main>
+      <main className={styles.mainContent}>
         <div className={styles.presentationContainer}>
           <div className={styles.presentationTexte}>
             <p>
@@ -88,9 +88,7 @@ export default function Apropos() {
           </div>
         </div>
       </main>
-      <div className={styles.footer}>
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 }

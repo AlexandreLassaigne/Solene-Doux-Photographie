@@ -1,11 +1,11 @@
 @font-face {
-  font-family: 'Glitther Syavina';
-  src: url('../fonts/GlittherSyavinafree.ttf');
+  font-family: "Glitther Syavina";
+  src: url("../fonts/GlittherSyavinafree.ttf");
 }
 
 @font-face {
-  font-family: 'Inria serif';
-  src: url('../fonts/InriaSerif-Regular.ttf');
+  font-family: "Inria serif";
+  src: url("../fonts/InriaSerif-Regular.ttf");
 }
 
 .chevron {
@@ -17,7 +17,7 @@
 }
 
 .presationTexte {
-  font-family: 'Inria serif';
+  font-family: "Inria serif";
   text-align: center;
   margin: auto;
   font-size: 22px;
@@ -31,7 +31,7 @@
   flex-wrap: wrap;
 }
 
-.formuleContainer{
+.formuleContainer {
   margin-top: 100px;
 }
 
@@ -51,7 +51,7 @@
   height: 50px;
   width: 100%;
   transition: 0.5s;
-  font-family: 'Inria serif';
+  font-family: "Inria serif";
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,10 +64,10 @@
 }
 
 @media (max-width: 1024px) {
-  .allContainer{
+  .allContainer {
     margin-top: 40px;
   }
-  .formuleContainer{
+  .formuleContainer {
     margin-top: 70px;
   }
   .container {
@@ -92,10 +92,10 @@
 }
 
 @media (max-width: 860px) {
-  .allContainer{
+  .allContainer {
     margin-top: 30px;
   }
-  .formuleContainer{
+  .formuleContainer {
     margin-top: 60px;
   }
   .container {
@@ -120,23 +120,21 @@
 }
 
 @media (max-width: 600px) {
-  .allContainer{
+  .allContainer {
     margin-top: 20px;
   }
-  .formuleContainer{
+  .formuleContainer {
     margin-top: 50px;
   }
   .container {
     flex-direction: column;
     align-items: center;
     padding: 1rem;
+    width: 40%;
   }
   .description {
     max-width: 100%;
     text-align: center;
-  }
-  .button {
-    font-size: 13px;
   }
 
   .presationTexte {
@@ -148,10 +146,10 @@
   }
 }
 @media (max-width: 480px) {
-  .allContainer{
+  .allContainer {
     margin-top: 10px;
   }
-  .formuleContainer{
+  .formuleContainer {
     margin-top: 40px;
   }
   .container {
@@ -164,7 +162,7 @@
     text-align: center;
   }
   .button {
-    font-size: 9px;
+    font-size: 15px;
   }
 
   .presationTexte {
@@ -174,6 +172,4 @@
     width: 20px;
     height: 20px;
   }
-
 }
-
