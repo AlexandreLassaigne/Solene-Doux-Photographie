@@ -44,8 +44,8 @@
 }
 
 .button {
-  border: solid 1px;
-  background-color: transparent;
+  border: solid 1px #000000 !important;
+  background-color: transparent !important;
   cursor: pointer;
   font-size: 24px;
   height: 50px;
@@ -58,8 +58,8 @@
 }
 
 .button:hover {
-  background-color: rgb(228, 165, 113, 0.8);
-  color: #ffffff;
+  background-color: rgb(228, 165, 113, 0.8) !important;
+  color: #ffffff !important;
   border: none;
 }
 

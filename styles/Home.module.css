@@ -52,8 +52,8 @@
 }
 
 .button, .buttonPrestation {
-  border: solid 1px;
-  background-color: transparent;
+  border: solid 1px #000000 !important;
+  background-color: transparent !important;
   cursor: pointer;
   font-size: 18px;
   width: 200px;
@@ -65,8 +65,8 @@
 }
 
 .button:hover, .buttonPrestation:hover {
-  background-color: rgb(228, 165, 113, 0.8);
-  color: #ffffff;
+  background-color: rgb(228, 165, 113, 0.8) !important;
+  color: #ffffff !important;
 }
 
 
