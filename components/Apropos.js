@@ -28,7 +28,7 @@ export default function Apropos() {
         <div className={styles.presentationContainer}>
           <div className={styles.presentationTexte}>
             <p>
-              Enchanté,
+              Enchantée,
               <br />
               <br />
               Moi c’est Solène, j’ai 30 ans et je vis dans la région Toulousaine

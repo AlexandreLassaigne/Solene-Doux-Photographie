@@ -54,6 +54,7 @@
 .button, .buttonPrestation {
   border: solid 1px #000000 !important;
   background-color: transparent !important;
+  color: #000000 !important;
   cursor: pointer;
   font-size: 18px;
   width: 200px;

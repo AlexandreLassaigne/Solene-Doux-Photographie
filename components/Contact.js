@@ -51,7 +51,7 @@ function Contact() {
       } else {
         setWrongTel(false);
       }
-/*       if (!recaptchaToken) {
+      /*       if (!recaptchaToken) {
         setMessageError("Veuillez valider le reCAPTCHA !");
         return;
       } */

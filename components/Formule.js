@@ -544,7 +544,7 @@ function Formule(props) {
             <p className={styles.presentation}>
               Offrez-vous des souvenirs mémorables et fun lors d’une séance
               photo EVJF (Enterrement de Vie de Jeune Fille) / EVG (Enterrement
-              de Vie de Garçon). Ce moment unique, entourée de vos ami(e)s les
+              de Vie de Garçon). Ce moment unique, entouré(e) de vos ami(e)s les
               plus proches, sera l’occasion parfaite de capturer ces instants de
               rires ainsi que la complicité et l’énergie de votre groupe.
               <br /> Que vous choisissiez un cadre urbain, naturel ou plus
@@ -593,9 +593,6 @@ function Formule(props) {
             </div>
           </div>
         </main>
-{/*         <div className={styles.footer}>
-          <Footer />
-        </div> */}
       </div>
     );
   } else if (props.name === "Famille") {
@@ -1552,7 +1549,7 @@ function Formule(props) {
           <div style={{ textAlign: "center", fontFamily: "Inria serif" }}>
             <h1>Séance Baptême</h1>
             <p className={styles.presentation}>
-              Le baptême est un moment particulier, chargé de symbolisme et
+              Le baptême est un moment particulier, chargé de symbolique et
               d'émotions.
               <br /> Offrez-vous la possibilité de capturer ces instants
               précieux grâce à une séance photo sur mesure <br />
@@ -1602,9 +1599,6 @@ function Formule(props) {
             </div>
           </div>
         </main>
-{/*         <div className={styles.footer}>
-          <Footer />
-        </div> */}
       </div>
     );
   } else if (props.name === "Séance à thème") {
