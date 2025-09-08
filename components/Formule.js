@@ -119,7 +119,7 @@ function Formule(props) {
                   <h1 className={styles.formulaTitle}>Formule Prestige</h1>
                   <h2 className={styles.h2}>Durée total : 12h</h2>
                   <span className={styles.price}>2600 €</span>
-                  <span className={styles.p}>Hors frais de déplacement</span>
+                  <span className={styles.price}>Hors frais de déplacement</span>
                   <p className={styles.p}>
                     Préparatifs des mariés / Cérémonie(s) / Photos de groupe /
                     Photos de couple / Vin d'honneur / Arrivée du gâteau /
