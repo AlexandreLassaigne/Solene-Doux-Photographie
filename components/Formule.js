@@ -38,8 +38,8 @@ function Formule(props) {
             <div className={styles.description}>
               <div>
                 <h1 className={styles.formulaTitle}>Formule Instants</h1>
-                <h2 className={styles.h2}>Durée total : 2h</h2>
-                <span className={styles.price}>650 €</span>
+                <h2 className={styles.h2}>Durée total : 4h</h2>
+                <span className={styles.price}>1000 €</span>
                 <p className={styles.p}>
                   Cérémonie / Photos de groupe / Photos de couple / Début du vin
                   d'honneur
@@ -70,7 +70,7 @@ function Formule(props) {
                 <div>
                   <h1 className={styles.formulaTitle}>Formule Douceur</h1>
                   <h2 className={styles.h2}>Durée total : 7h</h2>
-                  <span className={styles.price}>1500 €</span>
+                  <span className={styles.price}>1600 €</span>
                   <p className={styles.p}>
                     Préparatifs des mariés / Cérémonie / Photos de groupe /
                     Photos de couple / Vin d'honneur
@@ -117,12 +117,11 @@ function Formule(props) {
               <div className={styles.description}>
                 <div>
                   <h1 className={styles.formulaTitle}>Formule Prestige</h1>
-                  <h2 className={styles.h2}>Durée total : 10h</h2>
-                  <span className={styles.price}>2100 €</span>
+                  <h2 className={styles.h2}>Durée total : 12h</h2>
+                  <span className={styles.price}>2600 €</span>
                   <p className={styles.p}>
-                    Préparatifs des mariés / Cérémonie / Photos de groupe /
-                    Photos de couple / Vin d'honneur / Jusqu'au gâteau (00h00
-                    max)
+                    Préparatifs des mariés / Cérémonie(s) / Photos de groupe /
+                    Photos de couple / Vin d'honneur / Arrivée du gâteau / Ouverture de bal
                   </p>
                 </div>
                 <div>
