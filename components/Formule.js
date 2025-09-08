@@ -120,6 +120,9 @@ function Formule(props) {
                   <h2 className={styles.h2}>Durée total : 12h</h2>
                   <span className={styles.price}>2600 €</span>
                   <p className={styles.p}>
+                    Hors frais de déplacement
+                  </p>
+                  <p className={styles.p}>
                     Préparatifs des mariés / Cérémonie(s) / Photos de groupe /
                     Photos de couple / Vin d'honneur / Arrivée du gâteau / Ouverture de bal
                   </p>
