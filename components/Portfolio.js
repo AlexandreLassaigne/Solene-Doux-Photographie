@@ -24,26 +24,30 @@ function Portfolio() {
   };
 
   const imagePath = image.map((data, i) => {
-    const portrait = data.width < data.height
+    const portrait = data.width < data.height;
     return (
-      <div className={`${styles.imageContainer} ${portrait ? styles.portrait : ""}`} key={i}>
-{/*         <ScrollAnimation animateIn="fadeInUp" animateOnce={true}> */}
-          <Image
-            src={data.image}
-            alt={data.name}
-            width={data.width}
-            height={data.height}
-            onClick={() => handleImageClick(data.image)}
-            loading="lazy"
-            quality={75}
-            className={styles.image}
-          />
-{/*         </ScrollAnimation> */}
+      <div
+        className={`${styles.imageContainer} ${
+          portrait ? styles.portrait : ""
+        }`}
+        key={i}
+      >
+        {/*         <ScrollAnimation animateIn="fadeInUp" animateOnce={true}> */}
+        <Image
+          src={data.image}
+          alt={data.name}
+          width={data.width}
+          height={data.height}
+          onClick={() => handleImageClick(data.image)}
+          loading="lazy"
+          quality={75}
+          className={styles.image}
+        />
+        {/*         </ScrollAnimation> */}
       </div>
     );
   });
 
-  console.log(styles);
   return (
     <div>
       <Head>
@@ -55,7 +59,22 @@ function Portfolio() {
       </Head>
       <Header />
       <main>
-        <div className={styles.imagesContainer}>{imagePath}</div>
+        <div>
+          <div className={styles.lienPDF}>
+            <p>
+              Découvrez mon portfolio dédié aux mariages et plongez dans mon
+              univers doux et chaleureux pour des souvenirs uniques :{" "}
+              <a
+                href="/portfolio_mariage.pdf"
+                target="_blank"
+                style={{ textDecoration: "none", color: "black", fontWeight: "bold" }}
+              >
+                Portfolio Mariage
+              </a>
+            </p>
+          </div>
+          <div className={styles.imagesContainer}>{imagePath}</div>
+        </div>
         {imageOpen && (
           <div
             className={styles.fullscreenModal}
