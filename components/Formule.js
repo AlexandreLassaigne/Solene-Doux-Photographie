@@ -27,18 +27,22 @@ function Formule(props) {
               soignées et une attention particulière portée aux détails.
             </p>
             <div className={styles.lienPDF}>
-            <p>
-              Découvrez mon portfolio dédié aux mariages et plongez dans mon
-              univers doux et chaleureux pour des souvenirs uniques :{" "}
-              <a
-                href="/portfolio_mariage.pdf"
-                target="_blank"
-                style={{ textDecoration: "none", color: "black", fontWeight: "bold" }}
-              >
-                Portfolio Mariage
-              </a>
-            </p>
-          </div>
+              <p>
+                Découvrez mon portfolio dédié aux mariages et plongez dans mon
+                univers doux et chaleureux pour des souvenirs uniques :{" "}
+                <a
+                  href="/portfolio_mariage.pdf"
+                  target="_blank"
+                  style={{
+                    textDecoration: "none",
+                    color: "black",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Portfolio Mariage
+                </a>
+              </p>
+            </div>
           </div>
           <div className={styles.container}>
             <Image
