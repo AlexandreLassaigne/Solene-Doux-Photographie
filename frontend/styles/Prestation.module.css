@@ -1,0 +1,176 @@
+@font-face {
+  font-family: "Glitther Syavina";
+  src: url("../fonts/GlittherSyavinafree.ttf");
+}
+
+@font-face {
+  font-family: "Inria serif";
+  src: url("../fonts/InriaSerif-Regular.ttf");
+}
+
+.chevron {
+  margin-left: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.presationTexte {
+  font-family: "Inria serif";
+  text-align: center;
+  margin: auto;
+  font-size: 22px;
+  width: 80vw;
+}
+
+.allContainer {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.formuleContainer {
+  margin-top: 100px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.button {
+  border: solid 1px #000000 !important;
+  background-color: transparent !important;
+  color: #000000 !important;
+  cursor: pointer;
+  font-size: 24px;
+  height: 50px;
+  width: 100%;
+  transition: 0.5s;
+  font-family: "Inria serif";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  background-color: rgb(228, 165, 113, 0.8) !important;
+  color: #ffffff !important;
+  border: none;
+}
+
+@media (max-width: 1024px) {
+  .allContainer {
+    margin-top: 40px;
+  }
+  .formuleContainer {
+    margin-top: 70px;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  .description {
+    max-width: 100%;
+    text-align: center;
+  }
+  .button {
+    font-size: 20px;
+  }
+  .presationTexte {
+    font-size: 16px;
+  }
+  .chevron {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 860px) {
+  .allContainer {
+    margin-top: 30px;
+  }
+  .formuleContainer {
+    margin-top: 60px;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  .description {
+    max-width: 100%;
+    text-align: center;
+  }
+  .button {
+    font-size: 18px;
+  }
+  .presationTexte {
+    font-size: 14px;
+  }
+  .chevron {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .allContainer {
+    margin-top: 20px;
+  }
+  .formuleContainer {
+    margin-top: 50px;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    width: 40%;
+  }
+  .description {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .presationTexte {
+    font-size: 12px;
+  }
+  .chevron {
+    width: 25px;
+    height: 25px;
+  }
+}
+@media (max-width: 480px) {
+  .allContainer {
+    margin-top: 10px;
+  }
+  .formuleContainer {
+    margin-top: 40px;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  .description {
+    max-width: 100%;
+    text-align: center;
+  }
+  .button {
+    font-size: 15px;
+  }
+
+  .presationTexte {
+    font-size: 12px;
+  }
+  .chevron {
+    width: 20px;
+    height: 20px;
+  }
+}

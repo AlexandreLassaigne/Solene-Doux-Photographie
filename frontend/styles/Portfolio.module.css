@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "Glitther Syavina";
+  src: url("../fonts/GlittherSyavinafree.ttf");
+}
+
+@font-face {
+  font-family: "Inria serif";
+  src: url("../fonts/InriaSerif-Regular.ttf");
+}
+
+.lienPDF {
+  text-decoration: none;
+  font-size: 22px;
+  width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  text-align: center;
+  font-family: "Inria serif";
+}
+
+.imageContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.image {
+  width: 90%;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+  cursor: pointer;
+  margin: 2px;
+}
+
+.portrait {
+  grid-row: span 2;
+}
+
+.imagesContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 90%;
+  margin: 100px auto 0;
+}
+
+.fullscreenModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 1000;
+}
+
+.fullscreenImageContainer {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.fullscreenImage {
+  max-height: 90vh;
+  object-fit: contain;
+  background-color: rgba(0, 0, 0, 0);
+  margin: auto;
+}
+
+@media (max-width: 1024px) {
+  .imagesContainer {
+    margin: 70px auto 0;
+  }
+  .fullscreenImage {
+    max-width: 95%;
+  }
+}
+@media (max-width: 850px) {
+  .imagesContainer {
+    margin: 60px auto 0;
+  }
+
+  .fullscreenImage {
+    max-width: 95%;
+  }
+}
+@media (max-width: 480px) {
+  .imagesContainer {
+    margin: 50px auto 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .fullscreenImage {
+    max-width: 95%;
+  }
+}
