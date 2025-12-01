@@ -1,0 +1,191 @@
+@font-face {
+  font-family: 'Glitther Syavina';
+  src: url('../fonts/GlittherSyavinafree.ttf');
+}
+
+@font-face {
+  font-family: 'Inria serif';
+  src: url('../fonts/InriaSerif-Regular.ttf');
+}
+
+.presentation {
+  font-size: 18px;
+  width: 80vw;
+  margin: auto;
+  line-height: 130%;
+}
+
+.lienPDF {
+  text-decoration: none;
+  font-size: 18px;;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.description {
+  height: auto;
+  font-family: 'Inria serif';
+  max-width: 50%;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.image {
+  width: 30%;
+  height: 30%;
+  margin: 10px;
+}
+
+.formulaTitle {
+  font-size: 32px;
+  font-family: 'Glitther Syavina';
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.h2 {
+  font-size: 20px;
+  font-family: 'Inria serif';
+}
+
+.price {
+  font-size: 18px;
+  color: #c04e3c;
+  font-family: 'Inria serif';
+}
+
+.p {
+  font-size: 16px;
+  color: #666;
+  font-family: 'Inria serif';
+}
+
+.contact {
+  font-size: 14px;
+  font-family: 'Inria serif';
+  text-decoration: none;
+  color : #000000;
+}
+
+
+@media (max-width: 1024px) {
+  .presentation {
+    font-size: 16px;
+    width: 80vw;
+    margin: auto;
+    line-height: 130%;
+  }
+
+  .description {
+    max-width: 40%;
+  }
+  
+  .formulaTitle {
+    font-size: 30px;
+    margin-bottom: 8px;
+  }
+  
+  .h2 {
+    font-size: 20px;
+  }
+  
+  .price {
+    font-size: 18px;
+  }
+  
+  .p {
+    font-size: 16px;
+  }
+  
+  .contact {
+    font-size: 14px;
+  }
+ 
+}
+@media (max-width: 850px) {
+  .presentation {
+    font-size: 14px;
+  }
+  .description {
+    max-width: 30%;
+  }
+  .formulaTitle {
+    font-size: 26px;
+  }
+  .h2 {
+    font-size: 18px;
+  }
+  .price {
+    font-size: 16px;
+  }
+  .p {
+    font-size: 14px;
+  }
+  .contact {
+    font-size: 12px;
+  }
+}
+@media (max-width: 600px) {
+  .presentation {
+    font-size: 14px;
+  }
+  .description {
+    max-width: 30%;
+  }
+  .formulaTitle {
+    font-size: 22px;
+  }
+  .h2 {
+    font-size: 16px;
+  }
+  .price {
+    font-size: 14px;
+  }
+  .p {
+    font-size: 12px;
+  }
+  .contact {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .presentation {
+    font-size: 12px;
+  }
+  .formulaTitle {
+    font-size: 18px;
+  }
+  
+  .price {
+    font-size: 12px;
+  }
+  
+  .h2 {
+    font-size: 14px;
+  }
+  
+  .p {
+    font-size: 9px;
+  }
+  .contact {
+    font-size: 8px;
+  }
+}

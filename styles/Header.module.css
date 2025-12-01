@@ -1,0 +1,128 @@
+@font-face {
+  font-family: "Glitther Syavina";
+  src: url("../fonts/GlittherSyavinafree.ttf");
+}
+.head {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 0;
+}
+
+.headContainer {
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: rgba(186, 174, 152, 0.6);
+  position: fixed;
+  height: 60px;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  margin: 10px;
+}
+
+.logo {
+  background-color: transparent;
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+}
+
+.headerRight {
+  background-color: transparent;
+  display: flex;
+  margin-left: 40px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+}
+
+.lien {
+  cursor: pointer;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 22px;
+  margin-right: 20px;
+  font-family: "Glitther Syavina";
+  color: #000000;
+}
+
+
+.instaIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  margin-right: 20px;
+  font-size: 40px;
+  cursor: pointer;
+  color: #000000;
+}
+
+@media (max-width : 1024px){
+  .lien{
+    font-size: 18px;
+  }
+  .instaIcon{
+    font-size: 35px;
+  }
+  .headContainer {
+    height: 50px;
+  }
+}
+@media (max-width : 850px){
+  .lien{
+    font-size: 14px;
+    margin: 10px 10px;
+  }
+  .instaIcon{
+    font-size: 25px;
+    margin: 10px 10px;
+  }
+  .headContainer {
+    height: 40px;
+  }
+}
+@media (max-width : 600px){
+  .logo{
+    width: 80%;
+  }
+  .lien{
+    font-size: 12px;
+    margin: 10px 5px;
+  }
+  .instaIcon{
+    font-size: 20px;
+    margin-top: 7px;
+  }
+  .headContainer {
+    height: 35px;
+  }
+}
+@media (max-width : 480px){
+  .logo{
+    width: 80%;
+  }
+  .lien{
+    font-size: 10px;
+    margin: 5px;
+  }
+  .instaIcon{
+    font-size: 15px;
+    margin: 7px 7px;
+  }
+  .headContainer {
+    height: 30px;
+  }
+}
