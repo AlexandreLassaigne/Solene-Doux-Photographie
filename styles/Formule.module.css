@@ -1,11 +1,11 @@
 @font-face {
-  font-family: 'Glitther Syavina';
-  src: url('../fonts/GlittherSyavinafree.ttf');
+  font-family: "Glitther Syavina";
+  src: url("../fonts/GlittherSyavinafree.ttf");
 }
 
 @font-face {
-  font-family: 'Inria serif';
-  src: url('../fonts/InriaSerif-Regular.ttf');
+  font-family: "Inria serif";
+  src: url("../fonts/InriaSerif-Regular.ttf");
 }
 
 .presentation {
@@ -17,12 +17,12 @@
 
 .lienPDF {
   text-decoration: none;
-  font-size: 18px;;
+  font-size: 18px;
 }
 
 .container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   margin: 2rem 0;
   padding: 2rem;
   border-radius: 10px;
@@ -37,7 +37,7 @@
 
 .description {
   height: auto;
-  font-family: 'Inria serif';
+  font-family: "Inria serif";
   max-width: 50%;
   margin-left: 20px;
   margin-right: 20px;
@@ -55,35 +55,34 @@
 
 .formulaTitle {
   font-size: 32px;
-  font-family: 'Glitther Syavina';
+  font-family: "Glitther Syavina";
   color: #333;
   margin-bottom: 8px;
 }
 
 .h2 {
-  font-size: 20px;
-  font-family: 'Inria serif';
+  font-size: 32px;
+  font-family: "Inria serif";
 }
 
 .price {
-  font-size: 18px;
+  font-size: 28;
   color: #c04e3c;
-  font-family: 'Inria serif';
+  font-family: "Inria serif";
 }
 
 .p {
-  font-size: 16px;
+  font-size: 26px;
   color: #666;
-  font-family: 'Inria serif';
+  font-family: "Inria serif";
 }
 
 .contact {
-  font-size: 14px;
-  font-family: 'Inria serif';
+  font-size: 20px;
+  font-family: "Inria serif";
   text-decoration: none;
-  color : #000000;
+  color: #000000;
 }
-
 
 @media (max-width: 1024px) {
   .presentation {
@@ -96,28 +95,30 @@
   .description {
     max-width: 40%;
   }
-  
+
   .formulaTitle {
     font-size: 30px;
     margin-bottom: 8px;
   }
-  
+
   .h2 {
     font-size: 20px;
   }
-  
+
   .price {
     font-size: 18px;
   }
-  
+
   .p {
     font-size: 16px;
   }
-  
+
   .contact {
     font-size: 14px;
   }
- 
+  .lienPDF {
+    font-size: 16px;
+  }
 }
 @media (max-width: 850px) {
   .presentation {
@@ -141,10 +142,13 @@
   .contact {
     font-size: 12px;
   }
+  .lienPDF {
+    font-size: 14px;
+  }
 }
 @media (max-width: 600px) {
   .presentation {
-    font-size: 14px;
+    font-size: 12px;
   }
   .description {
     max-width: 30%;
@@ -164,6 +168,9 @@
   .contact {
     font-size: 10px;
   }
+  .lienPDF {
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -173,19 +180,22 @@
   .formulaTitle {
     font-size: 18px;
   }
-  
+
   .price {
     font-size: 12px;
   }
-  
+
   .h2 {
     font-size: 14px;
   }
-  
+
   .p {
     font-size: 9px;
   }
   .contact {
     font-size: 8px;
+  }
+  .lienPDF {
+    font-size: 12px;
   }
 }

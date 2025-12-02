@@ -1,5 +1,5 @@
 import styles from "../styles/Contact.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
 import emailjs from "emailjs-com";
 import Faq from "react-faq-component";
@@ -12,6 +12,12 @@ import {
 } from "@google-recaptcha/react"; */
 
 function Contact() {
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
   const [nom, setNom] = useState("");
   const [prenom, setPrenom] = useState("");
   const [email, setEmail] = useState("");
@@ -92,12 +98,12 @@ function Contact() {
       {
         title: "Quand faire la séance de grossesse ?",
         content:
-          "La séance grossesse est à réaliser idéalement entre le 7ème et le 8ème mois de grossesse, mais elle peut se faire avant si vous le souhaitez.",
+          "La séance grossesse est à réaliser idéalement entre le 7ème et le 8ème mois de grossesse, mais elle peut se faire avant si vous le souhaitez. Elle se fait en intérieur chez voous ou en extérieur (lieu à définir ensemble).",
       },
       {
         title: "Quand faire la séance naissance ?",
         content:
-          "La séance naissance est à réaliser idéalement dans le premier mois du bébé, voir même dans les deux premières semaines, afin de capturer ses petits détails de nouveau-né.",
+          "La séance naissance est à réaliser idéalement dans le premier mois du bébé, voir même dans les deux premières semaines, afin de capturer ses petits détails de nouveau-né. Elle se déroule en intérieur chez vous, dans votre cocon.",
       },
       {
         title: "Comment s'habiller ?",
@@ -117,7 +123,7 @@ function Contact() {
         />
       </Head>
       <Header />
-      <main>
+      <main className={styles.main}>
         <div className={styles.faq}>
           <Faq
             data={data}
@@ -224,7 +230,9 @@ function Contact() {
           </form>
         </div>
       </main>
-      <Footer />
+      <div style={{ position: "absolute", bottom: 0, left: 0, right: 0 }}>
+        <Footer />
+      </div>
     </div>
   );
 }

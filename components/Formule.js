@@ -3,8 +3,28 @@ import Link from "next/link";
 import Image from "next/image";
 import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css/animate.compat.css";
+import { useState, useEffect } from "react";
 
 function Formule(props) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (typeof window !== "undefined") {
+        setIsMobile(window.innerWidth < 850);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const AnimationWrapper = isMobile ? 'div' : ScrollAnimation;
+
   let formules;
   if (props.name === "Mariage") {
     formules = (
@@ -77,7 +97,7 @@ function Formule(props) {
               </div>
             </div>
           </div>
-          <ScrollAnimation
+          <AnimationWrapper
             animateIn="fadeInRight"
             animateOnce={true}
             delay={1 * 100}
@@ -117,8 +137,8 @@ function Formule(props) {
                 className={styles.image}
               />
             </div>
-          </ScrollAnimation>
-          <ScrollAnimation
+          </AnimationWrapper>
+          <AnimationWrapper
             animateIn="fadeInLeft"
             animateOnce={true}
             delay={1 * 100}
@@ -159,7 +179,7 @@ function Formule(props) {
                 </div>
               </div>
             </div>
-          </ScrollAnimation>
+          </AnimationWrapper>
         </main>
       </div>
     );
@@ -209,7 +229,7 @@ function Formule(props) {
               </div>
             </div>
           </div>
-          <ScrollAnimation
+          <AnimationWrapper
             animateIn="fadeInRight"
             animateOnce={true}
             delay={1 * 100}
@@ -248,8 +268,8 @@ function Formule(props) {
                 className={styles.image}
               />
             </div>
-          </ScrollAnimation>
-          <ScrollAnimation
+          </AnimationWrapper>
+          <AnimationWrapper
             animateIn="fadeInLeft"
             animateOnce={true}
             delay={1 * 100}
@@ -288,7 +308,7 @@ function Formule(props) {
                 </div>
               </div>
             </div>
-          </ScrollAnimation>
+          </AnimationWrapper>
         </main>
       </div>
     );
@@ -319,7 +339,7 @@ function Formule(props) {
               <div>
                 <h1 className={styles.formulaTitle}>Formule Instants</h1>
                 <h2 className={styles.h2}>Séance de 30 min</h2>
-                <span className={styles.price}>150 €</span>
+                <span className={styles.price}>200 €</span>
                 <p className={styles.p}>
                   Galerie complète envoyée (environ 50 photos)
                 </p>
@@ -339,7 +359,7 @@ function Formule(props) {
               </div>
             </div>
           </div>
-          <ScrollAnimation
+          <AnimationWrapper
             animateIn="fadeInRight"
             animateOnce={true}
             delay={1 * 100}
@@ -349,7 +369,7 @@ function Formule(props) {
                 <div>
                   <h1 className={styles.formulaTitle}>Formule Douceur</h1>
                   <h2 className={styles.h2}>Séance de 45 min</h2>
-                  <span className={styles.price}>200 €</span>
+                  <span className={styles.price}>250 €</span>
                   <p className={styles.p}>
                     Galerie complète envoyée (environ 80 photos)
                   </p>
@@ -378,8 +398,8 @@ function Formule(props) {
                 className={styles.image}
               />
             </div>
-          </ScrollAnimation>
-          <ScrollAnimation
+          </AnimationWrapper>
+          <AnimationWrapper
             animateIn="fadeInLeft"
             animateOnce={true}
             delay={1 * 100}
@@ -396,7 +416,7 @@ function Formule(props) {
                 <div>
                   <h1 className={styles.formulaTitle}>Formule Prestige</h1>
                   <h2 className={styles.h2}>Séance d'1h</h2>
-                  <span className={styles.price}>250 €</span>
+                  <span className={styles.price}>300 €</span>
                   <p className={styles.p}>
                     Galerie complète envoyée (environ 100 photos)
                   </p>
@@ -418,7 +438,7 @@ function Formule(props) {
                 </div>
               </div>
             </div>
-          </ScrollAnimation>
+          </AnimationWrapper>
         </main>
       </div>
     );
@@ -469,7 +489,7 @@ function Formule(props) {
               </div>
             </div>
           </div>
-          <ScrollAnimation
+          <AnimationWrapper
             animateIn="fadeInRight"
             animateOnce={true}
             delay={1 * 100}
@@ -508,8 +528,8 @@ function Formule(props) {
                 className={styles.image}
               />
             </div>
-          </ScrollAnimation>
-          <ScrollAnimation
+          </AnimationWrapper>
+          <AnimationWrapper
             animateIn="fadeInLeft"
             animateOnce={true}
             delay={1 * 100}
@@ -548,7 +568,7 @@ function Formule(props) {
                 </div>
               </div>
             </div>
-          </ScrollAnimation>
+          </AnimationWrapper>
         </main>
       </div>
     );
@@ -658,7 +678,7 @@ function Formule(props) {
               </div>
             </div>
           </div>
-          <ScrollAnimation
+          <AnimationWrapper
             animateIn="fadeInRight"
             animateOnce={true}
             delay={1 * 100}
@@ -697,8 +717,8 @@ function Formule(props) {
                 className={styles.image}
               />
             </div>
-          </ScrollAnimation>
-          <ScrollAnimation
+          </AnimationWrapper>
+          <AnimationWrapper
             animateIn="fadeInLeft"
             animateOnce={true}
             delay={1 * 100}
@@ -737,7 +757,7 @@ function Formule(props) {
                 </div>
               </div>
             </div>
-          </ScrollAnimation>
+          </AnimationWrapper>
         </main>
       </div>
     );
@@ -772,7 +792,7 @@ function Formule(props) {
               <div>
                 <h1 className={styles.formulaTitle}>Formule Instants</h1>
                 <h2 className={styles.h2}>Séance de 30 min</h2>
-                <span className={styles.price}>150 €</span>
+                <span className={styles.price}>200 €</span>
                 <p className={styles.p}>
                   Galerie complète envoyée (environ 50 photos)
                 </p>
@@ -792,7 +812,7 @@ function Formule(props) {
               </div>
             </div>
           </div>
-          <ScrollAnimation
+          <AnimationWrapper
             animateIn="fadeInRight"
             animateOnce={true}
             delay={1 * 100}
@@ -802,7 +822,7 @@ function Formule(props) {
                 <div>
                   <h1 className={styles.formulaTitle}>Formule Douceur</h1>
                   <h2 className={styles.h2}>Séance de 45 min</h2>
-                  <span className={styles.price}>200 €</span>
+                  <span className={styles.price}>250 €</span>
                   <p className={styles.p}>
                     Galerie complète envoyée (environ 80 photos)
                   </p>
@@ -831,8 +851,8 @@ function Formule(props) {
                 className={styles.image}
               />
             </div>
-          </ScrollAnimation>
-          <ScrollAnimation
+          </AnimationWrapper>
+          <AnimationWrapper
             animateIn="fadeInLeft"
             animateOnce={true}
             delay={1 * 100}
@@ -849,7 +869,7 @@ function Formule(props) {
                 <div>
                   <h1 className={styles.formulaTitle}>Formule Prestige</h1>
                   <h2 className={styles.h2}>Séance d'1h</h2>
-                  <span className={styles.price}>250 €</span>
+                  <span className={styles.price}>300 €</span>
                   <p className={styles.p}>
                     Galerie complète envoyée (environ 100 photos)
                   </p>
@@ -871,7 +891,7 @@ function Formule(props) {
                 </div>
               </div>
             </div>
-          </ScrollAnimation>
+          </AnimationWrapper>
         </main>
       </div>
     );
@@ -906,7 +926,7 @@ function Formule(props) {
               <div>
                 <h1 className={styles.formulaTitle}>Formule Instants</h1>
                 <h2 className={styles.h2}>Séance de 30 min</h2>
-                <span className={styles.price}>150 €</span>
+                <span className={styles.price}>200 €</span>
                 <p className={styles.p}>
                   Galerie complète envoyée (environ 50 photos)
                 </p>
@@ -926,7 +946,7 @@ function Formule(props) {
               </div>
             </div>
           </div>
-          <ScrollAnimation
+          <AnimationWrapper
             animateIn="fadeInRight"
             animateOnce={true}
             delay={1 * 100}
@@ -936,7 +956,7 @@ function Formule(props) {
                 <div>
                   <h1 className={styles.formulaTitle}>Formule Douceur</h1>
                   <h2 className={styles.h2}>Séance de 45 min</h2>
-                  <span className={styles.price}>200 €</span>
+                  <span className={styles.price}>250 €</span>
                   <p className={styles.p}>
                     Galerie complète envoyée (environ 80 photos)
                   </p>
@@ -965,8 +985,8 @@ function Formule(props) {
                 className={styles.image}
               />
             </div>
-          </ScrollAnimation>
-          <ScrollAnimation
+          </AnimationWrapper>
+          <AnimationWrapper
             animateIn="fadeInLeft"
             animateOnce={true}
             delay={1 * 100}
@@ -983,7 +1003,7 @@ function Formule(props) {
                 <div>
                   <h1 className={styles.formulaTitle}>Formule Prestige</h1>
                   <h2 className={styles.h2}>Séance d'1h</h2>
-                  <span className={styles.price}>250 €</span>
+                  <span className={styles.price}>300 €</span>
                   <p className={styles.p}>
                     Galerie complète envoyée (environ 100 photos)
                   </p>
@@ -1005,7 +1025,7 @@ function Formule(props) {
                 </div>
               </div>
             </div>
-          </ScrollAnimation>
+          </AnimationWrapper>
         </main>
       </div>
     );
@@ -1062,7 +1082,7 @@ function Formule(props) {
               </div>
             </div>
           </div>
-          <ScrollAnimation
+          <AnimationWrapper
             animateIn="fadeInRight"
             animateOnce={true}
             delay={1 * 100}
@@ -1101,8 +1121,8 @@ function Formule(props) {
                 className={styles.image}
               />
             </div>
-          </ScrollAnimation>
-          <ScrollAnimation
+          </AnimationWrapper>
+          <AnimationWrapper
             animateIn="fadeInLeft"
             animateOnce={true}
             delay={1 * 100}
@@ -1141,7 +1161,7 @@ function Formule(props) {
                 </div>
               </div>
             </div>
-          </ScrollAnimation>
+          </AnimationWrapper>
         </main>
       </div>
     );
@@ -1176,7 +1196,7 @@ function Formule(props) {
               <div>
                 <h1 className={styles.formulaTitle}>Formule Instants</h1>
                 <h2 className={styles.h2}>Séance de 30 min</h2>
-                <span className={styles.price}>150 €</span>
+                <span className={styles.price}>200 €</span>
                 <p className={styles.p}>
                   Galerie complète envoyée (environ 50 photos)
                 </p>
@@ -1196,7 +1216,7 @@ function Formule(props) {
               </div>
             </div>
           </div>
-          <ScrollAnimation
+          <AnimationWrapper
             animateIn="fadeInRight"
             animateOnce={true}
             delay={1 * 100}
@@ -1206,7 +1226,7 @@ function Formule(props) {
                 <div>
                   <h1 className={styles.formulaTitle}>Formule Douceur</h1>
                   <h2 className={styles.h2}>Séance de 45 min</h2>
-                  <span className={styles.price}>200 €</span>
+                  <span className={styles.price}>250 €</span>
                   <p className={styles.p}>
                     Galerie complète envoyée (environ 80 photos)
                   </p>
@@ -1235,8 +1255,8 @@ function Formule(props) {
                 className={styles.image}
               />
             </div>
-          </ScrollAnimation>
-          <ScrollAnimation
+          </AnimationWrapper>
+          <AnimationWrapper
             animateIn="fadeInLeft"
             animateOnce={true}
             delay={1 * 100}
@@ -1253,7 +1273,7 @@ function Formule(props) {
                 <div>
                   <h1 className={styles.formulaTitle}>Formule Prestige</h1>
                   <h2 className={styles.h2}>Séance d'1h</h2>
-                  <span className={styles.price}>250 €</span>
+                  <span className={styles.price}>300 €</span>
                   <p className={styles.p}>
                     Galerie complète envoyée (environ 100 photos)
                   </p>
@@ -1275,7 +1295,7 @@ function Formule(props) {
                 </div>
               </div>
             </div>
-          </ScrollAnimation>
+          </AnimationWrapper>
         </main>
       </div>
     );
@@ -1307,11 +1327,10 @@ function Formule(props) {
             />
             <div className={styles.description}>
               <div>
-                <h1 className={styles.formulaTitle}>Formule Instants</h1>
-                <h2 className={styles.h2}>Séance de 30 min</h2>
-                <span className={styles.price}>150 €</span>
+                <h1 className={styles.formulaTitle}>Tarif Unique</h1>
+                <span className={styles.price}>200 €</span>
                 <p className={styles.p}>
-                  Galerie complète envoyée (environ 50 photos)
+                  Galerie complète envoyée (environ 80 photos)
                 </p>
               </div>
 
@@ -1329,7 +1348,7 @@ function Formule(props) {
               </div>
             </div>
           </div>
-          <ScrollAnimation
+{/*           <AnimationWrapper
             animateIn="fadeInRight"
             animateOnce={true}
             delay={1 * 100}
@@ -1368,8 +1387,8 @@ function Formule(props) {
                 className={styles.image}
               />
             </div>
-          </ScrollAnimation>
-          <ScrollAnimation
+          </AnimationWrapper>
+          <AnimationWrapper
             animateIn="fadeInLeft"
             animateOnce={true}
             delay={1 * 100}
@@ -1408,7 +1427,7 @@ function Formule(props) {
                 </div>
               </div>
             </div>
-          </ScrollAnimation>
+          </AnimationWrapper> */}
         </main>
       </div>
     );
@@ -1456,7 +1475,7 @@ function Formule(props) {
               <div>
                 <h1 className={styles.formulaTitle}>Formule Instants</h1>
                 <h2 className={styles.h2}> 2 Séances de 30 min</h2>
-                <span className={styles.price}>250 €</span>
+                <span className={styles.price}>350 €</span>
                 <p className={styles.p}>
                   Galerie complète envoyée (environ 50 photos par galerie)
                 </p>
@@ -1476,7 +1495,7 @@ function Formule(props) {
               </div>
             </div>
           </div>
-          <ScrollAnimation
+          <AnimationWrapper
             animateIn="fadeInRight"
             animateOnce={true}
             delay={1 * 100}
@@ -1486,7 +1505,7 @@ function Formule(props) {
                 <div>
                   <h1 className={styles.formulaTitle}>Formule Douceur</h1>
                   <h2 className={styles.h2}>2 Séances de 45 min</h2>
-                  <span className={styles.price}>350 €</span>
+                  <span className={styles.price}>450 €</span>
                   <p className={styles.p}>
                     Galerie complète envoyée (environ 80 photos par galerie)
                   </p>
@@ -1515,8 +1534,8 @@ function Formule(props) {
                 className={styles.image}
               />
             </div>
-          </ScrollAnimation>
-          <ScrollAnimation
+          </AnimationWrapper>
+          {/* <AnimationWrapper
             animateIn="fadeInLeft"
             animateOnce={true}
             delay={1 * 100}
@@ -1555,7 +1574,7 @@ function Formule(props) {
                 </div>
               </div>
             </div>
-          </ScrollAnimation>
+          </AnimationWrapper> */}
         </main>
       </div>
     );
@@ -1671,7 +1690,7 @@ function Formule(props) {
               </div>
             </div>
           </div>
-          <ScrollAnimation
+          <AnimationWrapper
             animateIn="fadeInRight"
             animateOnce={true}
             delay={1 * 100}
@@ -1710,8 +1729,8 @@ function Formule(props) {
                 className={styles.image}
               />
             </div>
-          </ScrollAnimation>
-          <ScrollAnimation
+          </AnimationWrapper>
+          <AnimationWrapper
             animateIn="fadeInLeft"
             animateOnce={true}
             delay={1 * 100}
@@ -1750,7 +1769,7 @@ function Formule(props) {
                 </div>
               </div>
             </div>
-          </ScrollAnimation>
+          </AnimationWrapper>
         </main>
       </div>
     );

@@ -73,6 +73,9 @@
   .fullscreenImage {
     max-width: 95%;
   }
+    .lienPDF {
+    font-size: 16px;
+  }
 }
 @media (max-width: 850px) {
   .imagesContainer {

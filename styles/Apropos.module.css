@@ -24,7 +24,7 @@
 
 .presentationTexte {
   text-align: center;
-  font-size: 22px;
+  font-size: 28px;
   display: block;
   font-family: 'Inria serif', sans-serif; 
   margin: 0 ;
@@ -68,7 +68,7 @@
 
 @media (max-width: 600px) {
   .image {
-    width: 40%;
+    width: 50%;
     margin: 20px;
   }
   .presentationTexte {
@@ -85,7 +85,7 @@
     margin-top: 60px;
   }
   .image {
-    width: 40%;
+    width: 45%;
     margin: 20px;
   }
   .presentationTexte {
