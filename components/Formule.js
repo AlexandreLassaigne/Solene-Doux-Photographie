@@ -209,7 +209,7 @@ function Formule(props) {
               <div>
                 <h1 className={styles.formulaTitle}>Formule Instants</h1>
                 <h2 className={styles.h2}>Séance de 30 min</h2>
-                <span className={styles.price}>150 €</span>
+                <span className={styles.price}>200 €</span>
                 <p className={styles.p}>
                   Galerie complète envoyée (environ 50 photos)
                 </p>
@@ -239,7 +239,7 @@ function Formule(props) {
                 <div>
                   <h1 className={styles.formulaTitle}>Formule Douceur</h1>
                   <h2 className={styles.h2}>Séance de 45 min</h2>
-                  <span className={styles.price}>200 €</span>
+                  <span className={styles.price}>250 €</span>
                   <p className={styles.p}>
                     Galerie complète envoyée (environ 80 photos)
                   </p>
@@ -286,7 +286,7 @@ function Formule(props) {
                 <div>
                   <h1 className={styles.formulaTitle}>Formule Prestige</h1>
                   <h2 className={styles.h2}>Séance d'1h</h2>
-                  <span className={styles.price}>250 €</span>
+                  <span className={styles.price}>300 €</span>
                   <p className={styles.p}>
                     Galerie complète envoyée (environ 100 photos)
                   </p>
@@ -469,7 +469,7 @@ function Formule(props) {
               <div>
                 <h1 className={styles.formulaTitle}>Formule Instants</h1>
                 <h2 className={styles.h2}>Séance de 30 min</h2>
-                <span className={styles.price}>150 €</span>
+                <span className={styles.price}>200 €</span>
                 <p className={styles.p}>
                   Galerie complète envoyée (environ 50 photos)
                 </p>
@@ -499,7 +499,7 @@ function Formule(props) {
                 <div>
                   <h1 className={styles.formulaTitle}>Formule Douceur</h1>
                   <h2 className={styles.h2}>Séance de 45 min</h2>
-                  <span className={styles.price}>200 €</span>
+                  <span className={styles.price}>250 €</span>
                   <p className={styles.p}>
                     Galerie complète envoyée (environ 80 photos)
                   </p>
@@ -546,7 +546,7 @@ function Formule(props) {
                 <div>
                   <h1 className={styles.formulaTitle}>Formule Prestige</h1>
                   <h2 className={styles.h2}>Séance d'1h</h2>
-                  <span className={styles.price}>250 €</span>
+                  <span className={styles.price}>300 €</span>
                   <p className={styles.p}>
                     Galerie complète envoyée (environ 100 photos)
                   </p>
@@ -658,7 +658,7 @@ function Formule(props) {
               <div>
                 <h1 className={styles.formulaTitle}>Formule Instants</h1>
                 <h2 className={styles.h2}>Séance de 30 min</h2>
-                <span className={styles.price}>150 €</span>
+                <span className={styles.price}>200 €</span>
                 <p className={styles.p}>
                   Galerie complète envoyée (environ 50 photos)
                 </p>
@@ -688,7 +688,7 @@ function Formule(props) {
                 <div>
                   <h1 className={styles.formulaTitle}>Formule Douceur</h1>
                   <h2 className={styles.h2}>Séance de 45 min</h2>
-                  <span className={styles.price}>200 €</span>
+                  <span className={styles.price}>250 €</span>
                   <p className={styles.p}>
                     Galerie complète envoyée (environ 80 photos)
                   </p>
@@ -735,7 +735,7 @@ function Formule(props) {
                 <div>
                   <h1 className={styles.formulaTitle}>Formule Prestige</h1>
                   <h2 className={styles.h2}>Séance d'1h</h2>
-                  <span className={styles.price}>250 €</span>
+                  <span className={styles.price}>300 €</span>
                   <p className={styles.p}>
                     Galerie complète envoyée (environ 100 photos)
                   </p>
@@ -1062,7 +1062,7 @@ function Formule(props) {
               <div>
                 <h1 className={styles.formulaTitle}>Formule Instants</h1>
                 <h2 className={styles.h2}>Séance de 30 min</h2>
-                <span className={styles.price}>150 €</span>
+                <span className={styles.price}>200 €</span>
                 <p className={styles.p}>
                   Galerie complète envoyée (environ 50 photos)
                 </p>
@@ -1092,7 +1092,7 @@ function Formule(props) {
                 <div>
                   <h1 className={styles.formulaTitle}>Formule Douceur</h1>
                   <h2 className={styles.h2}>Séance de 45 min</h2>
-                  <span className={styles.price}>200 €</span>
+                  <span className={styles.price}>250 €</span>
                   <p className={styles.p}>
                     Galerie complète envoyée (environ 80 photos)
                   </p>
@@ -1139,7 +1139,7 @@ function Formule(props) {
                 <div>
                   <h1 className={styles.formulaTitle}>Formule Prestige</h1>
                   <h2 className={styles.h2}>Séance d'1h</h2>
-                  <span className={styles.price}>250 €</span>
+                  <span className={styles.price}>300 €</span>
                   <p className={styles.p}>
                     Galerie complète envoyée (environ 100 photos)
                   </p>
@@ -1670,7 +1670,7 @@ function Formule(props) {
               <div>
                 <h1 className={styles.formulaTitle}>Formule Instants</h1>
                 <h2 className={styles.h2}>Séance de 30 min</h2>
-                <span className={styles.price}>150 €</span>
+                <span className={styles.price}>200 €</span>
                 <p className={styles.p}>
                   Galerie complète envoyée (environ 50 photos)
                 </p>
@@ -1700,7 +1700,7 @@ function Formule(props) {
                 <div>
                   <h1 className={styles.formulaTitle}>Formule Douceur</h1>
                   <h2 className={styles.h2}>Séance de 45 min</h2>
-                  <span className={styles.price}>200 €</span>
+                  <span className={styles.price}>250 €</span>
                   <p className={styles.p}>
                     Galerie complète envoyée (environ 80 photos)
                   </p>
@@ -1747,7 +1747,7 @@ function Formule(props) {
                 <div>
                   <h1 className={styles.formulaTitle}>Formule Prestige</h1>
                   <h2 className={styles.h2}>Séance d'1h</h2>
-                  <span className={styles.price}>250 €</span>
+                  <span className={styles.price}>300 €</span>
                   <p className={styles.p}>
                     Galerie complète envoyée (environ 100 photos)
                   </p>
