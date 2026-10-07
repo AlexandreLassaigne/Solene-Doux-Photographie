@@ -1,7 +1,7 @@
 import styles from "../styles/Header.module.css";
 import Link from "next/link";
 import { FaInstagram } from "react-icons/fa";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export default function Header() {
   return (

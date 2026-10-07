@@ -1,24 +1,48 @@
+@font-face {
+  font-family: "Inria serif";
+  src: url("/fonts/InriaSerif-Regular.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Safira";
+  src: url("/fonts/Safira-March.ttf");
+}
+
+@font-face {
+  font-family: "Glitther Syavina";
+  src: url("/fonts/GlittherSyavinafree.ttf");
+}
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica ;
-  
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica;
 }
 
 * {
   box-sizing: border-box;
-  background-color: #E8DCCA;
+  background-color: #e8dcca;
 }
-
 
 main {
-  flex: 1; 
+  flex: 1;
 }
 
-html, body, .appWrapper {
+html,
+body,
+.appWrapper {
   height: 100%;
-    display: flex;
+  display: flex;
   flex-direction: column;
 }
 
@@ -28,6 +52,7 @@ html, body, .appWrapper {
   min-height: 100vh;
 }
 
-footer, .footer {
+footer,
+.footer {
   margin-top: auto; /* Colle le footer en bas si contenu est insuffisant */
 }

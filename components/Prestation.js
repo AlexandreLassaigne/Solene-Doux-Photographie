@@ -4,7 +4,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import Head from "next/head";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import prestations from "../utils/prestation";
 import Formule from "./Formule";
 import ScrollAnimation from "react-animate-on-scroll";

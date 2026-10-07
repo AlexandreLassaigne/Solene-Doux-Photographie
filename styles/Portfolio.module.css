@@ -1,13 +1,3 @@
-@font-face {
-  font-family: "Glitther Syavina";
-  src: url("../fonts/GlittherSyavinafree.ttf");
-}
-
-@font-face {
-  font-family: "Inria serif";
-  src: url("../fonts/InriaSerif-Regular.ttf");
-}
-
 .lienPDF {
   text-decoration: none;
   font-size: 22px;
@@ -22,16 +12,11 @@
 .imageContainer {
   width: 100%;
   height: auto;
-  display: flex;
 }
 
 .image {
-  width: 90%;
-  height: auto;
   border-radius: 15px;
-  object-fit: cover;
   cursor: pointer;
-  margin: 2px;
 }
 
 .portrait {
@@ -43,6 +28,8 @@
   grid-template-columns: repeat(3, 1fr);
   width: 90%;
   margin: 100px auto 0;
+  gap: 15px;
+  grid-auto-flow: dense;
 }
 
 .fullscreenModal {
