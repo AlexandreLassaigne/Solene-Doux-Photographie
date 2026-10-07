@@ -38,6 +38,7 @@ function Portfolio() {
           height={data.height}
           onClick={() => handleImageClick(data.image)}
           layout="responsive"
+          sizes="(max-width: 480px) 50vw, 33vw"
           objectFit="cover"
           loading="lazy"
           quality={75}
