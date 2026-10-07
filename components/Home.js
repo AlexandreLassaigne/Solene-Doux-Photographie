@@ -1,12 +1,9 @@
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import ScrollAnimation from "react-animate-on-scroll";
-import "animate.css/animate.compat.css";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Header from "./Header";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import Footer from "./Footer";
 
 function Home() {
@@ -37,7 +34,7 @@ function Home() {
               height={850}
               className={styles.imageHead}
               priority
-              layout="intrinsic"
+              layout="responsive"
             />
             <Image
               src="/Accueil/accueil1.webp"
@@ -46,7 +43,7 @@ function Home() {
               height={850}
               className={styles.imageHead}
               loading="lazy"
-              layout="intrinsic"
+              layout="responsive"
             />
             <Image
               src="/Accueil/accueil4.webp"
@@ -55,7 +52,7 @@ function Home() {
               height={850}
               className={styles.imageHead}
               loading="lazy"
-              layout="intrinsic"
+              layout="responsive"
             />
             <Image
               src="/Accueil/accueil2.webp"
@@ -64,13 +61,13 @@ function Home() {
               height={850}
               className={styles.imageHead}
               loading="lazy"
-              layout="intrinsic"
+              layout="responsive"
             />
           </Slider>
         </div>
       </div>
       <main>
-       {/*  <h1 className={styles.h1}>Solene Doux - Photographe professionnelle</h1>
+        {/*  <h1 className={styles.h1}>Solene Doux - Photographe professionnelle</h1>
         <p>
           Photographe passionnée à <strong>Toulouse</strong>, je suis
           spécialisée dans les <strong>photos de mariage</strong>,{" "}
@@ -92,7 +89,8 @@ function Home() {
               <p>
                 Photographe passionnée et spécialisée dans les moments forts de
                 la vie, mon objectif : capturer les émotions authentiques et
-                sublimer chaque instant avec sensibilité et professionnalisme{" "}
+                sublimer chaque instant avec sensibilité et
+                professionnalisme{" "}
               </p>
               <Link href="/apropos">
                 <button className={styles.button}>A propos</button>

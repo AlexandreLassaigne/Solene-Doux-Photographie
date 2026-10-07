@@ -3,10 +3,8 @@ import Header from "./Header";
 import { useState } from "react";
 import Head from "next/head";
 import image from "../utils/image";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import ScrollAnimation from "react-animate-on-scroll";
-import "animate.css";
-import "animate.css/animate.compat.css";
 import Footer from "./Footer";
 
 function Portfolio() {
@@ -39,6 +37,8 @@ function Portfolio() {
           width={data.width}
           height={data.height}
           onClick={() => handleImageClick(data.image)}
+          layout="responsive"
+          objectFit="cover"
           loading="lazy"
           quality={75}
           className={styles.image}
@@ -67,7 +67,11 @@ function Portfolio() {
               <a
                 href="/portfolio_mariage.pdf"
                 target="_blank"
-                style={{ textDecoration: "none", color: "black", fontWeight: "bold" }}
+                style={{
+                  textDecoration: "none",
+                  color: "black",
+                  fontWeight: "bold",
+                }}
               >
                 Portfolio Mariage
               </a>

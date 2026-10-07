@@ -1,18 +1,3 @@
-@font-face {
-  font-family: "Glitther Syavina";
-  src: url("../fonts/GlittherSyavinafree.ttf");
-}
-
-@font-face {
-  font-family: "Inria serif";
-  src: url("../fonts/InriaSerif-Regular.ttf");
-}
-
-@font-face {
-  font-family: "Safira";
-  src: url("../fonts/Safira-March.ttf");
-}
-
 .main {
   flex: 1;
 }

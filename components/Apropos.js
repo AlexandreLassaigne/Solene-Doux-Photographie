@@ -1,8 +1,6 @@
 import styles from "../styles/Apropos.module.css";
 import Head from "next/head";
-import "animate.css";
-import "animate.css/animate.compat.css";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Header from "./Header";
 import Footer from "./Footer";
 

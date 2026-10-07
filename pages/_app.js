@@ -1,5 +1,9 @@
 import "../styles/globals.css";
 import Head from "next/head";
+import "animate.css";
+import "animate.css/animate.compat.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App({ Component, pageProps }) {
   return (

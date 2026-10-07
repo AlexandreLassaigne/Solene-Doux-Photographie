@@ -1,8 +1,7 @@
 import styles from "../styles/Formule.module.css";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import ScrollAnimation from "react-animate-on-scroll";
-import "animate.css/animate.compat.css";
 import { useState, useEffect } from "react";
 
 function Formule(props) {
@@ -23,7 +22,7 @@ function Formule(props) {
     };
   }, []);
 
-  const AnimationWrapper = isMobile ? 'div' : ScrollAnimation;
+  const AnimationWrapper = isMobile ? "div" : ScrollAnimation;
 
   let formules;
   if (props.name === "Mariage") {
@@ -1348,7 +1347,7 @@ function Formule(props) {
               </div>
             </div>
           </div>
-{/*           <AnimationWrapper
+          {/*           <AnimationWrapper
             animateIn="fadeInRight"
             animateOnce={true}
             delay={1 * 100}
